@@ -75,9 +75,14 @@ export default function Home() {
             {[
               { name: "Gyūdon", subtitle: "牛丼", description: "Bols de riz au bœuf", href: "/type-plat/gyudon" },
               { name: "Ramen", subtitle: "ラーメン", description: "Nouilles japonaises", href: "/type-plat/ramen" },
-              { name: "Kaiten-zushi", subtitle: "回転寿司", description: "Sushi tournant", href: "/type-plat/sushi" },
+              { name: "Kaiten-zushi", subtitle: "回転寿司", description: "Sushi tournant", href: "/type-plat/kaiten-zushi" },
               { name: "Curry Japonais", subtitle: "カレー", description: "Curry à la japonaise", href: "/type-plat/curry" },
               { name: "Tempura", subtitle: "天ぷら", description: "Beignets japonais", href: "/type-plat/tempura" },
+              { name: "Udon/Soba", subtitle: "うどん・そば", description: "Nouilles traditionnelles", href: "/type-plat/udon-soba" },
+              { name: "Family Restaurant", subtitle: "ファミレス", description: "Restaurants familiaux", href: "/type-plat/family-restaurants" },
+              { name: "Burgers Japonais", subtitle: "日本のハンバーガー", description: "Innovation burger", href: "/type-plat/burgers" },
+              { name: "Cuisine Chinoise", subtitle: "中華料理", description: "Adaptation japonaise", href: "/type-plat/cuisine-chinoise" },
+              { name: "Izakaya", subtitle: "居酒屋", description: "Bars traditionnels", href: "/type-plat/izakaya" },
             ].map((category) => (
               <Link 
                 key={category.name}

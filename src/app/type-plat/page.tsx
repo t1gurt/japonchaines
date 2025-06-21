@@ -1,7 +1,29 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function TypePlatPage() {
+export default function TypePlatPage() {  // Fonction pour obtenir le bon lien pour chaque type de plat
+  const getImplementationPath = (id: string) => {    const implementedPages: { [key: string]: string } = {
+      'gyudon': '/type-plat/gyudon',
+      'ramen': '/type-plat/ramen', 
+      'kaiten-zushi': '/type-plat/kaiten-zushi',
+      'curry': '/type-plat/curry',
+      'tempura': '/type-plat/tempura',
+      'udon-soba': '/type-plat/udon-soba',
+      'family-restaurants': '/type-plat/family-restaurants',
+      'burgers': '/type-plat/burgers',
+      'cuisine-chinoise': '/type-plat/cuisine-chinoise',
+      'izakaya': '/type-plat/izakaya'
+    };
+    
+    return implementedPages[id] || `/type-plat/${id}`;
+  };
+
+  // Fonction pour vérifier si une page est implémentée
+  const isImplemented = (id: string) => {
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon-soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya'];
+    return implementedIds.includes(id);
+  };
+
   const cuisineTypes = [
     {
       id: "gyudon",
@@ -22,8 +44,7 @@ export default function TypePlatPage() {
       chains: ["Ichiran", "Ippudo", "Tenkaippin"],
       color: "bg-orange-500",
       icon: "🍜"
-    },
-    {
+    },    {
       id: "kaiten-zushi",
       name: "Kaiten-zushi",
       japanese: "回転寿司",
@@ -171,14 +192,17 @@ export default function TypePlatPage() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {cuisineTypes.map((cuisine) => (
-              <Link 
+            {cuisineTypes.map((cuisine) => (              <Link 
                 key={cuisine.id}
-                href={`/type-plat/${cuisine.id}`}
+                href={getImplementationPath(cuisine.id)}
                 className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-red-200 overflow-hidden"
               >
-                <div className={`${cuisine.color} h-2`}></div>
-                <div className="p-6">
+                <div className={`${cuisine.color} h-2`}></div>                <div className="p-6">
+                  {isImplemented(cuisine.id) && (
+                    <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-3 inline-block">
+                      ✅ Page disponible
+                    </span>
+                  )}
                   <div className="flex items-center mb-4">
                     <div className="text-3xl mr-3">{cuisine.icon}</div>
                     <div>
