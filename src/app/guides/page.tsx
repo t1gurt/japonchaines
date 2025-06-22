@@ -17,15 +17,14 @@ export default function GuidesPage() {
         'Commande par QR code',
         'Phrases essentielles en 3 langues'
       ]
-    },
-    {
+    },    {
       id: 'regimes-alimentaires',
       title: 'Guide des Régimes Alimentaires',
       subtitle: 'Mangez selon vos besoins et convictions',
       description: 'Informations détaillées pour végétariens, vegans, halal et allergies alimentaires dans chaque chaîne.',
       icon: Heart,
       color: 'green',
-      available: false,
+      available: true,
       highlights: [
         'Options végétariennes et vegan',
         'Aliments halal et sans porc',

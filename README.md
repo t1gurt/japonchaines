@@ -1,36 +1,315 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍜 日本のチェーン飲食店フランス語ガイドサイト
 
-## Getting Started
+**Chain Japanese Restaurants** - フランス語圏の旅行者向け日本のチェーン飲食店専門ガイド
 
-First, run the development server:
+---
+
+## 📖 プロジェクト概要
+
+### 🎯 目的
+このプロジェクトは、**日本のチェーン飲食店に関するフランス語で利用可能な最初にして最も包括的な実用的・文化的ガイド**の開発を目的としています。フランス語圏の旅行者が日本のチェーン店を安心して利用できるよう、言語の壁や文化的な不安を解消する専門情報サイトです。
+
+### 🌍 対象ユーザー
+- **主要ターゲット**: 日本を訪れるフランス語圏の観光客（特に初来日者：64.8%）
+- **副次ターゲット**: 日本在住のフランス語話者（2023年末時点で15,153人）
+
+### 💡 独自価値
+既存のフランス語メディアが断片的かつ表層的にしか扱っていないニッチな市場において、体系的で詳細な情報を提供する専門サイトとして、日本のチェーン店文化を深く理解できる唯一のリソースです。
+
+---
+
+## 🏗️ 技術スタック
+
+### フロントエンド
+- **フレームワーク**: Next.js 15.3.3 (App Router)
+- **言語**: TypeScript
+- **UIライブラリ**: React 18
+- **スタイリング**: Tailwind CSS v3 + カスタムテーマ
+- **アイコン**: Lucide React
+- **フォント**: Inter (Google Fonts)
+
+### 開発・デプロイ
+- **パッケージマネージャー**: npm
+- **コード品質**: ESLint + TypeScript
+- **CSSプロセッサ**: PostCSS + Autoprefixer
+- **ホスティング**: GitHub Pages (予定)
+- **CI/CD**: GitHub Actions (予定)
+
+### アーキテクチャ特徴
+- **静的サイト生成 (SSG)**: SEO最適化とパフォーマンス向上
+- **レスポンシブデザイン**: モバイルファースト設計
+- **多言語表示**: フランス語主体 + 日本語（かな/漢字）+ ローマ字併記
+- **文化的配慮**: フランス語圏のUX/UIプリファレンスに特化
+
+---
+
+## 📋 サイト構成
+
+### 1. 料理カテゴリ別検索 (Rechercher par Type de Plat)
+利用者の「〇〇が食べたい」という欲求から出発する直感的ナビゲーション
+
+#### ✅ 実装完了カテゴリ (10/10 - 100%)
+1. **牛丼 (Gyūdon)** - 吉野家、すき家、松屋の詳細比較
+2. **ラーメン (Ramen)** - 一蘭、一風堂、天下一品の文化的解説
+3. **回転寿司 (Kaiten-zushi)** - スシロー、くら寿司、はま寿司のシステム解説
+4. **日本のカレー (Curry Japonais)** - CoCo壱番屋、Go!Go!Curry、すき家カレー
+5. **天ぷら・天丼 (Tempura/Tendon)** - てんや、つな八の伝統と技術
+6. **うどん・そば (Udon/Soba)** - 丸亀製麺、はなまるうどん、富士そば
+7. **ファミリーレストラン (Family Restaurants)** - サイゼリヤ、ガスト、ジョナサン
+8. **日本のハンバーガー (Burgers Japonais)** - モスバーガー、フレッシュネス、ロッテリア
+9. **中華料理 (Cuisine Chinoise)** - バーミヤン、餃子の王将、リンガーハット
+10. **居酒屋 (Izakaya)** - 鳥貴族、白木屋、ワタミの文化体験ガイド
+
+### 2. チェーン店別検索 (Rechercher par Chaîne)
+特定のチェーン名を知っている利用者向けの直接アクセス
+
+#### ✅ 全チェーン実装完了 (27/27 - 100%)
+
+**牛丼** (3店舗)
+- 吉野家 (Yoshinoya) - 牛丼文化の象徴
+- すき家 (Sukiya) - 24時間営業とカスタマイズ
+- 松屋 (Matsuya) - 定食文化との融合
+
+**ラーメン** (3店舗)
+- 一蘭 (Ichiran) - 豚骨ラーメンと個人体験
+- 一風堂 (Ippudo) - モダン豚骨の先駆者
+- 天下一品 (Tenkaippin) - 濃厚こってりの伝統
+
+**回転寿司** (3店舗)
+- スシロー (Sushiro) - 業界リーダーの技術革新
+- くら寿司 (Kura Sushi) - 無添加コンセプト
+- はま寿司 (Hama Sushi) - コストパフォーマンス重視
+
+**カレー** (3店舗)
+- CoCo壱番屋 (CoCo Ichibanya) - 日本カレーの王者
+- Go!Go!Curry (ゴーゴーカレー) - 金沢カレーの本格派
+- すき家カレー (Sukiya Curry) - 牛丼の進化形
+
+**天ぷら・天丼** (2店舗)
+- てんや (Tenya) - リーズナブル天丼チェーン
+- つな八 (Tsunahachi) - 老舗の伝統技術
+
+**うどん・そば** (3店舗)
+- 丸亀製麺 (Marugame Seimen) - 讃岐うどんの本格派
+- はなまるうどん (Hanamaru Udon) - セルフサービスの先駆者
+- 富士そば (Fuji Soba) - 東京立ち食いそばの代表
+
+**ファミリーレストラン** (3店舗)
+- サイゼリヤ (Saizeriya) - 驚異的コストパフォーマンス
+- ガスト (Gusto) - 日本最大ファミレス
+- ジョナサン (Jonathan's) - プレミアム体験
+
+**日本のハンバーガー** (3店舗)
+- モスバーガー (MOS Burger) - 日本独自進化の象徴
+- フレッシュネスバーガー (Freshness Burger) - プレミアム志向
+- ロッテリア (Lotteria) - 韓国系日本展開
+
+**中華料理** (3店舗)
+- バーミヤン (Bamiyan) - ファミリー向け中華
+- 餃子の王将 (Gyoza no Ohsho) - 関西発祥本格派
+- リンガーハット (Ringer Hut) - 長崎ちゃんぽん専門
+
+**居酒屋** (3店舗)
+- 鳥貴族 (Torikizoku) - 均一価格革命
+- 白木屋 (Shirokiya) - 総合居酒屋の代表
+- ワタミ (Watami) - 大手グループの安定感
+
+### 3. 実用ガイド (Guides Pratiques)
+#### ✅ 全セクション実装完了 (100%)
+- **注文方法完全ガイド (Comment Commander)** - 券売機、タッチパネル、QRコード対応
+- **食事制限ガイド (Guide des Régimes Alimentaires)**
+  - ベジタリアン・ヴィーガン対応
+  - 豚肉不使用・ハラル情報
+  - アレルギー対応ガイド
+- **文化・エチケットガイド (Culture & Étiquette)**
+  - 日本料理用語集
+  - レストランマナー
+- **特集記事 (Articles de Fond)**
+  - ラーメンの歴史
+  - だしの秘密
+  - 牛丼チェーン比較
+
+### 4. サイト情報
+#### ✅ 実装済み
+- **サイトミッション (À Propos)** - プロジェクトの理念と目標
+- **お問い合わせ (Contact)** - ユーザーサポート窓口
+
+---
+
+## 📊 開発進捗状況
+
+### 🏆 2025年6月現在の実装状況
+
+#### Phase 1: 基盤構造 (100% ✅)
+- ✅ **ホームページ** - モダンデザインと直感的ナビゲーション
+- ✅ **10料理カテゴリページ** - 深い文化的解説付き
+- ✅ **Next.js 15完全アーキテクチャ** - App Router方式
+
+#### Phase 2: コンテンツ充実 (100% ✅)
+- ✅ **27チェーン店個別ページ** - 詳細な文化的研究付き
+- ✅ **研究ファイル統合** - ramen-info.md、coco-itiban.md、yoshinoya.md等
+- ✅ **実用ガイド統合** - 各チェーンページ内組み込み
+- ✅ **ページ間ナビゲーション** - カテゴリ・チェーン間の機能的連携
+
+#### Phase 3: 安定化・修正 (100% ✅)
+- ✅ **構造的修正完了** - 全コンパイルエラー解決
+- ✅ **プロダクションビルド検証** - デプロイ準備完了
+- ✅ **ナビゲーション検証** - 全リンク動作確認済み
+- ✅ **コード品質最適化** - 軽微なlinting警告のみ残存
+
+#### Phase 4: 実用ガイド強化 (100% ✅)
+- ✅ **注文方法ガイド** - 包括的システム解説
+- ✅ **食事制限ガイド** - ベジタリアン、ハラル、アレルギー対応
+- ✅ **文化・エチケットガイド** - 用語集・マナーガイド完備
+- ✅ **特集記事** - ラーメン歴史、だし秘密、牛丼チェーン比較
+
+### 📈 全体進捗: **100%完了** 🎉
+
+**主要マイルストーン達成:**
+- ✅ **100%の料理カテゴリ** (10/10)
+- ✅ **100%の主要チェーン** (27/27)
+- ✅ **100%のナビゲーションガイド**
+- ✅ **100%の技術アーキテクチャ**
+- ✅ **100%の文化的・実用的コンテンツ**
+- ✅ **100%の実用ガイド・特集記事**
+
+---
+
+## 🎨 デザイン哲学
+
+### ユーザーエクスペリエンス設計
+- **モバイルファースト**: 旅行中の利用を想定した最適化
+- **直感的ナビゲーション**: 2つの検索軸（料理別・チェーン別）による迷わない導線
+- **文化的配慮**: フランス語圏のデザインプリファレンスに特化
+- **視覚的一貫性**: 全ページ統一されたレイアウトテンプレート
+
+### 多言語表示システム
+- **主要言語**: フランス語（UI・説明文）
+- **補助表示**: 日本語（店名・料理名の漢字・かな）
+- **発音支援**: ローマ字併記
+- **文化的コンテキスト**: 各要素の文化的背景説明
+
+---
+
+## 🚀 インストール・起動方法
+
+### 必要環境
+- Node.js 18.0.0以上
+- npm 9.0.0以上
+
+### セットアップ手順
 
 ```bash
+# リポジトリクローン
+git clone [リポジトリURL]
+cd japonchaines
+
+# 依存関係インストール
+npm install
+
+# 開発サーバー起動
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 利用可能なスクリプト
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# 開発サーバー (localhost:3000)
+npm run dev
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# プロダクションビルド
+npm run build
 
-## Learn More
+# プロダクションプレビュー
+npm run start
 
-To learn more about Next.js, take a look at the following resources:
+# コード品質チェック
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📁 プロジェクト構造
 
-## Deploy on Vercel
+```
+japonchaines/
+├── src/
+│   ├── app/                    # Next.js App Router
+│   │   ├── page.tsx           # ホームページ
+│   │   ├── type-plat/         # 料理カテゴリページ群
+│   │   ├── chaines/           # チェーン店個別ページ群
+│   │   ├── guides/            # 実用ガイドページ群
+│   │   ├── a-propos/          # サイト情報
+│   │   └── contact/           # お問い合わせ
+│   ├── components/            # 再利用可能コンポーネント
+│   └── styles/               # グローバルスタイル
+├── public/                   # 静的ファイル
+├── docs/                    # プロジェクト文書
+├── require.md              # 要件定義書
+└── README.md              # このファイル
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎯 プロジェクトの独自価値
+
+### 1. 包括性
+**世界初**のフランス語による日本チェーン店専門ガイド。27の主要チェーン、10の料理カテゴリを網羅。
+
+### 2. 文化的深度
+単なる情報提供ではなく、各チェーンの歴史的背景、文化的意義、社会的位置づけまで解説。
+
+### 3. 実用性
+券売機の使い方から食事制限対応まで、実際の利用に必要な全ての情報を網羅。
+
+### 4. 技術的優位性
+- 最新のNext.js 15による高速サイト
+- SEO最適化による検索エンジン上位表示
+- モバイル完全対応による旅行中の利便性
+
+### 5. 持続的価値
+静的サイト生成による高速性能と低運用コストを実現し、長期的な情報提供を保証。
+
+---
+
+## 🌟 今後の展開予定
+
+### Phase 5: 機能拡張 (2025年後半)
+- 地方限定チェーンの追加
+- 季節限定メニュー情報の追加
+- ユーザー投稿機能の検討
+
+### Phase 6: 多言語展開 (2026年)
+- スペイン語版サイトの開発
+- 英語版サイトの検討
+
+### Phase 7: コミュニティ機能 (将来)
+- ユーザーレビューシステム
+- 投稿型コンテンツ機能
+- SNS連携機能
+
+---
+
+## 📞 サポート・お問い合わせ
+
+このプロジェクトに関するご質問、ご提案、バグレポートなどは、以下の方法でお気軽にお問い合わせください。
+
+- **GitHub Issues**: [プロジェクトリポジトリ]のIssues
+- **技術的質問**: 開発チーム宛てご連絡
+- **コンテンツ提案**: サイト内お問い合わせフォーム
+
+---
+
+## 📜 ライセンス
+
+このプロジェクトは MIT License の下で公開されています。詳細は `LICENSE` ファイルをご確認ください。
+
+---
+
+## 🙏 謝辞
+
+このプロジェクトの実現にあたり、日本の食文化研究、フランス語圏旅行者のニーズ調査、技術的実装支援など、多方面からご協力をいただいた皆様に心より感謝申し上げます。
+
+---
+
+*最終更新: 2025年6月*
