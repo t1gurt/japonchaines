@@ -294,12 +294,19 @@ export default function RegimesAlimentairesPage() {
                   <span className="font-medium text-gray-800">Comment commander</span>
                   <span className="text-gray-500">→</span>
                 </Link>
-                
-                <Link
+                  <Link
                   href="/guides/culture-etiquette"
                   className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <span className="font-medium text-gray-800">Culture & étiquette</span>
+                  <span className="text-gray-500">→</span>
+                </Link>
+                
+                <Link
+                  href="/guides/articles"
+                  className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <span className="font-medium text-gray-800">Articles de Fond</span>
                   <span className="text-gray-500">→</span>
                 </Link>
                 
