@@ -1,8 +1,8 @@
 import type { NextConfig } from "next";
 
-// GitHub Pagesではrepo名がbasePathになる
+// カスタムドメインを使用する場合はbasePathは空にする
 const isGitHubPages = process.env.GITHUB_PAGES === 'true';
-const basePath = isGitHubPages ? '/japonchaines' : '';
+const basePath = ''; // カスタムドメイン使用時は常に空
 
 const nextConfig: NextConfig = {
   output: 'export',
