@@ -1,6 +1,7 @@
 import Link from "next/link";
+import CategoryViewTracker from '../../../components/CategoryViewTracker';
 
-export default function RamenPage() {  const ramenChains = [
+export default function RamenPage() {const ramenChains = [
     {
       name: "Ichiran",
       japanese: "一蘭",
@@ -75,9 +76,10 @@ export default function RamenPage() {  const ramenChains = [
       toppings: "Chashu, maïs, beurre, oignons verts",
       history: "Inventé en 1954 au restaurant Aji no Sanpei à Sapporo, révolutionnant le monde du ramen"
     }
-  ];
-  return (
-    <div className="min-h-screen bg-gray-50">
+  ];  return (
+    <>
+      <CategoryViewTracker categoryName="ramen" />
+      <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -642,10 +644,10 @@ export default function RamenPage() {  const ramenChains = [
                 <p className="font-bold text-gray-900">やわ</p>
                 <p className="text-sm text-gray-600">Yawa</p>
                 <p className="text-xs text-gray-500">Tendre</p>
-              </div>
-            </div>
+              </div>            </div>
           </div>
         </div>      </section>
-    </div>
+      </div>
+    </>
   );
 }

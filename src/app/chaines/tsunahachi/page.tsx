@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Crown, Fish, MapPin as LocationPin } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function TsunahachiPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function TsunahachiPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="tsunahachi" chainCategory="tempura" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -675,12 +679,12 @@ export default function TsunahachiPage() {  return (
                 <a href="/type-plat" 
                    className="block text-orange-600 hover:text-orange-700 text-sm">
                   → Explorer autres spécialités
-                </a>
-              </div>
+                </a>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

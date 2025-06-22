@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BookOpen, Users, Heart, Utensils, Star, ArrowRight, Globe, Calendar, Clock } from 'lucide-react';
+import GuideViewTracker from '../../../components/GuideViewTracker';
 
 export default function CultureEtiquettePage() {
   const sections = [
@@ -115,10 +116,11 @@ export default function CultureEtiquettePage() {
         'Préparer l\'argent exact si possible'
       ],
       icon: '💴'
-    }
-  ];
+    }  ];
   return (
-    <div className="min-h-screen bg-gray-50">
+    <>
+      <GuideViewTracker guideName="culture-etiquette" />
+      <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -304,12 +306,12 @@ export default function CultureEtiquettePage() {
             <Link
               href="/guides/culture-etiquette/bonnes-manieres"
               className="border border-purple-600 text-purple-600 px-6 py-3 rounded-lg font-medium hover:bg-purple-50 transition-colors text-center"
-            >
-              Apprendre l'étiquette
+            >              Apprendre l'étiquette
             </Link>
           </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

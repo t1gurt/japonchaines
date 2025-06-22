@@ -76,21 +76,20 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Chaînes Populaires
-          </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          </h3>          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { name: "Yoshinoya", japanese: "吉野家", type: "Gyūdon" },
-              { name: "Sukiya", japanese: "すき家", type: "Gyūdon" },
-              { name: "Sushiro", japanese: "スシロー", type: "Kaiten-zushi" },
-              { name: "CoCo壱番屋", japanese: "ココイチ", type: "Curry" },
-              { name: "Ichiran", japanese: "一蘭", type: "Ramen" },
-              { name: "Marugame Seimen", japanese: "丸亀製麺", type: "Udon" },
-              { name: "Saizeriya", japanese: "サイゼリヤ", type: "Family Restaurant" },
-              { name: "Tenya", japanese: "てんや", type: "Tempura" },
+              { name: "Yoshinoya", japanese: "吉野家", type: "Gyūdon", slug: "yoshinoya" },
+              { name: "Sukiya", japanese: "すき家", type: "Gyūdon", slug: "sukiya" },
+              { name: "Sushiro", japanese: "スシロー", type: "Kaiten-zushi", slug: "sushiro" },
+              { name: "CoCo壱番屋", japanese: "ココイチ", type: "Curry", slug: "coco-ichibanya" },
+              { name: "Ichiran", japanese: "一蘭", type: "Ramen", slug: "ichiran" },
+              { name: "Marugame Seimen", japanese: "丸亀製麺", type: "Udon", slug: "marugame-seimen" },
+              { name: "Saizeriya", japanese: "サイゼリヤ", type: "Family Restaurant", slug: "saizeriya" },
+              { name: "Tenya", japanese: "てんや", type: "Tempura", slug: "tenya" },
             ].map((chain) => (
               <Link 
                 key={chain.name}
-                href={`/chaines/${chain.name.toLowerCase().replace(/\s+/g, '-')}`}
+                href={`/chaines/${chain.slug}`}
                 className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-red-200"
               >
                 <h4 className="font-semibold text-gray-900 mb-1">{chain.name}</h4>

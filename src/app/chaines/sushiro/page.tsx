@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function SushiroPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function SushiroPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="sushiro" chainCategory="kaiten-zushi" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -637,9 +641,9 @@ export default function SushiroPage() {  return (
                 </Link>
               </div>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import CategoryViewTracker from '../../../components/CategoryViewTracker';
 
 export default function GyudonPage() {
   const gyudonChains = [    {
@@ -97,9 +98,10 @@ export default function GyudonPage() {
       calories: "約750kcal",
       image: "/menu/cheese-gyudon.jpg"
     }
-  ];
-  return (
-    <div className="min-h-screen bg-gray-50">
+  ];  return (
+    <>
+      <CategoryViewTracker categoryName="gyudon" />
+      <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -537,10 +539,10 @@ export default function GyudonPage() {
               <h4 className="font-bold text-gray-900 mb-2">Influence Mondiale</h4>
               <p className="text-sm text-gray-600">
                 Le modèle gyūdon a inspiré l'industrie mondiale du fast-food
-              </p>
-            </div>
+              </p>            </div>
           </div>
         </div>      </section>
-    </div>
+      </div>
+    </>
   );
 }

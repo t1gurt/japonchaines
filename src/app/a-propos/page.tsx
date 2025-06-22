@@ -1,8 +1,15 @@
 import Link from 'next/link';
 import { ArrowLeft, Heart, Users, Globe, Target, BookOpen, Star } from 'lucide-react';
+import PageViewTracker from '../../components/PageViewTracker';
 
 export default function AProposPage() {  return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
+    <>
+      <PageViewTracker 
+        pageName="a-propos" 
+        pageCategory="information" 
+        pageType="about_page" 
+      />
+      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -142,16 +149,15 @@ export default function AProposPage() {  return (
         {/* Coverage */}
         <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Notre Couverture Complète</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">27 Chaînes Documentées</h3>
+          <div className="grid md:grid-cols-2 gap-8">            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">29 Chaînes Documentées</h3>
               <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
                 <span>• Gyūdon (3 chaînes)</span>
                 <span>• Ramen (4 chaînes)</span>
                 <span>• Kaiten-zushi (3 chaînes)</span>
                 <span>• Curry japonais (3 chaînes)</span>
                 <span>• Tempura (2 chaînes)</span>
-                <span>• Udon/Soba (2 chaînes)</span>
+                <span>• Udon/Soba (4 chaînes)</span>
                 <span>• Family restaurants (3 chaînes)</span>
                 <span>• Burgers japonais (3 chaînes)</span>
                 <span>• Cuisine chinoise (3 chaînes)</span>
@@ -202,9 +208,9 @@ export default function AProposPage() {  return (
                 dans nos recherches, traductions et recommandations.
               </p>
             </div>
-          </div>
-        </div>
+          </div>        </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

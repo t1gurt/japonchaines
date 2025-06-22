@@ -239,8 +239,7 @@ export default function ChainesPage() {
       description: 'Grande chaîne d\'izakaya avec formules à volonté et ambiance conviviale.',
       popularity: 'Populaire',
       avgPrice: '2500-4000¥'
-    },
-    {
+    },    {
       slug: 'yoshinoya',
       name: 'Yoshinoya',
       nameJp: '吉野家',
@@ -248,12 +247,29 @@ export default function ChainesPage() {
       description: 'Pionnier du gyudon depuis 1899, ouvert 24h/24 dans tout le Japon.',
       popularity: 'Très populaire',
       avgPrice: '300-600¥'
-    }  ];
+    },
+    {
+      slug: 'fuji-soba',
+      name: 'Fuji Soba',
+      nameJp: '富士そば',
+      category: 'Udon/Soba',
+      description: 'Chaîne de nouilles soba et udon rapide, populaire pour les en-cas et repas légers.',
+      popularity: 'Populaire',
+      avgPrice: '300-700¥'
+    },
+    {
+      slug: 'hanamaru-udon',
+      name: 'Hanamaru Udon',
+      nameJp: 'はなまるうどん',
+      category: 'Udon',
+      description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',
+      popularity: 'Très populaire',
+      avgPrice: '200-500¥'
+    }];
 
   // State for search and filtering
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('Tous');
-
   const categories = [
     'Tous',
     'Gyudon',
@@ -265,6 +281,7 @@ export default function ChainesPage() {
     'Cuisine Chinoise',
     'Fast Food',
     'Udon',
+    'Udon/Soba',
     'Italien',
     'Izakaya',
     'Champon/Ramen',

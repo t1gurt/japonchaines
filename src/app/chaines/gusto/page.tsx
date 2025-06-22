@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, Coffee, ShoppingCart } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function GustoPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function GustoPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="gusto" chainCategory="family-restaurants" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -522,12 +526,12 @@ export default function GustoPage() {  return (
                 <a href="/chaines/jonathans" 
                    className="block text-orange-600 hover:text-orange-700 text-sm">
                   → Découvrir Jonathan's
-                </a>
-              </div>
+                </a>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

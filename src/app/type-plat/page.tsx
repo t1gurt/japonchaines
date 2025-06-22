@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
+import CategoryViewTracker from '../../components/CategoryViewTracker';
 
-export default function TypePlatPage() {  // Fonction pour obtenir le bon lien pour chaque type de plat
+export default function TypePlatPage() {// Fonction pour obtenir le bon lien pour chaque type de plat
   const getImplementationPath = (id: string) => {    const implementedPages: { [key: string]: string } = {
       'gyudon': '/type-plat/gyudon',
       'ramen': '/type-plat/ramen', 
@@ -124,9 +125,10 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       color: "bg-amber-600",
       icon: "🍻"
     }
-  ];
-  return (
-    <div className="min-h-screen bg-gray-50">
+  ];  return (
+    <>
+      <CategoryViewTracker categoryName="type-plat-overview" />
+      <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -234,13 +236,13 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
               Guide de Commande
             </Link>
             <Link 
-              href="/guides/culture-etiquette"
-              className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
+              href="/guides/culture-etiquette"              className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
             >
               Culture & Étiquette
             </Link>
           </div>
         </div>      </section>
-    </div>
+      </div>
+    </>
   );
 }

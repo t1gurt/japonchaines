@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Smartphone, Zap, DollarSign } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function HamaSushiPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function HamaSushiPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="hama-sushi" chainCategory="kaiten-zushi" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -460,12 +464,12 @@ export default function HamaSushiPage() {  return (
                 <a href="/chaines/kura-sushi" 
                    className="block text-orange-600 hover:text-orange-700 text-sm">
                   → Comparer avec Kura Sushi
-                </a>
-              </div>
+                </a>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

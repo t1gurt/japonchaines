@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, Users, History, Zap } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function FujiSobaPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function FujiSobaPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="fuji-soba" chainCategory="udon-soba" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -309,12 +313,12 @@ export default function FujiSobaPage() {  return (
                 </Link>
                 <Link href="/chaines/hanamaru-udon" className="block p-3 rounded border hover:bg-gray-50">
                   <div className="font-medium">Hanamaru Udon</div>
-                  <div className="text-sm text-gray-600">Udon self-service</div>
-                </Link>
+                  <div className="text-sm text-gray-600">Udon self-service</div>                </Link>
               </div>
             </div>
           </div>
         </div>      </div>
     </div>
+    </>
   );
 }

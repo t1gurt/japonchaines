@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
 export default function CocoIchibanyaPage() {
   const menuCategories = [
@@ -229,10 +230,11 @@ export default function CocoIchibanyaPage() {
         { french: "C'est végétarien ?", japanese: "ベジタリアン対応ですか？", romaji: "Bejitarian taiō desu ka?" },
         { french: "Combien de temps d'attente ?", japanese: "どのくらい待ちますか？", romaji: "Dono kurai machimasu ka?" }
       ]
-    }
-  ];
+    }  ];
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
+    <>
+      <ChainViewTracker chainName="coco-ichibanya" chainCategory="curry" />
+      <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -854,10 +856,10 @@ export default function CocoIchibanyaPage() {
               <p className="text-sm text-gray-600">
                 Alliance avec Haus Foods pour sécuriser la chaîne d'approvisionnement
               </p>
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </section>
     </div>
+    </>
   );
 }

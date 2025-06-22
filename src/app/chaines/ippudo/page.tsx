@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Globe, Flame, ChefHat } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function IppudoPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function IppudoPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="ippudo" chainCategory="ramen" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -444,12 +448,12 @@ export default function IppudoPage() {  return (
                 <a href="/chaines/ichiran" 
                    className="block text-orange-600 hover:text-orange-700 text-sm">
                   → Comparer avec Ichiran
-                </a>
-              </div>
+                </a>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

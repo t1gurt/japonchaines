@@ -19,23 +19,26 @@ export const pageview = (url: string) => {
   }
 };
 
-// イベントを送信
+// イベントを送信（GA4カスタムパラメータ対応）
 export const event = ({
   action,
   category,
   label,
   value,
+  custom_parameters,
 }: {
   action: string;
   category: string;
   label?: string;
   value?: number;
+  custom_parameters?: Record<string, any>;
 }) => {
   if (typeof window !== 'undefined' && window.gtag && GA_TRACKING_ID) {
     window.gtag('event', action, {
       event_category: category,
       event_label: label,
       value: value,
+      ...custom_parameters,
     });
   }
 };

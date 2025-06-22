@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Leaf, Heart, AlertTriangle, CheckCircle, XCircle, Info, Users, Globe } from 'lucide-react';
+import GuideViewTracker from '../../../components/GuideViewTracker';
 
 export default function RegimesAlimentairesPage() {
   const dietaryGuides = [
@@ -61,9 +62,10 @@ export default function RegimesAlimentairesPage() {
     { jp: '落花生', fr: 'Cacahuètes', en: 'Peanuts' },
     { jp: 'えび', fr: 'Crevettes', en: 'Shrimp' },
     { jp: 'かに', fr: 'Crabe', en: 'Crab' }
-  ];
-  return (
-    <div className="min-h-screen bg-gray-50">
+  ];  return (
+    <>
+      <GuideViewTracker guideName="regimes-alimentaires" />
+      <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -92,10 +94,9 @@ export default function RegimesAlimentairesPage() {
               <div className="flex items-center space-x-2">
                 <Users className="w-5 h-5" />
                 <span>Pour tous les régimes</span>
-              </div>
-              <div className="flex items-center space-x-2">
+              </div>              <div className="flex items-center space-x-2">
                 <Globe className="w-5 h-5" />
-                <span>27 chaînes analysées</span>
+                <span>29 chaînes analysées</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
@@ -293,12 +294,19 @@ export default function RegimesAlimentairesPage() {
                   <span className="font-medium text-gray-800">Comment commander</span>
                   <span className="text-gray-500">→</span>
                 </Link>
-                
-                <Link
+                  <Link
                   href="/guides/culture-etiquette"
                   className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <span className="font-medium text-gray-800">Culture & étiquette</span>
+                  <span className="text-gray-500">→</span>
+                </Link>
+                
+                <Link
+                  href="/guides/articles"
+                  className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <span className="font-medium text-gray-800">Articles de Fond</span>
                   <span className="text-gray-500">→</span>
                 </Link>
                 
@@ -310,10 +318,10 @@ export default function RegimesAlimentairesPage() {
                   <span className="text-gray-500">→</span>
                 </Link>
               </div>
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
