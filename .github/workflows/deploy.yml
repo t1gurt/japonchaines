@@ -40,6 +40,14 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Clean up conflicting config files
+        run: |
+          if [ -f "next.config.js" ]; then
+            echo "Removing conflicting next.config.js file"
+            rm next.config.js
+          fi
+          echo "Using next.config.ts"
+
       - name: Build with Next.js
         run: npm run build
         env:
@@ -57,10 +65,14 @@ jobs:
             find docs -type f | wc -l
           else
             echo "docs folder not found"
+            echo "Checking .next folder:"
+            if [ -d ".next" ]; then
+              echo ".next folder found, listing contents:"
+              ls -la .next/
+            fi
             echo "Available directories:"
             ls -la | grep "^d"
           fi
-        if: github.ref == 'refs/heads/main'
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

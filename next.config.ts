@@ -13,12 +13,12 @@ const nextConfig: NextConfig = {
   assetPrefix: basePath,
   basePath: basePath,
   distDir: 'docs',
-  // ESLintとTypeScriptチェックを無効化してビルドを高速化
+  // ESLintとTypeScriptチェックを有効化（警告のみ）
   eslint: {
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
 };
 

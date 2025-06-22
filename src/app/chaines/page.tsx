@@ -5,7 +5,11 @@ import { useState, useMemo } from 'react';
 import { Search, Star, TrendingUp, Clock, MapPin } from 'lucide-react';
 
 export default function ChainesPage() {
-  const chains = [
+  // State for search and filtering
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('Tous');
+
+  const chains = useMemo(() => [
     {
       slug: 'bamiyan',
       name: 'Bamiyan',
@@ -262,14 +266,10 @@ export default function ChainesPage() {
       name: 'Hanamaru Udon',
       nameJp: 'はなまるうどん',
       category: 'Udon',
-      description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',
-      popularity: 'Très populaire',
+      description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',      popularity: 'Très populaire',
       avgPrice: '200-500¥'
-    }];
+    }], []);
 
-  // State for search and filtering
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('Tous');
   const categories = [
     'Tous',
     'Gyudon',
