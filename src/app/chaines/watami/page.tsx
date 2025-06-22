@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Leaf, Heart, Globe } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function WatamiPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function WatamiPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="watami" chainCategory="izakaya" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -563,12 +567,12 @@ export default function WatamiPage() {  return (
                 <a href="/chaines/shirokiya" 
                    className="block text-orange-600 hover:text-orange-700 text-sm">
                   → Comparer avec Shirokiya
-                </a>
-              </div>
+                </a>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

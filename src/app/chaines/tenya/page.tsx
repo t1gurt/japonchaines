@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History, Zap } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function TenyaPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function TenyaPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="tenya" chainCategory="tempura" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -692,12 +696,12 @@ export default function TenyaPage() {  return (
                 >
                   <div className="font-medium text-gray-900">Daikokuya</div>
                   <div className="text-sm text-gray-600">L&apos;inventeur de la tempura</div>
-                </Link>
-              </div>
+                </Link>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

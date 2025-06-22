@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Zap, Smartphone, Truck } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function BamiyanPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function BamiyanPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="bamiyan" chainCategory="cuisine-chinoise" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -562,12 +566,12 @@ export default function BamiyanPage() {  return (
                 <a href="/chaines/ringer-hut" 
                    className="block text-orange-600 hover:text-orange-700 text-sm">
                   → Comparer avec Ringer Hut
-                </a>
-              </div>
+                </a>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

@@ -1,8 +1,12 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History, MapIcon } from 'lucide-react';
+import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export default function SaizeriyaPage() {  return (
-    <div className="min-h-screen bg-gray-50">
+export default function SaizeriyaPage() {
+  return (
+    <>
+      <ChainViewTracker chainName="saizeriya" chainCategory="family-restaurants" />
+      <div className="min-h-screen bg-gray-50">
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -717,12 +721,12 @@ export default function SaizeriyaPage() {  return (
                 >
                   <div className="font-medium text-gray-900">Skylark</div>
                   <div className="text-sm text-gray-600">Le pionnier du genre</div>
-                </Link>
-              </div>
+                </Link>              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }
