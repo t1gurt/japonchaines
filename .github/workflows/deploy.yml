@@ -2,9 +2,9 @@ name: Deploy Next.js to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, development ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, development ]
 
 # GitHub Pagesへのデプロイに必要な権限を設定
 permissions:
@@ -45,10 +45,29 @@ jobs:
         env:
           GITHUB_PAGES: true
 
+      - name: List build output
+        run: |
+          echo "Listing current directory:"
+          ls -la
+          echo "Checking if docs folder exists:"
+          if [ -d "docs" ]; then
+            echo "docs folder found, listing contents:"
+            ls -la docs/
+            echo "Total files in docs:"
+            find docs -type f | wc -l
+          else
+            echo "docs folder not found"
+            echo "Available directories:"
+            ls -la | grep "^d"
+          fi
+        if: github.ref == 'refs/heads/main'
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./docs
+        # mainブランチでのみアーティファクトをアップロード
+        if: github.ref == 'refs/heads/main'
 
   deploy:
     environment:
@@ -56,6 +75,8 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
+    # mainブランチでのみデプロイを実行
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
