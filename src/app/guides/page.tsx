@@ -32,15 +32,14 @@ export default function GuidesPage() {
         'Guide des allergènes',
         'Conseils par chaîne de restaurant'
       ]
-    },
-    {
+    },    {
       id: 'culture-etiquette',
       title: 'Culture & Étiquette',
       subtitle: 'Découvrez les codes culturels japonais',
       description: 'Apprenez les bonnes manières, le vocabulaire culinaire et les traditions pour une expérience authentique.',
       icon: Globe,
       color: 'blue',
-      available: false,
+      available: true,
       highlights: [
         'Glossaire de la cuisine japonaise',
         'Étiquette au restaurant',
@@ -55,7 +54,7 @@ export default function GuidesPage() {
       description: 'Articles approfondis sur l\'histoire des plats, comparaisons entre chaînes et secrets de la gastronomie japonaise.',
       icon: Book,
       color: 'purple',
-      available: false,
+      available: true,
       highlights: [
         'Histoire du ramen',
         'Secrets du dashi',
