@@ -297,7 +297,7 @@ export default function RamenPage() {  const ramenChains = [
           
           <div className="mt-8 text-center">
             <Link 
-              href="/guides/commander"
+              href="/guides/comment-commander"
               className="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors inline-block"
             >
               Guide Complet de Commande

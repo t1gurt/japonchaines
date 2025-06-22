@@ -527,7 +527,7 @@ export default function CocoIchibanyaPage() {
               <p className="text-gray-600">Découvrez CoCo壱番屋, Go!Go!Curry et plus</p>
             </Link>
             
-            <Link href="/guides/commander" className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group">
+            <Link href="/guides/comment-commander" className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group">
               <div className="text-4xl mb-4">📋</div>
               <h3 className="text-xl font-semibold mb-2 group-hover:text-orange-600">
                 Guide de Commande
@@ -535,7 +535,7 @@ export default function CocoIchibanyaPage() {
               <p className="text-gray-600">Maîtrisez l'art de commander au Japon</p>
             </Link>
             
-            <Link href="/guides/regimes" className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group">
+            <Link href="/guides/regimes-alimentaires" className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow group">
               <div className="text-4xl mb-4">🌱</div>
               <h3 className="text-xl font-semibold mb-2 group-hover:text-orange-600">
                 Régimes Alimentaires

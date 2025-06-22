@@ -189,24 +189,7 @@ export default function GuidesPage() {
                 </div>
               </div>
             );
-          })}
-        </div>
-
-        {/* Help Section */}
-        <div className="bg-white rounded-2xl shadow-lg p-8 mt-12">
-          <div className="text-center">
-            <HelpCircle className="h-12 w-12 text-red-600 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Besoin d'Aide ?</h2>            <p className="text-gray-700 mb-6">
-              Ces guides couvrent la plupart des situations que vous rencontrerez dans les restaurants japonais !
-            </p>
-            <Link 
-              href="/a-propos"
-              className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
-            >
-              En savoir plus
-            </Link>
-          </div>
-        </div>
+          })}        </div>
       </div>
     </div>
   );

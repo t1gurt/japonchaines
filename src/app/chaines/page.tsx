@@ -1,4 +1,7 @@
+'use client';
+
 import Link from 'next/link';
+import { useState, useMemo } from 'react';
 import { Search, Star, TrendingUp, Clock, MapPin } from 'lucide-react';
 
 export default function ChainesPage() {
@@ -245,8 +248,11 @@ export default function ChainesPage() {
       description: 'Pionnier du gyudon depuis 1899, ouvert 24h/24 dans tout le Japon.',
       popularity: 'Très populaire',
       avgPrice: '300-600¥'
-    }
-  ];
+    }  ];
+
+  // State for search and filtering
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('Tous');
 
   const categories = [
     'Tous',
@@ -262,9 +268,23 @@ export default function ChainesPage() {
     'Italien',
     'Izakaya',
     'Champon/Ramen',
-    'Tempura',
-    'Yakitori'
+    'Tempura',    'Yakitori'
   ];
+
+  // Filtered chains based on search and category
+  const filteredChains = useMemo(() => {
+    return chains.filter(chain => {
+      const matchesSearch = searchTerm === '' || 
+        chain.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        chain.nameJp.includes(searchTerm) ||
+        chain.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        chain.description.toLowerCase().includes(searchTerm.toLowerCase());
+      
+      const matchesCategory = selectedCategory === 'Tous' || chain.category === selectedCategory;
+      
+      return matchesSearch && matchesCategory;
+    });
+  }, [searchTerm, selectedCategory, chains]);
 
   const getPopularityBadge = (popularity: string) => {
     switch (popularity) {
@@ -296,18 +316,20 @@ export default function ChainesPage() {
           <div className="text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
               Chaînes de Restaurants Japonais
-            </h1>
-            <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
-              Découvrez les {chains.length} principales chaînes de restaurants japonais avec leurs spécialités, 
+            </h1>            <p className="text-xl text-gray-600 mb-6 max-w-3xl mx-auto">
+              Découvrez les {filteredChains.length} chaînes de restaurants japonais 
+              {selectedCategory !== 'Tous' ? ` spécialisées en ${selectedCategory}` : ''} 
+              {searchTerm ? ` correspondant à "${searchTerm}"` : ''} avec leurs spécialités, 
               prix et conseils pour commander en toute confiance.
             </p>
-            
-            {/* Search Bar */}
+              {/* Search Bar */}
             <div className="max-w-md mx-auto relative">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
               <input
                 type="text"
                 placeholder="Rechercher une chaîne..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
               />
             </div>
@@ -317,13 +339,13 @@ export default function ChainesPage() {
 
       {/* Filters */}
       <div className="bg-white border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex flex-wrap gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">          <div className="flex flex-wrap gap-2">
             {categories.map((category) => (
               <button
                 key={category}
+                onClick={() => setSelectedCategory(category)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  category === 'Tous'
+                  category === selectedCategory
                     ? 'bg-red-600 text-white'
                     : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                 }`}
@@ -333,12 +355,30 @@ export default function ChainesPage() {
             ))}
           </div>
         </div>
-      </div>
-
-      {/* Chains Grid */}
+      </div>      {/* Chains Grid */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {chains.map((chain) => (
+        {filteredChains.length === 0 ? (
+          <div className="text-center py-12">
+            <div className="text-6xl mb-4">🔍</div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Aucune chaîne trouvée
+            </h3>
+            <p className="text-gray-600 mb-4">
+              Essayez de modifier votre recherche ou vos filtres
+            </p>
+            <button
+              onClick={() => {
+                setSearchTerm('');
+                setSelectedCategory('Tous');
+              }}
+              className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+            >
+              Réinitialiser les filtres
+            </button>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredChains.map((chain) => (
             <Link
               key={chain.slug}
               href={`/chaines/${chain.slug}`}
@@ -381,25 +421,24 @@ export default function ChainesPage() {
                   </div>
                   <span className="text-sm font-semibold text-gray-900">
                     {chain.avgPrice}
-                  </span>
-                </div>
+                  </span>                </div>
               </div>
             </Link>
           ))}
         </div>
+        )}
       </div>
 
       {/* Stats Section */}
       <div className="bg-gray-100 border-t">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-red-600 mb-2">{chains.length}</div>
               <div className="text-gray-600">Chaînes référencées</div>
             </div>
             <div>
-              <div className="text-3xl font-bold text-red-600 mb-2">15</div>
-              <div className="text-gray-600">Types de cuisine</div>
+              <div className="text-3xl font-bold text-red-600 mb-2">{filteredChains.length}</div>
+              <div className="text-gray-600">Affichées actuellement</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-red-600 mb-2">100%</div>

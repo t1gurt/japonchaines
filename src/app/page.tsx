@@ -111,22 +111,21 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Comment Commander",
-                description: "Maîtrisez les distributeurs de tickets, écrans tactiles et commandes QR code",
+                title: "Comment Commander",                description: "Maîtrisez les distributeurs de tickets, écrans tactiles et commandes QR code",
                 icon: "🎫",
-                href: "/guides/commander"
+                href: "/guides/comment-commander"
               },
               {
                 title: "Régimes Alimentaires",
                 description: "Guide complet pour végétariens, vegans, sans porc et allergies",
                 icon: "🥗",
-                href: "/guides/regimes"
+                href: "/guides/regimes-alimentaires"
               },
               {
                 title: "Culture & Étiquette",
                 description: "Apprenez les bonnes manières et la culture culinaire japonaise",
                 icon: "🙏",
-                href: "/guides/culture"
+                href: "/guides/culture-etiquette"
               }
             ].map((guide) => (
               <Link 

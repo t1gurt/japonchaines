@@ -228,13 +228,13 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
-              href="/guides/commander"
+              href="/guides/comment-commander"
               className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
             >
               Guide de Commande
             </Link>
             <Link 
-              href="/guides/culture"
+              href="/guides/culture-etiquette"
               className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
             >
               Culture & Étiquette
