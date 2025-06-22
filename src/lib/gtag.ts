@@ -1,5 +1,5 @@
 // Google Analytics 4 (GA4) 設定
-export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || '';
+export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_TRACKING_ID || '';
 
 // GA4が有効かどうかを確認
 export const isProduction = process.env.NODE_ENV === 'production';

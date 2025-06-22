@@ -57,7 +57,7 @@ export const metadata: Metadata = {
   },
   verification: {
     // Google Search Console verification tag (実際の値に置き換えてください)
-    google: process.env.GOOGLE_SITE_VERIFICATION,
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
   },
 };
 
