@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
+import GoogleAdSense from "@/components/GoogleAdSense";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import StructuredData from "@/components/StructuredData";
 import { generateWebsiteSchema } from "@/lib/structured-data";
@@ -70,6 +71,9 @@ export default function RootLayout({
   
   return (
     <html lang="fr">
+      <head>
+        <GoogleAdSense />
+      </head>
       <body
         className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}
       >
