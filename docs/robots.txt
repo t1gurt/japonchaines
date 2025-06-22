@@ -5,4 +5,4 @@ Disallow: /_next/
 Disallow: /admin/
 Disallow: *.json
 
-Sitemap: https://japonchaines.net/sitemap.xml
+Sitemap: https://www.japonchaines.net/sitemap.xml
