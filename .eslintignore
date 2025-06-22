@@ -1,0 +1,6 @@
+# ESLintを無効化
+*
+**/*
+src/
+.next/
+node_modules/
