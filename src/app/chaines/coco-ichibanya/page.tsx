@@ -231,25 +231,9 @@ export default function CocoIchibanyaPage() {
       ]
     }
   ];
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-amber-50 to-orange-100">
-      {/* Header */}
-      <header className="bg-white shadow-sm border-b-2 border-orange-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <div className="flex items-center justify-between">
-            <Link href="/" className="flex items-center space-x-3">
-              <span className="text-2xl">🍛</span>
-              <span className="text-xl font-bold text-gray-900">Chaînes Japonaises</span>
-            </Link>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/type-plat" className="text-gray-600 hover:text-orange-600 font-medium">Types de Plats</Link>
-              <Link href="/chaines" className="text-gray-600 hover:text-orange-600 font-medium">Toutes les Chaînes</Link>
-              <Link href="/guides" className="text-gray-600 hover:text-orange-600 font-medium">Guides</Link>
-            </nav>
-          </div>
-        </div>
-      </header>      {/* Hero Section */}
+      {/* Hero Section */}
       <section className="bg-gradient-to-r from-orange-600 to-red-600 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">

@@ -1,28 +1,8 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History, Zap } from 'lucide-react';
 
-export default function TenyaPage() {
-  return (
+export default function TenyaPage() {  return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-orange-600">🍜 Japonchaines</span>
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/type-plat" className="text-gray-700 hover:text-orange-600">
-                Par Type de Plat
-              </Link>
-              <Link href="/chaines" className="text-gray-700 hover:text-orange-600">
-                Par Chaîne
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

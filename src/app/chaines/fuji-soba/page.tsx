@@ -1,37 +1,8 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, Users, History, Zap } from 'lucide-react';
 
-export default function FujiSobaPage() {
-  return (
+export default function FujiSobaPage() {  return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-orange-600">🍜 Japonchaines</span>
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/type-plat" className="text-gray-700 hover:text-orange-600">
-                Par Type de Plat
-              </Link>
-              <Link href="/chaines" className="text-gray-700 hover:text-orange-600">
-                Par Chaîne
-              </Link>
-              <Link href="/guides" className="text-gray-700 hover:text-orange-600">
-                Guides Pratiques
-              </Link>
-              <Link href="/a-propos" className="text-gray-700 hover:text-orange-600">
-                À Propos
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-orange-600">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Header avec retour */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -370,10 +341,8 @@ export default function FujiSobaPage() {
             </div>
             
             <div>
-              <h3 className="text-lg font-semibold mb-4">À Propos</h3>
-              <ul className="space-y-2">
+              <h3 className="text-lg font-semibold mb-4">À Propos</h3>              <ul className="space-y-2">
                 <li><Link href="/a-propos" className="text-gray-300 hover:text-orange-500">Notre Mission</Link></li>
-                <li><Link href="/contact" className="text-gray-300 hover:text-orange-500">Contact</Link></li>
               </ul>
             </div>
           </div>

@@ -1,21 +1,8 @@
 import Link from 'next/link';
 import { ArrowLeft, Heart, Users, Globe, Target, BookOpen, Star } from 'lucide-react';
 
-export default function AProposPage() {
-  return (
+export default function AProposPage() {  return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
-      {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-red-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2 text-red-600 hover:text-red-700 transition-colors">
-              <ArrowLeft className="h-5 w-5" />
-              <span className="font-medium">Retour à l'accueil</span>
-            </Link>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black/20"></div>

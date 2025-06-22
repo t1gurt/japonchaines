@@ -114,37 +114,8 @@ export default function GlossairePage() {
     { jp: '持ち帰り', romaji: 'mochikaeri', fr: 'à emporter', note: 'Take away' },
     { jp: '食べ放題', romaji: 'tabehōdai', fr: 'à volonté', note: 'Buffet illimité' }
   ];
-
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-red-600">🍜 Chain Japanese Restaurants</span>
-            </Link>
-            <div className="hidden md:flex space-x-8">
-              <Link href="/type-plat" className="text-gray-700 hover:text-red-600">
-                Par Type de Plat
-              </Link>
-              <Link href="/chaines" className="text-gray-700 hover:text-red-600">
-                Par Chaîne A-Z
-              </Link>
-              <Link href="/guides" className="text-red-600 font-medium">
-                Guides Pratiques
-              </Link>
-              <Link href="/a-propos" className="text-gray-700 hover:text-red-600">
-                À Propos
-              </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-red-600">
-                Contact
-              </Link>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Breadcrumb */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">

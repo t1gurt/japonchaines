@@ -4,39 +4,6 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header Navigation */}
-      <header className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex items-center">
-              <h1 className="text-2xl font-bold text-red-600">
-                Chain Japanese Restaurants
-              </h1>
-              <span className="ml-2 text-sm text-gray-500 japanese-text">
-                日本のチェーン飲食店
-              </span>
-            </div>
-            <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-gray-900 hover:text-red-600 font-medium">
-                Accueil
-              </Link>
-              <Link href="/type-plat" className="text-gray-600 hover:text-red-600">
-                Par Type de Plat
-              </Link>
-              <Link href="/chaines" className="text-gray-600 hover:text-red-600">
-                Par Chaîne A-Z
-              </Link>
-              <Link href="/guides" className="text-gray-600 hover:text-red-600">
-                Guides Pratiques
-              </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-red-600">
-                Contact
-              </Link>
-            </nav>
-          </div>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-red-50 to-orange-50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -203,10 +170,8 @@ export default function Home() {
               </ul>
             </div>
             <div>
-              <h5 className="font-semibold mb-4">À Propos</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
+              <h5 className="font-semibold mb-4">À Propos</h5>              <ul className="space-y-2 text-sm text-gray-400">
                 <li><Link href="/a-propos" className="hover:text-white">Notre Mission</Link></li>
-                <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
               </ul>
             </div>
           </div>

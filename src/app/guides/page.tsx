@@ -97,21 +97,8 @@ export default function GuidesPage() {
     };
     return colorMap[color as keyof typeof colorMap];
   };
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
-      {/* Navigation */}
-      <nav className="bg-white/80 backdrop-blur-md border-b border-red-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2 text-red-600 hover:text-red-700 transition-colors">
-              <ArrowLeft className="h-5 w-5" />
-              <span className="font-medium">Retour à l'accueil</span>
-            </Link>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -209,15 +196,14 @@ export default function GuidesPage() {
         <div className="bg-white rounded-2xl shadow-lg p-8 mt-12">
           <div className="text-center">
             <HelpCircle className="h-12 w-12 text-red-600 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Besoin d'Aide ?</h2>
-            <p className="text-gray-700 mb-6">
-              Ces guides ne répondent pas à votre question ? Nous sommes là pour vous aider !
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Besoin d'Aide ?</h2>            <p className="text-gray-700 mb-6">
+              Ces guides couvrent la plupart des situations que vous rencontrerez dans les restaurants japonais !
             </p>
             <Link 
-              href="/contact"
+              href="/a-propos"
               className="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
-              Nous contacter
+              En savoir plus
             </Link>
           </div>
         </div>

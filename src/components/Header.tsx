@@ -56,19 +56,8 @@ export default function Header() {
                 isActivePath('/a-propos') 
                   ? 'text-red-600 font-medium' 
                   : 'text-gray-700 hover:text-red-600'
-              }`}
-            >
+              }`}            >
               À Propos
-            </Link>
-            <Link 
-              href="/contact" 
-              className={`transition-colors ${
-                isActivePath('/contact') 
-                  ? 'text-red-600 font-medium' 
-                  : 'text-gray-700 hover:text-red-600'
-              }`}
-            >
-              Contact
             </Link>
           </div>
         </div>
