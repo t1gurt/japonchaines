@@ -149,16 +149,15 @@ export default function AProposPage() {  return (
         {/* Coverage */}
         <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl p-8 mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6 text-center">Notre Couverture Complète</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">27 Chaînes Documentées</h3>
+          <div className="grid md:grid-cols-2 gap-8">            <div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">29 Chaînes Documentées</h3>
               <div className="grid grid-cols-2 gap-2 text-sm text-gray-700">
                 <span>• Gyūdon (3 chaînes)</span>
                 <span>• Ramen (4 chaînes)</span>
                 <span>• Kaiten-zushi (3 chaînes)</span>
                 <span>• Curry japonais (3 chaînes)</span>
                 <span>• Tempura (2 chaînes)</span>
-                <span>• Udon/Soba (2 chaînes)</span>
+                <span>• Udon/Soba (4 chaînes)</span>
                 <span>• Family restaurants (3 chaînes)</span>
                 <span>• Burgers japonais (3 chaînes)</span>
                 <span>• Cuisine chinoise (3 chaînes)</span>

@@ -94,10 +94,9 @@ export default function RegimesAlimentairesPage() {
               <div className="flex items-center space-x-2">
                 <Users className="w-5 h-5" />
                 <span>Pour tous les régimes</span>
-              </div>
-              <div className="flex items-center space-x-2">
+              </div>              <div className="flex items-center space-x-2">
                 <Globe className="w-5 h-5" />
-                <span>27 chaînes analysées</span>
+                <span>29 chaînes analysées</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />
