@@ -302,11 +302,10 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
                 <li><Link href="/guides/regimes" className="hover:text-white">Régimes Alimentaires</Link></li>
                 <li><Link href="/guides/culture" className="hover:text-white">Culture & Étiquette</Link></li>
               </ul>
-            </div>
-            <div>
+            </div>            <div>
               <h5 className="font-semibold mb-4">À Propos</h5>
               <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/mission" className="hover:text-white">Notre Mission</Link></li>
+                <li><Link href="/a-propos" className="hover:text-white">Notre Mission</Link></li>
                 <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
               </ul>
             </div>
