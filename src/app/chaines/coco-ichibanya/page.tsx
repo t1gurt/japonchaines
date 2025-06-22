@@ -542,50 +542,8 @@ export default function CocoIchibanyaPage() {
               </h3>
               <p className="text-gray-600">Options végétariennes et restrictions</p>
             </Link>
-          </div>
-        </div>
+          </div>        </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h5 className="font-semibold mb-4">Types de Plats</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/type-plat/gyudon" className="hover:text-white">Gyūdon</Link></li>
-                <li><Link href="/type-plat/ramen" className="hover:text-white">Ramen</Link></li>
-                <li><Link href="/type-plat/curry" className="hover:text-white">Curry</Link></li>
-                <li><Link href="/type-plat/kaiten-zushi" className="hover:text-white">Sushi</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Chaînes Populaires</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><span className="hover:text-white">CoCo壱番屋</span></li>
-                <li><Link href="/chaines/yoshinoya" className="hover:text-white">Yoshinoya</Link></li>
-                <li><Link href="/chaines/sushiro" className="hover:text-white">Sushiro</Link></li>
-                <li><Link href="/chaines/marugame-seimen" className="hover:text-white">Marugame Seimen</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Guides</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/guides/commander" className="hover:text-white">Comment Commander</Link></li>
-                <li><Link href="/guides/regimes" className="hover:text-white">Régimes Alimentaires</Link></li>
-                <li><Link href="/guides/culture" className="hover:text-white">Culture & Étiquette</Link></li>
-              </ul>
-            </div>            <div>
-              <h5 className="font-semibold mb-4">À Propos</h5>              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/a-propos" className="hover:text-white">Notre Mission</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Chain Japanese Restaurants. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
 
       {/* Histoire et Philosophie */}
       <section className="py-16 bg-gradient-to-br from-amber-50 to-yellow-50">

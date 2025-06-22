@@ -588,50 +588,7 @@ export default function IzakayaPage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Chain Japanese Restaurants</h4>
-              <p className="text-gray-400 text-sm">
-                Votre guide français complet pour les chaînes de restaurants japonais.
-              </p>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Plats Izakaya</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><span className="hover:text-white">Yakitori</span></li>
-                <li><span className="hover:text-white">Edamame</span></li>
-                <li><span className="hover:text-white">Karaage</span></li>
-                <li><span className="hover:text-white">Takoyaki</span></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Chaînes Izakaya</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/chaines/torikizoku" className="hover:text-white">Torikizoku</Link></li>
-                <li><Link href="/chaines/shirokiya" className="hover:text-white">Shirokiya</Link></li>
-                <li><Link href="/chaines/watami" className="hover:text-white">Watami</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Culture Izakaya</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><span className="hover:text-white">Kanpai Etiquette</span></li>
-                <li><span className="hover:text-white">Nomihōdai System</span></li>
-                <li><span className="hover:text-white">Otōshi Tradition</span></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Chain Japanese Restaurants. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+        </div>      </section>
     </div>
   );
 }

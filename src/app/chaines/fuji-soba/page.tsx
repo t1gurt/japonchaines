@@ -314,44 +314,7 @@ export default function FujiSobaPage() {  return (
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12 mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-4">
-                <span className="text-xl font-bold text-orange-500">🍜 Japonchaines</span>
-              </div>
-              <p className="text-gray-300 mb-4">
-                Votre guide complet des chaînes de restaurants japonais. 
-                Découvrez la culture culinaire du Japon, une chaîne à la fois.
-              </p>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Navigation</h3>
-              <ul className="space-y-2">
-                <li><Link href="/type-plat" className="text-gray-300 hover:text-orange-500">Par Type de Plat</Link></li>
-                <li><Link href="/chaines" className="text-gray-300 hover:text-orange-500">Par Chaîne</Link></li>
-                <li><Link href="/guides" className="text-gray-300 hover:text-orange-500">Guides Pratiques</Link></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-4">À Propos</h3>              <ul className="space-y-2">
-                <li><Link href="/a-propos" className="text-gray-300 hover:text-orange-500">Notre Mission</Link></li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-gray-400">
-            <p>&copy; 2024 Japonchaines. Votre guide des chaînes de restaurants japonais.</p>
-          </div>
-        </div>
-      </footer>
+        </div>      </div>
     </div>
   );
 }

@@ -553,50 +553,7 @@ export default function TempuraTendonPage() {
               </p>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Chain Japanese Restaurants</h4>
-              <p className="text-gray-400 text-sm">
-                Votre guide français complet pour les chaînes de restaurants japonais.
-              </p>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Types de Tempura</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><span className="hover:text-white">Ebi Tempura</span></li>
-                <li><span className="hover:text-white">Yasai Tempura</span></li>
-                <li><span className="hover:text-white">Anago Tempura</span></li>
-                <li><span className="hover:text-white">Kakiage</span></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Chaînes Tempura</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/chaines/tenya" className="hover:text-white">Tenya</Link></li>
-                <li><Link href="/chaines/tsunahachi" className="hover:text-white">Tsunahachi</Link></li>
-                <li><Link href="/chaines/hanafusa" className="hover:text-white">Hanafusa</Link></li>
-              </ul>
-            </div>
-            <div>
-              <h5 className="font-semibold mb-4">Guides</h5>
-              <ul className="space-y-2 text-sm text-gray-400">
-                <li><Link href="/guides/commander" className="hover:text-white">Comment Commander</Link></li>
-                <li><Link href="/guides/regimes" className="hover:text-white">Régimes Alimentaires</Link></li>
-                <li><Link href="/guides/culture" className="hover:text-white">Culture & Étiquette</Link></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 pt-8 mt-8 text-center text-sm text-gray-400">
-            <p>&copy; 2024 Chain Japanese Restaurants. Tous droits réservés.</p>
-          </div>
-        </div>
-      </footer>
+        </div>      </section>
     </div>
   );
 }
