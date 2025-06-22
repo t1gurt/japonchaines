@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { BookOpen, Clock, TrendingUp, Star, ArrowRight, Calendar, Users, Award } from 'lucide-react';
+import GuideViewTracker from '../../../components/GuideViewTracker';
 
 export default function ArticlesPage() {
   const articles = [
@@ -97,9 +98,10 @@ export default function ArticlesPage() {
       description: 'Analyse comportementale de l\'architecture de restauration',
       eta: 'Mars 2025'
     }
-  ];
-  return (
-    <div className="min-h-screen bg-gray-50">
+  ];  return (
+    <>
+      <GuideViewTracker guideName="articles" />
+      <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -298,10 +300,10 @@ export default function ArticlesPage() {
               >
                 Tous les guides
               </Link>
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

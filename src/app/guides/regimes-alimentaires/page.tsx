@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Leaf, Heart, AlertTriangle, CheckCircle, XCircle, Info, Users, Globe } from 'lucide-react';
+import GuideViewTracker from '../../../components/GuideViewTracker';
 
 export default function RegimesAlimentairesPage() {
   const dietaryGuides = [
@@ -61,9 +62,10 @@ export default function RegimesAlimentairesPage() {
     { jp: '落花生', fr: 'Cacahuètes', en: 'Peanuts' },
     { jp: 'えび', fr: 'Crevettes', en: 'Shrimp' },
     { jp: 'かに', fr: 'Crabe', en: 'Crab' }
-  ];
-  return (
-    <div className="min-h-screen bg-gray-50">
+  ];  return (
+    <>
+      <GuideViewTracker guideName="regimes-alimentaires" />
+      <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
       <div className="bg-white border-b">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -310,10 +312,10 @@ export default function RegimesAlimentairesPage() {
                   <span className="text-gray-500">→</span>
                 </Link>
               </div>
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

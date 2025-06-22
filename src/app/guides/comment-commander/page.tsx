@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, Ticket, Monitor, QrCode, MessageCircle, AlertCircle, CheckCircle, Clock } from 'lucide-react';
+import GuideViewTracker from '../../../components/GuideViewTracker';
 
 export default function CommentCommanderPage() {
   const orderingSystems = [
@@ -131,9 +132,10 @@ export default function CommentCommanderPage() {
       green: 'bg-green-50 border-green-200 text-green-600'
     };
     return colorMap[color as keyof typeof colorMap];
-  };
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
+  };  return (
+    <>
+      <GuideViewTracker guideName="comment-commander" />
+      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -329,10 +331,10 @@ export default function CommentCommanderPage() {
               </div>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Entraînez-vous</h3>
               <p className="text-gray-700">Répétez les phrases à voix haute avant votre voyage. La pratique rend confiant.</p>
-            </div>
-          </div>
+            </div>          </div>
         </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

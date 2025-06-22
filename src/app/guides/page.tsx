@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, Book, Utensils, Heart, Globe, ChefHat, HelpCircle } from 'lucide-react';
+import GuideViewTracker from '../../components/GuideViewTracker';
 
 export default function GuidesPage() {
   const guides = [
@@ -96,9 +97,10 @@ export default function GuidesPage() {
       }
     };
     return colorMap[color as keyof typeof colorMap];
-  };
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
+  };  return (
+    <>
+      <GuideViewTracker guideName="guides-overview" />
+      <div className="min-h-screen bg-gradient-to-br from-red-50 via-white to-orange-50">
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 text-white">
         <div className="absolute inset-0 bg-black/20"></div>
@@ -184,13 +186,13 @@ export default function GuidesPage() {
                       <div className="bg-gray-200 text-gray-600 px-8 py-4 rounded-xl font-semibold text-center">
                         En préparation
                       </div>
-                    )}
-                  </div>
+                    )}                  </div>
                 </div>
               </div>
             );
           })}        </div>
       </div>
-    </div>
+      </div>
+    </>
   );
 }
