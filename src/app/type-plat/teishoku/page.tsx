@@ -42,20 +42,19 @@ export default function TeishokuPage() {
       uniqueFeatures: ["Riz illimité", "Prix abordable", "Portions généreuses"],
       atmosphere: "Décontracté familial",
       href: "/chaines/yayoiken"
-    },
-    {
-      name: "Teishoku no Yoshi",
-      japanese: "定食の吉",
-      englishName: "Teishoku no Yoshi",
-      description: "Chaîne spécialisée dans les teishoku authentiques avec un focus sur la cuisine japonaise traditionnelle.",
-      specialties: ["Grilled Fish Teishoku", "Tonkatsu Teishoku", "Chicken Teriyaki", "Seasonal Sets"],
-      priceRange: "¥700-1300",
-      style: "Teishoku authentique",
-      orderingMethod: "Menu papier + service à table",
-      vegetarianOptions: "Quelques options",
-      uniqueFeatures: ["Poisson grillé", "Cuisine authentique", "Atmosphère traditionnelle"],
-      atmosphere: "Traditionnel chaleureux",
-      href: "/chaines/teishoku-no-yoshi"
+    },    {
+      name: "Miyamoto Munashi",
+      japanese: "宮本むなし",
+      englishName: "Miyamoto Munashi",
+      description: "Chaîne de teishoku économique originaire d'Osaka, réputée pour ses portions généreuses à prix abordables.",
+      specialties: ["Teishoku économique", "Katsu Teishoku", "Ginger Pork", "Rice Bowl Sets"],
+      priceRange: "¥400-800",
+      style: "Teishoku économique",
+      orderingMethod: "Tickets + comptoir",
+      vegetarianOptions: "Options très limitées",
+      uniqueFeatures: ["Prix très bas", "Portions XXL", "Service rapide"],
+      atmosphere: "Populaire décontracté",
+      href: "/chaines/miyamoto-munashi"
     }
   ];
 

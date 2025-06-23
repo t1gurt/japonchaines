@@ -120,7 +120,7 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       japanese: "定食",
       description: "Repas complets traditionnels avec riz, soupe et accompagnements",
       detailedDescription: "Les teishoku sont des repas équilibrés composés d'un plat principal, de riz, de soupe miso et de petits accompagnements (tsukemono). C'est l'essence de la cuisine familiale japonaise, nutritive et authentique.",
-      chains: ["Ootoya", "Yayoiken", "Teishoku no Yoshi"],
+      chains: ["Ootoya", "Yayoiken", "Miyamoto Munashi"],
       color: "bg-green-600",
       icon: "🍱"
     },
