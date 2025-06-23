@@ -15,8 +15,7 @@ export default function CuisineChinoisePage() {
       uniqueFeatures: ["Portions généreuses", "Prix famille", "Drink bar"],
       atmosphere: "Restaurant familial",
       href: "/chaines/bamiyan"
-    },
-    {
+    },    {
       name: "Ohsho (Gyoza no Ohsho)",
       japanese: "餃子の王将",
       englishName: "Gyoza no Ohsho",
@@ -28,7 +27,7 @@ export default function CuisineChinoisePage() {
       vegetarianOptions: "Quelques options",
       uniqueFeatures: ["Gyoza fait maison", "Wok cooking", "Authentique"],
       atmosphere: "Restaurant traditionnel",
-      href: "/chaines/ohsho"
+      href: "/chaines/gyoza-no-ohsho"
     },
     {
       name: "Ringer Hut",
