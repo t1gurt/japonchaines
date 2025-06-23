@@ -380,15 +380,14 @@ export default function OotoyaPage() {
             Autres Chaînes de Teishoku
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-6">
-            <Link href="/chaines/yayoiken" className="group bg-yellow-50 p-6 rounded-xl border border-yellow-200 hover:border-yellow-300 transition-colors">
+          <div className="grid md:grid-cols-3 gap-6">            <Link href="/chaines/yayoiken" className="group bg-yellow-50 p-6 rounded-xl border border-yellow-200 hover:border-yellow-300 transition-colors">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-yellow-600 mb-3">Yayoiken</h3>
               <p className="text-gray-600 text-sm">Teishoku populaires avec riz illimité et prix abordables.</p>
             </Link>
             
-            <Link href="/chaines/teishoku-no-yoshi" className="group bg-orange-50 p-6 rounded-xl border border-orange-200 hover:border-orange-300 transition-colors">
-              <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 mb-3">Teishoku no Yoshi</h3>
-              <p className="text-gray-600 text-sm">Teishoku authentiques avec focus sur le poisson grillé traditionnel.</p>
+            <Link href="/chaines/miyamoto-munashi" className="group bg-orange-50 p-6 rounded-xl border border-orange-200 hover:border-orange-300 transition-colors">
+              <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 mb-3">Miyamoto Munashi</h3>
+              <p className="text-gray-600 text-sm">Teishoku économique d'Osaka avec portions généreuses à petit prix.</p>
             </Link>
             
             <Link href="/type-plat/teishoku" className="group bg-green-50 p-6 rounded-xl border border-green-200 hover:border-green-300 transition-colors">

@@ -278,7 +278,7 @@
   - `/type-plat/teishoku`: 正常ビルド
   - `/chaines/ootoya`: 正常ビルド（定食屋個別ページ）
   - `/chaines/yayoiken`: 正常ビルド（定食屋個別ページ）
-  - `/chaines/teishoku-no-yoshi`: 正常ビルド（定食屋個別ページ）
+  - `/chaines/miyamoto-munashi`: 正常ビルド（定食屋個別ページ）
   - sitemapに正しく追加済み
 
 - **サイト統合・ナビゲーション**: ✅ 完了
