@@ -1,8 +1,11 @@
 import Link from 'next/link';
 import { Leaf, Heart, AlertTriangle, CheckCircle, XCircle, Info, Users, Globe } from 'lucide-react';
 import GuideViewTracker from '../../../components/GuideViewTracker';
+import { getTotalChainCount } from '../../../lib/chain-count';
 
 export default function RegimesAlimentairesPage() {
+  const totalChains = getTotalChainCount();
+  
   const dietaryGuides = [
     {
       slug: 'vegetarien-vegan',
@@ -96,7 +99,7 @@ export default function RegimesAlimentairesPage() {
                 <span>Pour tous les régimes</span>
               </div>              <div className="flex items-center space-x-2">
                 <Globe className="w-5 h-5" />
-                <span>29 chaînes analysées</span>
+                <span>{totalChains} chaînes analysées</span>
               </div>
               <div className="flex items-center space-x-2">
                 <CheckCircle className="w-5 h-5 text-green-500" />

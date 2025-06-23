@@ -54,8 +54,7 @@ export default function ChainesPage() {
       description: 'Restaurant familial 24h/24 avec un menu varié de plats occidentaux et japonais.',
       popularity: 'Très populaire',
       avgPrice: '600-1200¥'
-    },
-    {
+    },    {
       slug: 'gyoza-no-ohsho',
       name: 'Gyoza no Ohsho',
       nameJp: '餃子の王将',
@@ -63,6 +62,15 @@ export default function ChainesPage() {
       description: 'Spécialiste des gyoza et plats chinois à prix populaires.',
       popularity: 'Très populaire',
       avgPrice: '400-800¥'
+    },
+    {
+      slug: 'osaka-ohsho',
+      name: 'Osaka Ohsho',
+      nameJp: '大阪王将',
+      category: 'Cuisine Chinoise',
+      description: 'Cuisine chinoise style Osaka avec gyoza croustillants et yakimeshi signature.',
+      popularity: 'Populaire',
+      avgPrice: '500-1300¥'
     },
     {
       slug: 'hama-sushi',
@@ -143,7 +151,15 @@ export default function ChainesPage() {
       category: 'Hamburgers',
       description: 'Burgers japonais avec des ingrédients locaux et des saveurs uniques.',
       popularity: 'Populaire',
-      avgPrice: '600-1200¥'
+      avgPrice: '600-1200¥'    },
+    {
+      slug: 'ootoya',
+      name: 'Ootoya',
+      nameJp: '大戸屋',
+      category: 'Teishoku',
+      description: 'Teishoku haut de gamme avec légumes frais, cuisine visible et présentation soignée.',
+      popularity: 'Populaire',
+      avgPrice: '800-1500¥'
     },
     {
       slug: 'ringer-hut',
@@ -215,7 +231,15 @@ export default function ChainesPage() {
       category: 'Tempura',
       description: 'Spécialiste du tendon (tempura sur riz) rapide et abordable.',
       popularity: 'Populaire',
-      avgPrice: '500-900¥'
+      avgPrice: '500-900¥'    },
+    {
+      slug: 'teishoku-no-yoshi',
+      name: 'Teishoku no Yoshi',
+      nameJp: '定食のよし',
+      category: 'Teishoku',
+      description: 'Teishoku authentique spécialisé dans le poisson grillé traditionnel au charbon.',
+      popularity: 'Modéré',
+      avgPrice: '780-1880¥'
     },
     {
       slug: 'torikizoku',
@@ -242,8 +266,17 @@ export default function ChainesPage() {
       category: 'Izakaya',
       description: 'Grande chaîne d\'izakaya avec formules à volonté et ambiance conviviale.',
       popularity: 'Populaire',
-      avgPrice: '2500-4000¥'
-    },    {
+      avgPrice: '2500-4000¥'    },
+    {
+      slug: 'yayoiken',
+      name: 'Yayoiken',
+      nameJp: 'やよい軒',
+      category: 'Teishoku',
+      description: 'Teishoku populaire avec riz illimité gratuit et prix abordables pour tous.',
+      popularity: 'Populaire',
+      avgPrice: '450-850¥'
+    },
+    {
       slug: 'yoshinoya',
       name: 'Yoshinoya',
       nameJp: '吉野家',
@@ -269,7 +302,6 @@ export default function ChainesPage() {
       description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',      popularity: 'Très populaire',
       avgPrice: '200-500¥'
     }], []);
-
   const categories = [
     'Tous',
     'Gyudon',
@@ -285,6 +317,7 @@ export default function ChainesPage() {
     'Italien',
     'Izakaya',
     'Champon/Ramen',
+    'Teishoku',
     'Tempura',    'Yakitori'
   ];
 

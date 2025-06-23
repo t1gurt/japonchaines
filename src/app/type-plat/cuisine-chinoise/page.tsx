@@ -15,8 +15,7 @@ export default function CuisineChinoisePage() {
       uniqueFeatures: ["Portions généreuses", "Prix famille", "Drink bar"],
       atmosphere: "Restaurant familial",
       href: "/chaines/bamiyan"
-    },
-    {
+    },    {
       name: "Ohsho (Gyoza no Ohsho)",
       japanese: "餃子の王将",
       englishName: "Gyoza no Ohsho",
@@ -28,7 +27,21 @@ export default function CuisineChinoisePage() {
       vegetarianOptions: "Quelques options",
       uniqueFeatures: ["Gyoza fait maison", "Wok cooking", "Authentique"],
       atmosphere: "Restaurant traditionnel",
-      href: "/chaines/ohsho"
+      href: "/chaines/gyoza-no-ohsho"
+    },
+    {
+      name: "Osaka Ohsho",
+      japanese: "大阪王将",
+      englishName: "Osaka Ohsho",
+      description: "Chaîne de cuisine chinoise populaire originaire d'Osaka, réputée pour ses gyoza croustillants et ses plats généreux.",
+      specialties: ["Gyoza", "Yakimeshi", "Ramen", "Ebi Chili"],
+      priceRange: "¥500-1300",
+      style: "Style Osaka décontracté",
+      orderingMethod: "Menu papier + service à table",
+      vegetarianOptions: "Options limitées",
+      uniqueFeatures: ["Gyoza style Osaka", "Yakimeshi signature", "Portions généreuses"],
+      atmosphere: "Décontracté familial",
+      href: "/chaines/osaka-ohsho"
     },
     {
       name: "Ringer Hut",
@@ -57,8 +70,7 @@ export default function CuisineChinoisePage() {
       popularity: "⭐⭐⭐⭐⭐",
       beginner: true,
       sauce: "Sauce soja + vinaigre + huile de sésame"
-    },
-    {
+    },    {
       name: "Fried Rice",
       japanese: "チャーハン",
       description: "Riz sauté à la chinoise avec œuf, légumes et viande",
@@ -68,6 +80,17 @@ export default function CuisineChinoisePage() {
       popularity: "⭐⭐⭐⭐⭐",
       beginner: true,
       sauce: "Sauce soja intégrée"
+    },
+    {
+      name: "Yakimeshi",
+      japanese: "焼きめし",
+      description: "Riz sauté style japonais, légèrement différent du fried rice chinois",
+      characteristics: "Parfumé, léger, style japonais",
+      price: "¥650-950",
+      difficulty: "Facile",
+      popularity: "⭐⭐⭐⭐",
+      beginner: true,
+      sauce: "Sauce soja japonaise"
     },
     {
       name: "Sweet & Sour Pork",
