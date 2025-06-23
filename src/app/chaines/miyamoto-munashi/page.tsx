@@ -30,28 +30,27 @@ export default function MiyamotoMunashiPage() {
       ]
     }
   ];
-
   const orderingSteps = [
     {
-      step: 1,
+      step: "1",
       title: "Distributeur de tickets",
       description: "Achetez votre ticket au distributeur automatique à l'entrée",
       tip: "Les photos sur les boutons facilitent la sélection"
     },
     {
-      step: 2,
+      step: "2",
       title: "Trouvez une place",
       description: "Asseyez-vous au comptoir ou aux tables communes",
       tip: "Ambiance décontractée, idéal pour manger seul"
     },
     {
-      step: 3,
+      step: "3",
       title: "Remettez le ticket",
       description: "Donnez votre ticket au personnel en cuisine",
       tip: "Service très rapide, 3-5 minutes d'attente"
     },
     {
-      step: 4,
+      step: "4",
       title: "Dégustez",
       description: "Savourez votre teishoku généreux à petit prix",
       tip: "Riz en libre-service dans certains restaurants"
@@ -214,8 +213,7 @@ export default function MiyamotoMunashiPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {orderingSteps.map((step, index) => (
-              <div key={index} className="text-center">
-                <div className="relative">
+              <div key={index} className="text-center">                <div className="relative">
                   <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
                     {step.step}
                   </div>
