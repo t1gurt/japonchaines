@@ -39,6 +39,7 @@ const restaurantChains = [
   'go-go-curry',
   'gusto',
   'gyoza-no-ohsho',
+  'osaka-ohsho',
   'hama-sushi',
   'hanamaru-udon',
   'ichiran',

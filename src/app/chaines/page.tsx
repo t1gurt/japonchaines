@@ -54,8 +54,7 @@ export default function ChainesPage() {
       description: 'Restaurant familial 24h/24 avec un menu varié de plats occidentaux et japonais.',
       popularity: 'Très populaire',
       avgPrice: '600-1200¥'
-    },
-    {
+    },    {
       slug: 'gyoza-no-ohsho',
       name: 'Gyoza no Ohsho',
       nameJp: '餃子の王将',
@@ -63,6 +62,15 @@ export default function ChainesPage() {
       description: 'Spécialiste des gyoza et plats chinois à prix populaires.',
       popularity: 'Très populaire',
       avgPrice: '400-800¥'
+    },
+    {
+      slug: 'osaka-ohsho',
+      name: 'Osaka Ohsho',
+      nameJp: '大阪王将',
+      category: 'Cuisine Chinoise',
+      description: 'Cuisine chinoise style Osaka avec gyoza croustillants et yakimeshi signature.',
+      popularity: 'Populaire',
+      avgPrice: '500-1300¥'
     },
     {
       slug: 'hama-sushi',
