@@ -148,10 +148,10 @@ export default function KaitenZushiPage() {
                   </h1>
                   <p className="text-2xl text-gray-600 japanese-text">回転寿司</p>
                 </div>
-              </div>
-              <p className="text-xl text-gray-700 mb-6">
-                L'expérience sushi la plus accessible du Japon. Des sushi frais qui défilent 
-                devant vous sur un tapis roulant, à des prix abordables.
+              </div>              <p className="text-xl text-gray-700 mb-6">
+                L'expérience sushi la plus accessible du Japon. Ces restaurants sushi sur tapis roulant 
+                offrent des sushi frais à des prix abordables, rendant la cuisine japonaise accessible 
+                à tous. Un type de restaurant sushi parfait pour découvrir la culture culinaire nippone.
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">

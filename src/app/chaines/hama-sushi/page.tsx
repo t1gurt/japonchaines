@@ -43,11 +43,11 @@ export default function HamaSushiPage() {
                 <h2 className="text-2xl font-bold text-gray-900">Présentation</h2>
               </div>
               
-              <div className="prose prose-gray max-w-none">
-                <p className="text-lg text-gray-700 mb-4">
+              <div className="prose prose-gray max-w-none">                <p className="text-lg text-gray-700 mb-4">
                   <strong>Hama Sushi (はま寿司)</strong> est la chaîne de kaiten-zushi la plus économique du Japon, 
-                  appartenant au groupe Zensho (même groupe que Sukiya). Lancée en 1968, Hama Sushi s'est imposée 
-                  comme le choix incontournable pour les familles et étudiants cherchant des sushis de qualité 
+                  appartenant au groupe Zensho (même groupe que Sukiya). Lancée en 1968, ce restaurant japonais 
+                  abordable s'est imposé comme le choix incontournable pour les familles et étudiants cherchant 
+                  des sushis de qualité à prix mini.
                   correcte à prix imbattables.
                 </p>
                 

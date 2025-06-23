@@ -43,11 +43,11 @@ export default function KuraSushiPage() {
                   <h2 className="text-2xl font-bold text-gray-900">Présentation</h2>
                 </div>
                 
-                <div className="prose prose-gray max-w-none">
-                  <p className="text-lg text-gray-700 mb-4">
+                <div className="prose prose-gray max-w-none">                  <p className="text-lg text-gray-700 mb-4">
                     <strong>Kura Sushi (くら寿司)</strong> est une chaîne de kaiten-zushi révolutionnaire qui a transformé 
                     l'industrie avec son concept <em>"Muttenka"</em> (無添加) - sans additifs chimiques. Fondée en 1977 
-                    à Osaka, Kura Sushi s'est imposée comme la chaîne la plus innovante du Japon, alliant tradition 
+                    à Osaka, ce restaurant japonais innovant s'est imposé comme la chaîne la plus créative du Japon, 
+                    alliant tradition sushi et technologies modernes.
                     culinaire et technologie de pointe.
                   </p>
                   

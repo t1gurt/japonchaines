@@ -2,8 +2,7 @@ import Link from 'next/link';
 import { ArrowLeft, Book, Utensils, Heart, Globe, ChefHat, HelpCircle } from 'lucide-react';
 import GuideViewTracker from '../../components/GuideViewTracker';
 
-export default function GuidesPage() {
-  const guides = [
+export default function GuidesPage() {  const guides = [
     {
       id: 'comment-commander',
       title: 'Comment Commander',
@@ -18,7 +17,38 @@ export default function GuidesPage() {
         'Commande par QR code',
         'Phrases essentielles en 3 langues'
       ]
-    },    {
+    },
+    {
+      id: 'comment-choisir-restaurant-japonais',
+      title: 'Comment Choisir un Restaurant Japonais',
+      subtitle: 'Guide de sélection selon votre situation',
+      description: 'Conseils pratiques pour choisir le restaurant japonais idéal selon votre budget, groupe et préférences alimentaires.',
+      icon: HelpCircle,
+      color: 'orange',
+      available: true,
+      highlights: [
+        'Facteurs de décision clés',
+        'Types de restaurants par difficulté',
+        'Conseils budget et recommandations',
+        'Éviter les pièges touristiques'
+      ]
+    },
+    {
+      id: 'restaurant-sushi',
+      title: 'Guide des Restaurants Sushi',
+      subtitle: 'Choisissez le restaurant sushi parfait',
+      description: 'Guide complet pour naviguer dans l\'univers des restaurants sushi japonais : kaiten-zushi, sushi-ya traditionnels et chaînes modernes.',
+      icon: ChefHat,
+      color: 'blue',
+      available: true,
+      highlights: [
+        'Comparaison des types de restaurants',
+        'Top 3 des chaînes de sushi',
+        'Conseils de choix par situation',
+        'Guide des prix et budgets'
+      ]
+    },
+    {
       id: 'regimes-alimentaires',
       title: 'Guide des Régimes Alimentaires',
       subtitle: 'Mangez selon vos besoins et convictions',
@@ -32,7 +62,7 @@ export default function GuidesPage() {
         'Guide des allergènes',
         'Conseils par chaîne de restaurant'
       ]
-    },    {
+    },{
       id: 'culture-etiquette',
       title: 'Culture & Étiquette',
       subtitle: 'Découvrez les codes culturels japonais',
@@ -64,14 +94,20 @@ export default function GuidesPage() {
     }
   ];
 
-  const getColorClasses = (color: string) => {
-    const colorMap = {
+  const getColorClasses = (color: string) => {    const colorMap = {
       red: {
         bg: 'bg-red-50',
         border: 'border-red-200',
         icon: 'text-red-600',
         button: 'bg-red-600 hover:bg-red-700',
         coming: 'bg-red-100 text-red-800'
+      },
+      orange: {
+        bg: 'bg-orange-50',
+        border: 'border-orange-200',
+        icon: 'text-orange-600',
+        button: 'bg-orange-600 hover:bg-orange-700',
+        coming: 'bg-orange-100 text-orange-800'
       },
       green: {
         bg: 'bg-green-50',
