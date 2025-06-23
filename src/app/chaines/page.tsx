@@ -229,17 +229,17 @@ export default function ChainesPage() {
       name: 'Tenya',
       nameJp: 'てんや',
       category: 'Tempura',
-      description: 'Spécialiste du tendon (tempura sur riz) rapide et abordable.',
-      popularity: 'Populaire',
-      avgPrice: '500-900¥'    },
+      description: 'Spécialiste du tendon (tempura sur riz) rapide et abordable.',      popularity: 'Populaire',
+      avgPrice: '500-900¥'
+    },
     {
-      slug: 'teishoku-no-yoshi',
-      name: 'Teishoku no Yoshi',
-      nameJp: '定食のよし',
+      slug: 'miyamoto-munashi',
+      name: 'Miyamoto Munashi',
+      nameJp: '宮本むなし',
       category: 'Teishoku',
-      description: 'Teishoku authentique spécialisé dans le poisson grillé traditionnel au charbon.',
-      popularity: 'Modéré',
-      avgPrice: '780-1880¥'
+      description: 'Chaîne de teishoku économique d\'Osaka, réputée pour ses portions XXL à petit prix.',
+      popularity: 'Populaire',
+      avgPrice: '400-800¥'
     },
     {
       slug: 'torikizoku',

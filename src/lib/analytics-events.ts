@@ -86,7 +86,10 @@ export const trackRestaurantView = (restaurantName: string) => {
     'ippudo': 'ramen',
     'sushiro': 'kaiten-zushi',
     'kura-sushi': 'kaiten-zushi',
-    'coco-ichibanya': 'curry'
+    'coco-ichibanya': 'curry',
+    'miyamoto-munashi': 'teishoku',
+    'ootoya': 'teishoku',
+    'yayoiken': 'teishoku'
   };
   
   const category = categoryMap[restaurantName.toLowerCase()] || 'other';
