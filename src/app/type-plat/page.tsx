@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CategoryViewTracker from '../../components/CategoryViewTracker';
 
-export default function TypePlatPage() {// Fonction pour obtenir le bon lien pour chaque type de plat
+export default function TypePlatPage() {  // Fonction pour obtenir le bon lien pour chaque type de plat
   const getImplementationPath = (id: string) => {    const implementedPages: { [key: string]: string } = {
       'gyudon': '/type-plat/gyudon',
       'ramen': '/type-plat/ramen', 
@@ -13,15 +13,15 @@ export default function TypePlatPage() {// Fonction pour obtenir le bon lien pou
       'family-restaurants': '/type-plat/family-restaurants',
       'burgers': '/type-plat/burgers',
       'cuisine-chinoise': '/type-plat/cuisine-chinoise',
-      'izakaya': '/type-plat/izakaya'
+      'izakaya': '/type-plat/izakaya',
+      'teishoku': '/type-plat/teishoku'
     };
     
     return implementedPages[id] || `/type-plat/${id}`;
   };
-
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon-soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya'];
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon-soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku'];
     return implementedIds.includes(id);
   };
 
@@ -104,8 +104,7 @@ export default function TypePlatPage() {// Fonction pour obtenir le bon lien pou
       chains: ["MOS Burger", "Freshness Burger"],
       color: "bg-indigo-500",
       icon: "🍔"
-    },
-    {
+    },    {
       id: "cuisine-chinoise",
       name: "Cuisine Chinoise",
       japanese: "中華料理",
@@ -114,6 +113,16 @@ export default function TypePlatPage() {// Fonction pour obtenir le bon lien pou
       chains: ["Bamiyan", "Ohsho", "Gyoza no Ohsho"],
       color: "bg-red-600",
       icon: "🥟"
+    },
+    {
+      id: "teishoku",
+      name: "Teishoku",
+      japanese: "定食",
+      description: "Repas complets traditionnels avec riz, soupe et accompagnements",
+      detailedDescription: "Les teishoku sont des repas équilibrés composés d'un plat principal, de riz, de soupe miso et de petits accompagnements (tsukemono). C'est l'essence de la cuisine familiale japonaise, nutritive et authentique.",
+      chains: ["Ootoya", "Yayoiken", "Teishoku no Yoshi"],
+      color: "bg-green-600",
+      icon: "🍱"
     },
     {
       id: "izakaya",
