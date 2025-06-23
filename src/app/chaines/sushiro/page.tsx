@@ -39,12 +39,12 @@ export default function SushiroPage() {
             {/* Présentation générale */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <h2 className="text-2xl font-bold text-gray-900 mb-4">L&apos;Empire du Sushi Accessible</h2>
-              <div className="prose prose-orange max-w-none">
-                <p className="text-lg text-gray-700 leading-relaxed">
+              <div className="prose prose-orange max-w-none">                <p className="text-lg text-gray-700 leading-relaxed">
                   Sushiro est aujourd&apos;hui <strong>le plus grand réseau de kaiten-zushi au monde</strong> avec 
                   <strong> 627 restaurants au Japon</strong> et une expansion internationale remarquable. 
                   Fondée en 1984 à Osaka, cette chaîne a révolutionné l&apos;industrie du sushi en démocratisant 
-                  l&apos;accès à des <strong>sushis de qualité à prix abordable</strong>.
+                  l&apos;accès à des <strong>sushis de qualité à prix abordable</strong>. Ce restaurant japonais 
+                  emblématique est devenu la référence des restaurants sushi accessibles au Japon.
                 </p>
                 <p className="text-gray-700">
                   Avec son système de <strong>prix unique à 110¥</strong> pour la plupart des assiettes et 

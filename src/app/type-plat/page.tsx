@@ -148,10 +148,10 @@ export default function TypePlatPage() {// Fonction pour obtenir le bon lien pou
             <span className="block text-lg font-normal text-gray-600 mt-2 japanese-text">
               料理の種類から探す
             </span>
-          </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Découvrez les chaînes de restaurants japonais organisées par type de cuisine. 
-            Chaque catégorie comprend des informations détaillées sur les plats, les chaînes populaires et les méthodes de commande.
+          </h1>          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            Découvrez les meilleurs restaurants japonais organisés par type de cuisine. 
+            Chaque catégorie comprend des informations détaillées sur les plats, les meilleures chaînes 
+            et les méthodes de commande pour trouver le restaurant japonais parfait selon vos goûts.
           </p>
         </div>
       </section>
