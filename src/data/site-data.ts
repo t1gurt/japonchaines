@@ -14,6 +14,7 @@ export const restaurantChains = [
   'gyoza-no-ohsho',
   'hama-sushi',
   'hanamaru-udon',
+  'hidakaya',
   'ichiran',
   'ippudo',
   'jonathans',

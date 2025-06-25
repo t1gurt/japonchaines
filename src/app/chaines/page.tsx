@@ -64,6 +64,15 @@ export default function ChainesPage() {
       avgPrice: '400-800¥'
     },
     {
+      slug: 'hidakaya',
+      name: 'Hidakaya',
+      nameJp: '日高屋',
+      category: 'Cuisine Chinoise',
+      description: 'Gyoza & ramen populaires - Cuisine chinoise accessible depuis 1979.',
+      popularity: 'Très populaire',
+      avgPrice: '300-700¥'
+    },
+    {
       slug: 'osaka-ohsho',
       name: 'Osaka Ohsho',
       nameJp: '大阪王将',

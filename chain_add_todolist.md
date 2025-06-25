@@ -1,5 +1,13 @@
 # チェーン追加時のToDoリスト・ガイド
 
+## ✅ 日高屋追加完了 (2025年6月25日)
+- ✅ 個別ページ作成 (`src/app/chaines/hidakaya/page.tsx`)
+- ✅ サイトデータ更新 (`src/data/site-data.ts`)
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ 中華カテゴリページ更新 (`src/app/type-plat/cuisine-chinoise/page.tsx`)
+- ✅ README.md統計情報更新 (34→35チェーン)
+- ✅ ドキュメント更新完了
+
 ## 1. 個別ページ以外で更新・追加すべき内容一覧
 
 ### 1.1 サイトマップ・ナビゲーション系
