@@ -17,14 +17,15 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       'izakaya': '/type-plat/izakaya',
       'teishoku': '/type-plat/teishoku',
       'cafe': '/type-plat/cafe',
-      'street-food': '/type-plat/street-food'
+      'street-food': '/type-plat/street-food',
+      'steak': '/type-plat/steak'
     };
     
     return implementedPages[id] || `/type-plat/${id}`;
   };
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food'];
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food', 'steak'];
     return implementedIds.includes(id);
   };
 
@@ -166,6 +167,16 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       chains: ["Gindako"],
       color: "bg-red-600",
       icon: "🥟"
+    },
+    {
+      id: "steak",
+      name: "Steak",
+      japanese: "ステーキ",
+      description: "Steaks premium et innovation culinaire - L'excellence bovine à la japonaise",
+      detailedDescription: "Le steak au Japon représente l'union parfaite entre la qualité exceptionnelle du bœuf wagyu et l'innovation dans le service. Des concepts révolutionnaires comme le tachi-gui aux steakhouses traditionnels.",
+      chains: ["Ikinari Steak"],
+      color: "bg-red-800",
+      icon: "🥩"
     }
   ];  return (
     <>

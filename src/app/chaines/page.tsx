@@ -109,6 +109,15 @@ export default function ChainesPage() {
       avgPrice: '900-1500¥'
     },
     {
+      slug: 'ikinari-steak',
+      name: 'Ikinari Steak',
+      nameJp: 'いきなりステーキ',
+      category: 'Steak',
+      description: 'Révolution du steak au Japon : qualité premium debout à prix abordables.',
+      popularity: 'Populaire',
+      avgPrice: '1500-3000¥'
+    },
+    {
       slug: 'jonathans',
       name: 'Jonathan\'s',
       nameJp: 'ジョナサン',
@@ -116,6 +125,15 @@ export default function ChainesPage() {
       description: 'Restaurant familial avec menu varié, ouvert tard et adapté aux familles.',
       popularity: 'Populaire',
       avgPrice: '700-1300¥'
+    },
+    {
+      slug: 'jolly-pasta',
+      name: 'Jolly Pasta',
+      nameJp: 'ジョリーパスタ',
+      category: 'Restaurant Familial',
+      description: 'Spécialiste des pâtes italiennes adaptées au goût japonais, ambiance familiale.',
+      popularity: 'Populaire',
+      avgPrice: '800-1500¥'
     },
     {
       slug: 'kura-sushi',
@@ -389,6 +407,7 @@ export default function ChainesPage() {
     'Ramen',
     'Restaurant Familial',
     'Soba',
+    'Steak',
     'Street Food',
     'Sushi',
     'Teishoku',

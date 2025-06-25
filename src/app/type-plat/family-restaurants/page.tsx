@@ -43,6 +43,20 @@ export default function FamilyRestaurantsPage() {
       uniqueFeatures: ["Décor soigné", "Qualité supérieure", "Desserts remarquables"],
       cuisine: "Fusion Japonaise-Occidentale",
       href: "/chaines/jonathans"
+    },
+    {
+      name: "Jolly Pasta",
+      japanese: "ジョリーパスタ",
+      englishName: "Jolly Pasta",
+      description: "Spécialiste des pâtes italiennes avec une approche familiale et des recettes adaptées au goût japonais.",
+      specialties: ["Spaghetti Carbonara", "Pizza Margherita", "Gratin aux fruits de mer"],
+      priceRange: "¥800-1500",
+      style: "Italien familial",
+      orderingMethod: "Menu papier + service à table",
+      vegetarianOptions: "Bonnes options de pâtes",
+      uniqueFeatures: ["Pâtes artisanales", "Adaptation japonaise", "Ambiance chaleureuse"],
+      cuisine: "Italienne adaptée",
+      href: "/chaines/jolly-pasta"
     }
   ];
 
