@@ -1,5 +1,17 @@
 # チェーン追加時のToDoリスト・ガイド
 
+## ✅ ジョリーパスタ（Jolly Pasta）・いきなりステーキ（Ikinari Steak）追加完了 (2025年6月25日)
+- ✅ ジョリーパスタ個別ページ作成 (`src/app/chaines/jolly-pasta/page.tsx`)
+- ✅ いきなりステーキ個別ページ作成 (`src/app/chaines/ikinari-steak/page.tsx`)
+- ✅ 新カテゴリ「steak」作成 (`src/app/type-plat/steak/page.tsx`)
+- ✅ サイトデータ更新 (`src/data/site-data.ts`) - jolly-pasta, ikinari-steak, steak追加
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ ファミリーレストラン カテゴリページ更新 (`src/app/type-plat/family-restaurants/page.tsx`)
+- ✅ タイプ別ページ更新 (`src/app/type-plat/page.tsx`)
+- ✅ ホームページ更新 (`src/app/page.tsx`)
+- ✅ README.md統計情報更新 (40→42チェーン、14→15カテゴリ)
+- ✅ ドキュメント更新完了
+
 ## ✅ ドトールコーヒー・星乃珈琲店追加完了 (2025年6月25日)
 - ✅ ドトールコーヒー個別ページ作成 (`src/app/chaines/doutor/page.tsx`)
 - ✅ 星乃珈琲店個別ページ作成 (`src/app/chaines/hoshino/page.tsx`)
