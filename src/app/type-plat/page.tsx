@@ -15,14 +15,16 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       'burgers': '/type-plat/burgers',
       'cuisine-chinoise': '/type-plat/cuisine-chinoise',
       'izakaya': '/type-plat/izakaya',
-      'teishoku': '/type-plat/teishoku'
+      'teishoku': '/type-plat/teishoku',
+      'cafe': '/type-plat/cafe',
+      'street-food': '/type-plat/street-food'
     };
     
     return implementedPages[id] || `/type-plat/${id}`;
   };
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku'];
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food'];
     return implementedIds.includes(id);
   };
 
@@ -144,6 +146,26 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       chains: ["Torikizoku", "Shirokiya", "Warawara"],
       color: "bg-amber-600",
       icon: "🍻"
+    },
+    {
+      id: "cafe",
+      name: "Café",
+      japanese: "カフェ・喫茶店",
+      description: "Kissaten et cafés modernes - L'art du temps qui s'arrête",
+      detailedDescription: "Les cafés japonais incarnent une philosophie unique où le temps prend une autre dimension. Du kissaten traditionnel aux chaînes modernes, ils offrent bien plus qu'une simple pause café : un véritable art de vivre.",
+      chains: ["Komeda Coffee"],
+      color: "bg-amber-700",
+      icon: "☕"
+    },
+    {
+      id: "street-food",
+      name: "Street Food",
+      japanese: "屋台・街角グルメ",
+      description: "Yatai moderne et takoyaki - L'âme de la rue japonaise",
+      detailedDescription: "Des festivals d'été aux coins de rue animés, la street food japonaise transforme chaque bouchée en moment de convivialité authentique, perpétuant une tradition millénaire d'excellence culinaire nomade.",
+      chains: ["Gindako"],
+      color: "bg-red-600",
+      icon: "🥟"
     }
   ];  return (
     <>
