@@ -17,9 +17,11 @@ export const restaurantChains = [
   'ichiran',
   'ippudo',
   'jonathans',
+  'komoro-soba',
   'kura-sushi',
   'lotteria',
-  'marugame-seimen',  'matsuya',
+  'marugame-seimen',
+  'matsuya',
   'miyamoto-munashi',
   'mos-burger',
   'ootoya',
@@ -27,7 +29,8 @@ export const restaurantChains = [
   'saizeriya',
   'shirokiya',
   'sukiya',
-  'sukiya-curry',  'sushiro',
+  'sukiya-curry',
+  'sushiro',
   'tenkaippin',
   'tenya',
   'torikizoku',
@@ -35,6 +38,7 @@ export const restaurantChains = [
   'watami',
   'yayoiken',
   'yoshinoya',
+  'yudetaro',
 ];
 
 // 料理タイプのリスト
@@ -47,9 +51,10 @@ export const foodTypes = [
   'izakaya',
   'kaiten-zushi',
   'ramen',
+  'soba',
   'teishoku',
   'tempura',
-  'udon-soba',
+  'udon',
 ];
 
 // 静的ページのリスト

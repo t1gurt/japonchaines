@@ -38,14 +38,16 @@ export default function Home() {
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Découvrez par Type de Cuisine
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">            {[
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {[
               { name: "Gyūdon", subtitle: "牛丼", description: "Bols de riz au bœuf", href: "/type-plat/gyudon" },
               { name: "Ramen", subtitle: "ラーメン", description: "Nouilles japonaises", href: "/type-plat/ramen" },
               { name: "Kaiten-zushi", subtitle: "回転寿司", description: "Sushi tournant", href: "/type-plat/kaiten-zushi" },
               { name: "Curry Japonais", subtitle: "カレー", description: "Curry à la japonaise", href: "/type-plat/curry" },
               { name: "Teishoku", subtitle: "定食", description: "Repas complets", href: "/type-plat/teishoku" },
               { name: "Tempura", subtitle: "天ぷら", description: "Beignets japonais", href: "/type-plat/tempura" },
-              { name: "Udon/Soba", subtitle: "うどん・そば", description: "Nouilles traditionnelles", href: "/type-plat/udon-soba" },
+              { name: "Udon", subtitle: "うどん", description: "Nouilles épaisses", href: "/type-plat/udon" },
+              { name: "Soba", subtitle: "そば", description: "Nouilles de sarrasin", href: "/type-plat/soba" },
               { name: "Family Restaurant", subtitle: "ファミレス", description: "Restaurants familiaux", href: "/type-plat/family-restaurants" },
               { name: "Burgers Japonais", subtitle: "日本のハンバーガー", description: "Innovation burger", href: "/type-plat/burgers" },
               { name: "Cuisine Chinoise", subtitle: "中華料理", description: "Adaptation japonaise", href: "/type-plat/cuisine-chinoise" },
@@ -76,7 +78,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h3 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Chaînes Populaires
-          </h3>          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">            {[
+          </h3>          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            {[
               { name: "Yoshinoya", japanese: "吉野家", type: "Gyūdon", slug: "yoshinoya" },
               { name: "Sukiya", japanese: "すき家", type: "Gyūdon", slug: "sukiya" },
               { name: "Sushiro", japanese: "スシロー", type: "Kaiten-zushi", slug: "sushiro" },
@@ -84,6 +87,7 @@ export default function Home() {
               { name: "Ootoya", japanese: "大戸屋", type: "Teishoku", slug: "ootoya" },
               { name: "Ichiran", japanese: "一蘭", type: "Ramen", slug: "ichiran" },
               { name: "Marugame Seimen", japanese: "丸亀製麺", type: "Udon", slug: "marugame-seimen" },
+              { name: "Yudetaro", japanese: "ゆで太郎", type: "Soba", slug: "yudetaro" },
               { name: "Tenya", japanese: "てんや", type: "Tempura", slug: "tenya" },
             ].map((chain) => (
               <Link 

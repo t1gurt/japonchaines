@@ -9,7 +9,8 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       'kaiten-zushi': '/type-plat/kaiten-zushi',
       'curry': '/type-plat/curry',
       'tempura': '/type-plat/tempura',
-      'udon-soba': '/type-plat/udon-soba',
+      'udon': '/type-plat/udon',
+      'soba': '/type-plat/soba',
       'family-restaurants': '/type-plat/family-restaurants',
       'burgers': '/type-plat/burgers',
       'cuisine-chinoise': '/type-plat/cuisine-chinoise',
@@ -21,7 +22,7 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
   };
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon-soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku'];
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku'];
     return implementedIds.includes(id);
   };
 
@@ -76,14 +77,24 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       icon: "🍤"
     },
     {
-      id: "udon-soba",
-      name: "Udon / Soba",
-      japanese: "うどん・そば",
-      description: "Nouilles japonaises épaisses (udon) ou fines (soba) dans un bouillon clair",
-      detailedDescription: "L'udon sont des nouilles de blé épaisses, tandis que les soba sont des nouilles de sarrasin plus fines. Elles sont servies chaudes dans un bouillon ou froides avec une sauce à tremper.",
+      id: "udon",
+      name: "Udon",
+      japanese: "うどん",
+      description: "Nouilles japonaises épaisses et moelleuses dans un bouillon savoureux",
+      detailedDescription: "L'udon sont des nouilles de blé épaisses et souples, servies chaudes dans un bouillon dashi parfumé ou froides avec une sauce à tremper. Originaires du sud du Japon, elles offrent une expérience réconfortante et authentique.",
       chains: ["Marugame Seimen", "Hanamaru Udon"],
-      color: "bg-purple-500",
+      color: "bg-orange-500",
       icon: "🍲"
+    },
+    {
+      id: "soba",
+      name: "Soba",
+      japanese: "そば",
+      description: "Nouilles fines de sarrasin, symbole de la tradition culinaire d'Edo",
+      detailedDescription: "Les soba sont des nouilles fines de sarrasin au goût subtil et parfumé. Elles incarnent l'élégance d'Edo (Tokyo) et se dégustent chaudes dans un bouillon ou froides avec une sauce tsuyu. Une expérience raffinée et authentique.",
+      chains: ["Fuji Soba", "Yudetaro", "Komoro Soba"],
+      color: "bg-purple-500",
+      icon: "�"
     },
     {
       id: "family-restaurant",
