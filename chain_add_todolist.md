@@ -1,5 +1,13 @@
 # チェーン追加時のToDoリスト・ガイド
 
+## ✅ 串カツ田中追加完了 (2025年6月25日)
+- ✅ 個別ページ作成 (`src/app/chaines/kushikatsu-tanaka/page.tsx`)
+- ✅ サイトデータ更新 (`src/data/site-data.ts`)
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ 居酒屋カテゴリページ更新 (`src/app/type-plat/izakaya/page.tsx`)
+- ✅ README.md統計情報更新 (35→36チェーン)
+- ✅ ドキュメント更新完了
+
 ## ✅ 日高屋追加完了 (2025年6月25日)
 - ✅ 個別ページ作成 (`src/app/chaines/hidakaya/page.tsx`)
 - ✅ サイトデータ更新 (`src/data/site-data.ts`)

@@ -127,6 +127,15 @@ export default function ChainesPage() {
       avgPrice: '100-120¥/pièce'
     },
     {
+      slug: 'kushikatsu-tanaka',
+      name: 'Kushikatsu Tanaka',
+      nameJp: '串カツ田中',
+      category: 'Izakaya',
+      description: 'Spécialiste du kushikatsu d\'Osaka - brochettes panées et frites avec sauce secrète.',
+      popularity: 'Populaire',
+      avgPrice: '1500-2500¥'
+    },
+    {
       slug: 'lotteria',
       name: 'Lotteria',
       nameJp: 'ロッテリア',

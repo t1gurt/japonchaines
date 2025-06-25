@@ -20,6 +20,7 @@ export const restaurantChains = [
   'jonathans',
   'komoro-soba',
   'kura-sushi',
+  'kushikatsu-tanaka',
   'lotteria',
   'marugame-seimen',
   'matsuya',
