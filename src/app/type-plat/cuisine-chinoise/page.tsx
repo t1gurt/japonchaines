@@ -15,6 +15,20 @@ export default function CuisineChinoisePage() {
       uniqueFeatures: ["Portions généreuses", "Prix famille", "Drink bar"],
       atmosphere: "Restaurant familial",
       href: "/chaines/bamiyan"
+    },
+    {
+      name: "Hidakaya",
+      japanese: "日高屋",
+      englishName: "Hidakaya",
+      description: "Gyoza & ramen populaires - Cuisine chinoise accessible depuis 1979. Spécialiste des gyoza croustillants et prix ultra-compétitifs.",
+      specialties: ["Gyoza", "Ramen", "Fried Rice", "Tantanmen"],
+      priceRange: "¥300-700",
+      style: "Populaire décontracté",
+      orderingMethod: "Tickets-repas + comptoir",
+      vegetarianOptions: "Options très limitées",
+      uniqueFeatures: ["Prix ultra-compétitifs", "Gyoza signature", "Service rapide"],
+      atmosphere: "Casual populaire",
+      href: "/chaines/hidakaya"
     },    {
       name: "Ohsho (Gyoza no Ohsho)",
       japanese: "餃子の王将",
@@ -212,7 +226,7 @@ export default function CuisineChinoisePage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
-                  Prix : ¥400-1500
+                  Prix : ¥300-1500
                 </span>
                 <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
                   Adapté au goût japonais

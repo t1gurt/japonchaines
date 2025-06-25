@@ -17,6 +17,20 @@ export default function IzakayaPage() {
       href: "/chaines/torikizoku"
     },
     {
+      name: "Kushikatsu Tanaka",
+      japanese: "串カツ田中",
+      englishName: "Kushikatsu Tanaka",
+      description: "Spécialiste du kushikatsu d'Osaka depuis 1929. Brochettes panées et frites avec la fameuse sauce secrète dans l'ambiance populaire d'Osaka.",
+      specialties: ["Kushikatsu", "Kushikatsu Premium", "Sauce Secrète", "Bière"],
+      priceRange: "¥1500-2500",
+      style: "Izakaya Osaka style",
+      orderingMethod: "Menu papier à cocher",
+      atmosphere: "Populaire, convivial",
+      uniqueFeatures: ["Tradition Osaka", "NO double dipping", "Sauce légendaire"],
+      ageGroup: "Tous âges",
+      href: "/chaines/kushikatsu-tanaka"
+    },
+    {
       name: "Shirokiya",
       japanese: "白木屋",
       englishName: "Shirokiya",
@@ -243,7 +257,7 @@ export default function IzakayaPage() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
-                  Prix : ¥200-1000
+                  Prix : ¥200-2500
                 </span>
                 <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
                   Culture authentique
