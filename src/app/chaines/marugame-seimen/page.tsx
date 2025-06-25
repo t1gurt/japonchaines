@@ -5,13 +5,13 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 export default function MarugameSeimensPage() {
   return (
     <>
-      <ChainViewTracker chainName="marugame-seimen" chainCategory="udon_soba" />
+      <ChainViewTracker chainName="marugame-seimen" chainCategory="udon" />
       <div className="min-h-screen bg-gray-50">
         {/* Header avec retour */}
         <div className="bg-white border-b">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <Link 
-              href="/type-plat/udon-soba" 
+              href="/type-plat/udon" 
               className="inline-flex items-center text-orange-600 hover:text-orange-700 mb-4"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />

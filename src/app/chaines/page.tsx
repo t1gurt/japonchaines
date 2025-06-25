@@ -289,8 +289,8 @@ export default function ChainesPage() {
       slug: 'fuji-soba',
       name: 'Fuji Soba',
       nameJp: '富士そば',
-      category: 'Udon/Soba',
-      description: 'Chaîne de nouilles soba et udon rapide, populaire pour les en-cas et repas légers.',
+      category: 'Soba',
+      description: 'Chaîne de nouilles soba traditionnelle de Tokyo, ouverte 24h/24, populaire auprès des salarymen.',
       popularity: 'Populaire',
       avgPrice: '300-700¥'
     },
@@ -299,8 +299,27 @@ export default function ChainesPage() {
       name: 'Hanamaru Udon',
       nameJp: 'はなまるうどん',
       category: 'Udon',
-      description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',      popularity: 'Très populaire',
+      description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',
+      popularity: 'Très populaire',
       avgPrice: '200-500¥'
+    },
+    {
+      slug: 'yudetaro',
+      name: 'Yudetaro',
+      nameJp: 'ゆで太郎',
+      category: 'Soba',
+      description: 'Chaîne moderne de soba proposant des nouilles artisanales à prix abordables avec service rapide.',
+      popularity: 'Populaire',
+      avgPrice: '300-600¥'
+    },
+    {
+      slug: 'komoro-soba',
+      name: 'Komoro Soba',
+      nameJp: '小諸そば',
+      category: 'Soba',
+      description: 'Expérience authentique tachi-gui (manger debout) avec soba traditionnel de style Shinshu.',
+      popularity: 'Modéré',
+      avgPrice: '290-550¥'
     }], []);
   const categories = [
     'Tous',
@@ -313,12 +332,13 @@ export default function ChainesPage() {
     'Cuisine Chinoise',
     'Fast Food',
     'Udon',
-    'Udon/Soba',
+    'Soba',
     'Italien',
     'Izakaya',
     'Champon/Ramen',
     'Teishoku',
-    'Tempura',    'Yakitori'
+    'Tempura',
+    'Yakitori'
   ];
 
   // Filtered chains based on search and category
