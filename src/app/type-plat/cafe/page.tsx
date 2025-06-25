@@ -83,76 +83,50 @@ export default function CafePage() {
               ☕ Chaînes de Café au Japon
             </h2>
             
-            <div className="grid md:grid-cols-1 gap-8">
+            <div className="grid md:grid-cols-3 gap-8">
               {/* Komeda Coffee */}
               <Link href="/chaines/komeda">
-                <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-8 border border-amber-200 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                  <div className="flex items-center mb-6">
-                    <div className="flex items-center mr-6">
-                      <span className="text-4xl mr-3">☕</span>
-                      <span className="text-4xl mr-3">🍞</span>
-                      <span className="text-4xl">🥛</span>
-                    </div>
+                <div className="bg-gradient-to-br from-amber-50 to-yellow-50 rounded-xl p-6 border border-amber-200 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                  <div className="flex items-center mb-4">
+                    <span className="text-3xl mr-3">☕</span>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 group-hover:text-amber-700 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-amber-700 transition-colors">
                         Komeda Coffee
                       </h3>
-                      <p className="text-lg text-gray-600 japanese-text">コメダ珈琲店</p>
+                      <p className="text-sm text-gray-600 japanese-text">コメダ珈琲店</p>
                     </div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-3">🌅 Morning Service Légendaire</h4>
-                      <p className="text-gray-700 mb-4">
-                        Le célèbre "Morning Service" : toast épais + œuf dur offerts 
-                        avec tout café commandé avant 11h. Une tradition depuis 1968!
+                      <h4 className="font-bold text-gray-900 mb-2">🌅 Morning Service</h4>
+                      <p className="text-sm text-gray-700">
+                        Toast épais + œuf dur offerts avec tout café avant 11h. Tradition depuis 1968!
                       </p>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Horaires :</span>
-                          <span className="font-semibold">7h-11h</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Prix café :</span>
-                          <span className="font-semibold">450¥-650¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Offert :</span>
-                          <span className="font-semibold">Toast + œuf</span>
-                        </div>
-                      </div>
                     </div>
                     
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-3">🍰 Shironoir & Desserts</h4>
-                      <p className="text-gray-700 mb-4">
-                        Le fameux Shironoir : brioche chaude, glace vanille, sirop noir. 
-                        Plus qu'un dessert, une institution adorée dans tout le Japon.
+                      <h4 className="font-bold text-gray-900 mb-2">🍰 Shironoir</h4>
+                      <p className="text-sm text-gray-700">
+                        Le fameux dessert : brioche chaude, glace vanille, sirop noir.
                       </p>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Shironoir Classic :</span>
-                          <span className="font-semibold">580¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Mini version :</span>
-                          <span className="font-semibold">430¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Versions saisonnières :</span>
-                          <span className="font-semibold">680¥-780¥</span>
-                        </div>
+                    </div>
+                    
+                    <div className="text-xs text-gray-600 space-y-1">
+                      <div className="flex justify-between">
+                        <span>Prix café :</span>
+                        <span className="font-semibold">450¥-650¥</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Shironoir :</span>
+                        <span className="font-semibold">580¥</span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-6 pt-4 border-t border-amber-200">
-                    <p className="text-sm text-gray-600 mb-2">
-                      <strong>Spécialité :</strong> Kissaten moderne, Morning Service, hospitalité omotenashi
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      <strong>Ambiance :</strong> Rétro-moderne, sièges confortables, atmosphère relaxante
+                  <div className="mt-4 pt-3 border-t border-amber-200">
+                    <p className="text-xs text-gray-600">
+                      <strong>Style :</strong> Kissaten moderne, hospitalité omotenashi
                     </p>
                   </div>
                 </div>
@@ -160,73 +134,47 @@ export default function CafePage() {
 
               {/* Doutor Coffee */}
               <Link href="/chaines/doutor">
-                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-8 border border-orange-200 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                  <div className="flex items-center mb-6">
-                    <div className="flex items-center mr-6">
-                      <span className="text-4xl mr-3">☕</span>
-                      <span className="text-4xl mr-3">🚀</span>
-                      <span className="text-4xl">⚡</span>
-                    </div>
+                <div className="bg-gradient-to-br from-orange-50 to-red-50 rounded-xl p-6 border border-orange-200 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                  <div className="flex items-center mb-4">
+                    <span className="text-3xl mr-3">🚀</span>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 group-hover:text-orange-700 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-700 transition-colors">
                         Doutor Coffee
                       </h3>
-                      <p className="text-lg text-gray-600 japanese-text">ドトールコーヒー</p>
+                      <p className="text-sm text-gray-600 japanese-text">ドトールコーヒー</p>
                     </div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-3">🚀 Pioneer du Café Moderne</h4>
-                      <p className="text-gray-700 mb-4">
-                        Depuis 1980, révolution du café japonais : qualité européenne, 
-                        rapidité japonaise, prix accessible pour tous.
+                      <h4 className="font-bold text-gray-900 mb-2">🚀 Pioneer du Café</h4>
+                      <p className="text-sm text-gray-700">
+                        Révolutionnaire depuis 1980 : qualité européenne, rapidité japonaise.
                       </p>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Blend Coffee :</span>
-                          <span className="font-semibold">220¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Café au Lait :</span>
-                          <span className="font-semibold">250¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Service :</span>
-                          <span className="font-semibold">Rapide & efficace</span>
-                        </div>
-                      </div>
                     </div>
                     
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-3">🥪 Milano Sandwiches</h4>
-                      <p className="text-gray-700 mb-4">
-                        Sandwiches Milano signature : pain focaccia, ingrédients premium, 
-                        saveurs européennes adaptées au goût japonais.
+                      <h4 className="font-bold text-gray-900 mb-2">🥪 Milano Sandwiches</h4>
+                      <p className="text-sm text-gray-700">
+                        Pain focaccia, ingrédients premium, saveurs européennes adaptées.
                       </p>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Milano A :</span>
-                          <span className="font-semibold">420¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Milano B :</span>
-                          <span className="font-semibold">450¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Set Café+Sandwich :</span>
-                          <span className="font-semibold">590¥-680¥</span>
-                        </div>
+                    </div>
+                    
+                    <div className="text-xs text-gray-600 space-y-1">
+                      <div className="flex justify-between">
+                        <span>Blend Coffee :</span>
+                        <span className="font-semibold">220¥</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Milano Sandwich :</span>
+                        <span className="font-semibold">420¥-450¥</span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-6 pt-4 border-t border-orange-200">
-                    <p className="text-sm text-gray-600 mb-2">
-                      <strong>Spécialité :</strong> Pioneer café moderne, innovation qualité/prix, sandwiches Milano
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      <strong>Ambiance :</strong> Moderne, efficace, rapport qualité/prix imbattable
+                  <div className="mt-4 pt-3 border-t border-orange-200">
+                    <p className="text-xs text-gray-600">
+                      <strong>Style :</strong> Moderne, efficace, rapport qualité/prix
                     </p>
                   </div>
                 </div>
@@ -234,73 +182,47 @@ export default function CafePage() {
 
               {/* Hoshino Coffee */}
               <Link href="/chaines/hoshino">
-                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl p-8 border border-yellow-200 hover:shadow-lg transition-all duration-300 cursor-pointer group">
-                  <div className="flex items-center mb-6">
-                    <div className="flex items-center mr-6">
-                      <span className="text-4xl mr-3">⭐</span>
-                      <span className="text-4xl mr-3">☕</span>
-                      <span className="text-4xl">🌸</span>
-                    </div>
+                <div className="bg-gradient-to-br from-yellow-50 to-amber-50 rounded-xl p-6 border border-yellow-200 hover:shadow-lg transition-all duration-300 cursor-pointer group">
+                  <div className="flex items-center mb-4">
+                    <span className="text-3xl mr-3">⭐</span>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 group-hover:text-amber-700 transition-colors">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-amber-700 transition-colors">
                         Hoshino Coffee
                       </h3>
-                      <p className="text-lg text-gray-600 japanese-text">星乃珈琲店</p>
+                      <p className="text-sm text-gray-600 japanese-text">星乃珈琲店</p>
                     </div>
                   </div>
                   
-                  <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-3">
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-3">🌸 Nostalgie Showa Authentique</h4>
-                      <p className="text-gray-700 mb-4">
-                        Renaissance de l'ère Showa : café siphon traditionnel, 
-                        mobilier vintage, atmosphère chaleureuse d'antan.
+                      <h4 className="font-bold text-gray-900 mb-2">🌸 Nostalgie Showa</h4>
+                      <p className="text-sm text-gray-700">
+                        Renaissance de l'ère Showa : café siphon, mobilier vintage.
                       </p>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Siphon Coffee :</span>
-                          <span className="font-semibold">480¥-680¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Préparation :</span>
-                          <span className="font-semibold">5-7 minutes</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Ambiance :</span>
-                          <span className="font-semibold">Vintage Showa</span>
-                        </div>
-                      </div>
                     </div>
                     
                     <div>
-                      <h4 className="font-bold text-gray-900 mb-3">🥞 Pancakes Nostalgiques</h4>
-                      <p className="text-gray-700 mb-4">
-                        Pancakes épais style Showa : moelleux exceptionnels, 
-                        beurre artisanal, sirop d'érable authentique.
+                      <h4 className="font-bold text-gray-900 mb-2">🥞 Pancakes Signature</h4>
+                      <p className="text-sm text-gray-700">
+                        Pancakes épais style Showa, moelleux exceptionnels, beurre artisanal.
                       </p>
-                      <div className="space-y-1 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Pancakes Classic :</span>
-                          <span className="font-semibold">880¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Fruits de Saison :</span>
-                          <span className="font-semibold">1180¥</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Set Café+Pancakes :</span>
-                          <span className="font-semibold">1280¥-1480¥</span>
-                        </div>
+                    </div>
+                    
+                    <div className="text-xs text-gray-600 space-y-1">
+                      <div className="flex justify-between">
+                        <span>Siphon Coffee :</span>
+                        <span className="font-semibold">480¥-680¥</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span>Pancakes :</span>
+                        <span className="font-semibold">880¥</span>
                       </div>
                     </div>
                   </div>
                   
-                  <div className="mt-6 pt-4 border-t border-yellow-200">
-                    <p className="text-sm text-gray-600 mb-2">
-                      <strong>Spécialité :</strong> Nostalgie Showa, café siphon artisanal, pancakes signature
-                    </p>
-                    <p className="text-sm text-gray-600">
-                      <strong>Ambiance :</strong> Vintage authentique, mobilier rétro, atmosphère nostalgique
+                  <div className="mt-4 pt-3 border-t border-yellow-200">
+                    <p className="text-xs text-gray-600">
+                      <strong>Style :</strong> Vintage authentique, atmosphère nostalgique
                     </p>
                   </div>
                 </div>
