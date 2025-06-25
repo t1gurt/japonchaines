@@ -127,6 +127,33 @@ export default function ChainesPage() {
       avgPrice: '100-120¥/pièce'
     },
     {
+      slug: 'komeda',
+      name: 'Komeda Coffee',
+      nameJp: 'コメダ珈琲店',
+      category: 'Café',
+      description: 'Kissaten moderne avec Morning Service légendaire et spécialité Shironoir.',
+      popularity: 'Très populaire',
+      avgPrice: '450-780¥'
+    },
+    {
+      slug: 'doutor',
+      name: 'Doutor Coffee',
+      nameJp: 'ドトールコーヒー',
+      category: 'Café',
+      description: 'Pioneer du café moderne japonais - qualité artisanale et innovation depuis 1980.',
+      popularity: 'Très populaire',
+      avgPrice: '200-450¥'
+    },
+    {
+      slug: 'hoshino',
+      name: 'Hoshino Coffee',
+      nameJp: '星乃珈琲店',
+      category: 'Café',
+      description: 'Nostalgie Showa authentique - café siphon artisanal et pancakes signature.',
+      popularity: 'Populaire',
+      avgPrice: '480-1280¥'
+    },
+    {
       slug: 'kushikatsu-tanaka',
       name: 'Kushikatsu Tanaka',
       nameJp: '串カツ田中',
@@ -313,6 +340,15 @@ export default function ChainesPage() {
       avgPrice: '300-700¥'
     },
     {
+      slug: 'gindako',
+      name: 'Gindako',
+      nameJp: '銀だこ',
+      category: 'Street Food',
+      description: 'Spécialiste des takoyaki authentiques d\'Osaka avec cuisson live et sauce secrète.',
+      popularity: 'Très populaire',
+      avgPrice: '480-800¥'
+    },
+    {
       slug: 'hanamaru-udon',
       name: 'Hanamaru Udon',
       nameJp: 'はなまるうどん',
@@ -341,21 +377,23 @@ export default function ChainesPage() {
     }], []);
   const categories = [
     'Tous',
-    'Gyudon',
-    'Ramen',
-    'Sushi',
-    'Curry',
-    'Hamburgers',
-    'Restaurant Familial',
+    'Café',
+    'Champon/Ramen',
     'Cuisine Chinoise',
+    'Curry',
     'Fast Food',
-    'Udon',
-    'Soba',
+    'Gyudon',
+    'Hamburgers',
     'Italien',
     'Izakaya',
-    'Champon/Ramen',
+    'Ramen',
+    'Restaurant Familial',
+    'Soba',
+    'Street Food',
+    'Sushi',
     'Teishoku',
     'Tempura',
+    'Udon',
     'Yakitori'
   ];
 

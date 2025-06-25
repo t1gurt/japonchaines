@@ -1,5 +1,32 @@
 # チェーン追加時のToDoリスト・ガイド
 
+## ✅ ドトールコーヒー・星乃珈琲店追加完了 (2025年6月25日)
+- ✅ ドトールコーヒー個別ページ作成 (`src/app/chaines/doutor/page.tsx`)
+- ✅ 星乃珈琲店個別ページ作成 (`src/app/chaines/hoshino/page.tsx`)
+- ✅ サイトデータ更新 (`src/data/site-data.ts`) - doutor, hoshino追加
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ カフェカテゴリページ更新 (`src/app/type-plat/cafe/page.tsx`)
+- ✅ README.md統計情報更新 (38→40チェーン)
+- ✅ ドキュメント更新完了
+
+## ✅ 銀だこ（Gindako）追加完了 (2025年6月25日)
+- ✅ 個別ページ作成 (`src/app/chaines/gindako/page.tsx`)
+- ✅ 新カテゴリ「street-food」作成 (`src/app/type-plat/street-food/page.tsx`)
+- ✅ サイトデータ更新 (`src/data/site-data.ts`)
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ タイプ別ページ更新 (`src/app/type-plat/page.tsx`)
+- ✅ README.md統計情報更新 (36→38チェーン、12→14カテゴリ)
+- ✅ ドキュメント更新完了
+
+## ✅ コメダ珈琲店（Komeda Coffee）追加完了 (2025年6月25日)
+- ✅ 個別ページ作成 (`src/app/chaines/komeda/page.tsx`)
+- ✅ 新カテゴリ「cafe」作成 (`src/app/type-plat/cafe/page.tsx`)
+- ✅ サイトデータ更新 (`src/data/site-data.ts`)
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ タイプ別ページ更新 (`src/app/type-plat/page.tsx`)
+- ✅ README.md統計情報更新 (36→38チェーン、12→14カテゴリ)
+- ✅ ドキュメント更新完了
+
 ## ✅ 串カツ田中追加完了 (2025年6月25日)
 - ✅ 個別ページ作成 (`src/app/chaines/kushikatsu-tanaka/page.tsx`)
 - ✅ サイトデータ更新 (`src/data/site-data.ts`)
