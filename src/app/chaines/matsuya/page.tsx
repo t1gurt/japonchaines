@@ -1,6 +1,30 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Matsuya (松屋) | Gyudon | Guide Restaurants Japonais',
+  description: 'Guide complet de Matsuya - Gyudon économique 24h/24 avec menu varié et système de tickets automatique. Menu détaillé, prix imbattables et conseils.',
+  keywords: [
+    'matsuya', '松屋', 'gyudon', 'gyudon économique',
+    'service 24h', 'menu varié', 'prix imbattables',
+    'tickets automatique', 'restauration rapide', 'bœuf riz'
+  ],
+  openGraph: {
+    title: 'Matsuya (松屋) | Gyudon Économique 24h/24',
+    description: 'Découvrez Matsuya, la chaîne de gyudon économique avec service 24h/24 et prix imbattables',
+    type: 'article',
+    url: '/chaines/matsuya',
+  },
+  alternates: {
+    canonical: '/chaines/matsuya',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function MatsuyaPage() {
   return (

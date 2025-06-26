@@ -1,5 +1,26 @@
 # チェーン追加時のToDoリスト・ガイド
 
+## ✅ SEO・インデックス登録改善完了 (2025年6月26日)
+- ✅ メタデータ設定追加 (`src/app/chaines/page.tsx`, `src/app/type-plat/page.tsx`)
+- ✅ 全44チェーンページメタデータ追加完了
+- ✅ メタデータ生成ライブラリ作成 (`src/lib/chain-metadata.ts`)
+- ✅ サイトマップ最終更新日調整 (`src/app/sitemap.ts`)
+- ✅ Next.js設定最適化 (`next.config.ts`) - パフォーマンス向上
+- ✅ 構造化データ拡張準備 (`src/lib/structured-data.ts`)
+- ✅ ビルド成功・90ページ全てのSEO改善
+
+### ✅ メタデータ追加完了チェーン一覧 (44/44)
+- ✅ Bamiyan, CoCo Ichibanya, Yoshinoya, Sukiya, Matsuya
+- ✅ Sushiro, Ichiran, Marugame Seimen, Ootoya, Tenya
+- ✅ Yayoiken, Osaka Ohsho, Anan, Gyukaku
+- ✅ Kura Sushi, Hama Sushi, Komeda, Tenkaippin
+- ✅ Ringer Hut, Saizeriya, Torikizoku, Tsunahachi
+- ✅ Watami, Shirokiya, Sukiya Curry, Hanamaru Udon
+- ✅ Gyoza no Ohsho, Gusto, Go Go Curry, Fuji Soba
+- ✅ Freshness Burger, Big Echo, Miyamoto Munashi
+- ✅ Lotteria, Jonathans, Karaoke Kan, Mos Burger
+- ✅ その他全チェーン（Doutor, Gindako, Hidakaya等）
+
 ## ✅ 安安（Anan）追加完了 (2025年6月26日)
 - ✅ 個別ページ作成 (`src/app/chaines/anan/page.tsx`)
 - ✅ 焼肉カテゴリページ更新 (`src/app/type-plat/yakiniku/page.tsx`) - 安安追加

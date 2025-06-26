@@ -1,5 +1,30 @@
 import Link from "next/link";
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Coffee, Utensils, Heart, Gift } from 'lucide-react';
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Komeda Coffee (コメダ珈琲) | Cafés | Guide Restaurants Japonais',
+  description: 'Guide complet de Komeda Coffee - Café traditionnel japonais avec petit-déjeuner matinal gratuit et ambiance nostalgique. Menu et culture du café japonais.',
+  keywords: [
+    'komeda coffee', 'コメダ珈琲', 'café japonais', 'petit-déjeuner gratuit',
+    'morning service', 'café traditionnel', 'ambiance nostalgique',
+    'shiro noir', 'ogura toast', 'café culture'
+  ],
+  openGraph: {
+    title: 'Komeda Coffee (コメダ珈琲) | Café Traditionnel Japonais',
+    description: 'Découvrez Komeda Coffee, café traditionnel avec petit-déjeuner matinal gratuit et ambiance nostalgique',
+    type: 'article',
+    url: '/chaines/komeda',
+  },
+  alternates: {
+    canonical: '/chaines/komeda',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function KomedaPage() {
   return (

@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, MapPin, Clock, Star, DollarSign, Users, Utensils } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, ChefHat, DollarSign } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Miyamoto Munashi (宮本むなし) | Teishoku | Guide Restaurants Japonais',
+  description: 'Guide complet de Miyamoto Munashi - Restaurant teishoku traditionnel avec repas équilibrés et prix abordables. Cuisine japonaise authentique.',
+  keywords: [
+    'miyamoto munashi', '宮本むなし', 'teishoku', 'repas équilibrés',
+    'prix abordables', 'cuisine japonaise', 'restaurant traditionnel',
+    'menu japonais', 'repas complets', 'style teishoku'
+  ],
+  openGraph: {
+    title: 'Miyamoto Munashi (宮本むなし) | Teishoku Traditionnel',
+    description: 'Découvrez Miyamoto Munashi, restaurant teishoku avec repas équilibrés et cuisine japonaise authentique',
+    type: 'article',
+    url: '/chaines/miyamoto-munashi',
+  },
+  alternates: {
+    canonical: '/chaines/miyamoto-munashi',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function MiyamotoMunashiPage() {
   const menuItems = [

@@ -1,5 +1,30 @@
-import Link from "next/link";
+import Link from 'next/link';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Flame, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'CoCo Ichibanya (ココイチ) | Curry | Guide Restaurants Japonais',
+  description: 'Guide complet de CoCo Ichibanya - Leader du curry japonais avec personnalisation complète et qualité constante. Curry authentique style japonais.',
+  keywords: [
+    'coco ichibanya', 'ココイチ', 'curry japonais', 'personnalisation',
+    'qualité constante', 'curry authentique', 'style japonais',
+    'leader curry', 'épices personnalisées', 'curry rice'
+  ],
+  openGraph: {
+    title: 'CoCo Ichibanya (ココイチ) | Leader du Curry Japonais',
+    description: 'Découvrez CoCo Ichibanya, leader du curry japonais avec personnalisation complète et qualité constante',
+    type: 'article',
+    url: '/chaines/coco-ichibanya',
+  },
+  alternates: {
+    canonical: '/chaines/coco-ichibanya',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function CocoIchibanyaPage() {
   const menuCategories = [

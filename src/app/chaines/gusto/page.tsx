@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, Coffee, ShoppingCart } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Coffee, Leaf, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Gusto (ガスト) | Family Restaurant | Guide Restaurants Japonais',
+  description: 'Guide complet de Gusto - Restaurant familial populaire avec menu varié et prix abordables. Parfait pour les familles, ambiance décontractée.',
+  keywords: [
+    'gusto', 'ガスト', 'family restaurant', 'restaurant familial',
+    'menu varié', 'prix abordables', 'parfait familles',
+    'ambiance décontractée', 'cuisine occidentale', 'restaurant populaire'
+  ],
+  openGraph: {
+    title: 'Gusto (ガスト) | Restaurant Familial Populaire',
+    description: 'Découvrez Gusto, restaurant familial avec menu varié et prix abordables, parfait pour les familles',
+    type: 'article',
+    url: '/chaines/gusto',
+  },
+  alternates: {
+    canonical: '/chaines/gusto',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function GustoPage() {
   return (

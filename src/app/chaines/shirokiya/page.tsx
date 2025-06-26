@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Building, Wine, Crown } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Gift, Crown, Building, Wine } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Shirokiya (白木屋) | Izakaya | Guide Restaurants Japonais',
+  description: 'Guide complet de Shirokiya - Izakaya traditionnel avec ambiance authentique et menu japonais varié. Expérience culturelle et culinaire authentique.',
+  keywords: [
+    'shirokiya', '白木屋', 'izakaya', 'traditionnel',
+    'ambiance authentique', 'menu japonais', 'expérience culturelle',
+    'cuisine japonaise', 'boissons traditionnelles', 'atmosphère locale'
+  ],
+  openGraph: {
+    title: 'Shirokiya (白木屋) | Izakaya Traditionnel',
+    description: 'Découvrez Shirokiya, izakaya traditionnel avec ambiance authentique et expérience culinaire japonaise',
+    type: 'article',
+    url: '/chaines/shirokiya',
+  },
+  alternates: {
+    canonical: '/chaines/shirokiya',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function ShirokiyaPage() {
   return (

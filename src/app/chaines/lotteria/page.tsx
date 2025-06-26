@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Zap, Candy, Globe } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Crown, Coffee, Zap, Candy } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Lotteria (ロッテリア) | Burgers | Guide Restaurants Japonais',
+  description: 'Guide complet de Lotteria - Chaîne de burgers japonaise avec menu unique et saveurs locales. Burgers style japonais avec influences asiatiques.',
+  keywords: [
+    'lotteria', 'ロッテリア', 'burgers japonais', 'menu unique',
+    'saveurs locales', 'style japonais', 'influences asiatiques',
+    'burgers originaux', 'fast food japonais', 'créativité culinaire'
+  ],
+  openGraph: {
+    title: 'Lotteria (ロッテリア) | Burgers Style Japonais',
+    description: 'Découvrez Lotteria, chaîne de burgers japonaise avec menu unique et saveurs locales originales',
+    type: 'article',
+    url: '/chaines/lotteria',
+  },
+  alternates: {
+    canonical: '/chaines/lotteria',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function LotteriaPage() {
   return (
