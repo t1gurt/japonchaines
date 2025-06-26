@@ -5,6 +5,7 @@
 
 // レストランチェーンのリスト
 export const restaurantChains = [
+  'anan',
   'bamiyan',
   'coco-ichibanya',
   'doutor',
@@ -14,6 +15,7 @@ export const restaurantChains = [
   'go-go-curry',
   'gusto',
   'gyoza-no-ohsho',
+  'gyukaku',
   'hama-sushi',
   'hanamaru-udon',
   'hidakaya',
@@ -66,6 +68,7 @@ export const foodTypes = [
   'teishoku',
   'tempura',
   'udon',
+  'yakiniku',
 ];
 
 // 静的ページのリスト
