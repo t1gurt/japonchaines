@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Bird, Coins, Flame } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Gamepad2, Gift, Coins } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Torikizoku (鳥貴族) | Izakaya | Guide Restaurants Japonais',
+  description: 'Guide complet de Torikizoku - Izakaya spécialisé dans le yakitori avec prix uniformes. Ambiance conviviale, brochettes de qualité à prix fixe.',
+  keywords: [
+    'torikizoku', '鳥貴族', 'izakaya', 'yakitori',
+    'prix uniforme', 'brochettes poulet', 'ambiance conviviale',
+    'prix fixe', 'spécialité yakitori', 'restaurant japonais'
+  ],
+  openGraph: {
+    title: 'Torikizoku (鳥貴族) | Izakaya Yakitori Prix Fixe',
+    description: 'Découvrez Torikizoku, izakaya spécialisé dans le yakitori avec prix uniformes et ambiance conviviale',
+    type: 'article',
+    url: '/chaines/torikizoku',
+  },
+  alternates: {
+    canonical: '/chaines/torikizoku',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TorikizokuPage() {
   return (
@@ -20,7 +44,7 @@ export default function TorikizokuPage() {
           
           <div className="flex items-center space-x-4">
             <div className="w-16 h-16 bg-yellow-600 rounded-lg flex items-center justify-center">
-              <Bird className="w-8 h-8 text-white" />
+              <Heart className="w-8 h-8 text-white" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-gray-900">Torikizoku</h1>

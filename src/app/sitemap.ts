@@ -8,7 +8,7 @@ export const dynamic = 'force-static';
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://username.github.io/japonchaines';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const currentDate = new Date();
+  const currentDate = new Date('2025-06-26');
 
   // 静的ページのサイトマップエントリ
   const staticSitemapEntries = staticPages.map((page) => ({

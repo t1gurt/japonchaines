@@ -1,6 +1,32 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategoryViewTracker from '../../components/CategoryViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Types de Cuisine Japonaise | Guide des Catégories de Restaurants',
+  description: 'Découvrez tous les types de cuisine japonaise : Gyūdon, Ramen, Sushi, Curry, Tempura, Udon, Yakiniku et plus. 16 catégories de restaurants avec guides détaillés.',
+  keywords: [
+    'cuisine japonaise', 'types restaurants japon',
+    'gyudon', 'ramen', 'sushi', 'curry japonais',
+    'tempura', 'udon', 'soba', 'yakiniku',
+    'izakaya', 'teishoku', 'family restaurant',
+    'guide voyage japon', 'restaurants japonais'
+  ],
+  openGraph: {
+    title: 'Types de Cuisine Japonaise | 16 Catégories de Restaurants',
+    description: 'Guide complet de tous les types de cuisine japonaise avec chaînes recommandées',
+    type: 'website',
+    url: '/type-plat',
+  },
+  alternates: {
+    canonical: '/type-plat',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TypePlatPage() {  // Fonction pour obtenir le bon lien pour chaque type de plat
   const getImplementationPath = (id: string) => {    const implementedPages: { [key: string]: string } = {

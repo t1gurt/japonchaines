@@ -1,6 +1,30 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History, Wheat } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Marugame Seimen (丸亀製麺) | Udon | Guide Restaurants Japonais',
+  description: 'Guide complet de Marugame Seimen - Udon fraîches préparées devant vous avec tradition de Sanuki et tempura croustillantes. Menu détaillé, prix et techniques.',
+  keywords: [
+    'marugame seimen', '丸亀製麺', 'udon', 'udon sanuki',
+    'préparation visible', 'tempura fraîches', 'qualité artisanale',
+    'udon fraîches', 'tradition sanuki', 'nouilles japonaises'
+  ],
+  openGraph: {
+    title: 'Marugame Seimen (丸亀製麺) | Udon Fraîches Artisanales',
+    description: 'Découvrez Marugame Seimen, udon fraîches préparées devant vous avec tradition de Sanuki',
+    type: 'article',
+    url: '/chaines/marugame-seimen',
+  },
+  alternates: {
+    canonical: '/chaines/marugame-seimen',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function MarugameSeimensPage() {
   return (

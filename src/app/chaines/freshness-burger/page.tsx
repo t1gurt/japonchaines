@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Leaf, Coffee, ChefHat, DollarSign } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Leaf, Crown, ChefHat, DollarSign } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Freshness Burger (フレッシュネスバーガー) | Burgers | Guide Restaurants Japonais',
+  description: 'Guide complet de Freshness Burger - Burgers premium japonais avec ingrédients frais et qualité supérieure. Burgers gourmet style japonais.',
+  keywords: [
+    'freshness burger', 'フレッシュネスバーガー', 'burgers premium', 'ingrédients frais',
+    'qualité supérieure', 'burgers gourmet', 'style japonais',
+    'burgers japonais', 'qualité premium', 'ingrédients naturels'
+  ],
+  openGraph: {
+    title: 'Freshness Burger (フレッシュネスバーガー) | Burgers Premium Japonais',
+    description: 'Découvrez Freshness Burger, burgers premium avec ingrédients frais et qualité supérieure style japonais',
+    type: 'article',
+    url: '/chaines/freshness-burger',
+  },
+  alternates: {
+    canonical: '/chaines/freshness-burger',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function FreshnessBurgerPage() {
   return (

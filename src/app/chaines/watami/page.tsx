@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Leaf, Heart, Globe } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Wine, Music, Leaf } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Watami (ワタミ) | Izakaya | Guide Restaurants Japonais',
+  description: 'Guide complet de Watami - Chaîne d\'izakaya populaire avec menu varié et ambiance conviviale. Plats traditionnels japonais et boissons à prix raisonnables.',
+  keywords: [
+    'watami', 'ワタミ', 'izakaya', 'restaurant japonais',
+    'menu varié', 'ambiance conviviale', 'prix raisonnables',
+    'plats traditionnels', 'boissons japonaises', 'chaîne populaire'
+  ],
+  openGraph: {
+    title: 'Watami (ワタミ) | Izakaya Convivial',
+    description: 'Découvrez Watami, chaîne d\'izakaya populaire avec menu varié et ambiance conviviale',
+    type: 'article',
+    url: '/chaines/watami',
+  },
+  alternates: {
+    canonical: '/chaines/watami',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function WatamiPage() {
   return (

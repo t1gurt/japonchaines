@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Smartphone, Zap, DollarSign } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Gamepad2, Gift, Shield, Smartphone, DollarSign, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hama Sushi (はま寿司) | Kaiten-zushi | Guide Restaurants Japonais',
+  description: 'Guide complet de Hama Sushi - Sushi tournant abordable avec système de commande tactile et ramen. Menu varié, prix attractifs et service efficace.',
+  keywords: [
+    'hama sushi', 'はま寿司', 'kaiten-zushi', 'sushi tournant',
+    'commande tactile', 'prix abordables', 'sushi frais',
+    'ramen disponible', 'service rapide', 'menu varié'
+  ],
+  openGraph: {
+    title: 'Hama Sushi (はま寿司) | Sushi Tournant Abordable',
+    description: 'Découvrez Hama Sushi, sushi tournant abordable avec système de commande tactile et menu varié',
+    type: 'article',
+    url: '/chaines/hama-sushi',
+  },
+  alternates: {
+    canonical: '/chaines/hama-sushi',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function HamaSushiPage() {
   return (

@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, Users, History, Utensils } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hanamaru Udon (はなまるうどん) | Udon-Soba | Guide Restaurants Japonais',
+  description: 'Guide complet de Hanamaru Udon - Chaîne populaire d\'udon avec service rapide et prix abordables. Udon frais et authentique style Kagawa.',
+  keywords: [
+    'hanamaru udon', 'はなまるうどん', 'udon', 'soba',
+    'service rapide', 'prix abordables', 'udon frais',
+    'style kagawa', 'udon authentique', 'self-service'
+  ],
+  openGraph: {
+    title: 'Hanamaru Udon (はなまるうどん) | Udon Rapide et Abordable',
+    description: 'Découvrez Hanamaru Udon, chaîne populaire d\'udon avec service rapide et prix abordables',
+    type: 'article',
+    url: '/chaines/hanamaru-udon',
+  },
+  alternates: {
+    canonical: '/chaines/hanamaru-udon',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function HanamaruUdonPage() {
   return (

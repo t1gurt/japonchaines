@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Zap, Clock9, MapPin as LocationPin } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Crown, Zap, Clock9 } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Go Go Curry (ゴーゴーカレー) | Curry | Guide Restaurants Japonais',
+  description: 'Guide complet de Go Go Curry - Curry de style Kanazawa avec sauce épaisse unique et ambiance rock. Curry japonais authentique et savoureux.',
+  keywords: [
+    'go go curry', 'ゴーゴーカレー', 'curry kanazawa', 'sauce épaisse',
+    'ambiance rock', 'curry japonais', 'curry authentique',
+    'style kanazawa', 'curry savoureux', 'spécialité curry'
+  ],
+  openGraph: {
+    title: 'Go Go Curry (ゴーゴーカレー) | Curry de Kanazawa Rock',
+    description: 'Découvrez Go Go Curry, curry de style Kanazawa avec sauce épaisse unique et ambiance rock',
+    type: 'article',
+    url: '/chaines/go-go-curry',
+  },
+  alternates: {
+    canonical: '/chaines/go-go-curry',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function GoGoCarryPage() {
   return (

@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Droplets, Wheat, MapPin as LocationPin } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, ChefHat, Heart, Zap, Droplets, Wheat } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Ringer Hut (リンガーハット) | Ramen | Guide Restaurants Japonais',
+  description: 'Guide complet de Ringer Hut - Spécialiste du chanpon de Nagasaki avec légumes frais et bouillon savoureux. Ramen fusion japonais unique.',
+  keywords: [
+    'ringer hut', 'リンガーハット', 'chanpon', 'nagasaki chanpon',
+    'ramen légumes', 'bouillon savoureux', 'cuisine nagasaki',
+    'légumes frais', 'ramen fusion', 'spécialité kyushu'
+  ],
+  openGraph: {
+    title: 'Ringer Hut (リンガーハット) | Chanpon de Nagasaki',
+    description: 'Découvrez Ringer Hut, spécialiste du chanpon de Nagasaki avec légumes frais et bouillon savoureux',
+    type: 'article',
+    url: '/chaines/ringer-hut',
+  },
+  alternates: {
+    canonical: '/chaines/ringer-hut',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function RingerHutPage() {
   return (

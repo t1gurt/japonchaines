@@ -1,6 +1,30 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Sushiro (スシロー) | Kaiten-zushi | Guide Restaurants Japonais',
+  description: 'Guide complet de Sushiro - Leader du sushi tournant avec innovation technologique et qualité à prix accessible. Menu détaillé, prix et conseils pratiques.',
+  keywords: [
+    'sushiro', 'スシロー', 'kaiten-zushi', 'sushi tournant',
+    'leader kaiten', 'innovation tech', 'qualité accessible',
+    'menu saisonnier', 'sushi abordable', 'tapis roulant'
+  ],
+  openGraph: {
+    title: 'Sushiro (スシロー) | Leader du Sushi Tournant',
+    description: 'Découvrez Sushiro, le leader du sushi tournant au Japon avec innovation technologique et qualité accessible',
+    type: 'article',
+    url: '/chaines/sushiro',
+  },
+  alternates: {
+    canonical: '/chaines/sushiro',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function SushiroPage() {
   return (

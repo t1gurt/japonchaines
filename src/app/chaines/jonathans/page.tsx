@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, Coffee, Wine, Crown } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Coffee, Leaf, Wine, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Jonathans (ジョナサン) | Family Restaurant | Guide Restaurants Japonais',
+  description: 'Guide complet de Jonathans - Restaurant familial avec menu occidental et ambiance décontractée. Parfait pour repas en famille et entre amis.',
+  keywords: [
+    'jonathans', 'ジョナサン', 'family restaurant', 'menu occidental',
+    'ambiance décontractée', 'repas famille', 'restaurant familial',
+    'cuisine occidentale', 'convivial', 'menu varié'
+  ],
+  openGraph: {
+    title: 'Jonathans (ジョナサン) | Restaurant Familial Occidental',
+    description: 'Découvrez Jonathans, restaurant familial avec menu occidental et ambiance décontractée',
+    type: 'article',
+    url: '/chaines/jonathans',
+  },
+  alternates: {
+    canonical: '/chaines/jonathans',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function JonathansPage() {
   return (

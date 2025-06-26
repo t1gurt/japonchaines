@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Crown, Fish, MapPin as LocationPin } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, ChefHat, Flame, Crown, Fish } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tsunahachi (つな八) | Tempura | Guide Restaurants Japonais',
+  description: 'Guide complet de Tsunahachi - Restaurant de tempura traditionnel fondé en 1923. Expertise centenaire, technique authentique et qualité exceptionnelle.',
+  keywords: [
+    'tsunahachi', 'つな八', 'tempura', 'restaurant traditionnel',
+    'fondé 1923', 'technique authentique', 'tempura maître',
+    'qualité exceptionnelle', 'tradition japonaise', 'expertise centenaire'
+  ],
+  openGraph: {
+    title: 'Tsunahachi (つな八) | Tempura Traditionnel depuis 1923',
+    description: 'Découvrez Tsunahachi, maître de la tempura depuis 1923 avec technique authentique et qualité exceptionnelle',
+    type: 'article',
+    url: '/chaines/tsunahachi',
+  },
+  alternates: {
+    canonical: '/chaines/tsunahachi',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TsunahachiPage() {
   return (

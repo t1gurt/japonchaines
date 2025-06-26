@@ -1,6 +1,30 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, Crown } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Flame, Heart, Crown, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Tenkaippin (天下一品) | Ramen | Guide Restaurants Japonais',
+  description: 'Guide complet de Tenkaippin - Ramen kotteri avec bouillon riche et crémeux. Spécialité ramen traditionnel de Kyoto, goût unique et authentique.',
+  keywords: [
+    'tenkaippin', '天下一品', 'ramen kotteri', 'bouillon crémeux',
+    'ramen kyoto', 'ramen traditionnel', 'kotteri ramen',
+    'bouillon riche', 'ramen authentique', 'spécialité kyoto'
+  ],
+  openGraph: {
+    title: 'Tenkaippin (天下一品) | Ramen Kotteri de Kyoto',
+    description: 'Découvrez Tenkaippin, ramen kotteri avec bouillon riche et crémeux, spécialité traditionnelle de Kyoto',
+    type: 'article',
+    url: '/chaines/tenkaippin',
+  },
+  alternates: {
+    canonical: '/chaines/tenkaippin',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function TenkaippinPage() {
   return (
