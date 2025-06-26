@@ -52,6 +52,7 @@ export default function Home() {
               { name: "Burgers Japonais", subtitle: "日本のハンバーガー", description: "Innovation burger", href: "/type-plat/burgers" },
               { name: "Cuisine Chinoise", subtitle: "中華料理", description: "Adaptation japonaise", href: "/type-plat/cuisine-chinoise" },
               { name: "Izakaya", subtitle: "居酒屋", description: "Bars traditionnels", href: "/type-plat/izakaya" },
+              { name: "Yakiniku", subtitle: "焼肉", description: "BBQ japonais convivial", href: "/type-plat/yakiniku" },
               { name: "Steak", subtitle: "ステーキ", description: "Excellence bovine", href: "/type-plat/steak" },
             ].map((category) => (
               <Link 
@@ -90,6 +91,7 @@ export default function Home() {
               { name: "Marugame Seimen", japanese: "丸亀製麺", type: "Udon", slug: "marugame-seimen" },
               { name: "Yudetaro", japanese: "ゆで太郎", type: "Soba", slug: "yudetaro" },
               { name: "Tenya", japanese: "てんや", type: "Tempura", slug: "tenya" },
+              { name: "Gyukaku", japanese: "牛角", type: "Yakiniku", slug: "gyukaku" },
               { name: "Jolly Pasta", japanese: "ジョリーパスタ", type: "Family Restaurant", slug: "jolly-pasta" },
               { name: "Ikinari Steak", japanese: "いきなりステーキ", type: "Steak", slug: "ikinari-steak" },
             ].map((chain) => (

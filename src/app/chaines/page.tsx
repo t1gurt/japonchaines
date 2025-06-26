@@ -11,6 +11,15 @@ export default function ChainesPage() {
 
   const chains = useMemo(() => [
     {
+      slug: 'anan',
+      name: 'Anan',
+      nameJp: '安安',
+      category: 'Yakiniku',
+      description: 'Yakiniku abordable au charbon de bois - "安くて旨い" (bon marché et délicieux) dans une ambiance décontractée.',
+      popularity: 'Populaire',
+      avgPrice: '1500-2500¥'
+    },
+    {
       slug: 'bamiyan',
       name: 'Bamiyan',
       nameJp: 'バーミヤン',
@@ -62,6 +71,15 @@ export default function ChainesPage() {
       description: 'Spécialiste des gyoza et plats chinois à prix populaires.',
       popularity: 'Très populaire',
       avgPrice: '400-800¥'
+    },
+    {
+      slug: 'gyukaku',
+      name: 'Gyukaku',
+      nameJp: '牛角',
+      category: 'Yakiniku',
+      description: 'Leader du yakiniku premium - Viandes de qualité dans une ambiance moderne et conviviale.',
+      popularity: 'Très populaire',
+      avgPrice: '2000-4000¥'
     },
     {
       slug: 'hidakaya',
@@ -413,7 +431,8 @@ export default function ChainesPage() {
     'Teishoku',
     'Tempura',
     'Udon',
-    'Yakitori'
+    'Yakitori',
+    'Yakiniku'
   ];
 
   // Filtered chains based on search and category

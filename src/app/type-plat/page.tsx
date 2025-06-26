@@ -18,14 +18,15 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       'teishoku': '/type-plat/teishoku',
       'cafe': '/type-plat/cafe',
       'street-food': '/type-plat/street-food',
-      'steak': '/type-plat/steak'
+      'steak': '/type-plat/steak',
+      'yakiniku': '/type-plat/yakiniku'
     };
     
     return implementedPages[id] || `/type-plat/${id}`;
   };
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food', 'steak'];
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food', 'steak', 'yakiniku'];
     return implementedIds.includes(id);
   };
 
@@ -177,6 +178,16 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       chains: ["Ikinari Steak"],
       color: "bg-red-800",
       icon: "🥩"
+    },
+    {
+      id: "yakiniku",
+      name: "Yakiniku",
+      japanese: "焼肉",
+      description: "Barbecue japonais premium - L'art de griller en famille",
+      detailedDescription: "Le yakiniku incarne l'art japonais du barbecue, où la qualité de la viande rencontre la convivialité du partage. Cette expérience culinaire permet de griller soi-même des morceaux de bœuf premium dans une ambiance détendue et moderne.",
+      chains: ["Gyukaku"],
+      color: "bg-red-700",
+      icon: "🔥"
     }
   ];  return (
     <>

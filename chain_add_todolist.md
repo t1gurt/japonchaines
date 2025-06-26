@@ -1,5 +1,22 @@
 # チェーン追加時のToDoリスト・ガイド
 
+## ✅ 安安（Anan）追加完了 (2025年6月26日)
+- ✅ 個別ページ作成 (`src/app/chaines/anan/page.tsx`)
+- ✅ 焼肉カテゴリページ更新 (`src/app/type-plat/yakiniku/page.tsx`) - 安安追加
+- ✅ サイトデータ更新 (`src/data/site-data.ts`) - anan追加
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ README.md統計情報更新 (43→44チェーン)
+- ✅ ドキュメント更新完了
+
+## ✅ 牛角（Gyukaku）追加完了 (2025年6月26日)
+- ✅ 個別ページ作成 (`src/app/chaines/gyukaku/page.tsx`)
+- ✅ 新カテゴリ「yakiniku」作成 (`src/app/type-plat/yakiniku/page.tsx`)
+- ✅ サイトデータ更新 (`src/data/site-data.ts`) - gyukaku, yakiniku追加
+- ✅ チェーン一覧ページ更新 (`src/app/chaines/page.tsx`)
+- ✅ タイプ別ページ更新 (`src/app/type-plat/page.tsx`)
+- ✅ README.md統計情報更新 (42→43チェーン、15→16カテゴリ)
+- ✅ ドキュメント更新完了
+
 ## ✅ ジョリーパスタ（Jolly Pasta）・いきなりステーキ（Ikinari Steak）追加完了 (2025年6月25日)
 - ✅ ジョリーパスタ個別ページ作成 (`src/app/chaines/jolly-pasta/page.tsx`)
 - ✅ いきなりステーキ個別ページ作成 (`src/app/chaines/ikinari-steak/page.tsx`)
