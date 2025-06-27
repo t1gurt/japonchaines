@@ -84,7 +84,7 @@ export default function Home() {
           </h3>          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
               { name: "Yoshinoya", japanese: "吉野家", type: "Gyūdon", slug: "yoshinoya" },
-              { name: "Sukiya", japanese: "すき家", type: "Gyūdon", slug: "sukiya" },
+              { name: "Nakau", japanese: "なか卯", type: "Gyūdon", slug: "nakau" },
               { name: "Sushiro", japanese: "スシロー", type: "Kaiten-zushi", slug: "sushiro" },
               { name: "CoCo Ichibanya", japanese: "ココイチ", type: "Curry", slug: "coco-ichibanya" },
               { name: "Ootoya", japanese: "大戸屋", type: "Teishoku", slug: "ootoya" },

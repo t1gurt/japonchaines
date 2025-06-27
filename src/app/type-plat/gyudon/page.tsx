@@ -67,6 +67,29 @@ export default function GyudonPage() {
       foundingYear: 1966,
       heritage: "Challenger créatif qui repousse les limites du fast-food",
       href: "/chaines/matsuya"
+    },
+    {
+      name: "Nakau",
+      japanese: "なか卯",
+      logo: "/logos/nakau.png",
+      description: "Le spécialiste unique combinant gyūdon et udon frais. Qualité familiale et innovation depuis 1969.",
+      specialties: ["親子丼 (Oyako-don)", "牛丼 (Gyū-don)", "うどん (Udon frais)", "定食 (Sets complets)", "天丼 (Ten-don)"],
+      priceRange: "¥490 (並盛) - ¥800+ (sets)",
+      locations: "460+ restaurants",
+      orderingMethod: "Distributeur + Commande au comptoir",
+      vegetarianOptions: "Udon au dashi végétal disponible",
+      uniqueFeatures: [
+        "Fusion unique gyūdon + udon sous un même toit",
+        "Udon préparés fraîchement dans chaque restaurant",
+        "Bouillon dashi authentique avec katsuobushi",
+        "Ambiance familiale plus détendue",
+        "Spécialiste de l'Oyako-don (poulet-œuf)",
+        "Qualité supérieure des ingrédients",
+        "Innovation continue avec menus saisonniers"
+      ],
+      foundingYear: 1969,
+      heritage: "55 ans d'innovation dans la fusion fast-food et qualité familiale",
+      href: "/chaines/nakau"
     }
   ];
 
