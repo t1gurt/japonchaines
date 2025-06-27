@@ -94,7 +94,7 @@ export default function MiyamotoMunashiPage() {
             <nav className="flex space-x-2 text-sm">
               <Link href="/" className="text-gray-500 hover:text-red-600">Accueil</Link>
               <span className="text-gray-400">→</span>
-              <Link href="/chaines" className="text-gray-500 hover:text-red-600">Chaînes</Link>
+              <Link href="/type-plat/teishoku" className="text-gray-500 hover:text-red-600">Teishoku</Link>
               <span className="text-gray-400">→</span>
               <span className="text-gray-900">Miyamoto Munashi</span>
             </nav>

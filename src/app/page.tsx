@@ -86,7 +86,7 @@ export default function Home() {
               { name: "Yoshinoya", japanese: "吉野家", type: "Gyūdon", slug: "yoshinoya" },
               { name: "Sukiya", japanese: "すき家", type: "Gyūdon", slug: "sukiya" },
               { name: "Sushiro", japanese: "スシロー", type: "Kaiten-zushi", slug: "sushiro" },
-              { name: "CoCo壱番屋", japanese: "ココイチ", type: "Curry", slug: "coco-ichibanya" },
+              { name: "CoCo Ichibanya", japanese: "ココイチ", type: "Curry", slug: "coco-ichibanya" },
               { name: "Ootoya", japanese: "大戸屋", type: "Teishoku", slug: "ootoya" },
               { name: "Ichiran", japanese: "一蘭", type: "Ramen", slug: "ichiran" },
               { name: "Marugame Seimen", japanese: "丸亀製麺", type: "Udon", slug: "marugame-seimen" },

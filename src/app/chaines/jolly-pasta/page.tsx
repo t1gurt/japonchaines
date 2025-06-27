@@ -13,7 +13,7 @@ export default function JollyPastaPage() {
             <nav className="text-sm">
               <Link href="/" className="text-gray-500 hover:text-purple-600">Accueil</Link>
               <span className="text-gray-400 mx-2">/</span>
-              <Link href="/chaines" className="text-gray-500 hover:text-purple-600">Chaînes</Link>
+              <Link href="/type-plat/family-restaurants" className="text-gray-500 hover:text-purple-600">Family Restaurants</Link>
               <span className="text-gray-400 mx-2">/</span>
               <span className="text-purple-600 font-medium">Jolly Pasta</span>
             </nav>
