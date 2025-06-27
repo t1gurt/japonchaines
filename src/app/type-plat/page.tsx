@@ -45,14 +45,15 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       'cafe': '/type-plat/cafe',
       'street-food': '/type-plat/street-food',
       'steak': '/type-plat/steak',
-      'yakiniku': '/type-plat/yakiniku'
+      'yakiniku': '/type-plat/yakiniku',
+      'karaoke': '/type-plat/karaoke'
     };
     
     return implementedPages[id] || `/type-plat/${id}`;
   };
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food', 'steak', 'yakiniku'];
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food', 'steak', 'yakiniku', 'karaoke'];
     return implementedIds.includes(id);
   };
 
@@ -214,6 +215,16 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       chains: ["Gyukaku"],
       color: "bg-red-700",
       icon: "🔥"
+    },
+    {
+      id: "karaoke",
+      name: "Karaoke",
+      japanese: "カラオケ",
+      description: "Divertissement musical japonais - Culture du chant entre amis",
+      detailedDescription: "Le karaoke est né au Japon et fait partie intégrante de la culture sociale japonaise. Dans des salles privées équipées de systèmes audio modernes, c'est l'expérience parfaite pour se détendre et s'amuser entre amis ou collègues.",
+      chains: ["Big Echo", "Karaoke Kan"],
+      color: "bg-purple-600",
+      icon: "🎤"
     }
   ];  return (
     <>
