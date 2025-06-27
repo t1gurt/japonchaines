@@ -13,7 +13,7 @@ export default function DoutorPage() {
             <nav className="text-sm">
               <Link href="/" className="text-gray-500 hover:text-purple-600">Accueil</Link>
               <span className="text-gray-400 mx-2">/</span>
-              <Link href="/chaines" className="text-gray-500 hover:text-purple-600">Chaînes</Link>
+              <Link href="/type-plat/cafe" className="text-gray-500 hover:text-purple-600">Café</Link>
               <span className="text-gray-400 mx-2">/</span>
               <span className="text-purple-600 font-medium">Doutor Coffee</span>
             </nav>

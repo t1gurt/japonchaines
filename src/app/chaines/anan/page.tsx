@@ -109,7 +109,7 @@ export default function AnanPage() {
           <nav className="text-sm">
             <Link href="/" className="text-gray-500 hover:text-red-600">Accueil</Link>
             <span className="text-gray-400 mx-2">/</span>
-            <Link href="/chaines" className="text-gray-500 hover:text-red-600">Chaînes</Link>
+            <Link href="/type-plat/yakiniku" className="text-gray-500 hover:text-red-600">Yakiniku</Link>
             <span className="text-gray-400 mx-2">/</span>
             <span className="text-red-600 font-medium">Anan</span>
           </nav>
