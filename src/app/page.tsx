@@ -54,6 +54,7 @@ export default function Home() {
               { name: "Izakaya", subtitle: "居酒屋", description: "Bars traditionnels", href: "/type-plat/izakaya" },
               { name: "Yakiniku", subtitle: "焼肉", description: "BBQ japonais convivial", href: "/type-plat/yakiniku" },
               { name: "Steak", subtitle: "ステーキ", description: "Excellence bovine", href: "/type-plat/steak" },
+              { name: "Karaoke", subtitle: "カラオケ", description: "Divertissement musical", href: "/type-plat/karaoke" },
             ].map((category) => (
               <Link 
                 key={category.name}
@@ -94,6 +95,7 @@ export default function Home() {
               { name: "Gyukaku", japanese: "牛角", type: "Yakiniku", slug: "gyukaku" },
               { name: "Jolly Pasta", japanese: "ジョリーパスタ", type: "Family Restaurant", slug: "jolly-pasta" },
               { name: "Ikinari Steak", japanese: "いきなりステーキ", type: "Steak", slug: "ikinari-steak" },
+              { name: "Big Echo", japanese: "ビッグエコー", type: "Karaoke", slug: "big-echo" },
             ].map((chain) => (
               <Link 
                 key={chain.name}

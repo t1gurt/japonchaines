@@ -7,6 +7,7 @@
 export const restaurantChains = [
   'anan',
   'bamiyan',
+  'big-echo',
   'coco-ichibanya',
   'doutor',
   'freshness-burger',
@@ -25,6 +26,7 @@ export const restaurantChains = [
   'ippudo',
   'jolly-pasta',
   'jonathans',
+  'karaoke-kan',
   'komeda',
   'komoro-soba',
   'kura-sushi',
@@ -61,6 +63,7 @@ export const foodTypes = [
   'gyudon',
   'izakaya',
   'kaiten-zushi',
+  'karaoke',
   'ramen',
   'soba',
   'steak',
