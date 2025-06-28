@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Leaf, Crown, ChefHat, DollarSign } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import FreshnessBurgerCulturalMissions from './components/FreshnessBurgerCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -454,6 +455,10 @@ export default function FreshnessBurgerPage() {
             </div>
           </div>
         </div>
+
+        {/* Missions Culturelles */}
+        <FreshnessBurgerCulturalMissions />
+        
       </div>
     </div>
     </>

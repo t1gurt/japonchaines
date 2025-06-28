@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BurgerCategoryCulturalMissions from "./components/BurgerCategoryCulturalMissions";
 
 export default function BurgersJaponaisPage() {
   const burgerChains = [
@@ -529,7 +530,7 @@ export default function BurgersJaponaisPage() {
               <h3 className="text-lg font-bold text-gray-900 mb-3">Rapport Qualité-Prix</h3>
               <p className="text-gray-600 text-sm">
                 Bien que plus cher que McDonald's, la qualité justifie le prix. 
-                Les sets offrent une meilleure valeur que les items individuels.
+                Les sets offrent une meilleure value que les items individuels.
               </p>
             </div>
             
@@ -560,7 +561,12 @@ export default function BurgersJaponaisPage() {
               </p>
             </div>
           </div>
-        </div>      </section>
+        </div>
+        
+        {/* Missions Culturelles */}
+        <BurgerCategoryCulturalMissions />
+        
+      </section>
     </div>
   );
 }
