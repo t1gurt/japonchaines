@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import SukiyaCulturalMissions from './components/SukiyaCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -489,137 +490,15 @@ export default function SukiyaPage() {
                 </div>
               </div>
             </div>
+
+            {/* Missions Culturelles Sukiya */}
+            <SukiyaCulturalMissions />
           </div>
+        </div>
 
-          {/* Sidebar */}
-          <div className="space-y-6">
-            {/* Informations pratiques */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <Info className="w-5 h-5 text-orange-600 mr-2" />
-                Informations Pratiques
-              </h3>
-              
-              <div className="space-y-4 text-sm">
-                <div className="flex items-start space-x-3">
-                  <Clock className="w-4 h-4 text-gray-400 mt-1" />
-                  <div>
-                    <div className="font-medium text-gray-900">Horaires</div>
-                    <div className="text-gray-600">24h/24 (certains restaurants)</div>
-                    <div className="text-gray-500 text-xs">Varie selon l&apos;emplacement</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <MapPin className="w-4 h-4 text-gray-400 mt-1" />
-                  <div>
-                    <div className="font-medium text-gray-900">Localisation</div>
-                    <div className="text-gray-600">Centres commerciaux, zones résidentielles</div>
-                    <div className="text-gray-500 text-xs">1 942 restaurants au Japon</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <CreditCard className="w-4 h-4 text-gray-400 mt-1" />
-                  <div>
-                    <div className="font-medium text-gray-900">Paiement</div>
-                    <div className="text-gray-600">Espèces, cartes, cartes IC</div>
-                    <div className="text-gray-500 text-xs">Applications mobiles acceptées</div>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <Users className="w-4 h-4 text-gray-400 mt-1" />
-                  <div>
-                    <div className="font-medium text-gray-900">Ambiance</div>
-                    <div className="text-gray-600">Familiale et décontractée</div>
-                    <div className="text-gray-500 text-xs">Tables pour groupes</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <a 
-                  href="https://www.sukiya.jp" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-orange-600 hover:text-orange-700 text-sm font-medium"
-                >
-                  Site officiel Sukiya →
-                </a>
-              </div>
-            </div>
-
-            {/* Prix moyens */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Prix Moyens</h3>
-              
-              <div className="space-y-3 text-sm">
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Gyūdon normal</span>
-                  <span className="font-medium">400¥</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Avec fromage</span>
-                  <span className="font-medium">500¥</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-gray-600">Menu enfants</span>
-                  <span className="font-medium">300¥</span>
-                </div>
-                <div className="border-t border-gray-200 pt-2 mt-2">
-                  <div className="flex justify-between font-medium">
-                    <span className="text-gray-900">Repas moyen</span>
-                    <span className="text-gray-900">400-550¥</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Notre avis */}
-            <div className="bg-green-50 rounded-lg p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-3">Notre Avis</h3>
-              <div className="flex items-center mb-2">
-                <div className="flex text-green-400">
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4" />
-                </div>
-                <span className="text-sm text-gray-600 ml-2">Excellent rapport qualité-prix</span>
-              </div>
-              <p className="text-sm text-gray-700">
-                <strong>Le choix pratique par excellence.</strong> Sukiya excelle par sa commodité 
-                et sa diversité. Parfait pour les familles et ceux qui recherchent des options variées 
-                à prix abordables. L&apos;expérience peut être moins &quot;authentique&quot; que Yoshinoya, 
-                mais compense par son accessibilité.
-              </p>
-            </div>
-
-            {/* Navigation vers d'autres chaînes */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">Autres Chaînes de Gyūdon</h3>
-              
-              <div className="space-y-3">
-                <Link 
-                  href="/chaines/yoshinoya" 
-                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <div className="font-medium text-gray-900">Yoshinoya</div>
-                  <div className="text-sm text-gray-600">L&apos;original et l&apos;authentique</div>
-                </Link>
-                
-                <Link 
-                  href="/chaines/matsuya" 
-                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <div className="font-medium text-gray-900">Matsuya</div>
-                  <div className="text-sm text-gray-600">L&apos;innovateur du gyūdon</div>
-                </Link>
-              </div>
-            </div>
-          </div>
+        {/* Missions culturelles en pleine largeur */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <SukiyaCulturalMissions />
         </div>      </div>
     </div>
     </>
