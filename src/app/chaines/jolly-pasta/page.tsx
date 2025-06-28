@@ -1,5 +1,6 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import JollyPastaCulturalMissions from "./components/JollyPastaCulturalMissions";
 
 export default function JollyPastaPage() {
   return (
@@ -500,6 +501,9 @@ export default function JollyPastaPage() {
                 </div>
               </div>
             </div>
+
+            {/* Missions Culturelles */}
+            <JollyPastaCulturalMissions />
 
             {/* Navigation */}
             <div className="text-center">

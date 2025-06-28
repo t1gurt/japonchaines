@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Coffee, Leaf, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
+import GustoCulturalMissions from './components/GustoCulturalMissions';
 
 export const metadata: Metadata = {
   title: 'Gusto (ガスト) | Family Restaurant | Guide Restaurants Japonais',
@@ -404,6 +405,8 @@ export default function GustoPage() {
                 </div>
               </div>
             </div>
+
+            <GustoCulturalMissions />
           </div>
 
           {/* Sidebar */}
@@ -530,6 +533,8 @@ export default function GustoPage() {
                 l'accessibilité et de la modernité.
               </p>
             </div>
+
+            <GustoCulturalMissions />
 
             {/* Liens utiles */}
             <div className="bg-white rounded-lg shadow-sm p-6">

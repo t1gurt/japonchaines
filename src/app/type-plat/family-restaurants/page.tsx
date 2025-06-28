@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FamilyRestaurantCategoryCulturalMissions from "../family-restaurant/components/FamilyRestaurantCategoryCulturalMissions";
 
 export default function FamilyRestaurantsPage() {
   const familyChains = [
@@ -556,7 +557,12 @@ export default function FamilyRestaurantsPage() {
               </p>
             </div>
           </div>
-        </div>      </section>
+        </div>
+        
+        {/* Missions Culturelles */}
+        <FamilyRestaurantCategoryCulturalMissions />
+        
+      </section>
     </div>
   );
 }
