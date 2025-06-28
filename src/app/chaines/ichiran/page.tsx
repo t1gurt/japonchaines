@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import IchiranCulturalMissions from './components/IchiranCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -546,6 +547,9 @@ export default function IchiranPage() {
                 </div>
               </div>
             </div>
+
+            {/* Missions Culturelles Ichiran */}
+            <IchiranCulturalMissions />
           </div>
 
           {/* Sidebar */}

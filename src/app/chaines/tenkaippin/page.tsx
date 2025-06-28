@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Flame, Heart, Crown, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import TenkaippinCulturalMissions from './components/TenkaippinCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -476,6 +477,9 @@ export default function TenkaippinPage() {
                 authentique qui ne cherche pas à plaire à tout le monde.
               </p>
             </div>
+
+            {/* Missions Culturelles Tenkaippin */}
+            <TenkaippinCulturalMissions />
 
             {/* Liens utiles */}
             <div className="bg-white rounded-lg shadow-sm p-6">

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CategoryViewTracker from '../../../components/CategoryViewTracker';
+import RamenCategoryCulturalMissions from './components/RamenCategoryCulturalMissions';
 
 export default function RamenPage() {const ramenChains = [
     {
@@ -646,6 +647,9 @@ export default function RamenPage() {const ramenChains = [
                 <p className="text-xs text-gray-500">Tendre</p>
               </div>            </div>
           </div>
+
+          {/* Missions Culturelles Ramen */}
+          <RamenCategoryCulturalMissions />
         </div>      </section>
       </div>
     </>
