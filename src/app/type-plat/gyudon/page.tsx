@@ -121,7 +121,9 @@ export default function GyudonPage() {
       calories: "約750kcal",
       image: "/menu/cheese-gyudon.jpg"
     }
-  ];  return (
+  ];
+
+  return (
     <>
       <CategoryViewTracker categoryName="gyudon" />
       <div className="min-h-screen bg-gray-50">
@@ -565,6 +567,125 @@ export default function GyudonPage() {
               </p>            </div>
           </div>
         </div>      </section>
+
+      {/* Cultural Experience Integration */}
+      <section className="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                <span className="text-3xl">🥢</span>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Transformez votre Gyūdon en Expérience Culturelle
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Au-delà du simple repas, découvrez comment chaque visite dans une chaîne gyūdon 
+                peut devenir une opportunité de créer des liens authentiques avec les Japonais.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="bg-green-50 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-xl">🌱</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Mission Débutant</h3>
+                <p className="text-sm text-gray-600">Utilisez "Arigatou gozaimasu" et observez la réaction du staff</p>
+              </div>
+
+              <div className="bg-orange-50 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-xl">🥋</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Mission Intermédiaire</h3>
+                <p className="text-sm text-gray-600">Demandez des recommandations : "Osusume wa nan desu ka?"</p>
+              </div>
+
+              <div className="bg-red-50 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-xl">🏆</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Mission Avancée</h3>
+                <p className="text-sm text-gray-600">Conversez sur les différences régionales des gyūdon</p>
+              </div>
+
+              <div className="bg-purple-50 rounded-lg p-6 text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <span className="text-xl">💫</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Relation Authentique</h3>
+                <p className="text-sm text-gray-600">Le staff vous reconnaît et personnalise votre expérience</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-6 mb-6">
+              <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="mr-2">🎌</span>
+                Phrases spéciales pour les chaînes gyūdon
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <div className="font-japanese mb-1">並盛でお願いします</div>
+                  <div className="text-gray-600 mb-2">Namimori de onegaishimasu - Taille normale s'il vous plaît</div>
+                </div>
+                <div>
+                  <div className="font-japanese mb-1">つゆだくでお願いします</div>
+                  <div className="text-gray-600 mb-2">Tsuyudaku de onegaishimasu - Avec beaucoup de sauce</div>
+                </div>
+                <div>
+                  <div className="font-japanese mb-1">生卵をください</div>
+                  <div className="text-gray-600 mb-2">Namatamago wo kudasai - Un œuf cru s'il vous plaît</div>
+                </div>
+                <div>
+                  <div className="font-japanese mb-1">とても美味しかったです</div>
+                  <div className="text-gray-600 mb-2">Totemo oishikatta desu - C'était très délicieux</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <Link 
+                href="/guides/culture-experience"
+                className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+              >
+                <span className="mr-2">🌸</span>
+                Découvrir le Guide Complet
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gyūdon Chains */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Chaînes de Gyūdon à Découvrir
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {gyudonChains.map((chain, index) => (
+              <Link key={index} href={chain.href} className="block bg-gray-50 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
+                <div className="flex items-center p-4">
+                  <div className="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center mr-4">
+                    <Image src={chain.logo} alt={`${chain.name} logo`} width={64} height={64} className="object-contain" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-gray-900">{chain.name}</h3>
+                    <p className="text-gray-600 japanese-text">{chain.japanese}</p>
+                  </div>
+                </div>
+                <div className="p-4 border-t border-gray-200">
+                  <p className="text-gray-700">{chain.description}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
       </div>
     </>
   );

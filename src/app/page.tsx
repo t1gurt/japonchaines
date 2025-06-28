@@ -32,6 +32,74 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Cultural Experience Promotion */}
+      <section className="py-16 bg-gradient-to-r from-purple-50 via-pink-50 to-red-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+            </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">
+              Allez Au-Delà de la Simple Commande
+            </h3>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
+              Découvrez comment transformer vos visites dans les chaînes japonaises en véritables 
+              expériences culturelles et créer des relations authentiques qui dureront toute une vie.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-purple-100">
+              <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🗾</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Comprenez la Culture</h4>
+              <p className="text-gray-600 text-sm">
+                Découvrez pourquoi les Japonais semblent distants et comment cette "froideur" 
+                cache en réalité une chaleur humaine extraordinaire.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-pink-100">
+              <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">💝</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Créez des Liens</h4>
+              <p className="text-gray-600 text-sm">
+                Apprenez les phrases japonaises qui transforment un service froid en accueil 
+                chaleureux, et le staff en véritables amis.
+              </p>
+            </div>
+
+            <div className="bg-white rounded-xl p-6 shadow-sm border border-red-100">
+              <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🏆</span>
+              </div>
+              <h4 className="text-lg font-semibold text-gray-900 mb-3">Progressez Étape par Étape</h4>
+              <p className="text-gray-600 text-sm">
+                Suivez un parcours de 50 missions progressives qui vous mènent du statut de 
+                touriste à celui d'ami apprécié de la communauté locale.
+              </p>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link 
+              href="/guides/culture-experience"
+              className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+            >
+              <span className="mr-2">✨</span>
+              Commencer l'Expérience Culturelle
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Categories */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

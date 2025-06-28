@@ -4,6 +4,22 @@ import GuideViewTracker from '../../components/GuideViewTracker';
 
 export default function GuidesPage() {  const guides = [
     {
+      id: 'culture-experience',
+      title: 'Expérience Culturelle',
+      subtitle: 'Créez des liens authentiques avec les Japonais',
+      description: 'Apprenez à dépasser la simple commande pour créer des relations durables et découvrir la vraie culture japonaise à travers les chaînes.',
+      icon: Heart,
+      color: 'purple',
+      available: true,
+      highlights: [
+        'Comprendre la nature humaine japonaise',
+        'Missions progressives de 50 niveaux',
+        'Guide de conversation restaurant',
+        'Créer des relations authentiques'
+      ],
+      featured: true
+    },
+    {
       id: 'comment-commander',
       title: 'Comment Commander',
       subtitle: 'Maîtrisez tous les systèmes de commande japonais',
@@ -179,7 +195,12 @@ export default function GuidesPage() {  const guides = [
             const IconComponent = guide.icon;
             
             return (
-              <div key={guide.id} className={`${colors.bg} ${colors.border} border-2 rounded-2xl p-8 transition-all duration-300 hover:shadow-xl`}>
+              <div key={guide.id} className={`${colors.bg} ${colors.border} border-2 rounded-2xl p-8 transition-all duration-300 hover:shadow-xl ${guide.featured ? 'ring-4 ring-purple-200 relative' : ''}`}>
+                {guide.featured && (
+                  <div className="absolute -top-3 left-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                    ⭐ Nouveau & Populaire
+                  </div>
+                )}
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
                   <div className="flex-1">
                     <div className="flex items-center mb-4">

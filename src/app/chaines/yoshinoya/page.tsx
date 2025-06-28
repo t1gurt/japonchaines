@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Globe, Award, History } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import YoshinoyaCulturalMissions from './components/YoshinoyaCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -214,6 +215,126 @@ export default function YoshinoyaPage() {
                     </p>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Yoshinoya Cultural Missions */}
+            <YoshinoyaCulturalMissions />
+
+            {/* Cultural Experience Integration */}
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg shadow-sm p-8 mb-8">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                  <span className="text-3xl">🌸</span>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  Vivez l'Expérience Yoshinoya Authentique
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Yoshinoya offre l'opportunité parfaite de créer des liens avec les Japonais. 
+                  En tant que pionnier du gyūdon, c'est ici que tradition et modernité se rencontrent.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-8 mb-8">
+                <div className="bg-white rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
+                    Mission Première Visite
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <div className="bg-green-50 p-3 rounded">
+                      <div className="font-japanese text-base mb-1">はじめてです</div>
+                      <div className="text-gray-600 mb-1">Hajimete desu - C'est ma première fois</div>
+                      <div className="text-xs text-green-700">→ Le staff va vous aider avec une attention particulière</div>
+                    </div>
+                    <div className="bg-blue-50 p-3 rounded">
+                      <div className="font-japanese text-base mb-1">おすすめはなんですか？</div>
+                      <div className="text-gray-600 mb-1">Osusume wa nan desu ka? - Que recommandez-vous ?</div>
+                      <div className="text-xs text-blue-700">→ Ils vous expliqueront l'histoire du gyūdon avec fierté</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-xl p-6">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                    <span className="bg-orange-100 text-orange-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">5</span>
+                    Mission Visite Régulière
+                  </h3>
+                  <div className="space-y-3 text-sm">
+                    <div className="bg-orange-50 p-3 rounded">
+                      <div className="font-japanese text-base mb-1">つゆだくでお願いします</div>
+                      <div className="text-gray-600 mb-1">Tsuyudaku de onegaishimasu - Avec beaucoup de sauce</div>
+                      <div className="text-xs text-orange-700">→ Montre que vous connaissez les subtilités</div>
+                    </div>
+                    <div className="bg-purple-50 p-3 rounded">
+                      <div className="font-japanese text-base mb-1">1899年からの伝統ですね</div>
+                      <div className="text-gray-600 mb-1">1899-nen kara no dentō desu ne - Tradition depuis 1899</div>
+                      <div className="text-xs text-purple-700">→ Conversation sur l'histoire et la fierté de l'entreprise</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-6 mb-6">
+                <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
+                  <span className="mr-2">🏮</span>
+                  Pourquoi Yoshinoya est idéal pour créer des liens
+                </h3>
+                <div className="grid md:grid-cols-3 gap-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold text-red-700 mb-2">Histoire Légendaire</h4>
+                    <p className="text-gray-700">125 ans d'histoire donnent de nombreux sujets de conversation avec le staff fier de cette tradition.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-orange-700 mb-2">Comptoir en U</h4>
+                    <p className="text-gray-700">Le design iconique favorise les interactions naturelles entre clients et staff.</p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-yellow-700 mb-2">Clientèle Respectée</h4>
+                    <p className="text-gray-700">Fréquenté par des professionnels exigeants, un effort en japonais est particulièrement apprécié.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 mb-6">
+                <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
+                  <span className="mr-2">📚</span>
+                  Sujets de conversation spécial Yoshinoya
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <h4 className="font-semibold text-blue-700 mb-2">Histoire et tradition</h4>
+                    <ul className="space-y-1 text-gray-700">
+                      <li>• Marché aux poissons de Nihonbashi (1899)</li>
+                      <li>• Déménagement à Tsukiji (1926)</li>
+                      <li>• Crise BSE et retour triomphal (2004-2006)</li>
+                      <li>• Philosophie "Umai, Yasui, Hayai"</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-green-700 mb-2">Technique et qualité</h4>
+                    <ul className="space-y-1 text-gray-700">
+                      <li>• Sauce secrète au vin blanc</li>
+                      <li>• Méthode "tsugi-tashi" (ajout continu)</li>
+                      <li>• Louche à 47 trous</li>
+                      <li>• Épaisseur de viande 1.3mm</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Link 
+                  href="/guides/culture-experience"
+                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                >
+                  <span className="mr-2">🎌</span>
+                  Guide Complet de l'Expérience Culturelle
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
               </div>
             </div>
 
