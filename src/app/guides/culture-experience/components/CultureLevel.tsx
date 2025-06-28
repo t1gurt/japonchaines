@@ -69,11 +69,12 @@ export default function CultureLevel({ level, size = 'md', showDescription = fal
         ${config.bgColor} ${config.borderColor} ${config.color}
         ${sizeClass.container}
         font-medium
+        flex-wrap gap-1
       `}>
-        <span className={`mr-2 ${sizeClass.icon}`}>{config.icon}</span>
-        <span className={sizeClass.text}>{config.name}</span>
+        <span className={`${sizeClass.icon} flex-shrink-0`}>{config.icon}</span>
+        <span className={`${sizeClass.text} whitespace-nowrap`}>{config.name}</span>
         {size === 'lg' && (
-          <span className={`ml-2 text-gray-600 font-japanese ${sizeClass.text}`}>
+          <span className={`text-gray-600 font-japanese ${sizeClass.text} hidden sm:inline whitespace-nowrap`}>
             {config.nameJapanese}
           </span>
         )}

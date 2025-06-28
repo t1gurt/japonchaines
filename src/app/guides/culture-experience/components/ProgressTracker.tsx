@@ -37,37 +37,39 @@ export default function ProgressTracker({ stats, className = '' }: ProgressTrack
   const chainsPercentage = (stats.chainsVisited / stats.totalChains) * 100;
 
   return (
-    <div className={`bg-white rounded-lg shadow-sm border p-6 ${className}`}>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-xl font-bold text-gray-900">Votre Progression Culturelle</h2>
-        <div className={`flex items-center px-3 py-1 rounded-full border ${currentLevel.borderColor} ${currentLevel.bgColor}`}>
-          <span className="mr-2">{currentLevel.icon}</span>
-          <span className={`text-sm font-medium ${currentLevel.color}`}>
+    <div className={`bg-white rounded-lg shadow-sm border p-4 xl:p-6 ${className}`}>
+      <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between mb-4 xl:mb-6 space-y-3 xl:space-y-0">
+        <h2 className="text-lg xl:text-xl font-bold text-gray-900 leading-tight">
+          Votre Progression Culturelle
+        </h2>
+        <div className={`flex items-center px-3 py-1 rounded-full border ${currentLevel.borderColor} ${currentLevel.bgColor} w-fit`}>
+          <span className="mr-2 text-sm">{currentLevel.icon}</span>
+          <span className={`text-sm font-medium ${currentLevel.color} whitespace-nowrap`}>
             {currentLevel.name}
           </span>
         </div>
       </div>
 
       {/* Stats principales */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <div className="text-center p-4 bg-blue-50 rounded-lg">
-          <div className="text-2xl font-bold text-blue-600">{stats.totalPoints}</div>
-          <div className="text-sm text-blue-700">Points Totaux</div>
+      <div className="grid grid-cols-2 gap-3 xl:gap-4 mb-4 xl:mb-6">
+        <div className="text-center p-3 xl:p-4 bg-blue-50 rounded-lg">
+          <div className="text-xl xl:text-2xl font-bold text-blue-600">{stats.totalPoints}</div>
+          <div className="text-xs xl:text-sm text-blue-700">Points Totaux</div>
         </div>
         
-        <div className="text-center p-4 bg-green-50 rounded-lg">
-          <div className="text-2xl font-bold text-green-600">{stats.completedMissions}</div>
-          <div className="text-sm text-green-700">Missions</div>
+        <div className="text-center p-3 xl:p-4 bg-green-50 rounded-lg">
+          <div className="text-xl xl:text-2xl font-bold text-green-600">{stats.completedMissions}</div>
+          <div className="text-xs xl:text-sm text-green-700">Missions</div>
         </div>
         
-        <div className="text-center p-4 bg-purple-50 rounded-lg">
-          <div className="text-2xl font-bold text-purple-600">{stats.chainsVisited}</div>
-          <div className="text-sm text-purple-700">Chaînes Visitées</div>
+        <div className="text-center p-3 xl:p-4 bg-purple-50 rounded-lg">
+          <div className="text-xl xl:text-2xl font-bold text-purple-600">{stats.chainsVisited}</div>
+          <div className="text-xs xl:text-sm text-purple-700">Chaînes Visitées</div>
         </div>
         
-        <div className="text-center p-4 bg-pink-50 rounded-lg">
-          <div className="text-2xl font-bold text-pink-600">{stats.relationshipCount}</div>
-          <div className="text-sm text-pink-700">Relations</div>
+        <div className="text-center p-3 xl:p-4 bg-pink-50 rounded-lg">
+          <div className="text-xl xl:text-2xl font-bold text-pink-600">{stats.relationshipCount}</div>
+          <div className="text-xs xl:text-sm text-pink-700">Relations</div>
         </div>
       </div>
 
@@ -128,8 +130,8 @@ export default function ProgressTracker({ stats, className = '' }: ProgressTrack
       </div>
 
       {/* Badges/Achievements */}
-      <div className="mt-6 pt-6 border-t">
-        <h3 className="text-sm font-semibold text-gray-900 mb-3">Vos Accomplissements</h3>
+      <div className="mt-4 xl:mt-6 pt-4 xl:pt-6 border-t">
+        <h3 className="text-sm font-semibold text-gray-900 mb-3">Accomplissements</h3>
         <div className="flex flex-wrap gap-2">
           {stats.completedMissions >= 1 && (
             <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-blue-100 text-blue-800">
@@ -148,7 +150,7 @@ export default function ProgressTracker({ stats, className = '' }: ProgressTrack
           )}
           {stats.cultureLevel === 'intermediate' && (
             <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-orange-100 text-orange-800">
-              🌿 Niveau Intermédiaire
+              🌿 Intermédiaire
             </span>
           )}
           {stats.cultureLevel === 'advanced' && (
@@ -158,7 +160,7 @@ export default function ProgressTracker({ stats, className = '' }: ProgressTrack
           )}
           {stats.totalPoints >= 1000 && (
             <span className="inline-flex items-center px-2 py-1 rounded-full text-xs bg-yellow-100 text-yellow-800">
-              ⭐ Collectionneur de Points
+              ⭐ Collectionneur
             </span>
           )}
         </div>

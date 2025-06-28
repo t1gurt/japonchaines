@@ -60,26 +60,30 @@ export default function CultureExperiencePage() {
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
       <div className="bg-white shadow-sm">
-        <div className="max-w-4xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <nav className="text-sm text-gray-600 mb-4">
             <Link href="/guides" className="hover:text-gray-900">Guides</Link>
             <span className="mx-2">›</span>
             <span>Expérience Culturelle</span>
           </nav>
           
-          <div className="flex items-center gap-4 mb-6">
-            <CultureLevel level="beginner" size="lg" />
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-2">
-                Découvrir le Japon à travers ses chaînes de restaurants
-              </h1>
-              <p className="text-lg text-gray-600">
-                Un guide complet pour comprendre la culture japonaise authentique et développer des relations humaines significatives
-              </p>
+          <div className="flex flex-col lg:flex-row lg:items-start gap-4 mb-6">
+            <div className="flex items-center gap-4 min-w-0 flex-1">
+              <div className="flex-shrink-0">
+                <CultureLevel level="beginner" size="lg" />
+              </div>
+              <div className="min-w-0 flex-1">
+                <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+                  Découvrir le Japon à travers ses chaînes de restaurants
+                </h1>
+                <p className="text-base lg:text-lg text-gray-600">
+                  Un guide complet pour comprendre la culture japonaise authentique et développer des relations humaines significatives
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 text-sm text-gray-600">
+          <div className="flex flex-wrap items-center gap-4 lg:gap-6 text-sm text-gray-600">
             <span className="flex items-center">
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -102,10 +106,10 @@ export default function CultureExperiencePage() {
         </div>
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 xl:grid-cols-4 gap-8">
           {/* Contenu principal */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="xl:col-span-3 space-y-8">
             
             {/* Introduction */}
             <section className="bg-white rounded-lg shadow-sm p-8">
@@ -200,7 +204,7 @@ export default function CultureExperiencePage() {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Phrases essentielles pour briser la glace</h3>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
                     <div className="border rounded-lg p-4 bg-gray-50">
                       <div className="font-japanese text-lg mb-1">いらっしゃいませ</div>
                       <div className="text-sm text-gray-600 mb-1">Irasshaimase</div>
@@ -229,17 +233,17 @@ export default function CultureExperiencePage() {
 
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">Phrases pour montrer votre appréciation</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg">
-                      <span className="font-japanese text-lg">おいしいです</span>
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <div className="flex items-start space-x-3 p-4 bg-blue-50 rounded-lg">
+                      <span className="font-japanese text-xl">おいしいです</span>
                       <div className="flex-1">
                         <div className="text-sm text-gray-600">Oishii desu</div>
                         <div className="text-sm text-blue-800">&quot;C&apos;est délicieux&quot; - Cette phrase simple fait briller les yeux du personnel</div>
                       </div>
                     </div>
                     
-                    <div className="flex items-start space-x-3 p-3 bg-blue-50 rounded-lg">
-                      <span className="font-japanese text-lg">はじめてです</span>
+                    <div className="flex items-start space-x-3 p-4 bg-blue-50 rounded-lg">
+                      <span className="font-japanese text-xl">はじめてです</span>
                       <div className="flex-1">
                         <div className="text-sm text-gray-600">Hajimete desu</div>
                         <div className="text-sm text-blue-800">&quot;C&apos;est ma première fois&quot; - Déclenche souvent une aide bienveillante</div>
@@ -296,7 +300,7 @@ export default function CultureExperiencePage() {
             <section className="bg-white rounded-lg shadow-sm p-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Approfondissez votre compréhension</h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 <Link href="/guides/culture-experience/omotenashi" className="block p-6 border rounded-lg hover:shadow-md transition-shadow">
                   <div className="flex items-center mb-3">
                     <span className="text-2xl mr-3">🏮</span>
@@ -312,12 +316,20 @@ export default function CultureExperiencePage() {
                   </div>
                   <p className="text-gray-600 text-sm">Découvrez pourquoi les Japonais semblent distants au premier abord et comment créer des liens authentiques.</p>
                 </Link>
+
+                <Link href="/guides/culture-experience/conversation" className="block p-6 border rounded-lg hover:shadow-md transition-shadow">
+                  <div className="flex items-center mb-3">
+                    <span className="text-2xl mr-3">💬</span>
+                    <h3 className="text-lg font-semibold text-gray-900">Guide de Conversation</h3>
+                  </div>
+                  <p className="text-gray-600 text-sm">Apprenez les phrases essentielles et les subtilités culturelles pour des interactions réussies.</p>
+                </Link>
               </div>
             </section>
           </div>
 
           {/* Sidebar */}
-          <div className="space-y-6">
+          <div className="xl:col-span-1 space-y-6">
             {/* Progression tracker exemple */}
             <ProgressTracker 
               stats={{
