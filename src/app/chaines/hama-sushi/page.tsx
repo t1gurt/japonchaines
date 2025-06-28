@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Gamepad2, Gift, Shield, Smartphone, DollarSign, Zap } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, DollarSign, Award, Utensils, Smartphone, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
+import HamaSushiCulturalMissions from './components/HamaSushiCulturalMissions';
 
 export const metadata: Metadata = {
   title: 'Hama Sushi (はま寿司) | Kaiten-zushi | Guide Restaurants Japonais',
@@ -489,6 +490,90 @@ export default function HamaSushiPage() {
                    className="block text-orange-600 hover:text-orange-700 text-sm">
                   → Comparer avec Kura Sushi
                 </a>              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Hama Sushi Cultural Missions */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <HamaSushiCulturalMissions />
+      </div>
+
+      {/* Cultural Experience Integration */}
+      <div className="bg-gradient-to-r from-purple-50 to-pink-50 py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                <span className="text-3xl">💰</span>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Transformez votre visite Hama Sushi en Découverte Sociale
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Hama Sushi incarne l'idéal japonais d'accessibilité universelle, créant un espace social 
+                unique où toutes les couches de la société se rencontrent autour de la qualité accessible.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="text-center p-4 bg-green-50 rounded-lg">
+                <div className="text-2xl mb-2">💰</div>
+                <h3 className="font-semibold text-green-800 mb-2">Accessibilité Prix</h3>
+                <p className="text-sm text-green-600">Maîtrisez l'économie de qualité</p>
+              </div>
+              <div className="text-center p-4 bg-blue-50 rounded-lg">
+                <div className="text-2xl mb-2">🏢</div>
+                <h3 className="font-semibold text-blue-800 mb-2">Écosystème Zensho</h3>
+                <p className="text-sm text-blue-600">Découvrez la synergie intégrée</p>
+              </div>
+              <div className="text-center p-4 bg-amber-50 rounded-lg">
+                <div className="text-2xl mb-2">🥢</div>
+                <h3 className="font-semibold text-amber-800 mb-2">Variations Shouyu</h3>
+                <p className="text-sm text-amber-600">Explorez les subtilités des sauces</p>
+              </div>
+              <div className="text-center p-4 bg-orange-50 rounded-lg">
+                <div className="text-2xl mb-2">🤝</div>
+                <h3 className="font-semibold text-orange-800 mb-2">Harmonie Sociale</h3>
+                <p className="text-sm text-orange-600">Intégrez la mixité communautaire</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-xl p-6 mb-6">
+              <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
+                <span className="mr-2">🎌</span>
+                Phrases spéciales pour Hama Sushi
+              </h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm">
+                <div>
+                  <p className="font-medium">Prix accessibles :</p>
+                  <p className="text-gray-700">"Yasui kedo oishii desu ne" (安いけど美味しいですね)</p>
+                </div>
+                <div>
+                  <p className="font-medium">Économie familiale :</p>
+                  <p className="text-gray-700">"Kazoku de kite mo yasui desu" (家族で来ても安いです)</p>
+                </div>
+                <div>
+                  <p className="font-medium">Variétés de sauce :</p>
+                  <p className="text-gray-700">"Shouyu no shurui ga oi desu ne" (醤油の種類が多いですね)</p>
+                </div>
+                <div>
+                  <p className="font-medium">Accessibilité sociale :</p>
+                  <p className="text-gray-700">"Dare demo kimasu ne" (誰でも来ますね)</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <a href="/guides/culture-experience" 
+                 className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+                <span className="mr-2">📚</span>
+                Découvrir le Guide Complet
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

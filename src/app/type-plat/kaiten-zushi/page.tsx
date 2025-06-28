@@ -1,4 +1,5 @@
 import Link from "next/link";
+import KaitenZushiCategoryCulturalMissions from './components/KaitenZushiCategoryCulturalMissions';
 
 export default function KaitenZushiPage() {
   const sushiChains = [
@@ -384,6 +385,111 @@ export default function KaitenZushiPage() {
             </div>
           </div>
         </div>      </section>
+
+      {/* Kaiten-zushi Category Cultural Missions */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <KaitenZushiCategoryCulturalMissions />
+        </div>
+      </section>
+
+      {/* Cultural Experience Integration pour la catégorie */}
+      <section className="py-16 bg-gradient-to-r from-purple-50 to-pink-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                <span className="text-3xl">🍣</span>
+              </div>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Transformez votre Kaiten-zushi en Expérience Culturelle Complète
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                Le kaiten-zushi n'est pas qu'une restauration rapide, c'est une fenêtre sur l'innovation sociale 
+                japonaise, la démocratisation de la qualité et l'évolution harmonieuse de la tradition culinaire.
+              </p>
+            </div>
+
+            {/* Parcours recommandé pour débutants */}
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 mb-8">
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                📚 Parcours Recommandé pour Débutants
+              </h3>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="bg-white p-4 rounded-lg border border-green-200">
+                  <div className="flex items-center mb-2">
+                    <span className="bg-green-100 text-green-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">1</span>
+                    <h4 className="font-semibold">Niveau Débutant</h4>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-1"><strong>Sushiro</strong> - Interface technologique accessible</p>
+                  <p className="text-xs text-gray-500">Système multilingue, prix clairs, service efficace</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-blue-200">
+                  <div className="flex items-center mb-2">
+                    <span className="bg-blue-100 text-blue-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">2</span>
+                    <h4 className="font-semibold">Niveau Intermédiaire</h4>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-1"><strong>Kura Sushi</strong> - Expérience ludique et santé</p>
+                  <p className="text-xs text-gray-500">Concept sans additifs, jeu Bikkura-Pon, ambiance familiale</p>
+                </div>
+                <div className="bg-white p-4 rounded-lg border border-purple-200">
+                  <div className="flex items-center mb-2">
+                    <span className="bg-purple-100 text-purple-600 w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-3">3</span>
+                    <h4 className="font-semibold">Niveau Avancé</h4>
+                  </div>
+                  <p className="text-sm text-gray-600 mb-1"><strong>Hama Sushi</strong> - Intégration sociale complète</p>
+                  <p className="text-xs text-gray-500">Mixité sociale, sophistication accessible, écosystème Zensho</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Philosophies comparatives */}
+            <div className="grid md:grid-cols-3 gap-6 mb-8">
+              <div className="text-center p-6 bg-blue-50 rounded-lg">
+                <div className="text-3xl mb-3">🚀</div>
+                <h3 className="font-semibold text-blue-800 mb-2">Innovation Technologique</h3>
+                <p className="text-sm text-blue-600 mb-3">Sushiro révolutionne par la technologie</p>
+                <ul className="text-xs text-blue-500 space-y-1">
+                  <li>• Tablettes tactiles multilingues</li>
+                  <li>• Efficacité opérationnelle maximale</li>
+                  <li>• Accessibilité numérique</li>
+                </ul>
+              </div>
+              <div className="text-center p-6 bg-purple-50 rounded-lg">
+                <div className="text-3xl mb-3">🎮</div>
+                <h3 className="font-semibold text-purple-800 mb-2">Innovation Santé & Ludique</h3>
+                <p className="text-sm text-purple-600 mb-3">Kura Sushi transforme par le bien-être</p>
+                <ul className="text-xs text-purple-500 space-y-1">
+                  <li>• Philosophie "Muttenka" sans additifs</li>
+                  <li>• Gamification familiale Bikkura-Pon</li>
+                  <li>• Technologie antibactérienne</li>
+                </ul>
+              </div>
+              <div className="text-center p-6 bg-green-50 rounded-lg">
+                <div className="text-3xl mb-3">💰</div>
+                <h3 className="font-semibold text-green-800 mb-2">Innovation Sociale</h3>
+                <p className="text-sm text-green-600 mb-3">Hama Sushi démocratise par l'accessibilité</p>
+                <ul className="text-xs text-green-500 space-y-1">
+                  <li>• Accessibilité économique universelle</li>
+                  <li>• Mixité sociale harmonieuse</li>
+                  <li>• Sophistication accessible</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <a href="/guides/culture-experience" 
+                 className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+                <span className="mr-2">📚</span>
+                Guide Complet de l'Expérience Culturelle
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

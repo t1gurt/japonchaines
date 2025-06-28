@@ -1,7 +1,8 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Gamepad2, Gift, Shield } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, Heart, Shield, Users, Gamepad2, Utensils, Gift } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
+import KuraSushiCulturalMissions from './components/KuraSushiCulturalMissions';
 
 export const metadata: Metadata = {
   title: 'Kura Sushi (くら寿司) | Kaiten-zushi | Guide Restaurants Japonais',
@@ -366,6 +367,9 @@ export default function KuraSushiPage() {
                   </div>
                 </div>
               </div>
+
+              <KuraSushiCulturalMissions />
+
             </div>
 
             {/* Sidebar */}
@@ -472,6 +476,90 @@ export default function KuraSushiPage() {
                     → Comparer avec Sushiro
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Kura Sushi Cultural Missions */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <KuraSushiCulturalMissions />
+        </div>
+
+        {/* Cultural Experience Integration */}
+        <div className="bg-gradient-to-r from-purple-50 to-pink-50 py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-2xl p-8 shadow-lg">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                  <span className="text-3xl">🎮</span>
+                </div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                  Transformez votre visite Kura Sushi en Aventure Culturelle
+                </h2>
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                  Kura Sushi révolutionne l'expérience sushi avec sa philosophie "Muttenka" sans additifs 
+                  et son système ludique Bikkura-Pon, créant une harmonie unique entre santé, plaisir et innovation.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div className="text-center p-4 bg-green-50 rounded-lg">
+                  <div className="text-2xl mb-2">🌿</div>
+                  <h3 className="font-semibold text-green-800 mb-2">Philosophie Muttenka</h3>
+                  <p className="text-sm text-green-600">Découvrez la révolution sans additifs</p>
+                </div>
+                <div className="text-center p-4 bg-purple-50 rounded-lg">
+                  <div className="text-2xl mb-2">🎮</div>
+                  <h3 className="font-semibold text-purple-800 mb-2">Système Bikkura-Pon</h3>
+                  <p className="text-sm text-purple-600">Participez au jeu iconique des capsules</p>
+                </div>
+                <div className="text-center p-4 bg-blue-50 rounded-lg">
+                  <div className="text-2xl mb-2">🔬</div>
+                  <h3 className="font-semibold text-blue-800 mb-2">Innovation Antibactérienne</h3>
+                  <p className="text-sm text-blue-600">Explorez les technologies de pointe</p>
+                </div>
+                <div className="text-center p-4 bg-pink-50 rounded-lg">
+                  <div className="text-2xl mb-2">👨‍👩‍👧‍👦</div>
+                  <h3 className="font-semibold text-pink-800 mb-2">Harmonie Familiale</h3>
+                  <p className="text-sm text-pink-600">Intégrez la communauté multigénérationnelle</p>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-6 mb-6">
+                <h3 className="font-semibold text-gray-900 mb-3 flex items-center">
+                  <span className="mr-2">🎌</span>
+                  Phrases spéciales pour Kura Sushi
+                </h3>
+                <div className="grid md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <p className="font-medium">Concept sans additifs :</p>
+                    <p className="text-gray-700">"Muttenka wa tanoshii desu ne" (無添加は嬉しいですね)</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">Jeu Bikkura-Pon :</p>
+                    <p className="text-gray-700">"Bikkura-Pon yatte mimasu" (ビッくらポンやってみます)</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">Système sanitaire :</p>
+                    <p className="text-gray-700">"Eisei-teki de anshin desu" (衛生的で安心です)</p>
+                  </div>
+                  <div>
+                    <p className="font-medium">Expérience familiale :</p>
+                    <p className="text-gray-700">"Kazoku minna de tanoshimemasu" (家族みんなで楽しめます)</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <a href="/guides/culture-experience" 
+                   className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+                  <span className="mr-2">📚</span>
+                  Découvrir le Guide Complet
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </a>
               </div>
             </div>
           </div>
