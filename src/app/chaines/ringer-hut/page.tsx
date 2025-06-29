@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, ChefHat, Heart, Zap, Droplets, Wheat } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import RingerHutCulturalMissions from './components/RingerHutCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -569,6 +570,9 @@ export default function RingerHutPage() {
                   tout en promouvant une agriculture responsable.
                 </p>
               </div>
+
+              {/* Missions Culturelles Ringer Hut */}
+              <RingerHutCulturalMissions />
 
               {/* Liens utiles */}
               <div className="bg-white rounded-lg shadow-sm p-6">

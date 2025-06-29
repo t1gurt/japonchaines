@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Crown, Coffee, Zap, Candy } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import LotteriaCulturalMissions from './components/LotteriaCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -481,6 +482,10 @@ export default function LotteriaPage() {
               </div>
             </div>
           </div>
+
+          {/* Missions Culturelles */}
+          <LotteriaCulturalMissions />
+          
         </div>
       </div>
     </>

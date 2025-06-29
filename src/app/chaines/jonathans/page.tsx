@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Coffee, Leaf, Wine, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
+import JonathansCulturalMissions from './components/JonathansCulturalMissions';
 
 export const metadata: Metadata = {
   title: 'Jonathans (ジョナサン) | Family Restaurant | Guide Restaurants Japonais',
@@ -467,6 +468,9 @@ export default function JonathansPage() {
                 </div>
               </div>
             </div>
+
+            <JonathansCulturalMissions />
+
           </div>
 
           {/* Sidebar */}
@@ -597,6 +601,9 @@ export default function JonathansPage() {
                 accessible" dans la restauration familiale japonaise.
               </p>
             </div>
+
+            {/* Missions Culturelles */}
+            <JonathansCulturalMissions />
 
             {/* Liens utiles */}
             <div className="bg-white rounded-lg shadow-sm p-6">

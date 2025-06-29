@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Leaf, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import MosBurgerCulturalMissions from './components/MosBurgerCulturalMissions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -679,6 +680,10 @@ export default function MOSBurgerPage() {
               </div>
             </div>
           </div>
+
+          {/* Missions Culturelles */}
+          <MosBurgerCulturalMissions />
+          
         </div>
       </div>
     </>

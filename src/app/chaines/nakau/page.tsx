@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Clock, MapPin, DollarSign, Users, ChefHat, Star, Award, TrendingUp, Heart, Utensils } from "lucide-react";
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import NakauCulturalMissions from './components/NakauCulturalMissions';
 
 export const metadata = {
   title: "Nakau (なか卯) - Guide Complet | Chaînes Japonaises",
@@ -331,6 +332,62 @@ export default function NakauPage() {
                     </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+
+            {/* Nakau Cultural Missions */}
+            <NakauCulturalMissions />
+
+            {/* Cultural Experience Integration */}
+            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg shadow-sm p-8 mb-8">
+              <div className="text-center mb-6">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-4">
+                  <span className="text-3xl">🎌</span>
+                </div>
+                <h2 className="text-2xl font-bold text-gray-900 mb-3">
+                  Transformez votre visite Nakau en Expérience Culturelle
+                </h2>
+                <p className="text-gray-600 max-w-3xl mx-auto">
+                  Nakau offre une opportunité unique de comprendre comment la fusion culinaire 
+                  reflète l'innovation japonaise tout en préservant les traditions familiales.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-white rounded-lg p-4 border border-purple-200">
+                  <h3 className="font-semibold text-purple-800 mb-2 flex items-center">
+                    <span className="mr-2">🍜</span>
+                    Fusion Authentique
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    Découvrez comment Nakau harmonise gyūdon et udon, créant une expérience 
+                    culinaire qui transcende la simple restauration rapide pour devenir 
+                    un art de vivre japonais.
+                  </p>
+                </div>
+                <div className="bg-white rounded-lg p-4 border border-pink-200">
+                  <h3 className="font-semibold text-pink-800 mb-2 flex items-center">
+                    <span className="mr-2">👨‍👩‍👧‍👦</span>
+                    Valeurs Familiales
+                  </h3>
+                  <p className="text-sm text-gray-700">
+                    Explorez l'esprit "oyako" et comprenez comment Nakau incarne les valeurs 
+                    familiales japonaises modernes dans un contexte de restauration rapide.
+                  </p>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <Link 
+                  href="/guides/culture-experience"
+                  className="inline-flex items-center bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-200"
+                >
+                  <span className="mr-2">📖</span>
+                  Découvrir le Guide Complet
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </Link>
               </div>
             </div>
           </div>

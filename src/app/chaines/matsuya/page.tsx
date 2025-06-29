@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
+import MatsuyaCulturalMissions from './components/MatsuyaCulturalMissions';
 
 export const metadata: Metadata = {
   title: 'Matsuya (松屋) | Gyudon | Guide Restaurants Japonais',
@@ -79,6 +80,11 @@ export default function MatsuyaPage() {
                 </p>
               </div>
             </div>
+
+            {/* Missions Culturelles Section */}
+            <section id="missions-culturelles" className="mb-12">
+              <MatsuyaCulturalMissions />
+            </section>
 
             {/* Histoire et innovation */}
             <div className="bg-white rounded-lg shadow-sm p-6">
@@ -690,7 +696,10 @@ export default function MatsuyaPage() {
                   <div className="text-sm text-gray-600">Le leader par le volume</div>
                 </Link>
               </div>
-            </div>          </div>
+            </div>
+
+            <MatsuyaCulturalMissions />
+          </div>
         </div>
       </div>
     </div>
