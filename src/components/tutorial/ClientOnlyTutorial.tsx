@@ -15,7 +15,7 @@ interface ClientOnlyTutorialProps {
   className?: string;
 }
 
-export const ClientOnlyTutorial: React.FC<ClientOnlyTutorialProps> = ({ 
+const ClientOnlyTutorial: React.FC<ClientOnlyTutorialProps> = ({ 
   className = '' 
 }) => {
   const [activeTab, setActiveTab] = useState<'dashboard' | 'badges' | 'reports' | 'quiz'>('dashboard');
@@ -174,3 +174,5 @@ export const ClientOnlyTutorial: React.FC<ClientOnlyTutorialProps> = ({
     </div>
   );
 };
+
+export default ClientOnlyTutorial;

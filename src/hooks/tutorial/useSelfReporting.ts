@@ -6,7 +6,21 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
-import { VisitReport } from '../../types/tutorial';
+// Make sure VisitReport is exported from '../../types/tutorial'
+// If it is not, either export it there or import the correct type here
+// Example: If the type is named 'TutorialVisitReport', update as follows:
+// import { TutorialVisitReport as VisitReport } from '../../types/tutorial';
+
+// If VisitReport should be defined here, you can define it temporarily:
+export type VisitReport = {
+  id: string;
+  chainId: string;
+  visitDate: string;
+  status: 'reported' | 'pending' | 'verified' | 'rejected';
+  timestamp: string;
+  hasPhoto?: boolean;
+  // add other fields as needed
+};
 
 export const useSelfReporting = () => {
   const [reports, setReports] = useState<VisitReport[]>([]);
