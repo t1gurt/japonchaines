@@ -21,6 +21,16 @@ export default function Header() {
           </Link>
           <div className="hidden md:flex space-x-8">
             <Link 
+              href="/tutorial" 
+              className={`transition-colors ${
+                isActivePath('/tutorial') 
+                  ? 'text-red-600 font-medium' 
+                  : 'text-gray-700 hover:text-red-600'
+              }`}
+            >
+              🎓 Tutoriel
+            </Link>
+            <Link 
               href="/type-plat" 
               className={`transition-colors ${
                 isActivePath('/type-plat') 
