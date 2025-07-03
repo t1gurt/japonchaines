@@ -28,11 +28,13 @@ const TutorialDashboard = () => {
     );
   }
 
-  const handleReportVisit = (chainId: string) => {
-    const chain = chains.find(c => c.id === chainId);
-    if (chain) {
-      reportStoreVisit(chainId, chain.name);
-    }
+  const handleReportVisit = (chainIds: string[]) => {
+    chainIds.forEach(chainId => {
+      const chain = chains.find(c => c.id === chainId);
+      if (chain) {
+        reportStoreVisit(chainId, chain.name);
+      }
+    });
   };
 
   const handleResetProgress = () => {
