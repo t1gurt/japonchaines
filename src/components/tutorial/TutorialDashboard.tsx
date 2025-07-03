@@ -14,6 +14,7 @@ const TutorialDashboard = () => {
   const { profile, isLoading, reportStoreVisit, resetProgress } = useLearningProgress();
   const [isModalOpen, setModalOpen] = useState(false);
   const [isResetModalOpen, setResetModalOpen] = useState(false);
+  const [refreshKey, setRefreshKey] = useState(0); // Clé pour forcer le re-render
 
   // If still loading or profile is not available, show a loading indicator
   if (isLoading || !profile) {
@@ -37,6 +38,7 @@ const TutorialDashboard = () => {
   const handleResetProgress = () => {
     resetProgress();
     setResetModalOpen(false);
+    setRefreshKey(prev => prev + 1); // Force le re-render de tous les composants
   };
 
   const progressPercentage = Math.round((profile.completedLessons.length / lessons.length) * 100);

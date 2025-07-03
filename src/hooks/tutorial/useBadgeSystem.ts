@@ -5,16 +5,22 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { Badge, BadgeCategory, BadgeRarity, LearnerProfile } from '../../types/tutorial';
-import { badges, BadgeChecker, BadgeDisplay, badgeCategories } from '../../data/tutorial/badges';
-import { useLocalStorage } from './useLocalStorage';
+import { allBadges, getBadgesByCategory, getBadgesByRarity } from '../../data/tutorial/badges';
+import { useLearningProgress } from './useLearningProgress';
+
+// バッジカテゴリー情報
+export const badgeCategories: Record<BadgeCategory, { name: string; icon: string; color: string }> = {
+  manners: { name: 'Bonnes Manières', icon: '🥢', color: 'bg-green-100 text-green-800' },
+  chains: { name: 'Chaînes', icon: '🏪', color: 'bg-blue-100 text-blue-800' },
+  systems: { name: 'Systèmes', icon: '📱', color: 'bg-purple-100 text-purple-800' },
+  expert: { name: 'Expert', icon: '🎓', color: 'bg-yellow-100 text-yellow-800' },
+  real_visit: { name: 'Visites Réelles', icon: '🏆', color: 'bg-red-100 text-red-800' }
+};
 
 export const useBadgeSystem = () => {
-  const { progress, addBadge } = useLocalStorage();
+  const { profile, addBadge } = useLearningProgress();
   const [newBadges, setNewBadges] = useState<Badge[]>([]);
   const [showBadgeAnimation, setShowBadgeAnimation] = useState(false);
-
-  // 現在のプロフィール
-  const profile = progress?.profile;
 
   // 獲得済みバッジ
   const earnedBadges = useMemo(() => {
@@ -23,10 +29,10 @@ export const useBadgeSystem = () => {
 
   // 未獲得バッジ
   const availableBadges = useMemo(() => {
-    if (!profile) return Object.values(badges);
+    if (!profile) return allBadges;
     
     const earnedBadgeIds = profile.badges.map(badge => badge.id);
-    return Object.values(badges).filter(badge => !earnedBadgeIds.includes(badge.id));
+    return allBadges.filter(badge => !earnedBadgeIds.includes(badge.id));
   }, [profile]);
 
   // カテゴリー別バッジ統計
@@ -42,7 +48,7 @@ export const useBadgeSystem = () => {
     };
 
     // 全バッジをカテゴリー別に集計
-    Object.values(badges).forEach(badge => {
+    allBadges.forEach(badge => {
       stats[badge.category].total++;
     });
 
@@ -73,7 +79,7 @@ export const useBadgeSystem = () => {
     };
 
     // 全バッジを希少度別に集計
-    Object.values(badges).forEach(badge => {
+    allBadges.forEach(badge => {
       stats[badge.rarity].total++;
     });
 
@@ -93,95 +99,13 @@ export const useBadgeSystem = () => {
     return stats;
   }, [profile]);
 
-  // バッジの進捗確認
-  const checkForNewBadges = useCallback(async () => {
-    if (!profile) return [];
-
-    const eligibleBadges = BadgeChecker.checkEligibleBadges(profile);
-    
-    if (eligibleBadges.length > 0) {
-      setNewBadges(eligibleBadges);
-      setShowBadgeAnimation(true);
-      
-      // バッジを一つずつ追加（アニメーション効果のため）
-      for (const badge of eligibleBadges) {
-        await new Promise(resolve => setTimeout(resolve, 500)); // 0.5秒間隔
-        addBadge(badge);
-      }
-      
-      return eligibleBadges;
-    }
-    
-    return [];
-  }, [profile, addBadge]);
-
-  // レッスン完了時のバッジチェック
-  const checkLessonBadges = useCallback(async (lessonId: string) => {
-    if (!profile) return [];
-
-    const lessonBadges = BadgeChecker.checkLessonCompletionBadges(lessonId, profile);
-    
-    if (lessonBadges.length > 0) {
-      setNewBadges(lessonBadges);
-      setShowBadgeAnimation(true);
-      
-      for (const badge of lessonBadges) {
-        await new Promise(resolve => setTimeout(resolve, 500));
-        addBadge(badge);
-      }
-      
-      return lessonBadges;
-    }
-    
-    return [];
-  }, [profile, addBadge]);
-
-  // 店舗訪問時のバッジチェック
-  const checkStoreVisitBadges = useCallback(async () => {
-    if (!profile) return [];
-
-    const visitBadges = BadgeChecker.checkStoreVisitBadges(profile);
-    
-    if (visitBadges.length > 0) {
-      setNewBadges(visitBadges);
-      setShowBadgeAnimation(true);
-      
-      for (const badge of visitBadges) {
-        await new Promise(resolve => setTimeout(resolve, 500));
-        addBadge(badge);
-      }
-      
-      return visitBadges;
-    }
-    
-    return [];
-  }, [profile, addBadge]);
-
-  // 特定バッジの即座付与
-  const awardInstantBadge = useCallback((badgeId: string) => {
-    const badge = BadgeChecker.awardInstantBadge(badgeId);
-    if (badge) {
-      setNewBadges([badge]);
-      setShowBadgeAnimation(true);
-      addBadge(badge);
-      return badge;
-    }
-    return null;
-  }, [addBadge]);
-
-  // バッジアニメーションを非表示
-  const dismissBadgeAnimation = useCallback(() => {
-    setShowBadgeAnimation(false);
-    setNewBadges([]);
-  }, []);
-
   // バッジフィルター
   const getFilteredBadges = useCallback((
     category?: BadgeCategory,
     rarity?: BadgeRarity,
     onlyEarned = false
   ) => {
-    let badgesToFilter = onlyEarned ? earnedBadges : Object.values(badges);
+    let badgesToFilter = onlyEarned ? earnedBadges : allBadges;
 
     if (category) {
       badgesToFilter = badgesToFilter.filter(badge => badge.category === category);
@@ -207,71 +131,57 @@ export const useBadgeSystem = () => {
     if (!profile) return [];
 
     return availableBadges
-      .filter(badge => {
-        // 条件が明確なバッジのみ表示
-        return badge.requiredPoints || badge.requiredVisits || 
-               ['first_lesson_complete', 'manners_student', 'consistent_learner'].includes(badge.id);
-      })
       .slice(0, 5) // 最大5つ
       .map(badge => {
         let progress = 0;
         let target = 100;
-        let progressText = '';
+        let progressText = 'En cours...';
 
-        if (badge.requiredPoints) {
-          progress = Math.min(profile.totalPoints, badge.requiredPoints);
-          target = badge.requiredPoints;
-          progressText = `${progress}/${target} points`;
-        } else if (badge.requiredVisits) {
-          progress = Math.min(profile.realStoreVisits, badge.requiredVisits);
-          target = badge.requiredVisits;
-          progressText = `${progress}/${target} visites`;
-        } else if (badge.id === 'consistent_learner') {
-          progress = profile.currentStreak;
-          target = 3;
-          progressText = `${progress}/${target} jours`;
-        } else if (badge.id === 'first_lesson_complete') {
-          progress = profile.completedLessons.length > 0 ? 1 : 0;
-          target = 1;
-          progressText = progress > 0 ? 'Complété !' : 'Terminez une leçon';
+        // 簡単な進捗計算
+        if (badge.category === 'manners') {
+          progress = profile.completedLessons.length > 0 ? 100 : 0;
+          progressText = progress > 0 ? 'Complété !' : 'Terminez une leçon de manières';
+        } else if (badge.category === 'chains') {
+          progress = Math.min(profile.completedLessons.length * 25, 100);
+          progressText = `${profile.completedLessons.length} leçons complétées`;
+        } else if (badge.category === 'real_visit') {
+          progress = Math.min(profile.realStoreVisits * 20, 100);
+          progressText = `${profile.realStoreVisits} visites de magasin`;
         }
 
         return {
           badge,
-          progress: Math.round((progress / target) * 100),
+          progress,
           progressText,
-          isClose: progress / target >= 0.8 // 80%以上で "近い"
+          isClose: progress >= 80 // 80%以上で "近い"
         };
       });
   }, [profile, availableBadges]);
 
   // バッジの詳細情報
   const getBadgeDetails = useCallback((badgeId: string) => {
-    const badgeTemplate = badges[badgeId];
+    const badgeTemplate = allBadges.find(b => b.id === badgeId);
     if (!badgeTemplate) return null;
 
     const earnedBadge = profile?.badges.find(b => b.id === badgeId);
     const isEarned = !!earnedBadge;
 
-    let requirements = '';
-    if (badgeTemplate.requiredPoints) {
-      requirements = `${badgeTemplate.requiredPoints} points requis`;
-    } else if (badgeTemplate.requiredVisits) {
-      requirements = `${badgeTemplate.requiredVisits} visites de magasin requises`;
-    }
-
     const categoryInfo = badgeCategories[badgeTemplate.category];
-    const rarityInfo = BadgeDisplay.getRarityDisplay(badgeTemplate.rarity);
+    const rarityInfo = {
+      icon: badgeTemplate.rarity === 'legendary' ? '🥇' : 
+            badgeTemplate.rarity === 'rare' ? '🥈' : '🥉',
+      label: badgeTemplate.rarity === 'legendary' ? 'Légendaire' : 
+             badgeTemplate.rarity === 'rare' ? 'Rare' : 'Commun'
+    };
 
     return {
       ...badgeTemplate,
       isEarned,
       earnedAt: earnedBadge?.earnedAt,
-      requirements,
+      requirements: 'Terminez les leçons correspondantes',
       categoryInfo,
       rarityInfo,
-      colorClass: BadgeDisplay.getBadgeColor(badgeTemplate.rarity),
-      categoryColorClass: BadgeDisplay.getCategoryColor(badgeTemplate.category)
+      categoryColorClass: categoryInfo.color
     };
   }, [profile]);
 
@@ -279,7 +189,7 @@ export const useBadgeSystem = () => {
   const getCollectionCompleteness = useCallback(() => {
     if (!profile) return 0;
 
-    const totalBadges = Object.keys(badges).length;
+    const totalBadges = allBadges.length;
     const earnedBadges = profile.badges.length;
     
     return {
@@ -299,18 +209,6 @@ export const useBadgeSystem = () => {
       .slice(0, limit);
   }, [profile]);
 
-  // プロフィール変更時のバッジチェック
-  useEffect(() => {
-    if (profile) {
-      // 自動バッジチェック（レンダリング負荷を避けるため遅延実行）
-      const timer = setTimeout(() => {
-        checkForNewBadges();
-      }, 1000);
-
-      return () => clearTimeout(timer);
-    }
-  }, [profile?.totalPoints, profile?.completedLessons?.length, profile?.realStoreVisits, checkForNewBadges]);
-
   return {
     // 状態
     earnedBadges,
@@ -322,13 +220,6 @@ export const useBadgeSystem = () => {
     badgeStatsByCategory,
     badgeStatsByRarity,
     getCollectionCompleteness,
-
-    // アクション
-    checkForNewBadges,
-    checkLessonBadges,
-    checkStoreVisitBadges,
-    awardInstantBadge,
-    dismissBadgeAnimation,
 
     // フィルターと検索
     getFilteredBadges,
