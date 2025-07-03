@@ -36,6 +36,19 @@ export const BadgeDisplay: React.FC<BadgeDisplayProps> = ({ className = '' }) =>
   const [selectedRarity, setSelectedRarity] = useState<BadgeRarity | 'all'>('all');
   const [showOnlyEarned, setShowOnlyEarned] = useState(false);
 
+  // useBadgeSystemフックからのデータが利用できない場合の対処
+  if (!badgeCategories || Object.keys(badgeCategories).length === 0) {
+    return (
+      <div className={`bg-white rounded-lg shadow-lg p-8 ${className}`}>
+        <div className="text-center">
+          <div className="text-4xl mb-4">🎯</div>
+          <h3 className="text-lg font-semibold text-gray-900 mb-2">Badge System Loading...</h3>
+          <p className="text-gray-600">The badge system is being initialized.</p>
+        </div>
+      </div>
+    );
+  }
+
   // クライアントサイドでない場合はローディング表示
   if (!isClient) {
     return (
@@ -168,7 +181,7 @@ export const BadgeDisplay: React.FC<BadgeDisplayProps> = ({ className = '' }) =>
           <h3 className="text-lg font-semibold text-gray-900 mb-4">🎯 Prochains Badges à Débloquer</h3>
           
           <div className="space-y-4">
-            {upcomingBadges.map((upcoming, index) => (
+            {upcomingBadges.map((upcoming: any, index) => (
               <div key={upcoming.badge.id} className="border border-gray-200 rounded-lg p-4">
                 <div className="flex items-center space-x-4">
                   <div className="text-3xl opacity-50">{upcoming.badge.icon}</div>
@@ -217,7 +230,7 @@ export const BadgeDisplay: React.FC<BadgeDisplayProps> = ({ className = '' }) =>
               <option value="all">Toutes</option>
               {Object.entries(badgeCategories).map(([key, category]) => (
                 <option key={key} value={key}>
-                  {category.icon} {category.name}
+                  {(category as any).icon} {(category as any).name}
                 </option>
               ))}
             </select>
@@ -253,7 +266,7 @@ export const BadgeDisplay: React.FC<BadgeDisplayProps> = ({ className = '' }) =>
 
         {/* Grille des badges */}
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {filteredBadges.map((badge) => {
+          {filteredBadges.map((badge: any) => {
             const isEarned = 'earnedAt' in badge;
             const badgeDetails = getBadgeDetails(badge.id);
             const earnedBadge = isEarned ? badge as Badge & { earnedAt: string } : null;

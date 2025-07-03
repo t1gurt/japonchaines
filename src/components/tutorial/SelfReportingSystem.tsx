@@ -7,8 +7,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useSelfReporting } from '../../hooks/tutorial/useSelfReporting';
-import { CHAINS } from '../../data/tutorial/chains';
-import { VisitReport } from '../../types/tutorial';
+import { chains } from '../../data/tutorial/chains';
+import { VisitedStore } from '../../types/tutorial';
 
 interface SelfReportingSystemProps {
   className?: string;
@@ -74,15 +74,11 @@ export const SelfReportingSystem: React.FC<SelfReportingSystemProps> = ({ classN
 
     setIsSubmitting(true);
     try {
-      const reportData: Omit<VisitReport, 'id' | 'timestamp' | 'status'> = {
+      // 簡素化されたレポート送信
+      await submitReport({
         chainId: selectedChain,
-        visitDate,
-        notes: notes.trim(),
-        hasPhoto: photo !== null,
-        location: '', // À implémenter si nécessaire
-      };
-
-      await submitReport(reportData);
+        visitDate: visitDate
+      });
       
       // Reset form
       setSelectedChain('');
@@ -168,9 +164,9 @@ export const SelfReportingSystem: React.FC<SelfReportingSystemProps> = ({ classN
                 className="w-full border border-gray-300 rounded-lg px-3 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               >
                 <option value="">Sélectionnez une chaîne...</option>
-                {Object.entries(CHAINS).map(([id, chain]) => (
-                  <option key={id} value={id}>
-                    {chain.name} ({chain.nameJa})
+                {chains.map((chain) => (
+                  <option key={chain.id} value={chain.id}>
+                    {chain.name}
                   </option>
                 ))}
               </select>
@@ -266,113 +262,19 @@ export const SelfReportingSystem: React.FC<SelfReportingSystemProps> = ({ classN
         <div className="bg-white rounded-lg shadow-lg p-6">
           <div className="flex items-center justify-between mb-4">
             <h3 className="text-lg font-semibold text-gray-900">📊 Activité Récente</h3>
-            <div className="flex space-x-2">
-              <button
-                onClick={() => setShowRecentReports(true)}
-                className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                  showRecentReports 
-                    ? 'bg-blue-100 text-blue-800' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                Récents
-              </button>
-              <button
-                onClick={() => setShowRecentReports(false)}
-                className={`px-3 py-1 text-xs rounded-full transition-colors ${
-                  !showRecentReports 
-                    ? 'bg-blue-100 text-blue-800' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
-                En attente
-              </button>
-            </div>
           </div>
 
-          <div className="space-y-3">
-            {showRecentReports ? (
-              recentReports.length > 0 ? (
-                recentReports.map((report: VisitReport) => {
-                  const chain = CHAINS[report.chainId];
-                  return (
-                    <div key={report.id} className="border border-gray-200 rounded-lg p-3">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-medium text-gray-900 text-sm">
-                          {chain?.name || 'Chaîne inconnue'}
-                        </h4>
-                        <span className={`px-2 py-1 text-xs rounded-full ${
-                          report.status === 'verified' 
-                            ? 'bg-green-100 text-green-800'
-                            : report.status === 'pending'
-                            ? 'bg-yellow-100 text-yellow-800'
-                            : 'bg-gray-100 text-gray-800'
-                        }`}>
-                          {report.status === 'verified' ? '✅ Vérifié' : 
-                           report.status === 'pending' ? '⏳ En attente' : '📝 Déclaré'}
-                        </span>
-                      </div>
-                      
-                      <div className="text-xs text-gray-600 space-y-1">
-                        <p>📅 Visite : {new Date(report.visitDate).toLocaleDateString()}</p>
-                        <p>🕒 Déclaré : {new Date(report.timestamp).toLocaleDateString()}</p>
-                        {report.notes && (
-                          <p className="text-gray-800 bg-gray-50 p-2 rounded text-xs">
-                            💭 {report.notes}
-                          </p>
-                        )}
-                        {report.hasPhoto && (
-                          <p className="text-blue-600">📸 Photo jointe</p>
-                        )}
-                      </div>
-                    </div>
-                  );
-                })
-              ) : (
-                <div className="text-center py-6">
-                  <div className="text-3xl mb-2">📝</div>
-                  <p className="text-gray-600">Aucune visite déclarée récemment.</p>
-                  <p className="text-sm text-gray-500">Votre première déclaration apparaîtra ici !</p>
-                </div>
-              )
-            ) : (
-              pendingReports.length > 0 ? (
-                pendingReports.map((report: VisitReport) => {
-                  const chain = CHAINS[report.chainId];
-                  return (
-                    <div key={report.id} className="border border-yellow-200 bg-yellow-50 rounded-lg p-3">
-                      <div className="flex items-center justify-between mb-2">
-                        <h4 className="font-medium text-gray-900 text-sm">
-                          {chain?.name || 'Chaîne inconnue'}
-                        </h4>
-                        <span className="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">
-                          ⏳ En attente
-                        </span>
-                      </div>
-                      
-                      <p className="text-xs text-gray-600">
-                        Visite du {new Date(report.visitDate).toLocaleDateString()}
-                      </p>
-                      <p className="text-xs text-yellow-700 mt-1">
-                        Déclaration en cours de vérification...
-                      </p>
-                    </div>
-                  );
-                })
-              ) : (
-                <div className="text-center py-6">
-                  <div className="text-3xl mb-2">✅</div>
-                  <p className="text-gray-600">Aucune visite en attente de vérification.</p>
-                </div>
-              )
-            )}
+          <div className="text-center py-6">
+            <div className="text-3xl mb-2">📝</div>
+            <p className="text-gray-600">Système de rapports en développement.</p>
+            <p className="text-sm text-gray-500">Les rapports de visite seront bientôt disponibles !</p>
           </div>
 
           {/* Encouragement */}
           <div className="mt-6 p-4 bg-gradient-to-r from-orange-100 to-red-100 rounded-lg">
             <h4 className="font-medium text-orange-900 mb-2">🎯 Continuez à explorer !</h4>
             <p className="text-sm text-orange-800">
-              Il reste {Object.keys(CHAINS).length - uniqueChains} chaînes à découvrir. 
+              Il reste {chains.length - uniqueChains} chaînes à découvrir. 
               Chaque nouvelle visite vous rapproche du statut d&apos;expert !
             </p>
           </div>

@@ -1,351 +1,317 @@
-/**
- * インタラクティブクイズコンポーネント
- * 学習内容の確認と評価機能
- */
-
+// src/components/tutorial/QuizComponent.tsx
 'use client';
 
-import React, { useState, useEffect } from 'react';
-import { QuizQuestion, QuizResult, QuizAnswer } from '../../types/tutorial';
+import React, { useState } from 'react';
+import { QuizQuestion } from '@/types/tutorial';
+import { CheckCircle, XCircle, ArrowRight, RotateCcw, ArrowLeft, Trophy, AlertCircle } from 'lucide-react';
+import Link from 'next/link';
 
 interface QuizComponentProps {
   questions: QuizQuestion[];
-  onComplete: (result: QuizResult) => void;
-  className?: string;
+  onComplete: (score: number, totalQuestions: number, isPerfectScore: boolean) => void;
+  lessonTitle?: string;
 }
 
-export const QuizComponent: React.FC<QuizComponentProps> = ({ 
+const QuizComponent: React.FC<QuizComponentProps> = ({ 
   questions, 
   onComplete, 
-  className = '' 
+  lessonTitle = 'Quiz'
 }) => {
-  const [isClient, setIsClient] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState<{ [questionId: string]: string | string[] }>({});
-  const [showExplanation, setShowExplanation] = useState(false);
-  const [timeStart, setTimeStart] = useState<Date | null>(null);
-  const [questionStartTime, setQuestionStartTime] = useState<Date | null>(null);
-  const [timeSpent, setTimeSpent] = useState<{ [questionId: string]: number }>({});
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
+  const [isAnswered, setIsAnswered] = useState(false);
+  const [userAnswers, setUserAnswers] = useState<number[]>([]);
+  const [isQuizCompleted, setIsQuizCompleted] = useState(false);
+  const [finalScore, setFinalScore] = useState(0);
 
-  // クライアントサイドの初期化
-  useEffect(() => {
-    setIsClient(true);
-    const now = new Date();
-    setTimeStart(now);
-    setQuestionStartTime(now);
-  }, []);
+  const resetQuiz = () => {
+    setCurrentQuestionIndex(0);
+    setSelectedAnswer(null);
+    setIsAnswered(false);
+    setUserAnswers([]);
+    setIsQuizCompleted(false);
+    setFinalScore(0);
+  };
 
-  const currentQuestion = questions[currentQuestionIndex];
-  const isLastQuestion = currentQuestionIndex === questions.length - 1;
-  const hasAnswered = selectedAnswers[currentQuestion?.id] != null;
+  const handleAnswer = (answerIndex: number) => {
+    if (isAnswered) return;
 
-  // クライアントサイドでない場合はローディング表示
-  if (!isClient) {
+    setSelectedAnswer(answerIndex);
+    setIsAnswered(true);
+    
+    // Ne pas ajouter la réponse immédiatement, attendre handleNextQuestion
+    console.log('Answer selected:', {
+      questionIndex: currentQuestionIndex,
+      answerIndex,
+      currentAnswersLength: userAnswers.length,
+      totalQuestions: questions.length
+    });
+  };
+
+  const handleNextQuestion = () => {
+    // Ajouter la réponse actuelle à la liste
+    const newUserAnswers = [...userAnswers, selectedAnswer!];
+    setUserAnswers(newUserAnswers);
+    
+    console.log('Moving to next question:', {
+      currentQuestionIndex,
+      selectedAnswer,
+      newAnswersLength: newUserAnswers.length,
+      totalQuestions: questions.length
+    });
+
+    if (currentQuestionIndex < questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setSelectedAnswer(null);
+      setIsAnswered(false);
+    } else {
+      // Calcul du score final avec la liste complète des réponses
+      const final = newUserAnswers.reduce((acc, answer, index) => {
+        const question = questions[index];
+        if (!question || typeof answer !== 'number') {
+          console.error('Invalid question or answer', { question, answer, index });
+          return acc;
+        }
+        return acc + (answer === question.correctAnswerIndex ? 1 : 0);
+      }, 0);
+      
+      console.log('Quiz completed:', {
+        finalAnswers: newUserAnswers,
+        finalScore: final,
+        questionsLength: questions.length
+      });
+      
+      setFinalScore(final);
+      setIsQuizCompleted(true);
+      const isPerfect = final === questions.length;
+      onComplete(final, questions.length, isPerfect);
+    }
+  };
+
+  if (questions.length === 0) {
     return (
-      <div className={`bg-white rounded-lg shadow-lg p-8 ${className}`}>
-        <div className="animate-pulse">
-          <div className="h-6 bg-gray-200 rounded w-3/4 mb-4"></div>
-          <div className="space-y-3">
-            {[...Array(4)].map((_, i) => (
-              <div key={i} className="h-12 bg-gray-200 rounded"></div>
-            ))}
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-2xl mx-auto text-center">
+        <div className="text-6xl mb-4">📚</div>
+        <p className="text-gray-600">Ce cours n'a pas encore de quiz disponible.</p>
+        <p className="text-sm text-gray-500 mt-2">Revenez bientôt pour tester vos connaissances !</p>
+        <Link href="/tutorial" className="mt-4 inline-flex items-center text-blue-600 hover:underline">
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Retour au tableau de bord
+        </Link>
+      </div>
+    );
+  }
+
+  // Affichage des résultats finaux
+  if (isQuizCompleted) {
+    const isPerfectScore = finalScore === questions.length;
+    const percentage = Math.round((finalScore / questions.length) * 100);
+
+    return (
+      <div className="bg-white rounded-xl shadow-lg max-w-4xl mx-auto overflow-hidden">
+        {/* En-tête de résultats */}
+        <div className={`p-6 text-white ${isPerfectScore ? 'bg-gradient-to-r from-green-600 to-emerald-600' : 'bg-gradient-to-r from-orange-500 to-red-500'}`}>
+          <div className="flex items-center justify-between">
+            <h2 className="text-2xl font-bold">Résultats du Quiz</h2>
+            <Link href="/tutorial" className="text-white hover:text-gray-200 transition-colors">
+              <ArrowLeft className="w-6 h-6" />
+            </Link>
+          </div>
+        </div>
+
+        <div className="p-8 text-center">
+          {isPerfectScore ? (
+            <div className="mb-6">
+              <Trophy className="w-16 h-16 text-yellow-500 mx-auto mb-4" />
+              <h3 className="text-3xl font-bold text-green-600 mb-2">Score Parfait !</h3>
+              <p className="text-lg text-gray-700 mb-4">
+                Félicitations ! Vous avez obtenu {finalScore}/{questions.length} ({percentage}%)
+              </p>
+              <div className="bg-green-50 border border-green-200 rounded-lg p-4 mb-6">
+                <div className="flex items-center justify-center text-green-800">
+                  <CheckCircle className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">Vous avez débloqué un nouveau badge !</span>
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div className="mb-6">
+              <AlertCircle className="w-16 h-16 text-orange-500 mx-auto mb-4" />
+              <h3 className="text-3xl font-bold text-orange-600 mb-2">Presque parfait !</h3>
+              <p className="text-lg text-gray-700 mb-4">
+                Score : {finalScore}/{questions.length} ({percentage}%)
+              </p>
+              <div className="bg-orange-50 border border-orange-200 rounded-lg p-4 mb-6">
+                <div className="flex items-center justify-center text-orange-800">
+                  <AlertCircle className="w-5 h-5 mr-2" />
+                  <span className="font-semibold">Réessayez pour obtenir un score parfait et débloquer le badge !</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Révision des réponses */}
+          <div className="text-left mb-8">
+            <h4 className="text-xl font-semibold mb-4">Révision de vos réponses :</h4>
+            <div className="space-y-4">
+              {questions.map((question, index) => {
+                // Utiliser directement userAnswers qui contient maintenant toutes les réponses
+                const userAnswer = userAnswers[index];
+                
+                // 安全性チェック
+                if (typeof userAnswer !== 'number' || !question) {
+                  return null;
+                }
+                
+                const isCorrect = userAnswer === question.correctAnswerIndex;
+                return (
+                  <div key={index} className={`p-4 rounded-lg border ${isCorrect ? 'bg-green-50 border-green-200' : 'bg-red-50 border-red-200'}`}>
+                    <p className="font-medium mb-2">
+                      Question {index + 1}: {question.question}
+                    </p>
+                    <div className="text-sm">
+                      <p className={`${isCorrect ? 'text-green-700' : 'text-red-700'}`}>
+                        {isCorrect ? '✓' : '✗'} Votre réponse: {question.options[userAnswer] || 'Réponse invalide'}
+                      </p>
+                      {!isCorrect && (
+                        <p className="text-green-700 mt-1">
+                          ✓ Bonne réponse: {question.options[question.correctAnswerIndex]}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="flex justify-center space-x-4">
+            {!isPerfectScore && (
+              <button
+                onClick={resetQuiz}
+                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center"
+              >
+                <RotateCcw className="w-5 h-5 mr-2" />
+                Réessayer le Quiz
+              </button>
+            )}
+            <Link
+              href="/tutorial"
+              className="bg-gradient-to-r from-gray-600 to-gray-700 text-white px-6 py-3 rounded-xl font-semibold hover:from-gray-700 hover:to-gray-800 transition-all duration-300 flex items-center"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Retour au Tableau de Bord
+            </Link>
           </div>
         </div>
       </div>
     );
   }
 
-  // 質問開始時刻をリセット
-  useEffect(() => {
-    if (isClient) {
-      setQuestionStartTime(new Date());
-    }
-  }, [currentQuestionIndex, isClient]);
-
-  // 回答を選択
-  const handleAnswerSelect = (answer: string) => {
-    if (!currentQuestion) return;
-
-    const questionId = currentQuestion.id;
-
-    if (currentQuestion.type === 'multiple_choice' || currentQuestion.type === 'true_false') {
-      // 単一選択
-      setSelectedAnswers(prev => ({
-        ...prev,
-        [questionId]: answer
-      }));
-    } else {
-      // その他のタイプも単一選択として扱う
-      setSelectedAnswers(prev => ({
-        ...prev,
-        [questionId]: answer
-      }));
-    }
-  };
-
-  // 回答を確認
-  const handleConfirmAnswer = () => {
-    if (!hasAnswered || !questionStartTime) return;
-
-    // 時間を記録
-    const questionTime = new Date().getTime() - questionStartTime.getTime();
-    setTimeSpent(prev => ({
-      ...prev,
-      [currentQuestion.id]: questionTime
-    }));
-
-    setShowExplanation(true);
-  };
-
-  // 次の質問へ
-  const handleNextQuestion = () => {
-    setShowExplanation(false);
-    
-    if (isLastQuestion) {
-      // クイズ完了
-      handleQuizComplete();
-    } else {
-      setCurrentQuestionIndex(prev => prev + 1);
-    }
-  };
-
-  // クイズ完了処理
-  const handleQuizComplete = () => {
-    if (!timeStart) return;
-    
-    const totalTime = new Date().getTime() - timeStart.getTime();
-    let correctAnswers = 0;
-
-    const detailedResults = questions.map(question => {
-      const userAnswer = selectedAnswers[question.id];
-      let isCorrect = false;
-
-      // 回答の正誤判定
-      if (Array.isArray(question.correctAnswer)) {
-        // 複数回答の場合
-        isCorrect = Array.isArray(userAnswer) && 
-          userAnswer.length === question.correctAnswer.length &&
-          userAnswer.every(ans => question.correctAnswer.includes(ans));
-      } else {
-        // 単一回答の場合
-        isCorrect = userAnswer === question.correctAnswer;
-      }
-
-      if (isCorrect) {
-        correctAnswers++;
-      }
-
-      return {
-        questionId: question.id,
-        questionText: question.question,
-        userAnswer,
-        correctAnswer: question.correctAnswer,
-        isCorrect,
-        timeSpent: timeSpent[question.id] || 0,
-        explanation: question.explanation
-      };
-    });
-
-    const result: QuizResult = {
-      lessonId: 'current_lesson', // 実際のレッスンIDを設定する必要があります
-      totalQuestions: questions.length,
-      correctAnswers,
-      score: Math.round((correctAnswers / questions.length) * 100),
-      duration: totalTime,
-      answers: detailedResults.map((result, index) => ({
-        questionIndex: index,
-        selectedAnswer: 0, // 実際の回答インデックスを設定する必要があります
-        isCorrect: result.isCorrect
-      })),
-      completedAt: isClient ? new Date() : new Date('2025-01-01')
-    };
-
-    onComplete(result);
-  };
-
-  // 現在の質問の正解確認
-  const isAnswerCorrect = (option: string) => {
-    if (!showExplanation) return null;
-    
-    if (Array.isArray(currentQuestion.correctAnswer)) {
-      return currentQuestion.correctAnswer.includes(option);
-    } else {
-      return currentQuestion.correctAnswer === option;
-    }
-  };
-
-  // 答えのスタイルクラス
-  const getAnswerClassName = (option: string) => {
-    const isSelected = selectedAnswers[currentQuestion?.id] === option;
-    
-    if (!showExplanation) {
-      return `p-4 border-2 rounded-lg cursor-pointer transition-all text-left ${
-        isSelected 
-          ? 'bg-blue-100 border-blue-500 text-blue-800' 
-          : 'bg-white border-gray-300 text-gray-700 hover:border-blue-300 hover:bg-blue-50'
-      }`;
-    }
-
-    // 解説表示時
-    const isCorrect = isAnswerCorrect(option);
-    if (isCorrect) {
-      return 'p-4 border-2 rounded-lg bg-green-100 border-green-500 text-green-800';
-    } else if (isSelected) {
-      return 'p-4 border-2 rounded-lg bg-red-100 border-red-500 text-red-800';
-    } else {
-      return 'p-4 border-2 rounded-lg bg-gray-100 border-gray-300 text-gray-600';
-    }
-  };
-
-  if (!currentQuestion) {
-    return (
-      <div className={`bg-white rounded-lg shadow-lg p-8 text-center ${className}`}>
-        <div className="text-4xl mb-4">❓</div>
-        <p className="text-gray-600">Aucune question disponible</p>
-      </div>
-    );
-  }
+  const currentQuestion = questions[currentQuestionIndex];
+  const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
 
   return (
-    <div className={`bg-white rounded-lg shadow-lg ${className}`}>
-      {/* En-tête du quiz */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-6 rounded-t-lg">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xl font-bold">Quiz Interactif</h2>
-          <span className="bg-white/20 px-3 py-1 rounded-full text-sm">
-            {currentQuestionIndex + 1} / {questions.length}
-          </span>
+    <div className="bg-white rounded-xl shadow-lg max-w-4xl mx-auto overflow-hidden">
+      {/* En-tête avec progression */}
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 p-6 text-white">
+        <div className="flex items-center justify-between mb-2">
+          <h2 className="text-2xl font-bold">{lessonTitle}</h2>
+          <Link href="/tutorial" className="text-white hover:text-gray-200 transition-colors">
+            <ArrowLeft className="w-6 h-6" />
+          </Link>
         </div>
-        
-        {/* Barre de progression */}
-        <div className="bg-white/20 rounded-full h-2">
+        <div className="flex items-center justify-between text-sm">
+          <span>Question {currentQuestionIndex + 1} sur {questions.length}</span>
+          <span>{Math.round(progress)}% terminé</span>
+        </div>
+        <div className="w-full bg-blue-400 bg-opacity-30 rounded-full h-2 mt-3">
           <div 
-            className="bg-white rounded-full h-2 transition-all duration-500"
-            style={{ width: `${((currentQuestionIndex + 1) / questions.length) * 100}%` }}
+            className="bg-white h-2 rounded-full transition-all duration-300"
+            style={{ width: `${progress}%` }}
           />
         </div>
       </div>
 
-      <div className="p-6">
-        {/* Question */}
-        <div className="mb-6">
-          <div className="flex items-center mb-4">
-            <div className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium mr-3">
-              {currentQuestion.difficulty === 'easy' ? '🟢 Facile' :
-               currentQuestion.difficulty === 'medium' ? '🟡 Moyen' : '🔴 Difficile'}
-            </div>
-            <div className="text-sm text-gray-500">
-              {currentQuestion.points} points
-            </div>
-          </div>
-          
-          <h3 className="text-lg font-semibold text-gray-900 mb-4">
+      {/* Contenu de la question */}
+      <div className="p-8">
+        <div className="mb-8">
+          <h3 className="text-xl font-semibold text-gray-900 leading-relaxed">
             {currentQuestion.question}
           </h3>
-          
-          {currentQuestion.image && (
-            <div className="mb-4">
-              <img 
-                src={currentQuestion.image} 
-                alt="Question illustration"
-                className="max-w-full h-48 object-cover rounded-lg"
-              />
-            </div>
-          )}
         </div>
 
-        {/* Réponses */}
-        <div className="space-y-3 mb-6">
-          {currentQuestion.options?.map((option, index) => (
-            <div
-              key={index}
-              className={getAnswerClassName(option)}
-              onClick={() => !showExplanation && handleAnswerSelect(option)}
+        <div className="space-y-3">
+          {currentQuestion.options.map((option: string, index: number) => {
+            const isCorrect = index === currentQuestion.correctAnswerIndex;
+            const isSelected = selectedAnswer === index;
+            const isWrong = isAnswered && isSelected && !isCorrect;
+
+            return (
+              <button
+                key={index}
+                onClick={() => handleAnswer(index)}
+                disabled={isAnswered}
+                className={`w-full text-left p-4 rounded-xl border-2 transition-all duration-300 
+                  ${!isAnswered 
+                    ? 'border-gray-200 hover:border-blue-300 hover:bg-blue-50 cursor-pointer' 
+                    : isCorrect 
+                      ? 'border-green-500 bg-green-50 text-green-800' 
+                      : isWrong 
+                        ? 'border-red-500 bg-red-50 text-red-800'
+                        : 'border-gray-200 bg-gray-50 text-gray-500'
+                  }
+                  ${isAnswered ? 'cursor-not-allowed' : ''}
+                `}
+              >
+                <div className="flex items-center justify-between">
+                  <span className="flex-1 font-medium">{option}</span>
+                  {isAnswered && (
+                    <div className="ml-3">
+                      {isCorrect && <CheckCircle className="w-5 h-5 text-green-600" />}
+                      {isWrong && <XCircle className="w-5 h-5 text-red-600" />}
+                    </div>
+                  )}
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {isAnswered && (
+          <div className="mt-8 text-center">
+            <div className="mb-4 p-4 rounded-lg bg-gray-50">
+              {selectedAnswer === currentQuestion.correctAnswerIndex ? (
+                <div className="text-green-700">
+                  <CheckCircle className="w-6 h-6 inline mr-2" />
+                  Bonne réponse ! Excellent travail.
+                </div>
+              ) : (
+                <div className="text-red-700">
+                  <XCircle className="w-6 h-6 inline mr-2" />
+                  Pas tout à fait. La bonne réponse était : "{currentQuestion.options[currentQuestion.correctAnswerIndex]}"
+                </div>
+              )}
+            </div>
+
+            <button 
+              onClick={handleNextQuestion}
+              className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-purple-700 transition-all duration-300 flex items-center justify-center mx-auto"
             >
-              <div className="flex items-start space-x-3">
-                <div className="flex-shrink-0 mt-1">
-                  <div className={`w-4 h-4 border-2 rounded-full ${
-                    selectedAnswers[currentQuestion.id] === option
-                      ? 'bg-blue-600 border-blue-600'
-                      : 'border-gray-400'
-                  }`}>
-                    {selectedAnswers[currentQuestion.id] === option && (
-                      <div className="w-2 h-2 bg-white rounded-full mx-auto mt-0.5" />
-                    )}
-                  </div>
-                </div>
-                
-                <div className="flex-1">
-                  <p className="text-sm font-medium">{option}</p>
-                </div>
-
-                {showExplanation && (
-                  <div className="flex-shrink-0">
-                    {isAnswerCorrect(option) ? (
-                      <span className="text-green-600">✅</span>
-                    ) : selectedAnswers[currentQuestion.id] === option ? (
-                      <span className="text-red-600">❌</span>
-                    ) : null}
-                  </div>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Explication */}
-        {showExplanation && currentQuestion.explanation && (
-          <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-            <h4 className="font-medium text-blue-900 mb-2">💡 Explication</h4>
-            <p className="text-sm text-blue-800">{currentQuestion.explanation}</p>
+              {currentQuestionIndex < questions.length - 1 ? (
+                <>
+                  Question Suivante
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </>
+              ) : (
+                'Voir les Résultats'
+              )}
+            </button>
           </div>
         )}
-
-        {/* Actions */}
-        <div className="flex justify-between items-center">
-          <div className="text-sm text-gray-500">
-            {hasAnswered ? (
-              showExplanation ? (
-                '✅ Réponse confirmée'
-              ) : (
-                '👍 Prêt à confirmer'
-              )
-            ) : (
-              'Sélectionnez votre réponse'
-            )}
-          </div>
-
-          <div className="space-x-3">
-            {!showExplanation ? (
-              <button
-                onClick={handleConfirmAnswer}
-                disabled={!hasAnswered}
-                className={`px-6 py-2 rounded-lg font-medium transition-colors ${
-                  hasAnswered
-                    ? 'bg-blue-600 text-white hover:bg-blue-700'
-                    : 'bg-gray-300 text-gray-500 cursor-not-allowed'
-                }`}
-              >
-                Confirmer
-              </button>
-            ) : (
-              <button
-                onClick={handleNextQuestion}
-                className="bg-green-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-green-700 transition-colors"
-              >
-                {isLastQuestion ? 'Terminer le Quiz' : 'Question Suivante'}
-              </button>
-            )}
-          </div>
-        </div>
-
-        {/* Raccourcis clavier */}
-        <div className="mt-4 pt-4 border-t border-gray-200">
-          <p className="text-xs text-gray-500 text-center">
-            💡 Astuce : Cliquez sur la réponse pour la sélectionner
-          </p>
-        </div>
       </div>
     </div>
   );
 };
+
+export default QuizComponent;

@@ -1,10 +1,18 @@
 // src/types/tutorial.ts
 
 // 学習者プロフィール
+export type LearningLevel = 'debutant' | 'intermediaire' | 'avance';
+
+// バッジカテゴリー
+export type BadgeCategory = 'manners' | 'chains' | 'systems' | 'expert' | 'real_visit';
+
+// バッジレアリティ
+export type BadgeRarity = 'common' | 'rare' | 'legendary';
+
 export interface LearnerProfile {
   id: string;
   name: string;
-  level: 'debutant' | 'intermediaire' | 'avance';
+  level: LearningLevel;
   totalPoints: number;
   badges: Badge[];
   completedLessons: string[];
@@ -31,8 +39,8 @@ export interface Badge {
   name: string;
   description: string;
   icon: string;
-  category: 'manners' | 'chains' | 'systems' | 'expert' | 'real_visit';
-  rarity: 'common' | 'rare' | 'legendary';
+  category: BadgeCategory;
+  rarity: BadgeRarity;
   earnedAt: Date;
   relatedChains: string[];
   isRealVisitBadge: boolean; // 実店舗訪問バッジかどうか
@@ -64,4 +72,39 @@ export interface Achievement {
   description: string;
   earnedAt: Date;
   dataUrl?: string; // e.g., for storing generated image data
+}
+
+// レッスン情報
+export interface Lesson {
+  id: string;
+  level: LearningLevel;
+  title: string;
+  description: string;
+  type: 'quiz' | 'simulation' | 'video';
+  points: number;
+  duration: number; // minutes
+}
+
+// クイズの質問情報
+export interface QuizQuestion {
+  question: string;
+  options: string[];
+  correctAnswerIndex: number;
+}
+
+// クイズ情報
+export interface Quiz {
+  lessonId: string;
+  questions: QuizQuestion[];
+}
+
+// チェーン店情報
+export interface Chain {
+  id: string;
+  name: string;
+  japanese: string;
+  category: string;
+  description: string;
+  difficulty: 'facile' | 'moyen' | 'difficile';
+  features: string[];
 }
