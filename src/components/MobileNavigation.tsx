@@ -89,18 +89,10 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, toggleMenu 
     <>
       
 
-      {/* Overlay Modernisé */}
-      {isOpen && (
-        <div
-          className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40 transition-opacity duration-300"
-          onClick={closeMenu}
-        />
-      )}
-
-      {/* Mobile Menu Panel Modernisé - Ouverture depuis la droite */}
+      {/* Mobile Menu Panel Modernisé - Fullscreen */}
       <nav
-        className={`md:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white/95 backdrop-blur-md shadow-2xl z-45 transform transition-all duration-500 ease-out ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`md:hidden fixed top-0 left-0 h-screen w-screen bg-white/95 backdrop-blur-md shadow-2xl z-40 transform transition-opacity duration-300 ease-out ${
+          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
       >
         <div className="flex flex-col h-full">
