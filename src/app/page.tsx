@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileSearch from "@/components/MobileSearch";
+import MobileCategoryGrid from "@/components/MobileCategoryGrid";
+import MobileChainCards from "@/components/MobileChainCards";
+import MobileGuidesPreview from "@/components/MobileGuidesPreview";
 
 export default function Home() {
   return (
@@ -15,6 +19,12 @@ export default function Home() {
             Le premier guide complet en français pour naviguer facilement dans les chaînes 
             de restaurants japonais. Menus détaillés, méthodes de commande et conseils pratiques.
           </p>
+          
+          {/* Mobile Search */}
+          <div className="md:hidden mb-8">
+            <MobileSearch />
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link 
               href="/type-plat"
@@ -31,6 +41,12 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Mobile Category Grid */}
+      <MobileCategoryGrid />
+
+      {/* Mobile Popular Chains */}
+      <MobileChainCards />
 
       {/* Featured Categories */}
       <section className="py-16 bg-white">
@@ -148,7 +164,11 @@ export default function Home() {
               </Link>
             ))}
           </div>
-        </div>      </section>
+        </div>
+      </section>
+
+      {/* Mobile Guides Preview */}
+      <MobileGuidesPreview />
     </div>
   );
 }
