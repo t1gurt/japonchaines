@@ -172,6 +172,7 @@ export function useLearningProgress() {
         visitDate: new Date(),
         earnedPoints: 100, // ボーナスポイント
         earnedBadges: [],
+        registeredAt: new Date(),
       };
 
       let updatedProfile = {
