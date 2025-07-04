@@ -31,6 +31,7 @@ export interface VisitedStore {
   visitDate?: Date; // 任意：記録したい場合のみ
   earnedPoints: number;
   earnedBadges: string[];
+  registeredAt: Date; // 登録日時
 }
 
 // バッジ情報

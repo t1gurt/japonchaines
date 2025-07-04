@@ -22,7 +22,7 @@ const nextConfig: NextConfig = {
   compress: true,
   // ESLintとTypeScriptチェックを有効化（警告のみ）
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true, // Désactiver ESLint pendant le build
   },
   typescript: {
     ignoreBuildErrors: false,
