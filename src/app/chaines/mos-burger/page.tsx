@@ -298,6 +298,66 @@ export default function MOSBurgerPage() {
                   </div>
                 </div>
 
+                {/* L'Innovation Teriyaki Burger */}
+                <div className="mb-8">
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
+                    <span className="bg-red-100 text-red-800 px-2 py-1 rounded text-sm mr-3">Innovation</span>
+                    Le Légendaire Teriyaki Burger (1973)
+                  </h3>
+                  <div className="bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-6 border border-red-200">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900 mb-3">🥇 Premier au Monde (1973)</h4>
+                        <p className="text-gray-700 mb-4">
+                          MOS Burger a créé le <strong>premier Teriyaki Burger au monde</strong> en 1973, 
+                          révolutionnant l'industrie du hamburger. Cette innovation a été si réussie 
+                          que McDonald's l'a copiée... 18 ans plus tard en 1991 !
+                        </p>
+                        
+                        <div className="bg-white p-4 rounded-lg border-l-4 border-red-500 mb-4">
+                          <h5 className="font-bold text-red-700 mb-2">Le Secret : La Sauce Miso 🤫</h5>
+                          <p className="text-sm text-gray-700">
+                            Le génie du Teriyaki MOS réside dans l'ajout subtil de <strong>miso</strong> 
+                            à la sauce teriyaki traditionnelle. Cette touche crée une complexité umami 
+                            que personne n'a jamais réussi à reproduire parfaitement.
+                          </p>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-lg font-bold text-gray-900 mb-3">🎯 Technique & Philosophie</h4>
+                        <div className="space-y-3">
+                          <div className="bg-white p-3 rounded-lg">
+                            <span className="font-semibold text-gray-900">Équilibre parfait : </span>
+                            <span className="text-sm text-gray-600">Sucré-salé typiquement japonais</span>
+                          </div>
+                          <div className="bg-white p-3 rounded-lg">
+                            <span className="font-semibold text-gray-900">Umami profond : </span>
+                            <span className="text-sm text-gray-600">Miso + mirin + sauce soja</span>
+                          </div>
+                          <div className="bg-white p-3 rounded-lg">
+                            <span className="font-semibold text-gray-900">Caramélisation : </span>
+                            <span className="text-sm text-gray-600">Grillade qui intensifie les saveurs</span>
+                          </div>
+                          <div className="bg-white p-3 rounded-lg">
+                            <span className="font-semibold text-gray-900">Impact mondial : </span>
+                            <span className="text-sm text-gray-600">Copié par toutes les chaînes mondiales</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-6 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                      <h5 className="font-bold text-yellow-800 mb-2">💡 Conseil de Dégustation</h5>
+                      <p className="text-sm text-gray-700">
+                        Contrairement aux imitations, le Teriyaki MOS ne nécessite <strong>aucun condiment 
+                        supplémentaire</strong>. La sauce est parfaitement équilibrée et se suffit à elle-même. 
+                        Dégustez-le nature pour apprécier pleinement cette innovation historique !
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Accompagnements et desserts */}
                 <div className="mb-8">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
@@ -456,6 +516,27 @@ export default function MOSBurgerPage() {
                         <div className="font-medium text-gray-900">Merci pour la nourriture :</div>
                         <div className="text-gray-700">&quot;Gochisōsama deshita&quot;</div>
                         <div className="text-gray-500 text-xs">ごちそうさまでした</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Culture de la Cuisson Optimale */}
+                  <div className="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                    <h4 className="font-semibold text-blue-900 mb-3">🇯🇵 Culture Japonaise : Pas de Choix de Cuisson</h4>
+                    <p className="text-sm text-gray-700 mb-3">
+                      <strong>Important pour les visiteurs français :</strong> Contrairement à la France, 
+                      on ne vous demandera jamais la cuisson de votre burger au Japon. Ce n'est pas un 
+                      manque de service, mais l'expression de la <strong>confiance absolue du chef</strong> 
+                      en sa capacité à livrer la cuisson optimale.
+                    </p>
+                    <div className="grid md:grid-cols-2 gap-4 text-xs">
+                      <div className="bg-white p-3 rounded">
+                        <span className="font-bold text-blue-700">🇫🇷 En France : </span>
+                        <span className="text-gray-600">Personnalisation selon les goûts individuels</span>
+                      </div>
+                      <div className="bg-white p-3 rounded">
+                        <span className="font-bold text-blue-700">🇯🇵 Au Japon : </span>
+                        <span className="text-gray-600">Perfection technique par l'expertise du shokunin</span>
                       </div>
                     </div>
                   </div>

@@ -4,21 +4,6 @@ import GuideViewTracker from '../../components/GuideViewTracker';
 
 export default function GuidesPage() {  const guides = [
     {
-      id: 'comment-commander',
-      title: 'Comment Commander',
-      subtitle: 'Maîtrisez tous les systèmes de commande japonais',
-      description: 'Guide complet des distributeurs automatiques, écrans tactiles, QR codes et phrases utiles pour commander sans stress.',
-      icon: Utensils,
-      color: 'red',
-      available: true,
-      highlights: [
-        'Distributeurs de tickets étape par étape',
-        'Écrans tactiles interactifs',
-        'Commande par QR code',
-        'Phrases essentielles en 3 langues'
-      ]
-    },
-    {
       id: 'comment-choisir-restaurant-japonais',
       title: 'Comment Choisir un Restaurant Japonais',
       subtitle: 'Guide de sélection selon votre situation',
@@ -31,6 +16,21 @@ export default function GuidesPage() {  const guides = [
         'Types de restaurants par difficulté',
         'Conseils budget et recommandations',
         'Éviter les pièges touristiques'
+      ]
+    },
+    {
+      id: 'comment-commander',
+      title: 'Comment Commander',
+      subtitle: 'Maîtrisez tous les systèmes de commande japonais',
+      description: 'Guide complet des distributeurs automatiques, écrans tactiles, QR codes et phrases utiles pour commander sans stress.',
+      icon: Utensils,
+      color: 'red',
+      available: true,
+      highlights: [
+        'Distributeurs de tickets étape par étape',
+        'Écrans tactiles interactifs',
+        'Commande par QR code',
+        'Phrases essentielles en 3 langues'
       ]
     },
     {
@@ -62,7 +62,8 @@ export default function GuidesPage() {  const guides = [
         'Guide des allergènes',
         'Conseils par chaîne de restaurant'
       ]
-    },{
+    },
+    {
       id: 'culture-etiquette',
       title: 'Culture & Étiquette',
       subtitle: 'Découvrez les codes culturels japonais',
