@@ -62,6 +62,20 @@ export default function ArticlesPage() {
       color: 'bg-cyan-500'
     },
     {
+      title: 'Yakiniku : L\'Expérience Gastronomique et Conviviale du Japon',
+      slug: 'yakiniku-culture-et-gastronomie',
+      description: 'De ses origines coréennes à sa transformation en art culinaire japonais : histoire, philosophie et techniques du yakiniku',
+      excerpt: 'Découvrez l\'univers du yakiniku japonais : de ses racines historiques à sa philosophie de partage, en passant par les techniques de grillage parfaites et l\'art des sauces tare. Une immersion complète dans cette tradition culinaire qui transcende la simple gastronomie.',
+      readTime: '15 min',
+      category: 'Culture & Gastronomie',
+      difficulty: 'Intermédiaire',
+      topics: ['Yakiniku', 'Culture', 'Convivialité', 'Wagyu', 'Techniques de grillage', 'Histoire'],
+      publishDate: '2025-07-05',
+      featured: true,
+      icon: '🔥',
+      color: 'bg-red-500'
+    },
+    {
       title: 'Kikan Gentei & Moe-dan : L\'Art Japonais du Burger',
       slug: 'culture-consommation-burger',
       description: 'Période limitée et esthétique de la coupe : comment le Japon a révolutionné la culture de consommation',
@@ -107,6 +121,12 @@ export default function ArticlesPage() {
 
   const categories = [
     {
+      name: 'Culture & Gastronomie',
+      description: 'Art culinaire et traditions gastronomiques japonaises',
+      count: 1,
+      color: 'bg-red-100 text-red-800'
+    },
+    {
       name: 'Innovation & Technologie',
       description: 'Révolutions technologiques dans la restauration japonaise',
       count: 1,
@@ -116,7 +136,7 @@ export default function ArticlesPage() {
       name: 'Histoire Culinaire',
       description: 'Les révolutions et évolutions de la cuisine japonaise',
       count: 2,
-      color: 'bg-red-100 text-red-800'
+      color: 'bg-orange-100 text-orange-800'
     },
     {
       name: 'Culture Régionale',
