@@ -218,7 +218,8 @@ export default function BurgersJaponaisPage() {
               <p className="text-xl text-gray-700 mb-6">
                 Découvrez l'art japonais du burger : ingrédients premium, innovations 
                 créatives comme le Rice Burger, et un service raffiné qui transforme 
-                le fast-food en expérience culinaire.
+                le fast-food en expérience culinaire. Du pionnier Sasebo Burger des années 1950 
+                aux créations Wagyu contemporaines, explorez une révolution gastronomique unique.
               </p>
               <div className="flex flex-wrap gap-4">
                 <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
@@ -561,6 +562,87 @@ export default function BurgersJaponaisPage() {
             </div>
           </div>
         </div>      </section>
+
+      {/* Articles de Fond Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Approfondissez Votre Connaissance des Burgers Japonais
+          </h2>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            <Link 
+              href="/guides/articles/revolution-burger-japonais"
+              className="group bg-gradient-to-br from-red-50 to-orange-50 rounded-xl p-6 border border-red-200 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="text-center mb-4">
+                <span className="text-4xl block mb-3">🍔⚡</span>
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+                  La Révolution Burger Japonaise
+                </h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">
+                Du fast-food américain à la gastronomie nippone : histoire complète de la transformation 
+                du hamburger au Japon, du Rice Burger aux créations Wagyu.
+              </p>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-red-600 font-medium">Lire l'article →</span>
+                <span className="text-gray-500">15 min</span>
+              </div>
+            </Link>
+
+            <Link 
+              href="/guides/articles/gotochiburger-voyage"
+              className="group bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 border border-green-200 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="text-center mb-4">
+                <span className="text-4xl block mb-3">🗾🎌</span>
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                  Tour du Japon en Gotōchi Burgers
+                </h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">
+                Découvrez les spécialités régionales : du Sasebo Burger historique aux créations 
+                marines de Suruga Bay, chaque région a son burger unique.
+              </p>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-green-600 font-medium">Explorer les régions →</span>
+                <span className="text-gray-500">12 min</span>
+              </div>
+            </Link>
+
+            <Link 
+              href="/guides/articles/culture-consommation-burger"
+              className="group bg-gradient-to-br from-pink-50 to-purple-50 rounded-xl p-6 border border-pink-200 hover:shadow-lg transition-all duration-300"
+            >
+              <div className="text-center mb-4">
+                <span className="text-4xl block mb-3">📸✨</span>
+                <h3 className="text-xl font-bold text-gray-900 group-hover:text-pink-600 transition-colors">
+                  Kikan Gentei & Moe-dan
+                </h3>
+              </div>
+              <p className="text-gray-600 text-sm mb-4">
+                Analysez les phénomènes culturels japonais : période limitée et esthétique de la coupe 
+                qui révolutionnent la consommation moderne.
+              </p>
+              <div className="flex items-center justify-between text-sm">
+                <span className="text-pink-600 font-medium">Découvrir la culture →</span>
+                <span className="text-gray-500">14 min</span>
+              </div>
+            </Link>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/guides/articles"
+              className="inline-flex items-center bg-gray-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+            >
+              Voir tous les articles de fond
+              <span className="ml-2">📚</span>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

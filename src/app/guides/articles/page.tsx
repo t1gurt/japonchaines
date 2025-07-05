@@ -3,7 +3,36 @@ import { BookOpen, Clock, TrendingUp, Star, ArrowRight, Calendar, Users, Award }
 import GuideViewTracker from '../../../components/GuideViewTracker';
 
 export default function ArticlesPage() {
+  // 難易度順に記事を並べる
   const articles = [
+    {
+      title: 'Gotochiburger : Le Voyage Gastronomique Régional',
+      slug: 'gotochiburger-voyage',
+      description: 'Explorez les burgers régionaux uniques du Japon : du Sasebo historique aux créations marines de Suruga Bay',
+      excerpt: 'Partez à la découverte des gotōchi burgers, ces spécialités régionales qui transforment chaque préfecture en destination culinaire unique. Du burger-ramen de Kitakata aux créations d\'Awaji.',
+      readTime: '12 min',
+      category: 'Culture Régionale',
+      difficulty: 'Débutant',
+      topics: ['Gotōchi', 'Régions', 'Spécialités', 'Voyage culinaire'],
+      publishDate: '2025-01-20',
+      featured: true,
+      icon: '🗾',
+      color: 'bg-green-500'
+    },
+    {
+      title: 'La Révolution Burger Japonaise : Du Fast-Food à la Gastronomie',
+      slug: 'revolution-burger-japonais',
+      description: 'Comment le Japon a transformé le hamburger américain en art culinaire avec le Rice Burger, Teriyaki et Wagyu',
+      excerpt: 'Découvrez comment le Japon a réinventé le hamburger en y intégrant sa philosophie culinaire : du Rice Burger révolutionnaire aux créations Wagyu gastronomiques, une histoire d\'innovation respectueuse.',
+      readTime: '15 min',
+      category: 'Histoire Culinaire',
+      difficulty: 'Intermédiaire',
+      topics: ['Innovation', 'Gastronomie', 'Histoire', 'Culture'],
+      publishDate: '2025-01-15',
+      featured: true,
+      icon: '🍔',
+      color: 'bg-red-500'
+    },
     {
       title: 'L\'Histoire du Ramen au Japon',
       slug: 'histoire-ramen',
@@ -16,7 +45,35 @@ export default function ArticlesPage() {
       publishDate: '2024-12-15',
       featured: true,
       icon: '🍜',
-      color: 'bg-red-500'
+      color: 'bg-orange-500'
+    },
+    {
+      title: 'Kaiten-zushi : La Révolution Technologique de la Restauration',
+      slug: 'kaiten-zushi-technologie-revolution',
+      description: 'Robots Pepper, IA prédictive, livraison express : comment les sushi tournants révolutionnent la gastronomie mondiale',
+      excerpt: 'Découvrez comment les kaiten-zushi japonais sont devenus des laboratoires d\'innovation technologique, transformant l\'art culinaire en expérience du futur avec robots, IA et automatisation.',
+      readTime: '16 min',
+      category: 'Innovation & Technologie',
+      difficulty: 'Intermédiaire',
+      topics: ['Robotique', 'Intelligence Artificielle', 'Automatisation', 'Futur', 'Hama Sushi'],
+      publishDate: '2025-01-30',
+      featured: true,
+      icon: '🤖',
+      color: 'bg-cyan-500'
+    },
+    {
+      title: 'Kikan Gentei & Moe-dan : L\'Art Japonais du Burger',
+      slug: 'culture-consommation-burger',
+      description: 'Période limitée et esthétique de la coupe : comment le Japon a révolutionné la culture de consommation',
+      excerpt: 'Analysez les phénomènes kikan gentei (期間限定) et moe-dan (萌え断) qui transforment chaque burger en expérience culturelle et virale sur les réseaux sociaux.',
+      readTime: '14 min',
+      category: 'Culture & Société',
+      difficulty: 'Avancé',
+      topics: ['Kikan Gentei', 'Moe-dan', 'Marketing', 'Esthétique', 'Social Media'],
+      publishDate: '2025-01-25',
+      featured: true,
+      icon: '📸',
+      color: 'bg-pink-500'
     },
     {
       title: 'Les Secrets du Dashi',
@@ -44,16 +101,34 @@ export default function ArticlesPage() {
       publishDate: '2024-12-05',
       featured: true,
       icon: '🥩',
-      color: 'bg-orange-500'
+      color: 'bg-purple-500'
     }
   ];
 
   const categories = [
     {
-      name: 'Histoire',
-      description: 'Les origines et l\'évolution des plats japonais',
+      name: 'Innovation & Technologie',
+      description: 'Révolutions technologiques dans la restauration japonaise',
       count: 1,
+      color: 'bg-cyan-100 text-cyan-800'
+    },
+    {
+      name: 'Histoire Culinaire',
+      description: 'Les révolutions et évolutions de la cuisine japonaise',
+      count: 2,
       color: 'bg-red-100 text-red-800'
+    },
+    {
+      name: 'Culture Régionale',
+      description: 'Spécialités et traditions locales japonaises',
+      count: 1,
+      color: 'bg-green-100 text-green-800'
+    },
+    {
+      name: 'Culture & Société',
+      description: 'Phénomènes sociaux et tendances contemporaines',
+      count: 1,
+      color: 'bg-pink-100 text-pink-800'
     },
     {
       name: 'Technique',
@@ -65,7 +140,7 @@ export default function ArticlesPage() {
       name: 'Analyse',
       description: 'Études approfondies des chaînes et tendances',
       count: 1,
-      color: 'bg-orange-100 text-orange-800'
+      color: 'bg-purple-100 text-purple-800'
     }
   ];
   const difficultyLevels: Record<string, { color: string; icon: string }> = {
@@ -76,10 +151,10 @@ export default function ArticlesPage() {
   };
 
   const stats = [
-    { label: 'Articles disponibles', value: '3', icon: BookOpen },
-    { label: 'Temps de lecture total', value: '30 min', icon: Clock },
-    { label: 'Sujets couverts', value: '9', icon: Star },
-    { label: 'Niveau expert', value: '100%', icon: Award }
+    { label: 'Articles disponibles', value: '7', icon: BookOpen },
+    { label: 'Temps de lecture total', value: '87 min', icon: Clock },
+    { label: 'Sujets couverts', value: '22', icon: Star },
+    { label: 'Technologies couvertes', value: '100%', icon: Award }
   ];
 
   const comingSoon = [

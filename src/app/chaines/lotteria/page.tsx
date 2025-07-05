@@ -444,6 +444,66 @@ export default function LotteriaPage() {
                 </div>
               </div>
 
+              {/* L'Innovation Ebi Burger - Révolution Mondiale */}
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg shadow-sm p-6 mb-6 border border-orange-200">
+                <div className="flex items-center mb-4">
+                  <Award className="w-6 h-6 text-orange-600 mr-3" />
+                  <h3 className="text-xl font-bold text-gray-900">L'Ebi Burger : Une Révolution Mondiale (1977)</h3>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-3">🌍 Premier Burger aux Crevettes au Monde</h4>
+                    <p className="text-gray-700 mb-4 text-sm">
+                      En 1977, Lotteria révolutionne l'industrie mondiale du burger en créant le 
+                      <strong> tout premier Ebi (Crevette) Burger</strong>. Cette innovation reflète 
+                      parfaitement la géographie insulaire du Japon et sa culture maritime millénaire.
+                    </p>
+                    
+                    <div className="bg-white p-4 rounded-lg border-l-4 border-orange-500 mb-4">
+                      <h5 className="font-bold text-orange-700 mb-2 text-sm">🕐 McDonald's : 28 Ans de Retard !</h5>
+                      <p className="text-xs text-gray-700">
+                        Il a fallu attendre <strong>2005</strong> pour que McDonald's propose enfin 
+                        un burger aux crevettes (Ebi Burger au Japon). Lotteria avait donc 28 ans d'avance 
+                        sur le géant américain !
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900 mb-3">🍤 Technique & Philosophie</h4>
+                    <div className="space-y-2">
+                      <div className="bg-white p-3 rounded-lg">
+                        <span className="font-semibold text-gray-900 text-sm">Tempura adaptée : </span>
+                        <span className="text-xs text-gray-600">Technique traditionnelle pour format burger</span>
+                      </div>
+                      <div className="bg-white p-3 rounded-lg">
+                        <span className="font-semibold text-gray-900 text-sm">Fraîcheur marine : </span>
+                        <span className="text-xs text-gray-600">Crevettes sélectionnées quotidiennement</span>
+                      </div>
+                      <div className="bg-white p-3 rounded-lg">
+                        <span className="font-semibold text-gray-900 text-sm">Sauce secrète : </span>
+                        <span className="text-xs text-gray-600">Tartar sauce japonaise unique</span>
+                      </div>
+                      <div className="bg-white p-3 rounded-lg">
+                        <span className="font-semibold text-gray-900 text-sm">Innovation continue : </span>
+                        <span className="text-xs text-gray-600">45+ ans d'amélioration constante</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-4 bg-red-50 p-4 rounded-lg border border-red-200">
+                  <h5 className="font-bold text-red-800 mb-2 text-sm">🇫🇷 Pourquoi Important pour les Français ?</h5>
+                  <p className="text-xs text-gray-700">
+                    Cette innovation illustre parfaitement l'art japonais de l'adaptation créative. 
+                    Lotteria a pris un concept occidental (le burger) et l'a transformé avec des 
+                    ingrédients typiquement japonais (crevettes tempura), créant quelque chose 
+                    d'entièrement nouveau qui inspire encore le monde aujourd'hui.
+                  </p>
+                </div>
+              </div>
+
               {/* Note culturelle */}
               <div className="bg-purple-50 rounded-lg p-6">
                 <h3 className="text-lg font-semibold text-purple-800 mb-3">
