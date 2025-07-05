@@ -27,12 +27,12 @@ export default function KaitenZushiPage() {
     {
       name: "Hama Sushi",
       japanese: "はま寿司",
-      description: "Chaîne du groupe Zensho offrant un excellent rapport qualité-prix avec des innovations constantes.",
-      specialties: ["Sushi abordable", "Menu fusion", "Ramen et plats chauds"],
-      priceRange: "¥100-250 par assiette",
-      orderingMethod: "Commande par tablette principalement",
-      vegetarianOptions: "Options végétariennes disponibles",
-      uniqueFeatures: ["Prix très compétitifs", "Menu non-sushi étendu", "Service rapide"],
+      description: "Révolution technologique du kaiten-zushi ! Robots Pepper, ligne express haute vitesse et 5 sauces soja régionales pour une expérience futuriste à prix imbattables.",
+      specialties: ["Système MMD révolutionnaire", "5 sauces soja artisanales", "Robot Pepper multilingue", "Ligne directe express", "Menu Hamakko avec Gachapon"],
+      priceRange: "¥110 pour 90% du menu",
+      orderingMethod: "Robot d'accueil + tablette tactile multilingue + livraison express",
+      vegetarianOptions: "Inari, kappa-maki, tamago, options fusion",
+      uniqueFeatures: ["Prix le plus bas du marché", "Expérience technologique", "Dégustation de sauces soja", "Accueil robotisé", "IA de prédiction des stocks"],
       href: "/chaines/hama-sushi"
     }
   ];
@@ -383,7 +383,78 @@ export default function KaitenZushiPage() {
               </div>
             </div>
           </div>
-        </div>      </section>
+        </div>
+      </section>
+
+      {/* Articles de Fond */}
+      <section className="bg-white py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Articles de Fond sur les Kaiten-zushi</h2>
+            <p className="text-lg text-gray-600">Approfondissez vos connaissances avec nos analyses détaillées</p>
+          </div>
+          
+          <div className="bg-gradient-to-r from-cyan-50 to-blue-50 rounded-xl p-8 border border-cyan-200">
+            <div className="flex items-start space-x-6">
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 bg-cyan-500 rounded-lg flex items-center justify-center text-2xl">
+                  🤖
+                </div>
+              </div>
+              <div className="flex-grow">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  Kaiten-zushi : La Révolution Technologique de la Restauration Japonaise
+                </h3>
+                <p className="text-gray-700 mb-4">
+                  Découvrez comment les sushi tournants japonais révolutionnent la gastronomie mondiale grâce aux robots Pepper, 
+                  à l'IA prédictive et aux systèmes de livraison express. Une plongée dans le futur de la restauration.
+                </p>
+                <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
+                  <span className="flex items-center">
+                    <span className="w-4 h-4 mr-1">⏱️</span>
+                    16 min de lecture
+                  </span>
+                  <span className="flex items-center">
+                    <span className="w-4 h-4 mr-1">🎯</span>
+                    Innovation & Technologie
+                  </span>
+                  <span className="flex items-center">
+                    <span className="w-4 h-4 mr-1">📊</span>
+                    Niveau Intermédiaire
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2 mb-4">
+                  <span className="px-2 py-1 bg-cyan-100 text-cyan-800 rounded-md text-xs">Robotique</span>
+                  <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded-md text-xs">Intelligence Artificielle</span>
+                  <span className="px-2 py-1 bg-purple-100 text-purple-800 rounded-md text-xs">Automatisation</span>
+                  <span className="px-2 py-1 bg-green-100 text-green-800 rounded-md text-xs">Hama Sushi</span>
+                </div>
+                <Link 
+                  href="/guides/articles/kaiten-zushi-technologie-revolution"
+                  className="inline-flex items-center px-4 py-2 bg-cyan-600 text-white rounded-lg hover:bg-cyan-700 transition-colors"
+                >
+                  Lire l'article complet
+                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <Link 
+              href="/guides/articles"
+              className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
+            >
+              Voir tous les articles de fond
+              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

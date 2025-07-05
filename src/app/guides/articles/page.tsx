@@ -3,6 +3,7 @@ import { BookOpen, Clock, TrendingUp, Star, ArrowRight, Calendar, Users, Award }
 import GuideViewTracker from '../../../components/GuideViewTracker';
 
 export default function ArticlesPage() {
+  // 難易度順に記事を並べる
   const articles = [
     {
       title: 'Gotochiburger : Le Voyage Gastronomique Régional',
@@ -45,6 +46,20 @@ export default function ArticlesPage() {
       featured: true,
       icon: '🍜',
       color: 'bg-orange-500'
+    },
+    {
+      title: 'Kaiten-zushi : La Révolution Technologique de la Restauration',
+      slug: 'kaiten-zushi-technologie-revolution',
+      description: 'Robots Pepper, IA prédictive, livraison express : comment les sushi tournants révolutionnent la gastronomie mondiale',
+      excerpt: 'Découvrez comment les kaiten-zushi japonais sont devenus des laboratoires d\'innovation technologique, transformant l\'art culinaire en expérience du futur avec robots, IA et automatisation.',
+      readTime: '16 min',
+      category: 'Innovation & Technologie',
+      difficulty: 'Intermédiaire',
+      topics: ['Robotique', 'Intelligence Artificielle', 'Automatisation', 'Futur', 'Hama Sushi'],
+      publishDate: '2025-01-30',
+      featured: true,
+      icon: '🤖',
+      color: 'bg-cyan-500'
     },
     {
       title: 'Kikan Gentei & Moe-dan : L\'Art Japonais du Burger',
@@ -92,6 +107,12 @@ export default function ArticlesPage() {
 
   const categories = [
     {
+      name: 'Innovation & Technologie',
+      description: 'Révolutions technologiques dans la restauration japonaise',
+      count: 1,
+      color: 'bg-cyan-100 text-cyan-800'
+    },
+    {
       name: 'Histoire Culinaire',
       description: 'Les révolutions et évolutions de la cuisine japonaise',
       count: 2,
@@ -130,10 +151,10 @@ export default function ArticlesPage() {
   };
 
   const stats = [
-    { label: 'Articles disponibles', value: '6', icon: BookOpen },
-    { label: 'Temps de lecture total', value: '71 min', icon: Clock },
-    { label: 'Sujets couverts', value: '18', icon: Star },
-    { label: 'Spécialités burger', value: '100%', icon: Award }
+    { label: 'Articles disponibles', value: '7', icon: BookOpen },
+    { label: 'Temps de lecture total', value: '87 min', icon: Clock },
+    { label: 'Sujets couverts', value: '22', icon: Star },
+    { label: 'Technologies couvertes', value: '100%', icon: Award }
   ];
 
   const comingSoon = [
