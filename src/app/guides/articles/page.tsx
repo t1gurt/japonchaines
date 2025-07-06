@@ -6,6 +6,20 @@ export default function ArticlesPage() {
   // 難易度順に記事を並べる
   const articles = [
     {
+      title: 'Du « Omotenashi » au « Ohitorisama » : La Culture Gastronomique Japonaise vue par un Français',
+      slug: 'culture-gaishoku-francais',
+      description: 'Analyse approfondie des différences culturelles entre la France et le Japon dans l\'art de manger au restaurant',
+      excerpt: 'Une exploration fascinante des philosophies culinaires opposées : du service sans pourboire japonais à la culture du repas solitaire, en passant par la spécialisation des restaurants et l\'esthétique de la présentation.',
+      readTime: '18 min',
+      category: 'Anthropologie Culinaire',
+      difficulty: 'Débutant',
+      topics: ['Culture française', 'Omotenashi', 'Ohitorisama', 'Comparaison culturelle', 'Philosophie gastronomique'],
+      publishDate: '2025-07-06',
+      featured: true,
+      icon: '🇫🇷',
+      color: 'bg-blue-500'
+    },
+    {
       title: 'Gotochiburger : Le Voyage Gastronomique Régional',
       slug: 'gotochiburger-voyage',
       description: 'Explorez les burgers régionaux uniques du Japon : du Sasebo historique aux créations marines de Suruga Bay',
@@ -121,6 +135,12 @@ export default function ArticlesPage() {
 
   const categories = [
     {
+      name: 'Anthropologie Culinaire',
+      description: 'Analyses comparatives et études culturelles approfondies',
+      count: 1,
+      color: 'bg-blue-100 text-blue-800'
+    },
+    {
       name: 'Culture & Gastronomie',
       description: 'Art culinaire et traditions gastronomiques japonaises',
       count: 1,
@@ -171,9 +191,9 @@ export default function ArticlesPage() {
   };
 
   const stats = [
-    { label: 'Articles disponibles', value: '7', icon: BookOpen },
-    { label: 'Temps de lecture total', value: '87 min', icon: Clock },
-    { label: 'Sujets couverts', value: '22', icon: Star },
+    { label: 'Articles disponibles', value: '8', icon: BookOpen },
+    { label: 'Temps de lecture total', value: '105 min', icon: Clock },
+    { label: 'Sujets couverts', value: '27', icon: Star },
     { label: 'Technologies couvertes', value: '100%', icon: Award }
   ];
 
