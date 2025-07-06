@@ -1,8 +1,23 @@
 import Link from 'next/link';
-import { ArrowLeft, Book, Utensils, Heart, Globe, ChefHat, HelpCircle } from 'lucide-react';
+import { ArrowLeft, Book, Utensils, Heart, Globe, ChefHat, HelpCircle, Brain } from 'lucide-react';
 import GuideViewTracker from '../../components/GuideViewTracker';
 
 export default function GuidesPage() {  const guides = [
+    {
+      id: 'comprendre-culture-japonaise',
+      title: 'Comprendre la Culture Japonaise',
+      subtitle: 'Guide complet de la mentalité japonaise',
+      description: 'Analyse approfondie de l\'esprit japonais au-delà des stéréotypes. Décryptez les concepts de honne/tatemae, uchi/soto et la communication indirecte pour une compréhension authentique.',
+      icon: Brain,
+      color: 'purple',
+      available: true,
+      highlights: [
+        'Fondements historiques et géographiques',
+        'Concepts clés : honne/tatemae, uchi/soto',
+        'Psychologie sociale japonaise',
+        'Communication interculturelle efficace'
+      ]
+    },
     {
       id: 'comment-choisir-restaurant-japonais',
       title: 'Comment Choisir un Restaurant Japonais',
