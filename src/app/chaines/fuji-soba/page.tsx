@@ -1,30 +1,9 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Fuji Soba (富士そば) | Udon-Soba | Guide Restaurants Japonais',
-  description: 'Guide complet de Fuji Soba - Chaîne de soba rapide ouverte 24h/24 dans certains lieux. Soba authentique, service rapide et prix abordables.',
-  keywords: [
-    'fuji soba', '富士そば', 'soba', 'udon',
-    '24h ouvert', 'service rapide', 'prix abordables',
-    'soba authentique', 'nouilles japonaises', 'fast soba'
-  ],
-  openGraph: {
-    title: 'Fuji Soba (富士そば) | Soba Rapide 24h',
-    description: 'Découvrez Fuji Soba, chaîne de soba rapide ouverte 24h/24 avec soba authentique et prix abordables',
-    type: 'article',
-    url: '/chaines/fuji-soba',
-  },
-  alternates: {
-    canonical: '/chaines/fuji-soba',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+
+
 
 export default function FujiSobaPage() {
   return (

@@ -1,30 +1,9 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Zap, Smartphone, Truck } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Bamiyan (バーミヤン) | Cuisine Chinoise | Guide Restaurants Japonais',
-  description: 'Guide complet de Bamiyan - Chaîne de restaurant chinois familial avec plats généreux à prix abordables. Menu, prix, conseils de commande et ambiance décontractée.',
-  keywords: [
-    'bamiyan', 'バーミヤン', 'cuisine chinoise', 'restaurant chinois japon',
-    'gyoza', 'ramen chinois', 'riz frit', 'bœuf au poivre noir',
-    'restaurant familial', 'prix abordable japon', 'chaîne restaurant'
-  ],
-  openGraph: {
-    title: 'Bamiyan (バーミヤン) | Cuisine Chinoise Familiale',
-    description: 'Découvrez Bamiyan, la chaîne de restaurant chinois familial au Japon avec des plats généreux et abordables',
-    type: 'article',
-    url: '/chaines/bamiyan',
-  },
-  alternates: {
-    canonical: '/chaines/bamiyan',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+
+
 
 export default function BamiyanPage() {
   return (

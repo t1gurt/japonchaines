@@ -1,30 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Music, Gamepad2 } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Karaoke Kan (カラオケ館) | Karaoke | Guide Restaurants Japonais',
-  description: 'Guide complet de Karaoke Kan - Chaîne de karaoke avec salles privées et équipements de qualité. Expérience karaoke authentique japonaise.',
-  keywords: [
-    'karaoke kan', 'カラオケ館', 'karaoke', 'salles privées',
-    'équipements qualité', 'expérience authentique', 'chant japonais',
-    'divertissement', 'karaoke box', 'ambiance conviviale'
-  ],
-  openGraph: {
-    title: 'Karaoke Kan (カラオケ館) | Karaoke de Qualité',
-    description: 'Découvrez Karaoke Kan, chaîne de karaoke avec salles privées et équipements de qualité',
-    type: 'article',
-    url: '/chaines/karaoke-kan',
-  },
-  alternates: {
-    canonical: '/chaines/karaoke-kan',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function KaraokeKanPage() {
   return (

@@ -3,28 +3,7 @@ import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Hi
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Torikizoku (鳥貴族) | Izakaya | Guide Restaurants Japonais',
-  description: 'Guide complet de Torikizoku - Izakaya spécialisé dans le yakitori avec prix uniformes. Ambiance conviviale, brochettes de qualité à prix fixe.',
-  keywords: [
-    'torikizoku', '鳥貴族', 'izakaya', 'yakitori',
-    'prix uniforme', 'brochettes poulet', 'ambiance conviviale',
-    'prix fixe', 'spécialité yakitori', 'restaurant japonais'
-  ],
-  openGraph: {
-    title: 'Torikizoku (鳥貴族) | Izakaya Yakitori Prix Fixe',
-    description: 'Découvrez Torikizoku, izakaya spécialisé dans le yakitori avec prix uniformes et ambiance conviviale',
-    type: 'article',
-    url: '/chaines/torikizoku',
-  },
-  alternates: {
-    canonical: '/chaines/torikizoku',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+
 
 export default function TorikizokuPage() {
   return (

@@ -2,31 +2,9 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History, Wheat, Globe, Eye, ChefHat, Utensils, Heart, Lightbulb } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Marugame Seimen (丸亀製麺) | Udon Artisanal Authentique | Guide Restaurants Japonais',
-  description: 'Découvrez Marugame Seimen - L\'art de l\'udon artisanal visible : men-shokunin qualifiés, tradition Sanuki, ingrédients nationaux. Guide complet avec menu détaillé et astuces de connaisseurs.',
-  keywords: [
-    'marugame seimen', '丸亀製麺', 'udon artisanal', 'men-shokunin',
-    'tradition sanuki', 'dekinitate', 'udon frais', 'artisanat visible',
-    'nouilles japonaises', 'chaîne udon japonaise', 'kagawa udon'
-  ],
-  openGraph: {
-    title: 'Marugame Seimen (丸亀製麺) | L\'Âme de l\'Udon Artisanal',
-    description: 'Plongez dans l\'univers de Marugame Seimen où l\'art ancestral de l\'udon rencontre l\'innovation culinaire moderne.',
-    type: 'article',
-    locale: 'fr_FR',
-  },
-  alternates: {
-    canonical: 'https://japonchaines.com/chaines/marugame-seimen'
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true }
-  },
-};
+
+
 
 export default function MarugameSeimensPage() {
   return (

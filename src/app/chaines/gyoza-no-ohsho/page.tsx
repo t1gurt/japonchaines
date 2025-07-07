@@ -1,30 +1,9 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Zap, Crown, ChefHat } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Gyoza no Ohsho (餃子の王将) | Cuisine Chinoise | Guide Restaurants Japonais',
-  description: 'Guide complet de Gyoza no Ohsho - Spécialiste des gyoza et cuisine chinoise populaire au Japon. Menu varié, prix abordables et saveurs authentiques.',
-  keywords: [
-    'gyoza no ohsho', '餃子の王将', 'gyoza', 'cuisine chinoise',
-    'gyoza grillés', 'prix abordables', 'cuisine populaire',
-    'saveurs authentiques', 'restaurant chinois', 'menu varié'
-  ],
-  openGraph: {
-    title: 'Gyoza no Ohsho (餃子の王将) | Roi des Gyoza',
-    description: 'Découvrez Gyoza no Ohsho, spécialiste des gyoza et cuisine chinoise populaire avec prix abordables',
-    type: 'article',
-    url: '/chaines/gyoza-no-ohsho',
-  },
-  alternates: {
-    canonical: '/chaines/gyoza-no-ohsho',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+
+
 
 export default function GyozaNoOhshoPage() {
   return (

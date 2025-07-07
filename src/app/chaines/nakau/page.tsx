@@ -3,16 +3,7 @@ import Image from "next/image";
 import { Clock, MapPin, DollarSign, Users, ChefHat, Star, Award, TrendingUp, Heart, Utensils } from "lucide-react";
 import ChainViewTracker from '../../../components/ChainViewTracker';
 
-export const metadata = {
-  title: "Nakau (なか卯) - Guide Complet | Chaînes Japonaises",
-  description: "Découvrez Nakau, spécialiste du gyūdon et udon depuis 1969. Menu diversifié, prix abordables et qualité familiale. Guide complet avec méthodes de commande et recommandations.",
-  keywords: ["Nakau", "なか卯", "gyudon", "udon", "tempura", "restaurants japonais", "chaîne", "guide français"],
-  openGraph: {
-    title: "Nakau (なか卯) - Spécialiste Gyūdon & Udon | Guide Français",
-    description: "Guide complet de Nakau - fusion parfaite entre gyūdon et udon, qualité familiale depuis 1969",
-    type: "article",
-  },
-};
+
 
 export default function NakauPage() {
   return (

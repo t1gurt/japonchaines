@@ -1,30 +1,9 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History, Zap } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Tenya (てんや) | Tempura | Guide Restaurants Japonais',
-  description: 'Guide complet de Tenya - Tempura rapide et abordable avec technique professionnelle et ingrédients de saison. Menu détaillé, prix et conseils tempura.',
-  keywords: [
-    'tenya', 'てんや', 'tempura', 'tempura rapide',
-    'technique pro', 'prix accessibles', 'ingrédients saison',
-    'tempura abordable', 'friture japonaise', 'ebi tempura'
-  ],
-  openGraph: {
-    title: 'Tenya (てんや) | Tempura Rapide et Abordable',
-    description: 'Découvrez Tenya, tempura rapide avec technique professionnelle et ingrédients de saison',
-    type: 'article',
-    url: '/chaines/tenya',
-  },
-  alternates: {
-    canonical: '/chaines/tenya',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+
+
 
 export default function TenyaPage() {
   return (

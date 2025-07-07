@@ -1,30 +1,9 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Flame, Crown, Coffee } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Sukiya Curry (すき家カレー) | Curry | Guide Restaurants Japonais',
-  description: 'Guide complet de Sukiya Curry - Spécialiste du curry japonais avec menu varié et prix abordables. Curry authentique style japonais.',
-  keywords: [
-    'sukiya curry', 'すき家カレー', 'curry japonais', 'curry rice',
-    'prix abordables', 'menu varié', 'curry authentique',
-    'style japonais', 'fast curry', 'épices japonaises'
-  ],
-  openGraph: {
-    title: 'Sukiya Curry (すき家カレー) | Curry Japonais Authentique',
-    description: 'Découvrez Sukiya Curry, spécialiste du curry japonais avec menu varié et prix abordables',
-    type: 'article',
-    url: '/chaines/sukiya-curry',
-  },
-  alternates: {
-    canonical: '/chaines/sukiya-curry',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+
+
 
 export default function SukiyaCurryPage() {
   return (
