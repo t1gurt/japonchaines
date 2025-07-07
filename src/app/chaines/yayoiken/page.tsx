@@ -1,17 +1,8 @@
-import { Metadata } from 'next';
+
 import Link from 'next/link';
 import ChainViewTracker from '@/components/ChainViewTracker';
 
-export const metadata: Metadata = {
-  title: 'Yayoiken (やよい軒) - Guide Complet | Restaurant Teishoku Populaire',
-  description: 'Découvrez Yayoiken, la chaîne de teishoku populaire avec riz illimité, prix abordables et service rapide. Le teishoku accessible à tous.',
-  keywords: 'Yayoiken, やよい軒, teishoku, restaurant japonais, riz illimité, prix abordables, service rapide, teishoku populaire',
-  openGraph: {
-    title: 'Yayoiken - Teishoku Populaire avec Riz Illimité',
-    description: 'Guide complet de Yayoiken : teishoku abordables avec riz à volonté, service rapide et saveurs authentiques pour tous les budgets.',
-    type: 'article'
-  }
-};
+
 
 export default function YayoikenPage() {
   const menuItems = [

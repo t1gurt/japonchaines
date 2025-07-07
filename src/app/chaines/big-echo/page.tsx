@@ -1,31 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Music, Gamepad2 } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Big Echo (ビッグエコー) | Guide Complet Karaoke Japonais | Culture & Pratique',
-  description: 'Guide complet de Big Echo - Plus grande chaîne de karaoke du Japon. Système DAM premium, guide étape par étape pour débutants, étiquette karaoke, conseils francophones et expériences solo/groupe.',
-  keywords: [
-    'big echo', 'ビッグエコー', 'karaoke japonais', 'daiichikosho',
-    'denmoku guide', 'système dam', 'nomihoudai', 'hitokara', 
-    'karaoke box culture', 'guide francophone', 'étiquette karaoke',
-    'rōmaji rubi', 'prix karaoke japon', 'chansons françaises japon'
-  ],
-  openGraph: {
-    title: 'Big Echo (ビッグエコー) | Guide Complet du Karaoke Japonais',
-    description: 'Maîtrisez Big Echo avec notre guide expert : de votre première visite au karaoke solo, en passant par l\'étiquette japonaise et les conseils pour francophones',
-    type: 'article',
-    url: '/chaines/big-echo',
-  },
-  alternates: {
-    canonical: '/chaines/big-echo',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function BigEchoPage() {
   return (

@@ -1,30 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Ichiran (一蘭) | Ramen | Guide Restaurants Japonais',
-  description: 'Guide complet d\'Ichiran - Ramen tonkotsu spécialisé avec système de commande unique et expérience individuelle focalisée. Menu détaillé et concept yatai.',
-  keywords: [
-    'ichiran', '一蘭', 'ramen', 'tonkotsu ramen',
-    'système yatai', 'personnalisation', 'focus individuel',
-    'ramen spécialisé', 'expérience unique', 'commande unique'
-  ],
-  openGraph: {
-    title: 'Ichiran (一蘭) | Ramen Tonkotsu Spécialisé',
-    description: 'Découvrez Ichiran, la chaîne de ramen tonkotsu avec système yatai unique et expérience individuelle',
-    type: 'article',
-    url: '/chaines/ichiran',
-  },
-  alternates: {
-    canonical: '/chaines/ichiran',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function IchiranPage() {
   return (

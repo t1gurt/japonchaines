@@ -1,30 +1,9 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Wine, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Saizeriya (サイゼリヤ) | Family Restaurant | Guide Restaurants Japonais',
-  description: 'Guide complet de Saizeriya - Restaurant familial italien abordable au Japon. Menu varié, prix exceptionnels et ambiance décontractée pour tous.',
-  keywords: [
-    'saizeriya', 'サイゼリヤ', 'restaurant familial', 'italien abordable',
-    'prix bas', 'menu varié', 'cuisine italienne',
-    'restaurant décontracté', 'famille', 'économique'
-  ],
-  openGraph: {
-    title: 'Saizeriya (サイゼリヤ) | Restaurant Italien Abordable',
-    description: 'Découvrez Saizeriya, restaurant familial italien avec prix exceptionnels et menu varié accessible à tous',
-    type: 'article',
-    url: '/chaines/saizeriya',
-  },
-  alternates: {
-    canonical: '/chaines/saizeriya',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
+
+
 
 export default function SaizeriyaPage() {
   return (

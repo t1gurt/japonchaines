@@ -1,30 +1,6 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Gamepad2, Gift, Shield } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Kura Sushi (くら寿司) | Kaiten-zushi | Guide Restaurants Japonais',
-  description: 'Guide complet de Kura Sushi - Sushi tournant innovant avec système de capsules et technologie pour une expérience ludique. Menu détaillé, prix et innovations.',
-  keywords: [
-    'kura sushi', 'くら寿司', 'kaiten-zushi', 'sushi tournant',
-    'système capsules', 'sushi frais', 'technologie ludique',
-    'prix accessibles', 'innovation sushi', 'expérience ludique'
-  ],
-  openGraph: {
-    title: 'Kura Sushi (くら寿司) | Sushi Tournant Innovant',
-    description: 'Découvrez Kura Sushi, sushi tournant innovant avec système de capsules et technologie ludique',
-    type: 'article',
-    url: '/chaines/kura-sushi',
-  },
-  alternates: {
-    canonical: '/chaines/kura-sushi',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function KuraSushiPage() {
   return (

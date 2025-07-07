@@ -1,30 +1,7 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Leaf, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
-import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Mos Burger (モスバーガー) | Burgers | Guide Restaurants Japonais',
-  description: 'Guide complet de Mos Burger - Burgers premium japonais avec ingrédients frais et qualité supérieure. Innovation culinaire et saveurs uniques.',
-  keywords: [
-    'mos burger', 'モスバーガー', 'burgers premium', 'ingrédients frais',
-    'qualité supérieure', 'innovation culinaire', 'saveurs uniques',
-    'burgers japonais', 'qualité premium', 'créativité'
-  ],
-  openGraph: {
-    title: 'Mos Burger (モスバーガー) | Burgers Premium Innovants',
-    description: 'Découvrez Mos Burger, burgers premium avec ingrédients frais et innovation culinaire japonaise',
-    type: 'article',
-    url: '/chaines/mos-burger',
-  },
-  alternates: {
-    canonical: '/chaines/mos-burger',
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
 
 export default function MOSBurgerPage() {
   return (
