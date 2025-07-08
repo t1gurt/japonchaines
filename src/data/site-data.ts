@@ -1,5 +1,18 @@
 export const restaurantChains = [
   {
+    "slug": "anan",
+    "name": "AnAn",
+    "nameJp": "安安",
+    "category": "Yakiniku",
+    "description": "Chaîne de yakiniku abordable avec un excellent rapport qualité-prix et des formules à volonté.",
+    "specialties": [
+      "Yakiniku abordable",
+      "Formules à volonté",
+      "Viandes marinées",
+      "Ambiance conviviale"
+    ]
+  },
+  {
     "slug": "bamiyan",
     "name": "Bamiyan",
     "nameJp": "バーミヤン",
