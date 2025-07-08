@@ -17,6 +17,20 @@ export default function BurgersJaponaisPage() {
       href: "/chaines/mos-burger"
     },
     {
+      name: "Dom Dom Burger",
+      japanese: "ドムドムバーガー",
+      englishName: "Dom Dom Burger",
+      description: "Le tout premier fast-food japonais (1970), légendaire chaîne renaissance après quasi-extinction. Innovation audacieuse et histoire unique.",
+      specialties: ["Marugoto!! Kani Burger", "Burgers historiques", "Innovation culinaire"],
+      priceRange: "¥280-680",
+      style: "Rétro-légendaire",
+      orderingMethod: "Comptoir traditionnel",
+      vegetarianOptions: "Options limitées",
+      uniqueFeatures: ["Histoire unique", "Kani Burger", "Atmosphère rétro"],
+      origin: "Japonaise (1970)",
+      href: "/chaines/domdom"
+    },
+    {
       name: "Freshness Burger",
       japanese: "フレッシュネスバーガー",
       englishName: "Freshness Burger",
@@ -47,6 +61,17 @@ export default function BurgersJaponaisPage() {
   ];
 
   const burgerTypes = [
+    {
+      name: "Kani Burger",
+      japanese: "カニバーガー",
+      description: "Burger au crabe soft-shell entier, spécialité Dom Dom révolutionnaire",
+      characteristics: "Unique au monde, croustillant, audacieux",
+      price: "¥680",
+      availability: "Dom Dom uniquement",
+      popularity: "⭐⭐⭐⭐⭐",
+      beginner: false,
+      unique: true
+    },
     {
       name: "Rice Burger",
       japanese: "ライスバーガー",
