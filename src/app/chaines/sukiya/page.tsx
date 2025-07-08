@@ -1,34 +1,82 @@
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History } from 'lucide-react';
+import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Award, History, Coffee, ShoppingCart, Home, Target, DollarSign, Globe, Utensils, Heart } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
 
-
-
+export const metadata: Metadata = {
+  title: 'Sukiya (すき家) | Le Géant du Gyūdon - Prix d\'un Café Parisien | Guide Restaurants Japonais',
+  description: 'Découvrez Sukiya - Le plus grand réseau de gyūdon au Japon avec 2000 restaurants. Un repas complet au prix d\'un café parisien ! Guide complet avec menu détaillé, astuces de commande et expérience culturelle.',
+  keywords: [
+    'sukiya', 'すき家', 'gyudon', 'restaurant japonais',
+    'fast food japon', 'bœuf japonais', 'prix abordable',
+    'chaîne restaurant', 'food japonais', 'budget voyage japon'
+  ],
+  openGraph: {
+    title: 'Sukiya (すき家) | L\'Infrastructure Alimentaire du Japon',
+    description: 'Repas complet au prix d\'un café parisien : découvrez le secret du succès de Sukiya, géant japonais du gyūdon accessible 24h/24.',
+    type: 'article',
+    locale: 'fr_FR',
+  },
+  alternates: {
+    canonical: 'https://japonchaines.com/chaines/sukiya'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true }
+  },
+};
 
 export default function SukiyaPage() {
   return (
     <>
       <ChainViewTracker chainName="sukiya" chainCategory="gyudon" />
-      <div className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gradient-to-br from-green-50 via-white to-emerald-50">
       {/* Header avec retour */}
-      <div className="bg-white border-b">
+      <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <Link 
             href="/type-plat/gyudon" 
-            className="inline-flex items-center text-orange-600 hover:text-orange-700 mb-4"
+            className="inline-flex items-center text-orange-600 hover:text-orange-700 transition-colors group"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
             Retour aux Gyūdon
           </Link>
-          
-          <div className="flex items-center space-x-4">
-            <div className="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center">
-              <span className="text-white text-2xl font-bold">す</span>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <div className="relative overflow-hidden bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div className="absolute inset-0 bg-black/20"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+          <div className="text-center">
+            <div className="flex justify-center mb-6">
+              <div className="bg-white/20 p-6 rounded-full">
+                <span className="text-4xl font-bold">す</span>
+              </div>
             </div>
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900">Sukiya</h1>
-              <p className="text-lg text-gray-600">すき家 | すきや</p>
-              <p className="text-sm text-gray-500">Le leader du gyūdon par le nombre de restaurants</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              Sukiya
+            </h1>
+            <p className="text-xl md:text-2xl text-green-100 mb-4">
+              すき家 | すきや
+            </p>
+            <p className="text-lg text-green-200 max-w-3xl mx-auto mb-8">
+              L'Infrastructure Alimentaire du Japon : Un Repas Complet au Prix d'un Café Parisien
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                ☕ Prix d'un café parisien
+              </span>
+              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                🏪 2000 restaurants
+              </span>
+              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                🕐 24h/24 365j/an
+              </span>
+              <span className="bg-white/20 px-4 py-2 rounded-full text-sm font-medium">
+                🥇 N°1 du marché
+              </span>
             </div>
           </div>
         </div>
@@ -39,433 +87,692 @@ export default function SukiyaPage() {
           {/* Contenu principal */}
           <div className="lg:col-span-2 space-y-8">
             
-            {/* Présentation générale */}
+            {/* Introduction révolutionnaire */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Le Géant de la Diversité</h2>
-              <div className="prose prose-orange max-w-none">
-                <p className="text-lg text-gray-700 leading-relaxed">
-                  Sukiya est aujourd&apos;hui <strong>le plus grand réseau de gyūdon au Japon</strong> avec 
-                  <strong> 1 942 restaurants</strong> à travers l&apos;archipel. Fondée en 1982 par Zensho Holdings, 
-                  cette chaîne a révolutionné le marché du gyūdon en privilégiant la <strong>diversité, 
-                  la commodité et l&apos;accessibilité familiale</strong>.
+              <div className="flex items-center mb-4">
+                <Coffee className="w-6 h-6 text-green-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">La Révolution du Repas Abordable</h2>
+              </div>
+              
+              <div className="prose prose-lg max-w-none">
+                <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-6 mb-6">
+                  <h3 className="text-lg font-semibold text-blue-800 mb-3">🤯 Un fait qui va vous surprendre</h3>
+                  <p className="text-blue-700 mb-4">
+                    <strong>À Paris, un café coûte en moyenne 2,50€.</strong> Chez Sukiya au Japon, 
+                    ce même montant vous offre un <strong>repas complet et nutritif</strong> : 
+                    gyūdon avec bœuf, riz, sauce, accompagné d'un thé vert illimité !
+                  </p>
+                  <div className="grid grid-cols-2 gap-4 text-sm">
+                    <div className="bg-white/60 p-3 rounded">
+                      <strong>🇫🇷 Paris</strong><br />
+                      1 café = 2,50€<br />
+                      <em>Juste une boisson</em>
+                    </div>
+                    <div className="bg-white/60 p-3 rounded">
+                      <strong>🇯🇵 Sukiya</strong><br />
+                      Gyūdon = 2,80€<br />
+                      <em>Repas complet + thé</em>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold mb-3">🏗️ L'"Infrastructure Alimentaire" du Japon</h3>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  Sukiya ne se contente pas d'être un restaurant : c'est ce qu'on appelle au Japon 
+                  une <strong>"infrastructure alimentaire"</strong> (食のインフラ). Comme l'électricité 
+                  ou l'eau courante, Sukiya fait partie des services essentiels qui rendent la vie 
+                  possible et agréable.
                 </p>
-                <p className="text-gray-700">
-                  Contrairement à la tradition pure de Yoshinoya, Sukiya a fait le pari de l&apos;innovation 
-                  et de l&apos;adaptation aux goûts modernes. Son menu étendu, ses services drive-through 
-                  et son positionnement familial en font le choix privilégié d&apos;une clientèle plus large 
-                  et diversifiée.
+
+                <p className="text-gray-700 mb-6">
+                  Avec <strong>2000 restaurants répartis dans les 47 préfectures</strong> du Japon, 
+                  dont beaucoup ouverts 24h/24 et 365 jours par an, Sukiya garantit qu'à tout moment, 
+                  n'importe où, chacun peut accéder à un repas chaud, nutritif et abordable. 
+                  C'est cette philosophie qui en fait le <strong>plus grand réseau de gyūdon au monde</strong>.
                 </p>
+
+                <div className="bg-yellow-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-yellow-800 mb-2">🎯 La Mission Secrète de Sukiya</h4>
+                  <p className="text-yellow-700 text-sm">
+                    Derrière cette chaîne se cache un objectif grandiose : 
+                    <strong>"Éliminer la faim et la pauvreté dans le monde"</strong>. 
+                    Cette vision de Zensho Holdings, le groupe propriétaire, guide chaque décision 
+                    et explique pourquoi vos 2,80€ peuvent vous nourrir si bien.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* Histoire et stratégie */}
+            {/* Le système MMD */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-center mb-4">
-                <History className="w-6 h-6 text-orange-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900">L&apos;Ascension du Challenger</h2>
+                <Target className="w-6 h-6 text-green-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Le Secret du Prix Révolutionnaire : Le Système MMD</h2>
               </div>
               
               <div className="space-y-6">
-                {/* Création */}
-                <div className="border-l-4 border-green-500 pl-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">1982 : Naissance de l&apos;Innovation</h3>
-                  <p className="text-gray-700">
-                    Sukiya est créée par <strong>Zensho Holdings</strong> avec une vision claire : 
-                    démocratiser le gyūdon en l&apos;adaptant aux besoins des familles modernes. 
-                    Dès le départ, la chaîne mise sur la <strong>diversité des menus</strong> 
-                    et l&apos;accessibilité.
-                  </p>
+                <p className="text-lg text-gray-700">
+                  Comment Sukiya réussit-il à servir un repas complet moins cher qu'un café parisien ? 
+                  La réponse tient en trois lettres : <strong>MMD</strong> (Mass Merchandising System).
+                </p>
+
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-3">🌍 Approvisionnement Mondial</h4>
+                    <ul className="text-sm text-green-700 space-y-1">
+                      <li>• Employés sur le terrain dans le monde entier</li>
+                      <li>• Négociation directe avec les producteurs</li>
+                      <li>• Standards de qualité plus stricts que les normes nationales</li>
+                      <li>• Élimination des intermédiaires</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-blue-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-blue-800 mb-3">🏭 Production Intégrée</h4>
+                    <ul className="text-sm text-blue-700 space-y-1">
+                      <li>• Usines de transformation propriétaires</li>
+                      <li>• Contrôle total de la chaîne de production</li>
+                      <li>• Logistique optimisée 24h/24</li>
+                      <li>• Réduction maximale des coûts</li>
+                    </ul>
+                  </div>
                 </div>
 
-                {/* Expansion */}
-                <div className="border-l-4 border-green-400 pl-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">1990-2000 : Expansion Stratégique</h3>
-                  <p className="text-gray-700">
-                    Sukiya développe un réseau dense de restaurants en privilégiant les 
-                    <strong> emplacements suburbains et les centres commerciaux</strong>. 
-                    Cette stratégie lui permet de toucher les familles et de proposer 
-                    des services comme le drive-through.
-                  </p>
-                </div>
-
-                {/* Crise BSE */}
-                <div className="border-l-4 border-blue-500 pl-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">2004 : L&apos;Opportunité de la Crise BSE</h3>
-                  <p className="text-gray-700">
-                    Pendant que Yoshinoya suspend ses ventes, Sukiya saisit l&apos;opportunité en 
-                    <strong> passant au bœuf australien</strong>. Cette décision pragmatique 
-                    lui permet de maintenir son service et de <strong>gagner des parts de marché considérables</strong>.
-                  </p>
-                </div>
-
-                {/* Leadership */}
-                <div className="border-l-4 border-yellow-500 pl-4">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">2010+ : Leadership par les Volumes</h3>
-                  <p className="text-gray-700">
-                    Sukiya devient le <strong>n°1 du marché</strong> grâce à son expansion 
-                    agressive et sa capacité d&apos;adaptation. Aujourd&apos;hui, c&apos;est la référence 
-                    en matière de volume et de commodité.
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-purple-800 mb-2">🔬 Exemple Concret : Le Riz</h4>
+                  <p className="text-purple-700 text-sm">
+                    Sukiya ne se contente pas d'acheter du riz : <strong>Zensho Rice</strong>, 
+                    filiale dédiée, sélectionne les variétés (Koshihikari, Hitomebore), 
+                    contrôle la culture, gère la récolte, effectue la transformation et 
+                    livre directement aux restaurants. Résultat : riz premium à prix minimal.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Stratégie et différenciation */}
+            {/* L'histoire de la conquête */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-center mb-4">
-                <Award className="w-6 h-6 text-orange-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900">La Stratégie de la Diversité</h2>
+                <History className="w-6 h-6 text-green-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">De Challenger à Champion : L'Ascension Stratégique</h2>
               </div>
               
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600 font-bold text-sm">1</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Menu Étendu</h3>
-                    <p className="text-gray-700 text-sm">
-                      <strong>Plus de 50 plats différents</strong> : gyūdon classiques, curry, 
-                      seafood bowls, desserts, petits-déjeuners. Une approche &quot;restaurant familial&quot; 
-                      plutôt que spécialiste.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600 font-bold text-sm">2</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Commodité Maximale</h3>
-                    <p className="text-gray-700 text-sm">
-                      <strong>Drive-through, livraison, emplacements stratégiques</strong> près 
-                      des centres commerciaux et zones résidentielles. L&apos;accent sur l&apos;accessibilité.
-                    </p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600 font-bold text-sm">3</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Positionnement Familial</h3>
-                    <p className="text-gray-700 text-sm">
-                      Tables familiales, <strong>menu enfants</strong>, atmosphère décontractée. 
-                      Cible les familles plutôt que les salariés pressés.
-                    </p>
+              <div className="space-y-6">
+                <div className="bg-gradient-to-r from-orange-50 to-red-50 p-6 rounded-xl">
+                  <h3 className="text-lg font-semibold text-orange-800 mb-3">⚔️ La Guerre des Gyūdon</h3>
+                  <p className="text-orange-700 mb-4">
+                    En 1982, quand Sukiya ouvre ses portes à Yokohama, <strong>Yoshinoya règne en maître</strong> 
+                    sur le marché du gyūdon depuis 1899. Comment un petit challenger a-t-il pu 
+                    détrôner un géant centenaire ?
+                  </p>
+                  
+                  <div className="grid md:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <h4 className="font-medium text-orange-800 mb-2">🏛️ Stratégie Yoshinoya (traditionnelle)</h4>
+                      <ul className="text-orange-700 space-y-1">
+                        <li>• Comptoirs uniquement</li>
+                        <li>• Centres-villes et gares</li>
+                        <li>• Menu limité et traditionnel</li>
+                        <li>• Clientèle : salarymen pressés</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-orange-800 mb-2">🚗 Révolution Sukiya</h4>
+                      <ul className="text-orange-700 space-y-1">
+                        <li>• Tables familiales</li>
+                        <li>• Zones résidentielles et drive-through</li>
+                        <li>• Menu diversifié et innovant</li>
+                        <li>• Clientèle : familles et automobilistes</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
-                
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-600 font-bold text-sm">4</span>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">Innovation Continue</h3>
-                    <p className="text-gray-700 text-sm">
-                      <strong>Nouveaux produits réguliers</strong>, collaborations saisonnières, 
-                      adaptation rapide aux tendances. Une approche marketing dynamique.
-                    </p>
+
+                <h3 className="text-xl font-semibold text-gray-900">🎯 Le Coup de Génie de 2004</h3>
+                <p className="text-gray-700 mb-4">
+                  La crise de la <strong>maladie de la vache folle (BSE)</strong> frappe le Japon. 
+                  Yoshinoya, attaché au bœuf américain traditionnel, doit fermer ses restaurants. 
+                  Sukiya, plus pragmatique, <strong>bascule immédiatement vers le bœuf australien</strong> 
+                  et continue à servir ses clients. Cette décision lui fait gagner des parts de marché décisives.
+                </p>
+
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-green-800 mb-2">📈 Résultats de la Conquête</h4>
+                  <div className="grid grid-cols-3 gap-4 text-center text-sm">
+                    <div>
+                      <div className="font-bold text-2xl text-green-600">2000</div>
+                      <div className="text-green-700">Restaurants Sukiya</div>
+                    </div>
+                    <div>
+                      <div className="font-bold text-2xl text-green-600">#1</div>
+                      <div className="text-green-700">Position marché</div>
+                    </div>
+                    <div>
+                      <div className="font-bold text-2xl text-green-600">47/47</div>
+                      <div className="text-green-700">Préfectures couvertes</div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Menu détaillé */}
+            {/* Menu détaillé et guide des tailles */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Menu Sukiya</h2>
-              
-              {/* Gyūdon classiques */}
+              <div className="flex items-center mb-6">
+                <Utensils className="w-6 h-6 text-green-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Guide Complet du Menu Sukiya</h2>
+              </div>
+
+              {/* Guide des tailles - Point central */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded text-sm mr-3">Classique</span>
-                  Gyūdon Traditionnels
-                </h3>
+                <h3 className="text-xl font-semibold mb-4">🥣 Guide des Tailles : Trouvez Votre Portion Idéale</h3>
+                <p className="text-gray-700 mb-4">
+                  La première chose qui surprend chez Sukiya, c'est la variété des tailles. 
+                  Voici votre guide pour choisir selon votre appétit et votre budget :
+                </p>
+                
                 <div className="overflow-x-auto">
-                  <table className="min-w-full border border-gray-200">
-                    <thead className="bg-gray-50">
+                  <table className="w-full text-sm border border-gray-200 rounded-lg">
+                    <thead className="bg-green-50">
                       <tr>
-                        <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Plat</th>
-                        <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Taille</th>
-                        <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Prix</th>
-                        <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Calories</th>
+                        <th className="text-left p-3 font-medium">Taille</th>
+                        <th className="text-left p-3 font-medium">Pour Qui ?</th>
+                        <th className="text-left p-3 font-medium">Viande</th>
+                        <th className="text-left p-3 font-medium">Riz</th>
+                        <th className="text-left p-3 font-medium">Calories</th>
+                        <th className="text-left p-3 font-medium">Prix (¥/€)</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200">
                       <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Gyūdon</div>
-                          <div className="text-sm text-gray-500">牛丼 | ぎゅうどん</div>
+                        <td className="p-3">
+                          <strong>Mini (ミニ)</strong>
                         </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Normale (並盛)</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">400¥</td>
-                        <td className="px-4 py-4 text-sm text-gray-700">733 kcal</td>
+                        <td className="p-3 text-gray-600">
+                          Petit appétit, accompagnement
+                        </td>
+                        <td className="p-3">66g</td>
+                        <td className="p-3">189g</td>
+                        <td className="p-3">496</td>
+                        <td className="p-3 font-medium">430¥ / ~2.5€</td>
+                      </tr>
+                      <tr className="bg-yellow-50">
+                        <td className="p-3">
+                          <strong>Normal (並盛)</strong> ⭐
+                        </td>
+                        <td className="p-3 text-gray-600">
+                          Standard recommandé
+                        </td>
+                        <td className="p-3">81g</td>
+                        <td className="p-3">300g</td>
+                        <td className="p-3">732</td>
+                        <td className="p-3 font-medium">480¥ / ~2.8€</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Gyūdon</div>
-                          <div className="text-sm text-gray-500">牛丼 | ぎゅうどん</div>
+                        <td className="p-3">
+                          <strong>Moyen (中盛)</strong>
                         </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Grande (大盛)</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">530¥</td>
-                        <td className="px-4 py-4 text-sm text-gray-700">953 kcal</td>
+                        <td className="p-3 text-gray-600">
+                          Plus de viande, moins de riz
+                        </td>
+                        <td className="p-3">136g</td>
+                        <td className="p-3">247g</td>
+                        <td className="p-3">798</td>
+                        <td className="p-3 font-medium">650¥ / ~3.8€</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Gyūdon</div>
-                          <div className="text-sm text-gray-500">牛丼 | ぎゅうどん</div>
+                        <td className="p-3">
+                          <strong>Grand (大盛)</strong>
                         </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Mega (メガ)</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">680¥</td>
-                        <td className="px-4 py-4 text-sm text-gray-700">1273 kcal</td>
+                        <td className="p-3 text-gray-600">
+                          Bon appétit général
+                        </td>
+                        <td className="p-3">120g</td>
+                        <td className="p-3">364g</td>
+                        <td className="p-3">967</td>
+                        <td className="p-3 font-medium">680¥ / ~4.0€</td>
                       </tr>
                       <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Gyūdon Mini</div>
-                          <div className="text-sm text-gray-500">ミニ牛丼</div>
+                        <td className="p-3">
+                          <strong>Spécial (特盛)</strong>
                         </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Mini</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">350¥</td>
-                        <td className="px-4 py-4 text-sm text-gray-700">513 kcal</td>
+                        <td className="p-3 text-gray-600">
+                          Très bon appétit
+                        </td>
+                        <td className="p-3">132g</td>
+                        <td className="p-3">403g</td>
+                        <td className="p-3">1,176</td>
+                        <td className="p-3 font-medium">880¥ / ~5.2€</td>
+                      </tr>
+                      <tr className="bg-red-50">
+                        <td className="p-3">
+                          <strong>Mega (メガ)</strong> 🔥
+                        </td>
+                        <td className="p-3 text-gray-600">
+                          Défi culinaire !
+                        </td>
+                        <td className="p-3">233g</td>
+                        <td className="p-3">410g</td>
+                        <td className="p-3">1,458</td>
+                        <td className="p-3 font-medium">1,030¥ / ~6.1€</td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
               </div>
 
-              {/* Variations spéciales */}
+              {/* Toppings et variations */}
               <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm mr-3">Spécialités</span>
-                  Variations Populaires
-                </h3>
-                <div className="overflow-x-auto">
-                  <table className="min-w-full border border-gray-200">
-                    <thead className="bg-gray-50">
-                      <tr>
-                        <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Plat</th>
-                        <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Description</th>
-                        <th className="px-4 py-3 text-left text-sm font-medium text-gray-900">Prix</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-gray-200">
-                      <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Cheese Gyūdon</div>
-                          <div className="text-sm text-gray-500">チーズ牛丼</div>
-                        </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Gyūdon avec fromage fondu au-dessus</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">500¥</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Kimchi Gyūdon</div>
-                          <div className="text-sm text-gray-500">キムチ牛丼</div>
-                        </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Avec kimchi épicé pour plus de saveur</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">480¥</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Ontama Gyūdon</div>
-                          <div className="text-sm text-gray-500">おんたま牛丼</div>
-                        </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Avec œuf à la coque (onsen tamago)</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">450¥</td>
-                      </tr>
-                      <tr>
-                        <td className="px-4 py-4">
-                          <div className="font-medium text-gray-900">Seafood Bowl</div>
-                          <div className="text-sm text-gray-500">海鮮丼</div>
-                        </td>
-                        <td className="px-4 py-4 text-sm text-gray-700">Bol de riz aux fruits de mer assortis</td>
-                        <td className="px-4 py-4 text-sm font-medium text-gray-900">650¥</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <h3 className="text-xl font-semibold mb-4">🎨 L'Art du Topping : Créez Votre Gyūdon Parfait</h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="font-semibold text-green-700 mb-3">Toppings Populaires</h4>
+                    <div className="space-y-3">
+                      <div className="border border-gray-200 rounded p-3">
+                        <div className="font-medium">とろ〜り3種のチーズ</div>
+                        <div className="text-sm text-gray-600">3 fromages fondants</div>
+                        <div className="text-sm font-medium text-green-600">+100¥</div>
+                      </div>
+                      <div className="border border-gray-200 rounded p-3">
+                        <div className="font-medium">ねぎ玉 (Negi-tama)</div>
+                        <div className="text-sm text-gray-600">Oignons verts + œuf cru</div>
+                        <div className="text-sm font-medium text-green-600">+80¥</div>
+                      </div>
+                      <div className="border border-gray-200 rounded p-3">
+                        <div className="font-medium">おろしポン酢</div>
+                        <div className="text-sm text-gray-600">Radis râpé + sauce ponzu</div>
+                        <div className="text-sm font-medium text-green-600">+60¥</div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-green-700 mb-3">Commandes Spéciales (Gratuit)</h4>
+                    <div className="space-y-3">
+                      <div className="bg-green-50 p-3 rounded">
+                        <div className="font-medium">つゆだく (Tsuyudaku)</div>
+                        <div className="text-sm text-gray-600">Plus de sauce - pour riz bien imbibé</div>
+                      </div>
+                      <div className="bg-green-50 p-3 rounded">
+                        <div className="font-medium">ねぎだく (Negidaku)</div>
+                        <div className="text-sm text-gray-600">Plus d'oignons - version gourmande</div>
+                      </div>
+                      <div className="bg-green-50 p-3 rounded">
+                        <div className="font-medium">つゆぬき (Tsuyunuki)</div>
+                        <div className="text-sm text-gray-600">Sans sauce - version allégée</div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
               {/* Menu étendu */}
-              <div className="mb-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 flex items-center">
-                  <span className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm mr-3">Diversité</span>
-                  Au-delà du Gyūdon
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="border border-gray-200 rounded p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Curry</h4>
-                    <p className="text-sm text-gray-700 mb-2">Curry japonais avec différentes garnitures</p>
-                    <div className="text-sm text-gray-600">À partir de 390¥</div>
-                  </div>
-                  <div className="border border-gray-200 rounded p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Petit-déjeuner</h4>
-                    <p className="text-sm text-gray-700 mb-2">Menu spécial matinal disponible jusqu&apos;à 10h</p>
-                    <div className="text-sm text-gray-600">À partir de 280¥</div>
-                  </div>
-                  <div className="border border-gray-200 rounded p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Desserts</h4>
-                    <p className="text-sm text-gray-700 mb-2">Soft cream, desserts saisonniers</p>
-                    <div className="text-sm text-gray-600">À partir de 200¥</div>
-                  </div>
-                  <div className="border border-gray-200 rounded p-4">
-                    <h4 className="font-semibold text-gray-900 mb-2">Menu Enfants</h4>
-                    <p className="text-sm text-gray-700 mb-2">Portions adaptées avec jouet inclus</p>
-                    <div className="text-sm text-gray-600">À partir de 300¥</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Commandes spéciales */}
-              <div className="bg-green-50 p-4 rounded-lg">
-                <h4 className="font-semibold text-gray-900 mb-2">Options Populaires</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm">
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold mb-4">🍛 Au-delà du Gyūdon : L'Univers Sukiya</h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <strong>つゆだく (Tsuyudaku)</strong> - Sauce extra
-                  </div>
-                  <div>
-                    <strong>ねぎだく (Negidaku)</strong> - Oignons extra
-                  </div>
-                  <div>
-                    <strong>お持ち帰り (Omochi-kaeri)</strong> - À emporter
-                  </div>
-                  <div>
-                    <strong>ドライブスルー (Drive-through)</strong> - Service auto
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Guide de commande */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Commander chez Sukiya</h2>
-              
-              <div className="space-y-6">
-                {/* Étapes */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-green-600 font-bold">1</span>
+                    <h4 className="font-semibold text-gray-900 mb-3">Curry Révolutionnaire (2024)</h4>
+                    <div className="bg-yellow-50 p-4 rounded-lg">
+                      <p className="text-sm text-yellow-800 mb-2">
+                        <strong>Innovation 2024 :</strong> Curry avec épices personnalisables !
+                      </p>
+                      <ul className="text-sm text-yellow-700 space-y-1">
+                        <li>• Base douce familiale</li>
+                        <li>• Épices sur table pour ajuster</li>
+                        <li>• Possibilité d'ajouter du bœuf</li>
+                        <li>• À partir de 390¥</li>
+                      </ul>
                     </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Choisissez</h3>
-                    <p className="text-sm text-gray-600">Sur place, drive-through ou à emporter</p>
                   </div>
                   
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-green-600 font-bold">2</span>
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Commandez</h3>
-                    <p className="text-sm text-gray-600">Au comptoir ou via distributeur automatique</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-green-600 font-bold">3</span>
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Attendez</h3>
-                    <p className="text-sm text-gray-600">Service rapide, généralement 3-5 minutes</p>
-                  </div>
-                  
-                  <div className="text-center">
-                    <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-green-600 font-bold">4</span>
-                    </div>
-                    <h3 className="font-semibold text-gray-900 mb-2">Dégustez</h3>
-                    <p className="text-sm text-gray-600">À table ou dans votre voiture</p>
-                  </div>
-                </div>
-
-                {/* Phrases utiles */}
-                <div className="bg-gray-50 p-4 rounded-lg">
-                  <h4 className="font-semibold text-gray-900 mb-3">Phrases Utiles en Japonais</h4>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                    <div>
-                      <div className="font-medium text-gray-900">Commander un gyūdon :</div>
-                      <div className="text-gray-700">&quot;Gyūdon hitotsu onegaishimasu&quot;</div>
-                      <div className="text-gray-500 text-xs">牛丼一つお願いします</div>
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">Avec du fromage :</div>
-                      <div className="text-gray-700">&quot;Chīzu tsukete kudasai&quot;</div>
-                      <div className="text-gray-500 text-xs">チーズつけてください</div>
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">À emporter :</div>
-                      <div className="text-gray-700">&quot;Omochi-kaeri de&quot;</div>
-                      <div className="text-gray-500 text-xs">お持ち帰りで</div>
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">Menu enfants :</div>
-                      <div className="text-gray-700">&quot;Okosama setto&quot;</div>
-                      <div className="text-gray-500 text-xs">お子様セット</div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">Menu Petit-Déjeuner</h4>
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <p className="text-sm text-blue-800 mb-2">
+                        <strong>5h-11h :</strong> Petit-déjeuner japonais authentique
+                      </p>
+                      <ul className="text-sm text-blue-700 space-y-1">
+                        <li>• まぜのっけ朝食 (Mix & Top) - 420¥</li>
+                        <li>• Saumon grillé + riz + miso - 380¥</li>
+                        <li>• Tamago kake gohan - 280¥</li>
+                        <li>• Plus nutritif qu'un petit-déj parisien !</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Avantages concurrentiels */}
+            {/* L'expérience culturelle unique */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-center mb-4">
-                <TrendingUp className="w-6 h-6 text-orange-600 mr-3" />
-                <h2 className="text-2xl font-bold text-gray-900">Pourquoi Sukiya Domine</h2>
+                <Globe className="w-6 h-6 text-green-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">L'Expérience Culturelle : Plus qu'un Repas</h2>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-green-600 text-xs">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Volume et Accessibilité</h4>
-                      <p className="text-sm text-gray-700">
-                        1 942 restaurants, présence dans les zones résidentielles
-                      </p>
-                    </div>
-                  </div>
+              <div className="space-y-6">
+                <div className="bg-blue-50 p-6 rounded-xl">
+                  <h3 className="text-lg font-semibold text-blue-800 mb-3">🥚 L'Œuf Cru : Votre Première Aventure Japonaise</h3>
+                  <p className="text-blue-700 mb-4">
+                    Ne soyez pas surpris de voir "生卵" (œuf cru) au menu ! Au Japon, les œufs 
+                    sont <strong>parmi les plus sûrs au monde</strong> grâce aux centres GP 
+                    (Good Production) qui appliquent des standards d'hygiène exceptionnels.
+                  </p>
                   
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-green-600 text-xs">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Service Drive-Through</h4>
-                      <p className="text-sm text-gray-700">
-                        Pionnier du drive-through dans la restauration rapide japonaise
-                      </p>
-                    </div>
+                  <div className="bg-white/60 p-4 rounded">
+                    <h4 className="font-medium text-blue-800 mb-2">🍳 Mode d'emploi :</h4>
+                    <ol className="text-sm text-blue-700 space-y-1">
+                      <li>1. Cassez l'œuf dans le petit bol fourni</li>
+                      <li>2. Ajoutez quelques gouttes de sauce soja</li>
+                      <li>3. Mélangez délicatement avec les baguettes</li>
+                      <li>4. Versez sur votre gyūdon chaud</li>
+                      <li>5. Savourez cette texture crémeuse unique !</li>
+                    </ol>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold text-gray-900">🍜 Les Condiments de Table : Vos Alliés Saveur</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="border border-gray-200 rounded p-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">紅生姜 (Beni Shōga)</h4>
+                    <p className="text-sm text-gray-700">
+                      Gingembre mariné rouge, <strong>pas juste une décoration !</strong> 
+                      Son acidité rafraîchit le palais entre les bouchées riches en gras.
+                    </p>
+                  </div>
+                  <div className="border border-gray-200 rounded p-4">
+                    <h4 className="font-semibold text-gray-900 mb-2">七味唐辛子 (Shichimi)</h4>
+                    <p className="text-sm text-gray-700">
+                      Mélange de 7 épices incluant piment, sésame, écorce d'orange. 
+                      <strong>Parfum complexe</strong> qui révèle de nouvelles saveurs.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-purple-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-purple-800 mb-2">🎯 Pro Tip : La Technique du "Mix Perfect"</h4>
+                  <p className="text-purple-700 text-sm">
+                    Les habitués mélangent tout ensemble : gyūdon + œuf cru + beni shōga + 
+                    un peu de shichimi. Cette combinaison crée une <strong>harmonie de textures 
+                    et de saveurs</strong> impossible à reproduire ailleurs dans le monde !
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Menu secret et astuces */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="flex items-center mb-4">
+                <Heart className="w-6 h-6 text-green-600 mr-3" />
+                <h2 className="text-2xl font-bold text-gray-900">Les Secrets des Initiés</h2>
+              </div>
+              
+              <div className="space-y-6">
+                <div className="bg-red-50 p-6 rounded-xl border border-red-200">
+                  <h3 className="text-lg font-semibold text-red-800 mb-3">👑 Le "Gyūdon King" - Menu Secret</h3>
+                  <p className="text-red-700 mb-4">
+                    Existe mais n'apparaît pas au menu : le <strong>"キング牛丼"</strong>. 
+                    Un défi culinaire avec <strong>6x la viande normale</strong> (510g) et 
+                    2,5x le riz (625g) pour plus de 2300 calories !
+                  </p>
+                  
+                  <div className="bg-white/60 p-3 rounded text-sm">
+                    <strong>⚠️ Conditions :</strong> Uniquement sur place, pas de take-away, 
+                    doit être terminé entièrement. Prix : environ 1500¥. 
+                    <em>Perfect pour impressionner vos amis !</em>
+                  </div>
+                </div>
+
+                <h3 className="text-xl font-semibold text-gray-900">💡 Astuces de Commande Avancées</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-green-50 p-4 rounded">
+                    <h4 className="font-medium text-green-800 mb-2">🥩 "Gyū-sara" (牛皿)</h4>
+                    <p className="text-sm text-green-700">
+                      Commandez la viande seule pour l'emporter. Parfait si vous avez 
+                      du riz à la maison - <strong>meilleur rapport qualité/prix</strong> !
+                    </p>
+                  </div>
+                  <div className="bg-blue-50 p-4 rounded">
+                    <h4 className="font-medium text-blue-800 mb-2">🚗 Drive-Through Pro</h4>
+                    <p className="text-sm text-blue-700">
+                      Sukiya a inventé le drive-through japonais ! Préparez votre commande 
+                      à l'avance, la <strong>vitesse de service</strong> est impressionnante.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="bg-yellow-50 p-4 rounded-lg">
+                  <h4 className="font-semibold text-yellow-800 mb-2">🕐 Timing Optimal</h4>
+                  <p className="text-yellow-700 text-sm">
+                    <strong>Petit-déjeuner (5h-11h) :</strong> Prix imbattables, expérience authentique<br />
+                    <strong>Déjeuner (11h-14h) :</strong> Service le plus rapide, forte affluence<br />
+                    <strong>Dîner (18h-21h) :</strong> Menu complet, ambiance familiale<br />
+                    <strong>Tard le soir (21h+) :</strong> Calme, parfait pour savourer tranquillement
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <div className="space-y-6">
+            {/* Quick info */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Informations Pratiques</h3>
+              <div className="space-y-4">
+                <div className="flex items-center">
+                  <MapPin className="w-5 h-5 text-green-600 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-900">Présence</div>
+                    <div className="text-sm text-gray-600">2000 restaurants au Japon</div>
+                    <div className="text-xs text-gray-500">47 préfectures couvertes</div>
                   </div>
                 </div>
                 
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-green-600 text-xs">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Diversité des Menus</h4>
-                      <p className="text-sm text-gray-700">
-                        Plus de 50 plats différents, adaptation aux goûts familiaux
-                      </p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-3">
-                    <div className="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <span className="text-green-600 text-xs">✓</span>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900">Prix Compétitifs</h4>
-                      <p className="text-sm text-gray-700">
-                        Positionnement prix attractif, promotions régulières
-                      </p>
-                    </div>
+                <div className="flex items-center">
+                  <Clock className="w-5 h-5 text-green-600 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-900">Horaires</div>
+                    <div className="text-sm text-gray-600">Généralement 5h-1h</div>
+                    <div className="text-xs text-gray-500">Certains 24h/24</div>
                   </div>
                 </div>
+                
+                <div className="flex items-center">
+                  <CreditCard className="w-5 h-5 text-green-600 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-900">Paiement</div>
+                    <div className="text-sm text-gray-600">Espèces, cartes</div>
+                    <div className="text-xs text-gray-500">IC cards acceptées</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center">
+                  <Users className="w-5 h-5 text-green-600 mr-3" />
+                  <div>
+                    <div className="font-medium text-gray-900">Services</div>
+                    <div className="text-sm text-gray-600">Drive-through</div>
+                    <div className="text-xs text-gray-500">Livraison disponible</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Gamme de prix */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Budget Type</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-sm text-gray-600">Gyūdon Mini</span>
+                  <span className="font-medium text-gray-900">430¥ (~2.5€)</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-sm text-gray-600">Gyūdon Normal</span>
+                  <span className="font-medium text-gray-900">480¥ (~2.8€)</span>
+                </div>
+                <div className="flex justify-between items-center py-2 border-b border-gray-100">
+                  <span className="text-sm text-gray-600">Petit-déjeuner</span>
+                  <span className="font-medium text-gray-900">280¥ (~1.6€)</span>
+                </div>
+                <div className="flex justify-between items-center py-2">
+                  <span className="text-sm text-gray-600">Mega Challenge</span>
+                  <span className="font-medium text-gray-900">1030¥ (~6.1€)</span>
+                </div>
+              </div>
+              
+              <div className="mt-4 p-3 bg-green-50 rounded">
+                <div className="text-sm font-medium text-green-800">💡 Astuce Budget</div>
+                <div className="text-xs text-green-700 mt-1">
+                  Un repas complet chez Sukiya coûte moins qu'un café à Paris !
+                </div>
+              </div>
+            </div>
+
+            {/* Spécialités */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Spécialités Incontournables</h3>
+              <div className="space-y-3">
+                <div className="p-3 border border-gray-200 rounded">
+                  <div className="font-medium text-gray-900 text-sm">Gyūdon Classique</div>
+                  <div className="text-xs text-gray-600">Le plus authentique</div>
+                </div>
+                <div className="p-3 border border-gray-200 rounded">
+                  <div className="font-medium text-gray-900 text-sm">3 Fromages Fondants</div>
+                  <div className="text-xs text-gray-600">Innovation crémeuse</div>
+                </div>
+                <div className="p-3 border border-gray-200 rounded">
+                  <div className="font-medium text-gray-900 text-sm">Curry Personnalisable</div>
+                  <div className="text-xs text-gray-600">Nouveauté 2024</div>
+                </div>
+                <div className="p-3 border border-gray-200 rounded">
+                  <div className="font-medium text-gray-900 text-sm">Mix & Top Breakfast</div>
+                  <div className="text-xs text-gray-600">Petit-déj révolutionnaire</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Ambiance */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Ambiance & Public</h3>
+              <div className="space-y-4">
+                <div className="flex items-center space-x-3">
+                  <Users className="w-5 h-5 text-green-600" />
+                  <div>
+                    <div className="text-sm font-medium text-gray-900">Familles</div>
+                    <div className="text-xs text-gray-600">Tables spacieuses, menu enfants</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-3">
+                  <ShoppingCart className="w-5 h-5 text-green-600" />
+                  <div>
+                    <div className="text-sm font-medium text-gray-900">Employés</div>
+                    <div className="text-xs text-gray-600">Déjeuner rapide et économique</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-3">
+                  <Home className="w-5 h-5 text-green-600" />
+                  <div>
+                    <div className="text-sm font-medium text-gray-900">Automobilistes</div>
+                    <div className="text-xs text-gray-600">Drive-through disponible</div>
+                  </div>
+                </div>
+                
+                <div className="flex items-center space-x-3">
+                  <Clock className="w-5 h-5 text-green-600" />
+                  <div>
+                    <div className="text-sm font-medium text-gray-900">Noctambules</div>
+                    <div className="text-xs text-gray-600">Ouvert très tard</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Points forts comparatifs */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Vs. Concurrence</h3>
+              <div className="space-y-3">
+                <div className="p-3 bg-green-50 rounded border border-green-200">
+                  <div className="text-sm font-medium text-green-800">✅ Plus grand réseau</div>
+                  <div className="text-xs text-green-700">2000 restaurants (vs 1200 Yoshinoya)</div>
+                </div>
+                
+                <div className="p-3 bg-green-50 rounded border border-green-200">
+                  <div className="text-sm font-medium text-green-800">✅ Menu le plus varié</div>
+                  <div className="text-xs text-green-700">50+ plats (vs 15 Yoshinoya)</div>
+                </div>
+                
+                <div className="p-3 bg-green-50 rounded border border-green-200">
+                  <div className="text-sm font-medium text-green-800">✅ Service modernisé</div>
+                  <div className="text-xs text-green-700">Drive-through pionnier</div>
+                </div>
+                
+                <div className="p-3 bg-green-50 rounded border border-green-200">
+                  <div className="text-sm font-medium text-green-800">✅ Prix imbattables</div>
+                  <div className="text-xs text-green-700">Système MMD efficace</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Call to action */}
+            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-lg p-6 text-white">
+              <h3 className="text-lg font-semibold mb-2">Prêt pour l'Aventure ?</h3>
+              <p className="text-green-100 text-sm mb-4">
+                Sukiya vous attend pour découvrir pourquoi 2000 restaurants ne peuvent pas se tromper !
+              </p>
+              <div className="bg-white/20 rounded p-3">
+                <div className="text-sm font-medium">Mission : Votre Premier Gyūdon</div>
+                <div className="text-xs text-green-100 mt-1">
+                  Commandez un gyūdon normal avec œuf cru. 
+                  Vous découvrirez pourquoi le Japon en est fou !
+                </div>
+              </div>
+            </div>
+
+            {/* Notre avis */}
+            <div className="bg-green-50 rounded-lg p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">Notre Avis</h3>
+              <div className="flex items-center mb-2">
+                <div className="flex text-green-400">
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                  <Star className="w-4 h-4 fill-current" />
+                </div>
+                <span className="text-sm text-gray-600 ml-2">Infrastructure alimentaire révolutionnaire</span>
+              </div>
+              <p className="text-sm text-gray-700">
+                <strong>Plus qu'un restaurant, une véritable innovation sociale.</strong> Sukiya a réussi 
+                l'exploit de rendre un repas complet moins cher qu'un café parisien. Son système MMD 
+                et sa vision d'infrastructure alimentaire en font un modèle unique au monde. 
+                L'expérience va bien au-delà du simple repas : c'est une leçon d'économie et de culture japonaise.
+              </p>
+            </div>
+
+            {/* Navigation vers d'autres chaînes */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">Autres Chaînes de Gyūdon</h3>
+              
+              <div className="space-y-3">
+                <Link 
+                  href="/chaines/yoshinoya" 
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <div className="font-medium text-gray-900">Yoshinoya</div>
+                  <div className="text-sm text-gray-600">L'original et l'authentique</div>
+                </Link>
+                
+                <Link 
+                  href="/chaines/matsuya" 
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  <div className="font-medium text-gray-900">Matsuya</div>
+                  <div className="text-sm text-gray-600">L'innovateur du gyūdon</div>
+                </Link>
               </div>
             </div>
           </div>
@@ -564,15 +871,15 @@ export default function SukiyaPage() {
                   <Star className="w-4 h-4 fill-current" />
                   <Star className="w-4 h-4 fill-current" />
                   <Star className="w-4 h-4 fill-current" />
-                  <Star className="w-4 h-4" />
+                  <Star className="w-4 h-4 fill-current" />
                 </div>
-                <span className="text-sm text-gray-600 ml-2">Excellent rapport qualité-prix</span>
+                <span className="text-sm text-gray-600 ml-2">Infrastructure alimentaire révolutionnaire</span>
               </div>
               <p className="text-sm text-gray-700">
-                <strong>Le choix pratique par excellence.</strong> Sukiya excelle par sa commodité 
-                et sa diversité. Parfait pour les familles et ceux qui recherchent des options variées 
-                à prix abordables. L&apos;expérience peut être moins &quot;authentique&quot; que Yoshinoya, 
-                mais compense par son accessibilité.
+                <strong>Plus qu'un restaurant, une véritable innovation sociale.</strong> Sukiya a réussi 
+                l'exploit de rendre un repas complet moins cher qu'un café parisien. Son système MMD 
+                et sa vision d'infrastructure alimentaire en font un modèle unique au monde. 
+                L'expérience va bien au-delà du simple repas : c'est une leçon d'économie et de culture japonaise.
               </p>
             </div>
 
@@ -586,7 +893,7 @@ export default function SukiyaPage() {
                   className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <div className="font-medium text-gray-900">Yoshinoya</div>
-                  <div className="text-sm text-gray-600">L&apos;original et l&apos;authentique</div>
+                  <div className="text-sm text-gray-600">L'original et l'authentique</div>
                 </Link>
                 
                 <Link 
@@ -594,13 +901,14 @@ export default function SukiyaPage() {
                   className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
                 >
                   <div className="font-medium text-gray-900">Matsuya</div>
-                  <div className="text-sm text-gray-600">L&apos;innovateur du gyūdon</div>
+                  <div className="text-sm text-gray-600">L'innovateur du gyūdon</div>
                 </Link>
               </div>
             </div>
           </div>
-        </div>      </div>
-    </div>
+        </div>
+      </div>
+    </main>
     </>
   );
 }
