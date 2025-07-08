@@ -1,5 +1,18 @@
 export const restaurantChains = [
   {
+    "slug": "anan",
+    "name": "AnAn",
+    "nameJp": "安安",
+    "category": "Yakiniku",
+    "description": "Chaîne de yakiniku abordable avec un excellent rapport qualité-prix et des formules à volonté.",
+    "specialties": [
+      "Yakiniku abordable",
+      "Formules à volonté",
+      "Viandes marinées",
+      "Ambiance conviviale"
+    ]
+  },
+  {
     "slug": "bamiyan",
     "name": "Bamiyan",
     "nameJp": "バーミヤン",
@@ -35,6 +48,19 @@ export const restaurantChains = [
       "Curry végétarien",
       "Niveaux épices",
       "Toppings variés"
+    ]
+  },
+  {
+    "slug": "domdom",
+    "name": "Dom Dom Burger",
+    "nameJp": "ドムドムバーガー",
+    "category": "Hamburgers",
+    "description": "Le tout premier fast-food japonais (1970), légendaire chaîne renaissance après quasi-extinction. Innovation audacieuse et histoire unique.",
+    "specialties": [
+      "Marugoto!! Kani Burger",
+      "Burgers historiques",
+      "Innovation culinaire",
+      "Atmosphère rétro"
     ]
   },
   {
@@ -612,8 +638,8 @@ export const foodTypes = [
   "Cuisine Chinoise",
   "Karaoke",
   "Curry",
-  "Café",
   "Hamburgers",
+  "Café",
   "Soba",
   "Street Food",
   "Family Restaurant",

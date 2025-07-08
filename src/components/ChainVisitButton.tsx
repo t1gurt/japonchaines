@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
 import { useSelfReporting } from '@/hooks/tutorial/useSelfReporting';
 
@@ -14,9 +14,15 @@ interface ChainVisitButtonProps {
 const ChainVisitButton: React.FC<ChainVisitButtonProps> = ({ chainId, chainName, className = '' }) => {
   const { submitReport } = useSelfReporting();
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  // クライアントサイドでのみレンダリング
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const handleClick = async () => {
-    if (isSubmitting) return;
+    if (isSubmitting || !isClient) return;
 
     setIsSubmitting(true);
     const toastId = toast.loading(`"${chainName}"への訪問を記録中...`);
@@ -34,6 +40,18 @@ const ChainVisitButton: React.FC<ChainVisitButtonProps> = ({ chainId, chainName,
       setIsSubmitting(false);
     }
   };
+
+  // クライアントサイドでない場合はローディング表示
+  if (!isClient) {
+    return (
+      <button
+        disabled
+        className={`w-full py-3 px-4 rounded-lg font-medium bg-gray-300 text-gray-500 cursor-not-allowed ${className}`}
+      >
+        読み込み中...
+      </button>
+    );
+  }
 
   return (
     <button

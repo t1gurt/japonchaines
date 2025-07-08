@@ -4,7 +4,7 @@ interface StructuredDataProps {
   data: object;
 }
 
-export default function StructuredData({ data }: StructuredDataProps) {
+export function StructuredData({ data }: StructuredDataProps) {
   return (
     <Script
       id="structured-data"
@@ -15,3 +15,5 @@ export default function StructuredData({ data }: StructuredDataProps) {
     />
   );
 }
+
+export default StructuredData;

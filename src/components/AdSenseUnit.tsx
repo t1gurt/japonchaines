@@ -4,21 +4,26 @@ import { useEffect } from 'react';
 
 interface AdSenseUnitProps {
   dataAdClient?: string;
-  dataAdSlot: string;
+  dataAdSlot?: string;
+  slot?: string;
   dataAdFormat?: string;
   dataFullWidthResponsive?: boolean;
   style?: React.CSSProperties;
   className?: string;
 }
 
-export default function AdSenseUnit({
+export function AdSenseUnit({
   dataAdClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || "ca-pub-6564351127136787",
   dataAdSlot,
+  slot,
   dataAdFormat = "auto",
   dataFullWidthResponsive = true,
   style = { display: 'block' },
   className = ""
 }: AdSenseUnitProps) {
+  // Use slot if provided, otherwise use dataAdSlot
+  const adSlot = slot || dataAdSlot;
+  
   useEffect(() => {
     try {
       if (typeof window !== 'undefined' && (window as any).adsbygoogle) {
@@ -35,10 +40,12 @@ export default function AdSenseUnit({
         className="adsbygoogle"
         style={style}
         data-ad-client={dataAdClient}
-        data-ad-slot={dataAdSlot}
+        data-ad-slot={adSlot}
         data-ad-format={dataAdFormat}
         data-full-width-responsive={dataFullWidthResponsive}
       />
     </div>
   );
 }
+
+export default AdSenseUnit;

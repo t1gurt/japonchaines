@@ -99,3 +99,28 @@ export function generateRestaurantSchema(
     hasMenu: `${baseUrl}/chaines/${slug}#menu`,
   };
 }
+
+// レストランチェーンページのJSON-LD構造化データ
+export function generateRestaurantJsonLd(chain: {
+  name: string;
+  nameJp: string;
+  description: string;
+  category: string;
+  slug: string;
+  specialties: string[];
+  priceRange?: string;
+  founded?: string;
+}): RestaurantSchema {
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://username.github.io/japonchaines';
+  
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Restaurant',
+    name: `${chain.name} (${chain.nameJp})`,
+    description: chain.description,
+    servesCuisine: chain.category,
+    url: `${baseUrl}/chaines/${chain.slug}`,
+    priceRange: chain.priceRange || '$',
+    hasMenu: `${baseUrl}/chaines/${chain.slug}#menu`,
+  };
+}
