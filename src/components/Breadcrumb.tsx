@@ -12,7 +12,7 @@ interface BreadcrumbProps {
   className?: string;
 }
 
-export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {  // 構造化データ用のデータを準備
+export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {  // 構造化データ用のデータを準備
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://username.github.io/japonchaines';
   const breadcrumbData = items.map(item => ({
     name: item.name,
@@ -55,3 +55,5 @@ export default function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
     </>
   );
 }
+
+export default Breadcrumb;

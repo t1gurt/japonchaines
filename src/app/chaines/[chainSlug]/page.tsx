@@ -5,7 +5,6 @@ import { StructuredData } from '@/components/StructuredData';
 import { generateRestaurantJsonLd } from '@/lib/structured-data';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { AdSenseUnit } from '@/components/AdSenseUnit';
-import { PageViewTracker } from '@/components/PageViewTracker';
 import { ChainViewTracker } from '@/components/ChainViewTracker';
 import ChainVisitButton from '@/components/ChainVisitButton';
 import { Metadata } from 'next';
@@ -29,19 +28,20 @@ interface ChainInfo {
 
 // Définir les props pour la page
 interface ChainPageProps {
-  params: {
+  params: Promise<{
     chainSlug: string;
-  };
+  }>;
 }
 
 // Générer les métadonnées dynamiques
 export async function generateMetadata({ params }: ChainPageProps): Promise<Metadata> {
-  const chain = restaurantChains.find(c => c.slug === params.chainSlug);
+  const { chainSlug } = await params;
+  const chain = restaurantChains.find(c => c.slug === chainSlug);
 
   if (!chain) {
     return {
       title: 'Chaîne non trouvée',
-      description: 'Cette chaîne de restaurants n'a pas été trouvée.',
+      description: 'Cette chaîne de restaurants n\'a pas été trouvée.',
     };
   }
 
@@ -65,7 +65,7 @@ export async function generateMetadata({ params }: ChainPageProps): Promise<Meta
       title,
       description,
       type: 'article',
-      url: `/chaines/${params.chainSlug}`,
+      url: `/chaines/${chainSlug}`,
     },
     twitter: {
       card: 'summary_large_image',
@@ -73,7 +73,7 @@ export async function generateMetadata({ params }: ChainPageProps): Promise<Meta
       description,
     },
     alternates: {
-      canonical: `/chaines/${params.chainSlug}`,
+      canonical: `/chaines/${chainSlug}`,
     },
     robots: {
       index: true,
@@ -90,8 +90,8 @@ export async function generateStaticParams() {
 }
 
 // Le composant de la page de la chaîne
-const ChainPage = ({ params }: ChainPageProps) => {
-  const { chainSlug } = params;
+const ChainPage = async ({ params }: ChainPageProps) => {
+  const { chainSlug } = await params;
   const chain = restaurantChains.find(c => c.slug === chainSlug) as ChainInfo | undefined;
 
   if (!chain) {
@@ -116,8 +116,7 @@ const ChainPage = ({ params }: ChainPageProps) => {
 
   return (
     <>
-      <PageViewTracker />
-      <ChainViewTracker chainSlug={chain.slug} />
+      <ChainViewTracker chainName={chain.slug} chainCategory={chain.category} />
       <StructuredData data={jsonLd} />
       <div className="container mx-auto px-4 py-8">
         <Breadcrumb items={breadcrumbItems} />
@@ -129,11 +128,8 @@ const ChainPage = ({ params }: ChainPageProps) => {
                 <Image
                   src={chain.image}
                   alt={`Image de ${chain.name}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="w-full h-full"
-                  // Add a placeholder for missing images
-                  onError={(e) => { e.currentTarget.src = '/images/placeholder.jpg'; }}
+                  fill
+                  className="object-cover w-full h-full"
                 />
               )}
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">

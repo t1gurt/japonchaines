@@ -38,6 +38,19 @@ export const restaurantChains = [
     ]
   },
   {
+    "slug": "domdom",
+    "name": "Dom Dom Burger",
+    "nameJp": "ドムドムバーガー",
+    "category": "Hamburgers",
+    "description": "Le tout premier fast-food japonais (1970), légendaire chaîne renaissance après quasi-extinction. Innovation audacieuse et histoire unique.",
+    "specialties": [
+      "Marugoto!! Kani Burger",
+      "Burgers historiques",
+      "Innovation culinaire",
+      "Atmosphère rétro"
+    ]
+  },
+  {
     "slug": "doutor",
     "name": "Doutor Coffee",
     "nameJp": "ドトールコーヒー",
@@ -612,8 +625,8 @@ export const foodTypes = [
   "Cuisine Chinoise",
   "Karaoke",
   "Curry",
-  "Café",
   "Hamburgers",
+  "Café",
   "Soba",
   "Street Food",
   "Family Restaurant",

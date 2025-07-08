@@ -8,7 +8,7 @@ interface ChainViewTrackerProps {
   chainCategory: string;
 }
 
-export default function ChainViewTracker({ chainName, chainCategory }: ChainViewTrackerProps) {
+export function ChainViewTracker({ chainName, chainCategory }: ChainViewTrackerProps) {
   useEffect(() => {
     // コンポーネントがマウントされた時にチェーン店閲覧イベントを送信
     trackChainView(chainName, chainCategory);
@@ -17,3 +17,5 @@ export default function ChainViewTracker({ chainName, chainCategory }: ChainView
   // このコンポーネントは何も表示しない
   return null;
 }
+
+export default ChainViewTracker;
