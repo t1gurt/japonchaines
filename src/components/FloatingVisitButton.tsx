@@ -87,37 +87,37 @@ const FloatingVisitButton: React.FC = () => {
         className={`
           flex items-center
           transition-all duration-300 ease-in-out
-          ${isExpanded ? 'w-auto' : 'w-16 md:w-20'}
-          h-16 md:h-20
-          bg-gradient-to-r from-blue-600 to-blue-700
-          rounded-full shadow-2xl
-          border-4 border-white
-          ${isSubmitting ? 'cursor-not-allowed opacity-75' : 'hover:scale-110 cursor-pointer'}
+          ${isExpanded ? 'w-auto' : 'w-14 md:w-16'}
+          h-14 md:h-16
+          bg-blue-500 hover:bg-blue-600
+          rounded-full shadow-lg
+          border-2 border-white
+          ${isSubmitting ? 'cursor-not-allowed opacity-75' : 'hover:scale-105 cursor-pointer'}
         `}
         onClick={handleClick}
         onMouseEnter={() => setIsExpanded(true)}
         onMouseLeave={() => setIsExpanded(false)}
         style={{ 
           willChange: 'transform, width',
-          minWidth: '64px',
-          minHeight: '64px'
+          minWidth: '56px',
+          minHeight: '56px'
         }}
       >
         {/* アイコン */}
-        <div className="flex items-center justify-center w-16 md:w-20 h-16 md:h-20">
+        <div className="flex items-center justify-center w-14 md:w-16 h-14 md:h-16">
           {isSubmitting ? (
-            <Clock className="w-8 h-8 md:w-10 md:h-10 text-white animate-spin" />
+            <Clock className="w-7 h-7 md:w-8 md:h-8 text-white animate-spin" />
           ) : (
-            <MapPin className="w-8 h-8 md:w-10 md:h-10 text-white" />
+            <MapPin className="w-7 h-7 md:w-8 md:h-8 text-white" />
           )}
         </div>
         
         {/* テキスト（展開時） */}
         <div className={`
           overflow-hidden transition-all duration-300 ease-in-out
-          ${isExpanded ? 'w-auto pr-4' : 'w-0'}
+          ${isExpanded ? 'w-auto pr-3' : 'w-0'}
         `}>
-          <span className="text-white font-medium text-sm md:text-base whitespace-nowrap">
+          <span className="text-white font-medium text-xs md:text-sm whitespace-nowrap">
             {isSubmitting ? '記録中...' : '訪問を記録'}
           </span>
         </div>
