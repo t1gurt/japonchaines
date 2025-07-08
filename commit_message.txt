@@ -1,0 +1,3 @@
+feat: Translate FloatingVisitButton texts to French
+
+Translates all user-facing texts within the FloatingVisitButton component from Japanese to French to align with the target audience.
