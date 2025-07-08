@@ -9,11 +9,11 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import MobileHeader from "@/components/MobileHeader";
 import MobileNavigation from "@/components/MobileNavigation";
-import BottomNavigation from "@/components/BottomNavigation";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAdSense from "@/components/GoogleAdSense";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import StructuredData from "@/components/StructuredData";
+import DynamicFloatingVisitButton from "@/components/DynamicFloatingVisitButton";
 import { generateWebsiteSchema } from "@/lib/structured-data";
 
 const inter = Inter({
@@ -48,13 +48,13 @@ export default function RootLayout({
           <Toaster position="top-center" reverseOrder={false} />
           <Header />
           
-                    <MobileHeader toggleMenu={toggleMenu} isOpen={isMenuOpen} />
+          <MobileHeader toggleMenu={toggleMenu} isOpen={isMenuOpen} />
           <MobileNavigation isOpen={isMenuOpen} toggleMenu={toggleMenu} />
-          <main className="min-h-screen pb-16 md:pb-0">
+          <main className="min-h-screen">
             {children}
           </main>
           <Footer />
-          <BottomNavigation />
+          <DynamicFloatingVisitButton />
         </AnalyticsProvider>
       </body>
     </html>

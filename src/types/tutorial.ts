@@ -109,3 +109,14 @@ export interface Chain {
   difficulty: 'facile' | 'moyen' | 'difficile';
   features: string[];
 }
+
+// 訪問レポート（自己申告システム用）
+export interface VisitReport {
+  id: string;
+  chainId: string;
+  visitDate: string;
+  status: 'reported' | 'pending' | 'verified' | 'rejected';
+  timestamp: string;
+  hasPhoto?: boolean;
+  notes?: string;
+}

@@ -6,7 +6,6 @@ import { generateRestaurantJsonLd } from '@/lib/structured-data';
 import { Breadcrumb } from '@/components/Breadcrumb';
 import { AdSenseUnit } from '@/components/AdSenseUnit';
 import { ChainViewTracker } from '@/components/ChainViewTracker';
-import ChainVisitButton from '@/components/ChainVisitButton';
 import { Metadata } from 'next';
 
 // Define the type for chainInfo
@@ -153,8 +152,13 @@ const ChainPage = async ({ params }: ChainPageProps) => {
               <p className="text-gray-700 leading-relaxed">
                 {chain.description}
               </p>
-              <div className="mt-6">
-                <ChainVisitButton chainId={chain.slug} chainName={chain.name} />
+              <div className="mt-6 text-center">
+                <a 
+                  href="/tutorial"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 text-sm font-medium"
+                >
+                  📊 訪問履歴を確認する
+                </a>
               </div>
             </section>
 
