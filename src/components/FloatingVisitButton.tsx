@@ -55,18 +55,18 @@ const FloatingVisitButton: React.FC = () => {
 
     console.log('FloatingVisitButton: submitting report for', currentChain);
     setIsSubmitting(true);
-    const toastId = toast.loading(`"${currentChain.name}"への訪問を記録中...`);
+    const toastId = toast.loading(`Enregistrement de la visite à "${currentChain.name}"...`);
 
     try {
       await submitReport({
         chainId: currentChain.id,
         visitDate: new Date().toISOString().split('T')[0],
       });
-      toast.success(`"${currentChain.name}"への訪問を記録しました！`, { id: toastId });
+      toast.success(`Visite à "${currentChain.name}" enregistrée !`, { id: toastId });
       console.log('FloatingVisitButton: report submitted successfully');
     } catch (error) {
       console.error('FloatingVisitButton: submit error:', error);
-      toast.error('エラーが発生しました。後ほど再トライしてください。', { id: toastId });
+      toast.error('Une erreur est survenue. Veuillez réessayer plus tard.', { id: toastId });
     } finally {
       setIsSubmitting(false);
     }
@@ -118,7 +118,7 @@ const FloatingVisitButton: React.FC = () => {
           ${isExpanded ? 'w-auto pr-3' : 'w-0'}
         `}>
           <span className="text-white font-medium text-xs md:text-sm whitespace-nowrap">
-            {isSubmitting ? '記録中...' : '訪問を記録'}
+            {isSubmitting ? 'Enregistrement...' : 'Enregistrer la visite'}
           </span>
         </div>
       </div>
@@ -130,7 +130,7 @@ const FloatingVisitButton: React.FC = () => {
         ${isExpanded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-2 pointer-events-none'}
       `}>
         <div className="bg-gray-900 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap shadow-lg">
-          {currentChain.name}への訪問を記録
+          Enregistrer la visite à {currentChain.name}
           <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-gray-900"></div>
         </div>
       </div>
