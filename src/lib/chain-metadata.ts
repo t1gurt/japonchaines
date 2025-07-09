@@ -33,6 +33,14 @@ const chainData: Record<string, {
     specialties: ['Curry katsu', 'Curry végétarien', 'Niveaux épices', 'Toppings variés'],
     founded: '1978'
   },
+  'domdom': {
+    name: 'Dom Dom Burger',
+    nameJp: 'ドムドムバーガー',
+    category: 'Hamburgers',
+    description: 'Le premier hamburger japonais (1970), légendaire phénix ressuscité avec des créations virales uniques et l\'esprit wabi-sabi.',
+    specialties: ['Burger Crabe entier', 'Amakara Chicken', 'Burgers créatifs', 'Culture "Dom-ren"'],
+    founded: '1970'
+  },
   'doutor': {
     name: 'Doutor Coffee',
     nameJp: 'ドトールコーヒー',

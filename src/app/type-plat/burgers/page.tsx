@@ -3,6 +3,20 @@ import Link from "next/link";
 export default function BurgersJaponaisPage() {
   const burgerChains = [
     {
+      name: "Dom Dom Burger",
+      japanese: "ドムドムバーガー",
+      englishName: "Dom Dom Burger",
+      description: "Le tout premier burger japonais (1970), phénix légendaire ressuscité avec des créations virales uniques et l'esprit authentique du Japon.",
+      specialties: ["Burger Crabe entier", "Amakara Chicken", "Omelette épaisse", "Okonomiyaki Burger"],
+      priceRange: "¥400-900",
+      style: "Authentique & créatif",
+      orderingMethod: "Comptoir traditionnel",
+      vegetarianOptions: "Options créatives disponibles",
+      uniqueFeatures: ["Premier burger japonais", "Créations virales", "Culture \"wabi-sabi\""],
+      origin: "Japonaise (1970)",
+      href: "/chaines/domdom"
+    },
+    {
       name: "MOS Burger",
       japanese: "モスバーガー",
       englishName: "MOS Burger",

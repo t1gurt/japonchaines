@@ -254,6 +254,15 @@ export const chains: Chain[] = [
     difficulty: 'facile',
     features: ['Style unique', 'Prix abordable', 'Menu local'],
   },
+  {
+    id: 'domdom',
+    name: 'Dom Dom Burger',
+    japanese: 'ドムドムバーガー',
+    category: 'burger',
+    description: 'Le premier burger japonais, phénix ressuscité',
+    difficulty: 'moyen',
+    features: ['Histoire légendaire', 'Menus créatifs viraux', 'Culture "wabi-sabi"'],
+  },
 
   // Chinese cuisine (4 stores)
   {
