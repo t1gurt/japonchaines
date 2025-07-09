@@ -9,6 +9,7 @@ export const restaurantChains = [
   'bamiyan',
   'big-echo',
   'coco-ichibanya',
+  'domdom',
   'doutor',
   'freshness-burger',
   'fuji-soba',

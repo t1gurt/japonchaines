@@ -29,6 +29,15 @@ export default function ChainesPage() {
       avgPrice: '800-1500¥'
     },
     {
+      slug: 'big-echo',
+      name: 'Big Echo',
+      nameJp: 'ビッグエコー',
+      category: 'Karaoke',
+      description: 'Karaoke leader du Japon - technologie de pointe et bibliothèque musicale exhaustive.',
+      popularity: 'Très populaire',
+      avgPrice: '1500-3500¥'
+    },
+    {
       slug: 'coco-ichibanya',
       name: 'CoCo Ichibanya',
       nameJp: 'CoCo壱番屋',
@@ -38,6 +47,24 @@ export default function ChainesPage() {
       avgPrice: '600-1200¥'
     },
     {
+      slug: 'domdom',
+      name: 'Dom Dom Burger',
+      nameJp: 'ドムドムハンバーガー',
+      category: 'Hamburgers',
+      description: 'Le plus ancien hamburger japonais (1970) - Phoenix ressuscité avec créations audacieuses et mascotte légendaire.',
+      popularity: 'Modéré',
+      avgPrice: '500-900¥'
+    },
+    {
+      slug: 'doutor',
+      name: 'Doutor Coffee',
+      nameJp: 'ドトールコーヒー',
+      category: 'Café',
+      description: 'Pioneer du café moderne japonais - qualité artisanale et innovation depuis 1980.',
+      popularity: 'Très populaire',
+      avgPrice: '200-450¥'
+    },
+    {
       slug: 'freshness-burger',
       name: 'Freshness Burger',
       nameJp: 'フレッシュネスバーガー',
@@ -45,6 +72,24 @@ export default function ChainesPage() {
       description: 'Chaîne de burgers premium avec des ingrédients frais et des options healthy.',
       popularity: 'Modéré',
       avgPrice: '800-1500¥'
+    },
+    {
+      slug: 'fuji-soba',
+      name: 'Fuji Soba',
+      nameJp: '富士そば',
+      category: 'Soba',
+      description: 'Chaîne de nouilles soba traditionnelle de Tokyo, ouverte 24h/24, populaire auprès des salarymen.',
+      popularity: 'Populaire',
+      avgPrice: '300-700¥'
+    },
+    {
+      slug: 'gindako',
+      name: 'Gindako',
+      nameJp: '銀だこ',
+      category: 'Street Food',
+      description: 'Spécialiste des takoyaki authentiques d\'Osaka avec cuisson live et sauce secrète.',
+      popularity: 'Très populaire',
+      avgPrice: '480-800¥'
     },
     {
       slug: 'go-go-curry',
@@ -63,7 +108,8 @@ export default function ChainesPage() {
       description: 'Restaurant familial 24h/24 avec un menu varié de plats occidentaux et japonais.',
       popularity: 'Très populaire',
       avgPrice: '600-1200¥'
-    },    {
+    },
+    {
       slug: 'gyoza-no-ohsho',
       name: 'Gyoza no Ohsho',
       nameJp: '餃子の王将',
@@ -82,6 +128,24 @@ export default function ChainesPage() {
       avgPrice: '2000-4000¥'
     },
     {
+      slug: 'hama-sushi',
+      name: 'Hama Sushi',
+      nameJp: 'はま寿司',
+      category: 'Sushi',
+      description: 'Sushi sur tapis roulant à 110¥ la pièce avec commande par tablette.',
+      popularity: 'Très populaire',
+      avgPrice: '100-120¥/pièce'
+    },
+    {
+      slug: 'hanamaru-udon',
+      name: 'Hanamaru Udon',
+      nameJp: 'はなまるうどん',
+      category: 'Udon',
+      description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',
+      popularity: 'Très populaire',
+      avgPrice: '200-500¥'
+    },
+    {
       slug: 'hidakaya',
       name: 'Hidakaya',
       nameJp: '日高屋',
@@ -91,22 +155,13 @@ export default function ChainesPage() {
       avgPrice: '300-700¥'
     },
     {
-      slug: 'osaka-ohsho',
-      name: 'Osaka Ohsho',
-      nameJp: '大阪王将',
-      category: 'Cuisine Chinoise',
-      description: 'Cuisine chinoise style Osaka avec gyoza croustillants et yakimeshi signature.',
+      slug: 'hoshino',
+      name: 'Hoshino Coffee',
+      nameJp: '星乃珈琲店',
+      category: 'Café',
+      description: 'Nostalgie Showa authentique - café siphon artisanal et pancakes signature.',
       popularity: 'Populaire',
-      avgPrice: '500-1300¥'
-    },
-    {
-      slug: 'hama-sushi',
-      name: 'Hama Sushi',
-      nameJp: 'はま寿司',
-      category: 'Sushi',
-      description: 'Sushi sur tapis roulant à 110¥ la pièce avec commande par tablette.',
-      popularity: 'Très populaire',
-      avgPrice: '100-120¥/pièce'
+      avgPrice: '480-1280¥'
     },
     {
       slug: 'ichiran',
@@ -118,15 +173,6 @@ export default function ChainesPage() {
       avgPrice: '800-1200¥'
     },
     {
-      slug: 'ippudo',
-      name: 'Ippudo',
-      nameJp: '一風堂',
-      category: 'Ramen',
-      description: 'Ramen tonkotsu haut de gamme originaire de Hakata (Fukuoka).',
-      popularity: 'Populaire',
-      avgPrice: '900-1500¥'
-    },
-    {
       slug: 'ikinari-steak',
       name: 'Ikinari Steak',
       nameJp: 'いきなりステーキ',
@@ -136,13 +182,13 @@ export default function ChainesPage() {
       avgPrice: '1500-3000¥'
     },
     {
-      slug: 'jonathans',
-      name: 'Jonathan\'s',
-      nameJp: 'ジョナサン',
-      category: 'Restaurant Familial',
-      description: 'Restaurant familial avec menu varié, ouvert tard et adapté aux familles.',
+      slug: 'ippudo',
+      name: 'Ippudo',
+      nameJp: '一風堂',
+      category: 'Ramen',
+      description: 'Ramen tonkotsu haut de gamme originaire de Hakata (Fukuoka).',
       popularity: 'Populaire',
-      avgPrice: '700-1300¥'
+      avgPrice: '900-1500¥'
     },
     {
       slug: 'jolly-pasta',
@@ -154,13 +200,22 @@ export default function ChainesPage() {
       avgPrice: '800-1500¥'
     },
     {
-      slug: 'kura-sushi',
-      name: 'Kura Sushi',
-      nameJp: 'くら寿司',
-      category: 'Sushi',
-      description: 'Sushi sur tapis roulant avec système de jeu et récompenses pour enfants.',
-      popularity: 'Très populaire',
-      avgPrice: '100-120¥/pièce'
+      slug: 'jonathans',
+      name: 'Jonathan\'s',
+      nameJp: 'ジョナサン',
+      category: 'Restaurant Familial',
+      description: 'Restaurant familial avec menu varié, ouvert tard et adapté aux familles.',
+      popularity: 'Populaire',
+      avgPrice: '700-1300¥'
+    },
+    {
+      slug: 'karaoke-kan',
+      name: 'Karaoke Kan',
+      nameJp: 'カラオケ館',
+      category: 'Karaoke',
+      description: 'Service premium et espaces haut de gamme pour expérience karaoke exceptionnelle.',
+      popularity: 'Populaire',
+      avgPrice: '2000-4500¥'
     },
     {
       slug: 'komeda',
@@ -172,22 +227,22 @@ export default function ChainesPage() {
       avgPrice: '450-780¥'
     },
     {
-      slug: 'doutor',
-      name: 'Doutor Coffee',
-      nameJp: 'ドトールコーヒー',
-      category: 'Café',
-      description: 'Pioneer du café moderne japonais - qualité artisanale et innovation depuis 1980.',
-      popularity: 'Très populaire',
-      avgPrice: '200-450¥'
+      slug: 'komoro-soba',
+      name: 'Komoro Soba',
+      nameJp: '小諸そば',
+      category: 'Soba',
+      description: 'Expérience authentique tachi-gui (manger debout) avec soba traditionnel de style Shinshu.',
+      popularity: 'Modéré',
+      avgPrice: '290-550¥'
     },
     {
-      slug: 'hoshino',
-      name: 'Hoshino Coffee',
-      nameJp: '星乃珈琲店',
-      category: 'Café',
-      description: 'Nostalgie Showa authentique - café siphon artisanal et pancakes signature.',
-      popularity: 'Populaire',
-      avgPrice: '480-1280¥'
+      slug: 'kura-sushi',
+      name: 'Kura Sushi',
+      nameJp: 'くら寿司',
+      category: 'Sushi',
+      description: 'Sushi sur tapis roulant avec système de jeu et récompenses pour enfants.',
+      popularity: 'Très populaire',
+      avgPrice: '100-120¥/pièce'
     },
     {
       slug: 'kushikatsu-tanaka',
@@ -226,13 +281,32 @@ export default function ChainesPage() {
       avgPrice: '350-700¥'
     },
     {
+      slug: 'miyamoto-munashi',
+      name: 'Miyamoto Munashi',
+      nameJp: '宮本むなし',
+      category: 'Teishoku',
+      description: 'Chaîne de teishoku économique d\'Osaka, réputée pour ses portions XXL à petit prix.',
+      popularity: 'Populaire',
+      avgPrice: '400-800¥'
+    },
+    {
       slug: 'mos-burger',
       name: 'Mos Burger',
       nameJp: 'モスバーガー',
       category: 'Hamburgers',
       description: 'Burgers japonais avec des ingrédients locaux et des saveurs uniques.',
       popularity: 'Populaire',
-      avgPrice: '600-1200¥'    },
+      avgPrice: '600-1200¥'
+    },
+    {
+      slug: 'nakau',
+      name: 'Nakau',
+      nameJp: 'なか卯',
+      category: 'Gyudon',
+      description: 'Gyudon familial avec spécialités udon et options équilibrées.',
+      popularity: 'Populaire',
+      avgPrice: '350-650¥'
+    },
     {
       slug: 'ootoya',
       name: 'Ootoya',
@@ -241,6 +315,15 @@ export default function ChainesPage() {
       description: 'Teishoku haut de gamme avec légumes frais, cuisine visible et présentation soignée.',
       popularity: 'Populaire',
       avgPrice: '800-1500¥'
+    },
+    {
+      slug: 'osaka-ohsho',
+      name: 'Osaka Ohsho',
+      nameJp: '大阪王将',
+      category: 'Cuisine Chinoise',
+      description: 'Cuisine chinoise style Osaka avec gyoza croustillants et yakimeshi signature.',
+      popularity: 'Populaire',
+      avgPrice: '500-1300¥'
     },
     {
       slug: 'ringer-hut',
@@ -310,17 +393,9 @@ export default function ChainesPage() {
       name: 'Tenya',
       nameJp: 'てんや',
       category: 'Tempura',
-      description: 'Spécialiste du tendon (tempura sur riz) rapide et abordable.',      popularity: 'Populaire',
-      avgPrice: '500-900¥'
-    },
-    {
-      slug: 'miyamoto-munashi',
-      name: 'Miyamoto Munashi',
-      nameJp: '宮本むなし',
-      category: 'Teishoku',
-      description: 'Chaîne de teishoku économique d\'Osaka, réputée pour ses portions XXL à petit prix.',
+      description: 'Spécialiste du tendon (tempura sur riz) rapide et abordable.',
       popularity: 'Populaire',
-      avgPrice: '400-800¥'
+      avgPrice: '500-900¥'
     },
     {
       slug: 'torikizoku',
@@ -347,7 +422,8 @@ export default function ChainesPage() {
       category: 'Izakaya',
       description: 'Grande chaîne d\'izakaya avec formules à volonté et ambiance conviviale.',
       popularity: 'Populaire',
-      avgPrice: '2500-4000¥'    },
+      avgPrice: '2500-4000¥'
+    },
     {
       slug: 'yayoiken',
       name: 'Yayoiken',
@@ -367,33 +443,6 @@ export default function ChainesPage() {
       avgPrice: '300-600¥'
     },
     {
-      slug: 'fuji-soba',
-      name: 'Fuji Soba',
-      nameJp: '富士そば',
-      category: 'Soba',
-      description: 'Chaîne de nouilles soba traditionnelle de Tokyo, ouverte 24h/24, populaire auprès des salarymen.',
-      popularity: 'Populaire',
-      avgPrice: '300-700¥'
-    },
-    {
-      slug: 'gindako',
-      name: 'Gindako',
-      nameJp: '銀だこ',
-      category: 'Street Food',
-      description: 'Spécialiste des takoyaki authentiques d\'Osaka avec cuisson live et sauce secrète.',
-      popularity: 'Très populaire',
-      avgPrice: '480-800¥'
-    },
-    {
-      slug: 'hanamaru-udon',
-      name: 'Hanamaru Udon',
-      nameJp: 'はなまるうどん',
-      category: 'Udon',
-      description: 'Spécialiste des udon frais à prix abordables avec de nombreux toppings.',
-      popularity: 'Très populaire',
-      avgPrice: '200-500¥'
-    },
-    {
       slug: 'yudetaro',
       name: 'Yudetaro',
       nameJp: 'ゆで太郎',
@@ -401,15 +450,6 @@ export default function ChainesPage() {
       description: 'Chaîne moderne de soba proposant des nouilles artisanales à prix abordables avec service rapide.',
       popularity: 'Populaire',
       avgPrice: '300-600¥'
-    },
-    {
-      slug: 'komoro-soba',
-      name: 'Komoro Soba',
-      nameJp: '小諸そば',
-      category: 'Soba',
-      description: 'Expérience authentique tachi-gui (manger debout) avec soba traditionnel de style Shinshu.',
-      popularity: 'Modéré',
-      avgPrice: '290-550¥'
     }], []);
   const categories = [
     'Tous',
@@ -422,6 +462,7 @@ export default function ChainesPage() {
     'Hamburgers',
     'Italien',
     'Izakaya',
+    'Karaoke',
     'Ramen',
     'Restaurant Familial',
     'Soba',
