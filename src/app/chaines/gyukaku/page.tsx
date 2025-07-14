@@ -16,82 +16,86 @@ export const metadata: Metadata = {
 export default function GyukakuPage() {
   const menuItems = [
     {
-      category: "Kalbi Premium",
+      category: "Parties Premium (上級部位)",
       items: [
-        { name: "Kalbi Spécial", price: "¥1,580", description: "Côtes de bœuf marinées signature" },
-        { name: "Kalbi Premium", price: "¥1,980", description: "Qualité supérieure, coupe traditionnelle" },
-        { name: "Kalbi Harami Set", price: "¥2,380", description: "Combinaison kalbi et harami" }
+        { name: "Sankaku-bara (三角バラ)", price: "¥2,980", description: "Le 'Roi du Kalbi' - Persillé exceptionnel, fonte en bouche" },
+        { name: "Zabuton (ザブトン)", price: "¥3,480", description: "Épaule premium - Texture fondante comme du beurre" },
+        { name: "Misuji (ミスジ)", price: "¥2,680", description: "Trois nervures - Partie rare avec gélatine unique" },
+        { name: "Tan-moto (タン元)", price: "¥1,980", description: "Base de langue - La partie la plus tendre" }
       ]
     },
     {
-      category: "Harami Selection",
+      category: "Kalbi & Harami Classiques",
       items: [
-        { name: "Harami Classique", price: "¥1,280", description: "Onglet de bœuf tendre et savoureux" },
-        { name: "Harami Premium", price: "¥1,680", description: "Qualité premium, texture fondante" },
-        { name: "Harami Sauce Spéciale", price: "¥1,480", description: "Mariné dans la sauce maison" }
+        { name: "Kalbi Spécial", price: "¥1,580", description: "Côtes marinées dans la sauce signature Gyukaku" },
+        { name: "Harami Premium", price: "¥1,680", description: "Diaphragme - N°1 popularité au Japon" },
+        { name: "Kalbi Harami Set", price: "¥2,380", description: "Combinaison des deux favoris" },
+        { name: "Naka-ochi Kalbi", price: "¥1,280", description: "Viande entre les côtes - Saveur concentrée" }
       ]
     },
     {
-      category: "Formules & Courses",
+      category: "Hormone (ホルモン) - Abats d'Exception",
       items: [
-        { name: "Course Premium", price: "¥3,980", description: "Sélection de viandes premium + accompagnements" },
-        { name: "All-you-can-eat", price: "¥2,980", description: "Buffet à volonté 120 minutes" },
-        { name: "Family Set", price: "¥5,980", description: "Pour 3-4 personnes, viandes variées" }
+        { name: "Mino (ミノ)", price: "¥980", description: "Premier estomac - Texture croquante, idéal débutants" },
+        { name: "Shimacho (シマチョウ)", price: "¥1,280", description: "Gros intestin rayé - Roi des abats" },
+        { name: "Senmai (センマイ)", price: "¥880", description: "Troisième estomac - Mille feuilles, texture unique" },
+        { name: "Hatsu (ハツ)", price: "¥980", description: "Cœur - Goût pur, texture ferme" }
       ]
     },
     {
-      category: "Accompagnements",
+      category: "Formules & Courses Découverte",
       items: [
-        { name: "Kimchi Maison", price: "¥480", description: "Chou fermenté traditionnel" },
-        { name: "Salade Cesar", price: "¥680", description: "Fraîcheur pour équilibrer" },
-        { name: "Riz Coréen", price: "¥380", description: "Riz parfumé, accompagnement idéal" }
+        { name: "Course Wagyu Premium", price: "¥5,980", description: "Sélection de parties wagyu + accompagnements traditionnels" },
+        { name: "All-you-can-eat Premium", price: "¥3,980", description: "À volonté avec parties premium incluses" },
+        { name: "Hormone Dégustation", price: "¥2,980", description: "Découverte guidée des abats japonais" },
+        { name: "Débutant Discovery", price: "¥2,480", description: "Sélection adaptée aux novices avec guide de cuisson" }
       ]
     }
   ];
 
   const orderingSteps = [
     {
-      step: "1. Installation",
-      description: "Prise de place à une table avec grill intégré",
-      tip: "Demander une explication du système de grill si nécessaire"
+      step: "1. Installation & Préparation",
+      description: "Table avec grill intégré - Attendre 5min de chauffe avant utilisation",
+      tip: "Demander l'explication du système de 3 sauces (soja/miso/sel) disponibles"
     },
     {
-      step: "2. Commande",
-      description: "Sélection via menu papier avec photos détaillées",
-      tip: "Commencer par une sélection variée pour découvrir vos préférences"
+      step: "2. Stratégie de Commande",
+      description: "Menu avec photos détaillées - Suivre la 'Règle d'Or' yakiniku",
+      tip: "Commencer par Langue (sel) → Viandes rouges → Parties persillées → Abats"
     },
     {
-      step: "3. Cuisson",
-      description: "Grill personnel, cuisson maîtrisée par le client",
-      tip: "Viandes fines : 30-60 secondes par face, plus épaisses : 2-3 minutes"
+      step: "3. Maîtrise de la Cuisson",
+      description: "Technique 'une seule fois retournée' - Observer les sucs en surface",
+      tip: "Langue: 30-45 sec/face | Kalbi: 1-2 min/face | Wagyu: saignant recommandé"
     },
     {
-      step: "4. Service",
-      description: "Staff attentif pour renouveler grill et accompagnements",
-      tip: "N'hésitez pas à demander de l'aide pour la cuisson optimale"
+      step: "4. Étiquette & Sécurité",
+      description: "Pinces séparées crues/cuites - Partage convivial autour du grill",
+      tip: "JAMAIS les mêmes pinces ! Cuire pour les autres = courtoisie japonaise"
     }
   ];
 
   const specialties = [
     {
-      name: "🥩 Kalbi Premium",
-      description: "Côtes de bœuf marinées dans une sauce secrète alliant soja, mirin et épices coréennes",
-      cultural: "Le kalbi (갈비) est l'âme du yakiniku, hérité de la tradition culinaire coréenne"
+      name: "🥩 Anatomie Premium",
+      description: "Gyukaku maîtrise la découpe japonaise : 50+ parties d'une seule carcasse, chacune avec sa technique optimale",
+      cultural: "Application de la tradition 'bui-wake' (部位分け) - art de la découpe respectant chaque muscle"
     },
     {
-      name: "🍖 Harami Selection",
-      description: "Onglet de bœuf réputé pour sa tendreté et son goût intense, coupe favorite des connaisseurs",
-      cultural: "Le harami est considéré comme la 'perle cachée' du bœuf japonais"
+      name: "🔥 Trois Écoles de Sauce",
+      description: "Sauces Tare signature : Soja (viandes riches), Miso (abats), Sel (parties délicates) - alchimie des saveurs",
+      cultural: "Héritage de la culture coréenne adapté au palais japonais depuis 30 ans d'innovation"
     },
     {
-      name: "🔥 Expérience Grill",
-      description: "Tables équipées de grills haute performance pour une cuisson parfaite maîtrisée par le client",
-      cultural: "Philosophie du 'jibun de yaku' (griller soi-même) pour une expérience personnalisée"
+      name: "⚡ Technique 'Ichido-gaeshi'",
+      description: "Philosophie 'retourner une seule fois' - Patience et observation des sucs pour préserver les arômes",
+      cultural: "Zen culinaire : chaque geste compte, la précision prime sur la rapidité"
     },
     {
-      name: "🏮 Ambiance Moderne",
-      description: "Décor contemporain alliant tradition yakiniku et confort moderne japonais",
-      cultural: "Evolution du yakiniku traditionnel vers une expérience premium accessible"
+      name: "🏮 Hormone Revolution",
+      description: "Démocratisation des abats japonais - De 'hōrumon' (放るもん = 'ce qu'on jette') à délicatesse recherchée",
+      cultural: "Philosophie 'Mottainai' (もったいない) : transformer chaque partie en expérience gustative"
     }
   ];
 

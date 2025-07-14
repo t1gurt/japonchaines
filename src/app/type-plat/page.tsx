@@ -210,9 +210,9 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       id: "yakiniku",
       name: "Yakiniku",
       japanese: "焼肉",
-      description: "Barbecue japonais premium - L'art de griller en famille",
-      detailedDescription: "Le yakiniku incarne l'art japonais du barbecue, où la qualité de la viande rencontre la convivialité du partage. Cette expérience culinaire permet de griller soi-même des morceaux de bœuf premium dans une ambiance détendue et moderne.",
-      chains: ["Gyukaku"],
+      description: "Art gastronomique du gril - De la culture coréenne à l'excellence japonaise",
+      detailedDescription: "Le yakiniku transcende le simple barbecue pour devenir une expérience culinaire raffinée où chaque convive maîtrise la cuisson de morceaux de bœuf premium. Cette tradition issue de la culture coréenne s'est épanouie au Japon pour créer un art unique mêlant convivialité, précision technique et qualité exceptionnelle des viandes wagyu.",
+      chains: ["Gyukaku", "Anan"],
       color: "bg-red-700",
       icon: "🔥"
     },

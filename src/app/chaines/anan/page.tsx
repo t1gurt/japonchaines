@@ -16,86 +16,86 @@ export const metadata: Metadata = {
 export default function AnanPage() {
   const menuItems = [
     {
-      category: "Viandes Populaires",
+      category: "Sélection Expertisée",
       items: [
-        { name: "Kalbi Standard", price: "¥480", description: "Côtes de bœuf marinées, le classique abordable" },
-        { name: "Harami", price: "¥580", description: "Onglet de bœuf tendre et savoureux" },
-        { name: "Butabara", price: "¥380", description: "Poitrine de porc grillée au charbon" },
-        { name: "Tori Momo", price: "¥350", description: "Cuisse de poulet juteuse" }
+        { name: "Kalbi Classique", price: "¥480", description: "Côtes de bœuf - découpe 'bui-wake' respectant chaque muscle, sauce tare 3 générations" },
+        { name: "Harami Premium", price: "¥580", description: "Onglet横隔膜 - Champion popularité, équilibre parfait viande rouge/graisse interne" },
+        { name: "Tan Salé", price: "¥680", description: "Langue de bœuf - Rituel d'ouverture yakiniku, cuisson 'ichido-gaeshi' recommandée" },
+        { name: "Sankaku-bara", price: "¥880", description: "Triangle de poitrine - 'Roi du kalbi', découpe triangulaire 1ère-6ème côte, savoir rare" }
       ]
     },
     {
-      category: "Formules à Volonté",
+      category: "Exploration Hormone",
       items: [
-        { name: "Tabehōdai Standard", price: "¥1,980", description: "Buffet viandes + légumes 90 minutes" },
-        { name: "Tabehōdai Premium", price: "¥2,980", description: "Sélection élargie + boissons incluses" },
-        { name: "Lunch Buffet", price: "¥1,480", description: "Formule déjeuner économique" },
-        { name: "Kids Set", price: "¥980", description: "Menu enfant avec dessert" }
+        { name: "Marucho Mix", price: "¥580", description: "Assortiment abats - De 'hōrumon' (放るもん = jeté) à délicatesse, philosophie Mottainai" },
+        { name: "Shimacho", price: "¥480", description: "Gros intestin - Texture unique, cuisson maîtrisée pour révéler les sucs naturels" },
+        { name: "Mino", price: "¥380", description: "Estomac premier - Texture ferme, introduction parfaite au monde des abats" },
+        { name: "Hatsu", price: "¥420", description: "Cœur de bœuf - Muscle pur, goût authentique sans artifice" }
       ]
     },
     {
-      category: "Légumes & Accompagnements",
+      category: "Formules Découverte",
       items: [
-        { name: "Yasai Moriawase", price: "¥480", description: "Assortiment de légumes de saison" },
-        { name: "Kimchi", price: "¥380", description: "Chou fermenté traditionnel maison" },
-        { name: "Namul Set", price: "¥450", description: "Trio de légumes marinés coréens" },
-        { name: "Wakame Soup", price: "¥280", description: "Soupe d'algues réconfortante" }
+        { name: "Tabehōdai Initiation", price: "¥1,980", description: "12 parties bovines + légumes + découverte hormone - 90 minutes d'exploration" },
+        { name: "Tabehōdai Connaisseur", price: "¥2,980", description: "25 parties incluant coupes rares + boissons + guide dégustation intégré" },
+        { name: "Lunch Tradition", price: "¥1,480", description: "Menu découverte midi - 6 coupes essentielles + initiation aux sauces tare" },
+        { name: "Parcours Famille", price: "¥980", description: "Enfants 12 ans - Introduction ludique yakiniku + dessert japonais" }
       ]
     },
     {
-      category: "Boissons",
+      category: "Accompagnements Expertise",
       items: [
-        { name: "Beer Jockey", price: "¥480", description: "Bière pression grande taille" },
-        { name: "Nomihodai", price: "¥1,480", description: "Boissons à volonté 120 minutes" },
-        { name: "Soft Drinks", price: "¥280", description: "Sodas, thé glacé, café" },
-        { name: "Makgeolli", price: "¥580", description: "Alcool de riz coréen traditionnel" }
+        { name: "Yasai Saison", price: "¥480", description: "Légumes saisonniers - Équilibre gustatif, nettoyage palais entre morceaux" },
+        { name: "Kimchi Artisanal", price: "¥380", description: "Chou fermenté maison - Probiotiques, aide digestion graisses, tradition millénaire" },
+        { name: "Namul Trio", price: "¥450", description: "Légumes marinés coréens - Épinards, pousses soja, radis, préparation traditionnelle" },
+        { name: "Kombu Dashi", price: "¥280", description: "Bouillon algues - Nettoyage palais, umami naturel, fin de repas traditionnelle" }
       ]
     }
   ];
 
   const orderingSteps = [
     {
-      step: "1. Installation",
-      description: "Table avec grille au charbon de bois (shichirin) intégrée",
-      tip: "Le charbon met quelques minutes à chauffer - patience récompensée !"
+      step: "1. Rituel d'Installation",
+      description: "Table avec shichirin (七輪) authentique - charbon binchotan traditionnel",
+      tip: "Respecter les 5-8 minutes de chauffe - le charbon parfait révèle ses braises orangées"
     },
     {
-      step: "2. Commande",
-      description: "Menu papier simple avec photos et prix clairs",
-      tip: "Commencer par la formule à volonté si vous avez faim"
+      step: "2. Stratégie de Commande",
+      description: "Menu éducatif avec anatomie bovine - débuter par progression 'tan → harami → kalbi'",
+      tip: "Ordre expert : parties délicates d'abord, graisses riches en fin pour protéger les papilles"
     },
     {
-      step: "3. Grillade",
-      description: "Cuisson au charbon de bois pour un goût authentique",
-      tip: "Viandes fines : 1-2 minutes, plus épaisses : 3-4 minutes par face"
+      step: "3. Maîtrise de Cuisson",
+      description: "Technique 'ichido-gaeshi' - retourner une seule fois, observer les sucs qui remontent",
+      tip: "Viandes rouges : ¥80% surface, Hormone : saisir peau d'abord, intérieur juste tiède"
     },
     {
-      step: "4. Service",
-      description: "Atmosphere décontractée, service efficace et amical",
-      tip: "N'hésitez pas à demander du charbon supplémentaire"
+      step: "4. Étiquette Yakiniku",
+      description: "Service communautaire - griller pour autrui, pinces séparées cru/cuit",
+      tip: "Anan cultive l'esprit populaire : détente assumée, apprentissage par l'expérience"
     }
   ];
 
   const specialties = [
     {
-      name: "🔥 Shichirin Authentique",
-      description: "Cuisson au charbon de bois traditionnel pour un goût fumé incomparable et une expérience authentique",
-      cultural: "Le shichirin (七輪) est le grill traditionnel japonais qui donne son caractère unique au yakiniku"
+      name: "🔥 Héritage Shichirin Populaire",
+      description: "Cuisson charbon binchotan - Démocratisation de l'art traditionnel 七輪, flamme infrarouge sublimant les fibres",
+      cultural: "Anan préserve l'âme yakiniku : le shichirin démocratisé sans compromise sur l'authenticité technique"
     },
     {
-      name: "💰 Prix Accessibles",
-      description: "Philosophie 'Yasukute Umai' (安くて旨い) - bon marché et délicieux pour démocratiser le yakiniku",
-      cultural: "Anan brise les codes du yakiniku premium pour le rendre accessible à tous les japonais"
+      name: "🥩 École de Découpe Accessible",
+      description: "Application 'bui-wake' (部位分け) 50+ parties d'une carcasse - Anatomie bovine enseignée par l'assiette",
+      cultural: "Révolution Anan : rendre l'expertise des maîtres bouchers accessible au grand public japonais"
     },
     {
-      name: "🍖 Sélection Globale",
-      description: "Viandes sélectionnées mondialement pour offrir qualité et fraîcheur à prix réduits",
-      cultural: "Approche moderne du sourcing international appliquée à la tradition yakiniku"
+      name: "� Trilogie Tare Héritée",
+      description: "Sauces signature 3 écoles : Soja (viandes riches), Miso (abats complexes), Sel (parties délicates)",
+      cultural: "30 ans d'adaptation coréenne au palais japonais - alchimie des saveurs transmise par générations"
     },
     {
-      name: "🏮 Ambiance Populaire",
-      description: "Atmosphere détendue et conviviale où familles et amis partagent des moments chaleureux",
-      cultural: "Incarnation du yakiniku de quartier, accessible et sans prétention"
+      name: "♻️ Philosophie Mottainai Appliquée",
+      description: "De 'hōrumon' (放るもん = jeté) à délicatesse - Transformation complète de chaque partie bovine",
+      cultural: "Esprit anti-gaspillage japonais : chaque muscle, chaque abat devient expérience gustative recherchée"
     }
   ];
 

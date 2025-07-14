@@ -66,22 +66,23 @@ export default function YakinikuCulturePage() {
             {/* Introduction */}
             <section className="mb-8">
               <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-lg border border-red-200 mb-6">
-                <h2 className="text-2xl font-bold text-red-800 mb-4">Bienvenue dans l'univers du YAKINIKU</h2>
+                <h2 className="text-2xl font-bold text-red-800 mb-4">L'Art de la Découpe 'Bui-wake' (部位分け)</h2>
                 <p className="text-lg text-red-700 leading-relaxed">
-                  Le yakiniku japonais dépasse largement le simple concept de "viande grillée". C'est une 
-                  <strong> expérience gastronomique interactive et conviviale</strong> où les convives deviennent 
-                  les chefs de leur propre repas, transformant chaque bouchée en moment de partage autour d'une 
-                  flamme commune. Comparable à l'esprit de <em>convivialité</em> du barbecue français ou de la 
-                  fondue, le yakiniku incarne une philosophie unique du <strong>partage et de la communion</strong>.
+                  Le yakiniku révèle la <strong>génie anatomique japonais</strong> : transformer une carcasse bovine 
+                  en 50+ parties distinctes, chacune avec sa technique optimale de cuisson et son profil gustatif unique. 
+                  Cette art millénaire de la <em>bui-wake</em> (部位分け) - littéralement "division par parties" - 
+                  représente l'évolution de la <strong>philosophie Mottainai</strong> (もったいない) appliquée à la 
+                  gastronomie : transformer chaque fibre musculaire en expérience gustative recherchée, 
+                  de l'hormone jadis "hōrumon" (放るもん = jeté) aux délicatesses premium.
                 </p>
               </div>
               
               <p className="text-gray-700 mb-4">
-                Contrairement aux barbecues européens qui privilégient souvent de gros morceaux de viande 
-                cuits à l'extérieur, le yakiniku se concentre sur des <strong>tranches fines et délicates</strong> 
-                de viande de haute qualité, cuites avec précision sur des grils individuels. Cette approche 
-                permet de révéler le <strong>potentiel maximal de chaque morceau</strong>, créant une harmonie 
-                parfaite entre texture, saveur et technique culinaire.
+                Au-delà de la simple grillage, le yakiniku moderne s'apparente à un <strong>"voyage d'exploration 
+                anatomique"</strong> où chaque bouchée révèle la complexité d'un terroir bovin. Cette approche 
+                scientifique de la découpe - héritée des maîtres bouchers <em>gyūniku-ya</em> - permet de révéler 
+                des textures et saveurs impossibles à obtenir par d'autres méthodes de cuisson, créant une 
+                <strong>cartographie gustative</strong> de l'animal entier.
               </p>
             </section>
 
@@ -108,12 +109,12 @@ export default function YakinikuCulturePage() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 mb-3">🥩 Spécificités Japonaises</h4>
+                    <h4 className="font-bold text-gray-900 mb-3">🥩 Maîtrise Anatomique Japonaise</h4>
                     <ul className="space-y-2 text-sm text-blue-700">
-                      <li>• <strong>Tranches ultra-fines</strong> - Précision du découpage</li>
-                      <li>• <strong>Viandes premium</strong> - Qualité exceptionnelle</li>
-                      <li>• <strong>Cuisson individuelle</strong> - Contrôle personnel</li>
-                      <li>• <strong>Sauces complexes</strong> - Fermentation japonaise</li>
+                      <li>• <strong>50+ parties distinctes</strong> - Précision de la découpe bui-wake</li>
+                      <li>• <strong>Hiérarchie gustative</strong> - Sankaku-bara (roi) → Zabuton (premium)</li>
+                      <li>• <strong>Hormone revolution</strong> - De déchet à délicatesse recherchée</li>
+                      <li>• <strong>Trilogie Tare</strong> - Soja, Miso, Sel selon profil muscle</li>
                     </ul>
                   </div>
                 </div>
