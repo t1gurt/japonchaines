@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowLeft, Book, Utensils, Heart, Globe, ChefHat, HelpCircle, Brain } from 'lucide-react';
+import { ArrowLeft, Book, Utensils, Heart, Globe, ChefHat, HelpCircle, Brain, Wine } from 'lucide-react';
 import GuideViewTracker from '../../components/GuideViewTracker';
 
 export default function GuidesPage() {  const guides = [
@@ -91,6 +91,21 @@ export default function GuidesPage() {  const guides = [
         'Étiquette au restaurant',
         'Traditions culinaires',
         'Expressions courantes'
+      ]
+    },
+    {
+      id: 'boissons-japonaises',
+      title: 'Guide des Boissons Japonaises',
+      subtitle: 'L\'art de boire au Japon',
+      description: 'Guide complet des boissons japonaises : saké, shochu, whisky japonais, bière. Culture, étiquette et accords parfaits pour une expérience authentique.',
+      icon: Wine,
+      color: 'purple',
+      available: true,
+      highlights: [
+        'Saké : classifications et températures',
+        'Shochu et whisky japonais',
+        'Étiquette et culture du service',
+        'Accords mets-boissons experts'
       ]
     },
     {
