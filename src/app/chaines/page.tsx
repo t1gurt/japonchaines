@@ -173,6 +173,15 @@ export default function ChainesPage() {
       avgPrice: '800-1200¥'
     },
     {
+      slug: 'isomaru-suisan',
+      name: 'Isomaru Suisan',
+      nameJp: '磯丸水産',
+      category: 'Izakaya',
+      description: 'Izakaya révolutionnaire avec grill de table pour fruits de mer frais - ambiance maritime conviviale.',
+      popularity: 'Très populaire',
+      avgPrice: '1000-4000¥'
+    },
+    {
       slug: 'ikinari-steak',
       name: 'Ikinari Steak',
       nameJp: 'いきなりステーキ',

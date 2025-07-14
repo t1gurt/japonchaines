@@ -23,6 +23,7 @@ export const restaurantChains = [
   'hidakaya',
   'hoshino',
   'ichiran',
+  'isomaru-suisan',
   'ikinari-steak',
   'ippudo',
   'jolly-pasta',

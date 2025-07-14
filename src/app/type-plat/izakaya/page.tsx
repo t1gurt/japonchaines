@@ -3,6 +3,20 @@ import Link from "next/link";
 export default function IzakayaPage() {
   const izakayaChains = [
     {
+      name: "Isomaru Suisan",
+      japanese: "磯丸水産",
+      englishName: "Isomaru Suisan",
+      description: "Izakaya révolutionnaire recréant l'ambiance d'une 'maison de la mer' en ville. Grillez vous-même des fruits de mer ultra-frais sur votre table.",
+      specialties: ["Hamayaki", "Kani Miso Kōra Yaki", "Hotate", "Kaisendon"],
+      priceRange: "¥1000-4000",
+      style: "Fruits de mer interactif",
+      orderingMethod: "Tablette tactile multilingue",
+      atmosphere: "Convivial, maritime",
+      uniqueFeatures: ["Grill de table", "Fruits de mer vivants", "Ouvert 24h/24"],
+      ageGroup: "Tous âges, groupes",
+      href: "/chaines/isomaru-suisan"
+    },
+    {
       name: "Torikizoku",
       japanese: "鳥貴族",
       englishName: "Torikizoku",
