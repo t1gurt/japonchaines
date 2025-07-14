@@ -92,6 +92,15 @@ export default function ChainesPage() {
       avgPrice: '300-700¥'
     },
     {
+      slug: 'futago',
+      name: 'Futago',
+      nameJp: 'ふたご',
+      category: 'Yakiniku',
+      description: 'Révolution du yakiniku premium d\'Osaka avec le légendaire "Hasami-deru Kalbi" et service "jusqu\'à la bouche".',
+      popularity: 'Populaire',
+      avgPrice: '3000-5000¥'
+    },
+    {
       slug: 'gindako',
       name: 'Gindako',
       nameJp: '銀だこ',

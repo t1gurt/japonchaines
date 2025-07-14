@@ -38,6 +38,20 @@ export default function YakinikuPage() {
       href: "/chaines/gyukaku"
     },
     {
+      name: "Futago",
+      japanese: "ふたご",
+      englishName: "Futago",
+      description: "Révolution du yakiniku premium d'Osaka avec le légendaire 'Hasami-deru Kalbi' et service 'jusqu'à la bouche'.",
+      specialties: ["Hasami-deru Kalbi", "Hormone gastronomique", "Service premium", "Quantité moitié/Prix moitié"],
+      priceRange: "¥3000-5000",
+      style: "Yakiniku premium entertainment",
+      orderingMethod: "Service complet par le staff",
+      vegetarianOptions: "Légumes premium, accompagnements traditionnels",
+      uniqueFeatures: ["Entertainment culinaire", "Hasmi-deru spectacle", "Service jusqu'à la bouche"],
+      cuisine: "Yakiniku Premium/Hormone",
+      href: "/chaines/futago"
+    },
+    {
       name: "Anan",
       japanese: "安安",
       englishName: "Anan",
