@@ -43,6 +43,7 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       'izakaya': '/type-plat/izakaya',
       'teishoku': '/type-plat/teishoku',
       'cafe': '/type-plat/cafe',
+      'okonomiyaki': '/type-plat/okonomiyaki',
       'street-food': '/type-plat/street-food',
       'steak': '/type-plat/steak',
       'yakiniku': '/type-plat/yakiniku',
@@ -53,7 +54,7 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
   };
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'street-food', 'steak', 'yakiniku', 'karaoke'];
+    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'okonomiyaki', 'street-food', 'steak', 'yakiniku', 'karaoke'];
     return implementedIds.includes(id);
   };
 
@@ -185,6 +186,16 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       chains: ["Komeda Coffee"],
       color: "bg-amber-700",
       icon: "☕"
+    },
+    {
+      id: "okonomiyaki",
+      name: "Okonomiyaki",
+      japanese: "お好み焼き",
+      description: "La 'pizza japonaise' d'Osaka - Invention culinaire révolutionnaire",
+      detailedDescription: "L'okonomiyaki, littéralement 'grillé comme vous l'aimez', est l'âme culinaire d'Osaka. Cette galette à base de chou et pâte spéciale, inventée avec mayonnaise et Modan-yaki par les pionniers comme Botejyu, incarne la créativité et convivialité osakienne.",
+      chains: ["Botejyu"],
+      color: "bg-red-600",
+      icon: "🥞"
     },
     {
       id: "street-food",
