@@ -32,6 +32,7 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
   const getImplementationPath = (id: string) => {    const implementedPages: { [key: string]: string } = {
       'gyudon': '/type-plat/gyudon',
       'ramen': '/type-plat/ramen', 
+      'aburasoba': '/type-plat/aburasoba',
       'kaiten-zushi': '/type-plat/kaiten-zushi',
       'curry': '/type-plat/curry',
       'tempura': '/type-plat/tempura',
@@ -54,7 +55,7 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
   };
   // Fonction pour vérifier si une page est implémentée
   const isImplemented = (id: string) => {
-    const implementedIds = ['gyudon', 'ramen', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'okonomiyaki', 'street-food', 'steak', 'yakiniku', 'karaoke'];
+    const implementedIds = ['gyudon', 'ramen', 'aburasoba', 'kaiten-zushi', 'curry', 'tempura', 'udon', 'soba', 'family-restaurants', 'burgers', 'cuisine-chinoise', 'izakaya', 'teishoku', 'cafe', 'okonomiyaki', 'street-food', 'steak', 'yakiniku', 'karaoke'];
     return implementedIds.includes(id);
   };
 
@@ -78,7 +79,18 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       chains: ["Ichiran", "Ippudo", "Tenkaippin"],
       color: "bg-orange-500",
       icon: "🍜"
-    },    {
+    },
+    {
+      id: "aburasoba",
+      name: "Abura Soba",
+      japanese: "油そば",
+      description: "Nouilles sans bouillon, mélangées à une sauce concentrée et huile parfumée",
+      detailedDescription: "L'abura soba est une spécialité de Tokyo née dans les années 1950. Paradoxalement plus sain qu'un ramen classique, ce plat transforme le mangeur en chef cuisinier qui mélange lui-même les ingrédients.",
+      chains: ["Tokyo Abura-gumi", "Ganso Aburado"],
+      color: "bg-amber-500",
+      icon: "🍜"
+    },
+    {
       id: "kaiten-zushi",
       name: "Kaiten-zushi",
       japanese: "回転寿司",
