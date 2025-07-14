@@ -38,6 +38,15 @@ export default function ChainesPage() {
       avgPrice: '1500-3500¥'
     },
     {
+      slug: 'botejyu',
+      name: 'Botejyu',
+      nameJp: 'ぼてぢゅう',
+      category: 'Okonomiyaki',
+      description: 'L\'inventeur légendaire du okonomiyaki avec mayonnaise et créateur du Modan-yaki depuis 1946.',
+      popularity: 'Populaire',
+      avgPrice: '800-1800¥'
+    },
+    {
       slug: 'coco-ichibanya',
       name: 'CoCo Ichibanya',
       nameJp: 'CoCo壱番屋',
@@ -472,6 +481,7 @@ export default function ChainesPage() {
     'Italien',
     'Izakaya',
     'Karaoke',
+    'Okonomiyaki',
     'Ramen',
     'Restaurant Familial',
     'Soba',
