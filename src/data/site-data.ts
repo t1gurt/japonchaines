@@ -13,6 +13,7 @@ export const restaurantChains = [
   'doutor',
   'freshness-burger',
   'fuji-soba',
+  'futago',
   'gindako',
   'go-go-curry',
   'gusto',
