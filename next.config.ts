@@ -15,7 +15,8 @@ const nextConfig: NextConfig = {
   },
   assetPrefix: basePath,
   basePath: basePath,
-  distDir: 'docs',
+  // 開発時は通常の.nextディレクトリ、本番ビルド時のみdocsディレクトリを使用
+  distDir: process.env.NODE_ENV === 'production' ? 'docs' : '.next',
   // SEO最適化のための設定
   generateEtags: false,
   poweredByHeader: false,
