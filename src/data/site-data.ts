@@ -39,7 +39,9 @@ export const restaurantChains = [
   'matsuya',
   'miyamoto-munashi',
   'mos-burger',
+  'nakau',
   'ootoya',
+  'osaka-ohsho',
   'ringer-hut',
   'saizeriya',
   'shirokiya',
@@ -97,6 +99,8 @@ export const staticPages = [
   '/guides/articles/comparatif-gyudon',
   '/guides/articles/histoire-ramen',
   '/guides/articles/secrets-dashi',
+  '/guides/comprendre-culture-japonaise',
+  '/guides/boissons-japonaises',
   '/a-propos',
   '/contact',
 ];
