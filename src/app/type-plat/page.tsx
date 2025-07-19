@@ -79,7 +79,8 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       detailedDescription: "Les ramen sont des nouilles de blé servies dans un bouillon chaud, garnis de porc, légumes, œufs et autres ingrédients. Chaque région et chaîne a ses propres variations de bouillon et garnitures.",
       chains: ["Ichiran", "Ippudo", "Tenkaippin"],
       color: "bg-orange-500",
-      icon: "🍜"
+      icon: "🍜",
+      bgImage: "/images/chaines/ippudo/shiromaru-motoaji.jpg"
     },
     {
       id: "aburasoba",
@@ -288,9 +289,21 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
             {cuisineTypes.map((cuisine) => (              <Link 
                 key={cuisine.id}
                 href={getImplementationPath(cuisine.id)}
-                className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-red-200 overflow-hidden"
+                className="group relative overflow-hidden bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-red-200"
+                style={cuisine.bgImage ? {
+                  backgroundImage: `url('${cuisine.bgImage}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                } : {}}
               >
-                <div className={`${cuisine.color} h-2`}></div>                <div className="p-6">
+                {cuisine.bgImage && (
+                  <div 
+                    className="absolute inset-0 group-hover:opacity-75 transition-all duration-300"
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  ></div>
+                )}
+                <div className={`${cuisine.color} h-2 relative z-10`}></div>                <div className="p-6 relative z-10">
                   {isImplemented(cuisine.id) && (
                     <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-3 inline-block">
                       ✅ Page disponible
@@ -299,32 +312,32 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
                   <div className="flex items-center mb-4">
                     <div className="text-3xl mr-3">{cuisine.icon}</div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-red-600 transition-colors">
+                      <h3 className={`text-xl font-bold transition-colors ${cuisine.bgImage ? 'text-white group-hover:text-red-200' : 'text-gray-900 group-hover:text-red-600'}`}>
                         {cuisine.name}
                       </h3>
-                      <p className="text-sm text-gray-600 japanese-text">
+                      <p className={`text-sm japanese-text ${cuisine.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>
                         {cuisine.japanese}
                       </p>
                     </div>
                   </div>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-2">
+                  <p className={`mb-4 line-clamp-2 ${cuisine.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>
                     {cuisine.description}
                   </p>
                   
                   <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">Chaînes populaires :</h4>
+                    <h4 className={`text-sm font-semibold mb-2 ${cuisine.bgImage ? 'text-white' : 'text-gray-900'}`}>Chaînes populaires :</h4>
                     <div className="flex flex-wrap gap-2">
                       {cuisine.chains.slice(0, 3).map((chain) => (
                         <span 
                           key={chain}
-                          className="bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded-full"
+                          className={`text-xs px-2 py-1 rounded-full ${cuisine.bgImage ? 'bg-black bg-opacity-40 text-white' : 'bg-gray-100 text-gray-700'}`}
                         >
                           {chain}
                         </span>
                       ))}
                       {cuisine.chains.length > 3 && (
-                        <span className="text-gray-500 text-xs">
+                        <span className={`text-xs ${cuisine.bgImage ? 'text-gray-300' : 'text-gray-500'}`}>
                           +{cuisine.chains.length - 3} autres
                         </span>
                       )}
@@ -332,7 +345,7 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
                   </div>
                   
                   <div className="flex items-center justify-between">
-                    <span className="text-red-600 font-medium text-sm group-hover:text-red-700">
+                    <span className={`font-medium text-sm transition-colors ${cuisine.bgImage ? 'text-red-200 group-hover:text-white' : 'text-red-600 group-hover:text-red-700'}`}>
                       Découvrir →
                     </span>
                   </div>

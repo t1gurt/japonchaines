@@ -238,7 +238,8 @@ export default function ChainesPage() {
       category: 'Ramen',
       description: 'Ramen tonkotsu haut de gamme originaire de Hakata (Fukuoka).',
       popularity: 'Populaire',
-      avgPrice: '900-1500¥'
+      avgPrice: '900-1500¥',
+      bgImage: '/images/chaines/ippudo/shiromaru-motoaji.jpg'
     },
     {
       slug: 'jolly-pasta',
@@ -638,16 +639,28 @@ export default function ChainesPage() {
             <Link
               key={chain.slug}
               href={`/chaines/${chain.slug}`}
-              className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200"
+              className="bg-white rounded-lg shadow-sm border border-gray-200 hover:shadow-md transition-shadow duration-200 overflow-hidden relative"
+              style={chain.bgImage ? {
+                backgroundImage: `url('${chain.bgImage}')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              } : {}}
             >
-              <div className="p-6">
+              {chain.bgImage && (
+                <div 
+                  className="absolute inset-0 hover:opacity-75 transition-all duration-300"
+                  style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                ></div>
+              )}
+              <div className="p-6 relative z-10">
                 {/* Header with popularity badge */}
                 <div className="flex justify-between items-start mb-3">
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                    <h3 className={`text-xl font-semibold mb-1 ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>
                       {chain.name}
                     </h3>
-                    <p className="text-sm text-gray-500 japanese-text">
+                    <p className={`text-sm japanese-text ${chain.bgImage ? 'text-gray-200' : 'text-gray-500'}`}>
                       {chain.nameJp}
                     </p>
                   </div>
@@ -659,23 +672,23 @@ export default function ChainesPage() {
 
                 {/* Category */}
                 <div className="mb-3">
-                  <span className="inline-block bg-red-50 text-red-700 px-3 py-1 rounded-full text-sm font-medium">
+                  <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${chain.bgImage ? 'bg-black bg-opacity-40 text-white' : 'bg-red-50 text-red-700'}`}>
                     {chain.category}
                   </span>
                 </div>
 
                 {/* Description */}
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                <p className={`text-sm mb-4 line-clamp-2 ${chain.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>
                   {chain.description}
                 </p>
 
                 {/* Price info */}
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center text-sm text-gray-500">
+                  <div className={`flex items-center text-sm ${chain.bgImage ? 'text-gray-300' : 'text-gray-500'}`}>
                     <MapPin className="w-4 h-4 mr-1" />
                     <span>Prix moyen</span>
                   </div>
-                  <span className="text-sm font-semibold text-gray-900">
+                  <span className={`text-sm font-semibold ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>
                     {chain.avgPrice}
                   </span>                </div>
               </div>
