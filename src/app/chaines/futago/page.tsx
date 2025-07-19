@@ -3,14 +3,26 @@ import Link from 'next/link';
 import ChainViewTracker from '@/components/ChainViewTracker';
 
 export const metadata: Metadata = {
-  title: 'Futago (ふたご) - Yakiniku Premium Osaka | Restaurant Japonais Guide',
-  description: 'Découvrez Futago, la révolution du yakiniku premium d\'Osaka. Spécialité: "hasami-deru kalbi" (カルビはみ出る), hormone d\'exception et service "jusqu\'à la bouche".',
-  keywords: 'Futago, ふたご, yakiniku premium, hasami-deru kalbi, hormone, horumon, Osaka yakiniku, restaurant japonais, barbecue japonais premium',
+  title: 'Futago ふたご | Yakiniku Premium Osaka | Japonchaines',
+  description: 'Révolution yakiniku Osaka. "Hasami-deru Kalbi", service premium, hormone d\'exception.',
+  keywords: [
+    'futago', 'ふたご', 'yakiniku premium', 'hasami-deru kalbi', 'hormone',
+    'osaka yakiniku', 'restaurant japonais', 'barbecue japonais premium',
+    'service premium', 'revolution yakiniku'
+  ],
   openGraph: {
-    title: 'Futago - Yakiniku Premium d\'Osaka',
-    description: 'L\'expérience yakiniku réinventée : des viandes premium qui débordent du grill et un service exceptionnel "jusqu\'à la bouche".',
-    type: 'article'
-  }
+    title: 'Futago : Le Yakiniku d\'Osaka Révolutionnaire | Japonchaines',
+    description: 'Guide du restaurant Futago. Découvrez le "Hasami-deru Kalbi" qui déborde du grill et le service "jusqu\'à la bouche".',
+    type: 'article',
+    url: '/chaines/futago',
+  },
+  alternates: {
+    canonical: '/chaines/futago',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function FutagoPage() {

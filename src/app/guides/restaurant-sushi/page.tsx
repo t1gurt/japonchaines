@@ -3,13 +3,21 @@ import { ArrowLeft, Fish, MapPin, Clock, Award, Utensils, DollarSign, Users, Che
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Guide Complet des Restaurants Sushi au Japon - Chain Japanese Restaurants',
-  description: 'Guide exhaustif des meilleurs restaurants sushi au Japon : kaiten-zushi, restaurants traditionnels, et chaînes modernes. Conseils pratiques pour choisir le bon restaurant sushi.',
+  title: 'Restaurants Sushi Japon | Kaiten Traditionnel | Japonchaines',
+  description: 'Choisir restaurant sushi : kaiten-zushi (Sushiro), sushi-ya traditionnels, chaînes.',
   keywords: 'restaurant sushi, sushi japon, kaiten-zushi, restaurant japonais, guide sushi, sushiro, kura sushi, hama sushi',
   openGraph: {
-    title: 'Guide Complet des Restaurants Sushi au Japon',
-    description: 'Découvrez les meilleurs restaurants sushi du Japon avec notre guide complet',
+    title: 'Guide des Restaurants Sushi au Japon : Kaiten, Traditionnel | Japonchaines',
+    description: 'Comment choisir votre restaurant sushi au Japon ? Guide complet des kaiten-zushi, sushi-ya traditionnels et chaînes modernes.',
     type: 'article',
+    url: '/guides/restaurant-sushi',
+  },
+  alternates: {
+    canonical: '/guides/restaurant-sushi',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

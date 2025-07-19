@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Ringer Hut (リンガーハット) | Ramen | Guide Restaurants Japonais',
-  description: 'Guide complet de Ringer Hut - Spécialiste du chanpon de Nagasaki avec légumes frais et bouillon savoureux. Ramen fusion japonais unique.',
+  title: "Ringer Hut リンガーハット | Champon Nagasaki | Japonchaines",
+  description: "Spécialiste champon Nagasaki. Légumes frais, bouillon unique, nouilles riches.",
   keywords: [
     'ringer hut', 'リンガーハット', 'chanpon', 'nagasaki chanpon',
     'ramen légumes', 'bouillon savoureux', 'cuisine nagasaki',
     'légumes frais', 'ramen fusion', 'spécialité kyushu'
   ],
   openGraph: {
-    title: 'Ringer Hut (リンガーハット) | Chanpon de Nagasaki',
-    description: 'Découvrez Ringer Hut, spécialiste du chanpon de Nagasaki avec légumes frais et bouillon savoureux',
+    title: "Ringer Hut リンガーハット | Champon Nagasaki | Japonchaines",
+    description: "Spécialiste champon Nagasaki. Légumes frais, bouillon unique, nouilles riches.",
     type: 'article',
-    url: '/chaines/ringer-hut',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/ringer-hut',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

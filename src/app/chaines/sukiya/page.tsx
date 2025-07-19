@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sukiya (すき家) | Gyudon | Guide Restaurants Japonais',
-  description: 'Guide complet de Sukiya - Leader du gyudon avec le plus grand réseau au Japon et menu diversifié 24h/24. Menu détaillé, prix et conseils pratiques.',
+  title: "Sukiya すき家 | Gyudon N°1 | Japonchaines",
+  description: "Plus grande chaîne gyudon. Menu varié (curry, fruits mer), service 24h familial.",
   keywords: [
-    'sukiya', 'すき家', 'gyudon', 'leader gyudon',
-    'plus grand réseau', 'menu diversifié', 'service 24h',
+    'sukiya', 'すき家', 'gyudon', 'plus grande chaîne',
+    'leader gyudon', 'menu varié', 'service 24h',
     'bœuf riz', 'restauration rapide', 'japon gyudon'
   ],
   openGraph: {
-    title: 'Sukiya (すき家) | Leader du Gyudon au Japon',
-    description: 'Découvrez Sukiya, le leader du gyudon avec le plus grand réseau de restaurants au Japon',
+    title: "Sukiya すき家 | Gyudon N°1 | Japonchaines",
+    description: "Plus grande chaîne gyudon. Menu varié (curry, fruits mer), service 24h familial.",
     type: 'article',
-    url: '/chaines/sukiya',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/sukiya',

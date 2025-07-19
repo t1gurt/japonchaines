@@ -1,5 +1,26 @@
 import Link from "next/link";
 import ChainViewTracker from "../../../components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Komoro Soba : Le Soba Authentique de Shinshu | Japonchaines',
+  description: 'Découvrez Komoro Soba et son expérience tachi-gui (manger debout). Des nouilles de sarrasin de Shinshu servies avec tradition et rapidité.',
+  keywords: 'komoro soba, soba debout, tachi-gui, shinshu soba, soba traditionnel, nouilles sarrasin, fast food japonais traditionnel',
+  openGraph: {
+    title: 'Komoro Soba : Le Soba Authentique de Shinshu | Japonchaines',
+    description: 'Découvrez Komoro Soba et son expérience tachi-gui (manger debout). Des nouilles de sarrasin de Shinshu servies avec tradition et rapidité.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/chaines/komoro-soba'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function KomoroSobaPage() {
   const menuCategories = [

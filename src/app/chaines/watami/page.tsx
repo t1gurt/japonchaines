@@ -4,16 +4,16 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Watami (ワタミ) | Izakaya | Guide Restaurants Japonais',
-  description: 'Guide complet de Watami - Chaîne d\'izakaya populaire avec menu varié et ambiance conviviale. Plats traditionnels japonais et boissons à prix raisonnables.',
+  title: 'Watami ワタミ | Izakaya Responsable | Japonchaines',
+  description: 'Izakaya fermes bio propres. Menu varié, ambiance familiale, engagement qualité.',
   keywords: [
     'watami', 'ワタミ', 'izakaya', 'restaurant japonais',
     'menu varié', 'ambiance conviviale', 'prix raisonnables',
     'plats traditionnels', 'boissons japonaises', 'chaîne populaire'
   ],
   openGraph: {
-    title: 'Watami (ワタミ) | Izakaya Convivial',
-    description: 'Découvrez Watami, chaîne d\'izakaya populaire avec menu varié et ambiance conviviale',
+    title: 'Watami : L\'Izakaya Responsable | Japonchaines',
+    description: 'Découvrez Watami, l\'izakaya avec ses propres fermes bio. Menu varié, ambiance familiale et engagement qualité.',
     type: 'article',
     url: '/chaines/watami',
   },

@@ -4,26 +4,27 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Matsuya (松屋) | Gyudon | Guide Restaurants Japonais',
-  description: 'Guide complet de Matsuya - Gyudon économique 24h/24 avec menu varié et système de tickets automatique. Menu détaillé, prix imbattables et conseils.',
+  title: "Matsuya 松屋 | Gyudon Tech | Japonchaines",
+  description: "Pioneer gyudon 100% automatisé. Prix imbattable 380¥, distributeur intelligent, curry signature. Innovation technologique.",
   keywords: [
-    'matsuya', '松屋', 'gyudon', 'gyudon économique',
-    'service 24h', 'menu varié', 'prix imbattables',
-    'tickets automatique', 'restauration rapide', 'bœuf riz'
+    'matsuya', '松屋', 'gyudon automatisé', 'distributeur intelligent',
+    'prix imbattable', 'innovation tech', 'curry signature',
+    'pioneer automation', 'gyudon 380¥', 'sans contact'
   ],
   openGraph: {
-    title: 'Matsuya (松屋) | Gyudon Économique 24h/24',
-    description: 'Découvrez Matsuya, la chaîne de gyudon économique avec service 24h/24 et prix imbattables',
+    title: "Matsuya 松屋 | Gyudon Tech | Japonchaines",
+    description: "Pioneer gyudon 100% automatisé. Prix imbattable 380¥, distributeur intelligent, curry signature. Innovation technologique.",
     type: 'article',
-    url: '/chaines/matsuya',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/matsuya',
   },
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true
+  }
 };
 
 export default function MatsuyaPage() {

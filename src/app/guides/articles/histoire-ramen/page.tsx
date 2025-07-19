@@ -1,5 +1,26 @@
 import Link from 'next/link';
 import { BookOpen, Clock, Calendar, ArrowLeft, Globe, TrendingUp, Users, Award } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'L\'Histoire du Ramen : Des Origines Chinoises au Plat National Japonais | Japonchaines',
+  description: 'Découvrez l\'histoire fascinante du ramen, de son importation de Chine à sa transformation en une icône de la cuisine japonaise.',
+  keywords: 'histoire ramen, origines ramen, cuisine chinoise japon, évolution culinaire, plat national japonais, tradition culinaire',
+  openGraph: {
+    title: 'L\'Histoire du Ramen : Des Origines Chinoises au Plat National Japonais',
+    description: 'Découvrez l\'histoire fascinante du ramen, de son importation de Chine à sa transformation en une icône de la cuisine japonaise.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/guides/articles/histoire-ramen'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function HistoireRamenPage() {
   const timeline = [

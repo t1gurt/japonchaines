@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Udon & Soba : Guide des Nouilles Japonaises | Japonchaines",
+  description: "Explorez les deux grandes traditions de nouilles japonaises : les udon épaisses du Kansai et les soba fines d'Edo.",
+  keywords: "udon, soba, nouilles japonaises, Marugame Seimen, Fuji Soba, traditions culinaires",
+  openGraph: {
+    title: "Udon & Soba : Guide des Nouilles Japonaises | Japonchaines",
+    description: "Explorez les deux grandes traditions de nouilles japonaises : les udon épaisses du Kansai et les soba fines d'Edo.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/udon-soba",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/udon-soba-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Udon et Soba - Nouilles japonaises traditionnelles"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Udon & Soba : Guide des Nouilles Japonaises | Japonchaines",
+    description: "Explorez les deux grandes traditions de nouilles japonaises : les udon épaisses du Kansai et les soba fines d'Edo.",
+    images: ["/images/udon-soba-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/udon-soba"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function UdonSobaRedirectPage() {
   return (

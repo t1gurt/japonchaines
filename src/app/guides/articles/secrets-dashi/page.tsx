@@ -1,5 +1,26 @@
 import Link from 'next/link';
 import { BookOpen, Clock, Calendar, ArrowLeft, Beaker, Atom, Droplets, Thermometer } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Les Secrets du Dashi : L\'Âme de la Cuisine Japonaise | Japonchaines',
+  description: 'Plongez dans les secrets du dashi, le bouillon fondamental qui est la source de l\'umami dans la cuisine japonaise. Techniques et histoire.',
+  keywords: 'dashi, umami, bouillon japonais, kombu, katsuobushi, cuisine japonaise, techniques culinaires, secrets culinaires',
+  openGraph: {
+    title: 'Les Secrets du Dashi : L\'Âme de la Cuisine Japonaise',
+    description: 'Plongez dans les secrets du dashi, le bouillon fondamental qui est la source de l\'umami dans la cuisine japonaise. Techniques et histoire.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/guides/articles/secrets-dashi'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function SecretsDashiPage() {
   const dashiTypes = [

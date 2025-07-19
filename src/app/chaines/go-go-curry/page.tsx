@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Go Go Curry (ゴーゴーカレー) | Curry | Guide Restaurants Japonais',
-  description: 'Guide complet de Go Go Curry - Curry de style Kanazawa avec sauce épaisse unique et ambiance rock. Curry japonais authentique et savoureux.',
+  title: "Go Go Curry ゴーゴーカレー | Curry Noir | Japonchaines",
+  description: "Curry noir Kanazawa. Sauce épaisse, service 55 secondes, ambiance rock unique.",
   keywords: [
     'go go curry', 'ゴーゴーカレー', 'curry kanazawa', 'sauce épaisse',
     'ambiance rock', 'curry japonais', 'curry authentique',
     'style kanazawa', 'curry savoureux', 'spécialité curry'
   ],
   openGraph: {
-    title: 'Go Go Curry (ゴーゴーカレー) | Curry de Kanazawa Rock',
-    description: 'Découvrez Go Go Curry, curry de style Kanazawa avec sauce épaisse unique et ambiance rock',
+    title: "Go Go Curry ゴーゴーカレー | Curry Noir | Japonchaines",
+    description: "Curry noir Kanazawa. Sauce épaisse, service 55 secondes, ambiance rock unique.",
     type: 'article',
-    url: '/chaines/go-go-curry',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/go-go-curry',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

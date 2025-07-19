@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Mos Burger (モスバーガー) | Burgers | Guide Restaurants Japonais',
-  description: 'Guide complet de Mos Burger - Burgers premium japonais avec ingrédients frais et qualité supérieure. Innovation culinaire et saveurs uniques.',
+  title: "MOS Burger モスバーガー | Burger Japonais | Japonchaines",
+  description: "Inventeur Rice Burger et Teriyaki. Qualité premium, saveurs uniques japonaises.",
   keywords: [
     'mos burger', 'モスバーガー', 'burgers premium', 'ingrédients frais',
     'qualité supérieure', 'innovation culinaire', 'saveurs uniques',
     'burgers japonais', 'qualité premium', 'créativité'
   ],
   openGraph: {
-    title: 'Mos Burger (モスバーガー) | Burgers Premium Innovants',
-    description: 'Découvrez Mos Burger, burgers premium avec ingrédients frais et innovation culinaire japonaise',
+    title: "MOS Burger モスバーガー | Burger Japonais | Japonchaines",
+    description: "Inventeur Rice Burger et Teriyaki. Qualité premium, saveurs uniques japonaises.",
     type: 'article',
-    url: '/chaines/mos-burger',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/mos-burger',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

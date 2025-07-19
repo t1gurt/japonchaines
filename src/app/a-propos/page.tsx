@@ -2,6 +2,27 @@ import Link from 'next/link';
 import { ArrowLeft, Heart, Users, Globe, Target, BookOpen, Star } from 'lucide-react';
 import PageViewTracker from '../../components/PageViewTracker';
 import { getTotalChainCount, getTotalFoodTypeCount } from '../../lib/chain-count';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "À Propos | Notre Mission | Japonchaines",
+  description: "Découvrez notre mission : le guide référence des restaurants japonais pour voyageurs francophones.",
+  keywords: "à propos Japonchaines, mission, guide restaurant japonais, voyage Japon, francophones",
+  openGraph: {
+    title: "À Propos | Notre Mission | Japonchaines",
+    description: "Découvrez notre mission : le guide référence des restaurants japonais pour voyageurs francophones.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: "/a-propos"
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function AProposPage() {
   const totalChains = getTotalChainCount();

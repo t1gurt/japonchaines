@@ -4,8 +4,8 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dom Dom Burger (ドムドムバーガー) | Hamburgers | Guide Restaurants Japonais',
-  description: 'Guide complet de Dom Dom Burger - Le plus ancien hamburger japonais (1970), Phoenix ressuscité avec créations audacieuses et mascotte légendaire "Domuzō-kun".',
+  title: "Dom Dom Burger ドムドムバーガー | Premier Burger | Japonchaines",
+  description: "Premier hamburger japonais (1970). Menus créatifs, burger crabe, renaissance icône.",
   keywords: [
     'dom dom burger', 'ドムドムバーガー', 'hamburger japonais', 'plus ancien',
     'domuzō-kun', 'どむぞうくん', 'phoenix', 'créations audacieuses',
@@ -13,10 +13,11 @@ export const metadata: Metadata = {
     'fujisaki shinobu', 'premier burger japonais', 'daiei', 'omoiyari'
   ],
   openGraph: {
-    title: 'Dom Dom Burger (ドムドムバーガー) | Le Plus Ancien Hamburger Japonais',
-    description: 'Découvrez Dom Dom Burger, le plus ancien hamburger japonais (1970) ressuscité avec créations audacieuses et mascotte légendaire',
+    title: "Dom Dom Burger ドムドムバーガー | Premier Burger | Japonchaines",
+    description: "Premier hamburger japonais (1970). Menus créatifs, burger crabe, renaissance icône.",
     type: 'article',
-    url: '/chaines/domdom',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/domdom',
@@ -24,7 +25,8 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-  },
+    googleBot: { index: true, follow: true }
+  }
 };
 
 export default function DomDomPage() {

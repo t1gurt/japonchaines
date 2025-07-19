@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tenkaippin (天下一品) | Ramen | Guide Restaurants Japonais',
-  description: 'Guide complet de Tenkaippin - Ramen kotteri avec bouillon riche et crémeux. Spécialité ramen traditionnel de Kyoto, goût unique et authentique.',
+  title: "Tenkaippin 天下一品 | Ramen Kotteri | Japonchaines",
+  description: "Bouillon kotteri ultra-riche Kyoto. Expérience unique et intense, jamais oubliée.",
   keywords: [
     'tenkaippin', '天下一品', 'ramen kotteri', 'bouillon crémeux',
     'ramen kyoto', 'ramen traditionnel', 'kotteri ramen',
     'bouillon riche', 'ramen authentique', 'spécialité kyoto'
   ],
   openGraph: {
-    title: 'Tenkaippin (天下一品) | Ramen Kotteri de Kyoto',
-    description: 'Découvrez Tenkaippin, ramen kotteri avec bouillon riche et crémeux, spécialité traditionnelle de Kyoto',
+    title: "Tenkaippin 天下一品 | Ramen Kotteri | Japonchaines",
+    description: "Bouillon kotteri ultra-riche Kyoto. Expérience unique et intense, jamais oubliée.",
     type: 'article',
-    url: '/chaines/tenkaippin',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/tenkaippin',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

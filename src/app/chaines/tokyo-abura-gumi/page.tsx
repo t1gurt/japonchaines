@@ -4,16 +4,16 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tokyo Abura-gumi Sōhonten (東京油組総本店) | Abura Soba | Guide Restaurants Japonais',
-  description: 'Guide complet de Tokyo Abura-gumi Sōhonten - Chaîne emblématique d\'abura soba classique avec style traditionnel et nouilles de haute qualité. Menu détaillé et concept interactif.',
+  title: 'Tokyo Abura-gumi 東京油組 | Abura Soba Classique | Japonchaines',
+  description: 'Spécialiste abura soba classique. Nouilles qualité, tare secret, prix unique toutes tailles.',
   keywords: [
     'tokyo abura-gumi', '東京油組総本店', 'abura soba', '油そば',
     'nouilles sans bouillon', 'tare secret', 'style classique',
     'mélange interactif', 'oimeshi', 'nouilles tokyo'
   ],
   openGraph: {
-    title: 'Tokyo Abura-gumi Sōhonten (東京油組総本店) | Abura Soba Classique',
-    description: 'Découvrez Tokyo Abura-gumi, la chaîne emblématique d\'abura soba avec style traditionnel et expérience interactive',
+    title: 'Tokyo Abura-gumi : L\'Abura Soba Traditionnel | Japonchaines',
+    description: 'Découvrez Tokyo Abura-gumi, le spécialiste de l\'abura soba classique. Nouilles de qualité, tare secret et prix unique pour toutes les tailles.',
     type: 'article',
     url: '/chaines/tokyo-abura-gumi',
   },

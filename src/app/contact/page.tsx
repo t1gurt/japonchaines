@@ -1,6 +1,27 @@
 import Link from 'next/link';
 import { Construction, ArrowLeft, Mail, MessageCircle } from 'lucide-react';
 import PageViewTracker from '../../components/PageViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Contact | Questions | Japonchaines",
+  description: "Contactez Japonchaines. Questions, suggestions, partenariats : nous sommes à votre écoute.",
+  keywords: "contact Japonchaines, questions, suggestions, partenariat, support",
+  openGraph: {
+    title: "Contact | Questions | Japonchaines",
+    description: "Contactez Japonchaines. Questions, suggestions, partenariats : nous sommes à votre écoute.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: "/contact"
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function ContactPage() {
   return (

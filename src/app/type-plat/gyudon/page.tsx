@@ -1,6 +1,47 @@
 import Link from "next/link";
 import Image from "next/image";
 import CategoryViewTracker from '../../../components/CategoryViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Gyudon : Guide des Bols de Riz au Bœuf (Yoshinoya, Sukiya) | Japonchaines",
+  description: "Découvrez le gyudon, le plat rapide et économique par excellence au Japon. Comparatif des géants : Yoshinoya, Sukiya et Matsuya.",
+  keywords: "gyudon, Yoshinoya, Sukiya, Matsuya, bol de riz au bœuf, fast food japonais",
+  openGraph: {
+    title: "Gyudon : Guide des Bols de Riz au Bœuf (Yoshinoya, Sukiya) | Japonchaines",
+    description: "Découvrez le gyudon, le plat rapide et économique par excellence au Japon. Comparatif des géants : Yoshinoya, Sukiya et Matsuya.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/gyudon",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/gyudon-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Gyudon - Bols de riz au bœuf japonais"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Gyudon : Guide des Bols de Riz au Bœuf (Yoshinoya, Sukiya) | Japonchaines",
+    description: "Découvrez le gyudon, le plat rapide et économique par excellence au Japon. Comparatif des géants : Yoshinoya, Sukiya et Matsuya.",
+    images: ["/images/gyudon-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/gyudon"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function GyudonPage() {
   const gyudonChains = [    {

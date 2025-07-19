@@ -4,6 +4,27 @@ import MobileSearch from "@/components/MobileSearch";
 import MobileCategoryGrid from "@/components/MobileCategoryGrid";
 import MobileChainCards from "@/components/MobileChainCards";
 import MobileGuidesPreview from "@/components/MobileGuidesPreview";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Restaurants Japonais 2025 | Japonchaines",
+  description: "45+ chaînes japonaises détaillées. Menus, prix, guide complet pour votre voyage au Japon !",
+  keywords: "restaurant japonais, chaînes japonaises, voyage Japon, guide restaurant, menu japonais, prix Japon",
+  openGraph: {
+    title: "Restaurants Japonais 2025 | Japonchaines",
+    description: "45+ chaînes japonaises détaillées. Menus, prix, guide complet pour votre voyage au Japon !",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: "/"
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function Home() {
   return (

@@ -1,6 +1,32 @@
 import Link from 'next/link';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Globe, Flame, ChefHat } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Ippudo 一風堂 | Ramen Premium | Japonchaines",
+  description: "Ramen tonkotsu premium. Innovation hakata, qualité internationale, expérience raffinée.",
+  keywords: [
+    'ippudo', '一風堂', 'ramen tonkotsu', 'hakata ramen',
+    'ramen premium', 'qualité supérieure', 'ramen authentique',
+    'style hakata', 'ramen raffiné', 'innovation ramen'
+  ],
+  openGraph: {
+    title: "Ippudo 一風堂 | Ramen Premium | Japonchaines",
+    description: "Ramen tonkotsu premium. Innovation hakata, qualité internationale, expérience raffinée.",
+    type: 'article',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: '/chaines/ippudo',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true }
+  },
+};
 
 export default function IppudoPage() {
   return (

@@ -4,8 +4,8 @@ import CategoryViewTracker from '../../components/CategoryViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Types de Cuisine Japonaise | Guide des Catégories de Restaurants',
-  description: 'Découvrez tous les types de cuisine japonaise : Gyūdon, Ramen, Sushi, Curry, Tempura, Udon, Yakiniku et plus. 16 catégories de restaurants avec guides détaillés.',
+  title: "16 Types Cuisine Japonaise | Guide | Japonchaines",
+  description: "Explorez 16 cuisines : ramen, sushi, yakiniku. Spécialités et meilleures chaînes.",
   keywords: [
     'cuisine japonaise', 'types restaurants japon',
     'gyudon', 'ramen', 'sushi', 'curry japonais',
@@ -14,10 +14,11 @@ export const metadata: Metadata = {
     'guide voyage japon', 'restaurants japonais'
   ],
   openGraph: {
-    title: 'Types de Cuisine Japonaise | 16 Catégories de Restaurants',
-    description: 'Guide complet de tous les types de cuisine japonaise avec chaînes recommandées',
+    title: "16 Types Cuisine Japonaise | Guide | Japonchaines",
+    description: "Explorez 16 cuisines : ramen, sushi, yakiniku. Spécialités et meilleures chaînes.",
     type: 'website',
-    url: '/type-plat',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/type-plat',

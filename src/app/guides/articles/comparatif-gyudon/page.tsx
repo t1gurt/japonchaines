@@ -1,5 +1,26 @@
 import Link from 'next/link';
 import { BookOpen, Clock, Calendar, ArrowLeft, TrendingUp, Users, MapPin, Award, DollarSign, Star } from 'lucide-react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Yoshinoya vs Sukiya vs Matsuya : Le Choc des Géants du Gyudon | Japonchaines',
+  description: 'Analyse comparative des trois plus grandes chaînes de gyudon. Stratégies, menus, et qui est le vrai roi du bol de bœuf ?',
+  keywords: 'comparatif gyudon, yoshinoya vs sukiya, matsuya comparison, analyse chaînes japonaises, guerre gyudon, fast food japonais',
+  openGraph: {
+    title: 'Yoshinoya vs Sukiya vs Matsuya : Le Choc des Géants du Gyudon',
+    description: 'Analyse comparative des trois plus grandes chaînes de gyudon. Stratégies, menus, et qui est le vrai roi du bol de bœuf ?',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/guides/articles/comparatif-gyudon'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function ComparatifGyudonPage() {
   const chainsOverview = [

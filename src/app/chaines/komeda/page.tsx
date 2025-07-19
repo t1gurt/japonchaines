@@ -4,26 +4,27 @@ import ChainViewTracker from "@/components/ChainViewTracker";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Komeda Coffee (コメダ珈琲) | Cafés | Guide Restaurants Japonais',
-  description: 'Guide complet de Komeda Coffee - Café traditionnel japonais avec petit-déjeuner matinal gratuit et ambiance nostalgique. Menu et culture du café japonais.',
+  title: "Komeda Coffee コメダ珈琲 | Kissaten Moderne | Japonchaines",
+  description: "Morning Service gratuit jusqu'à 11h ! Tradition kissaten depuis 1968, café siphon authentique, Shironoir légendaire. Hospitalité japonaise.",
   keywords: [
-    'komeda coffee', 'コメダ珈琲', 'café japonais', 'petit-déjeuner gratuit',
-    'morning service', 'café traditionnel', 'ambiance nostalgique',
-    'shiro noir', 'ogura toast', 'café culture'
+    'komeda coffee', 'コメダ珈琲', 'kissaten moderne', 'morning service gratuit',
+    'café siphon', 'tradition japonaise', 'shironoir dessert',
+    'hospitalité omotenashi', 'culture café', 'authentic japanese'
   ],
   openGraph: {
-    title: 'Komeda Coffee (コメダ珈琲) | Café Traditionnel Japonais',
-    description: 'Découvrez Komeda Coffee, café traditionnel avec petit-déjeuner matinal gratuit et ambiance nostalgique',
+    title: "Komeda Coffee コメダ珈琲 | Kissaten Moderne | Japonchaines",
+    description: "Morning Service gratuit jusqu'à 11h ! Tradition kissaten depuis 1968, café siphon authentique, Shironoir légendaire. Hospitalité japonaise.",
     type: 'article',
-    url: '/chaines/komeda',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/komeda',
   },
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true
+  }
 };
 
 export default function KomedaPage() {

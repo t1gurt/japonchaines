@@ -4,16 +4,16 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Ganso Aburado (元祖油堂) | Abura Soba | Guide Restaurants Japonais',
-  description: 'Guide complet de Ganso Aburado - Chaîne innovante d\'abura soba avec nouilles hybrides et concept santé moderne. Design contemporain et thé gratuit.',
+  title: 'Ganso Aburado 元祖油堂 | Abura Soba Sain | Japonchaines',
+  description: 'Abura soba innovant : nouilles hybrides, concept santé, thé oolong gratuit.',
   keywords: [
     'ganso aburado', '元祖油堂', 'abura soba', '油そば',
     'nouilles hybrides', 'innovation moderne', 'thé santé',
     'design moderne', 'nouilles pasta', 'concept sain'
   ],
   openGraph: {
-    title: 'Ganso Aburado (元祖油堂) | Abura Soba Innovant',
-    description: 'Découvrez Ganso Aburado, la chaîne d\'abura soba innovante avec nouilles hybrides et concept santé moderne',
+    title: 'Ganso Aburado : L\'Abura Soba Sain et Innovant | Japonchaines',
+    description: 'Découvrez Ganso Aburado et ses nouilles hybrides uniques (blé et pâtes). Un concept d\'abura soba moderne et sain.',
     type: 'article',
     url: '/chaines/ganso-aburado',
   },

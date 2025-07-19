@@ -1,7 +1,19 @@
 import Link from 'next/link';
 import { Leaf, Heart, AlertTriangle, CheckCircle, XCircle, Info, Users, Globe } from 'lucide-react';
+import { Metadata } from 'next';
 import GuideViewTracker from '../../../components/GuideViewTracker';
 import { getTotalChainCount } from '../../../lib/chain-count';
+
+export const metadata: Metadata = {
+  title: 'Régimes Japon : Végétarien Halal | Japonchaines',
+  description: 'Guides complets végétariens, végans, sans porc (halal), gestion allergies.',
+  keywords: 'végétarien Japon, végan Japon, halal Japon, sans porc Japon, allergies Japon, restrictions alimentaires',
+  openGraph: {
+    title: 'Guide des Régimes Alimentaires au Japon',
+    description: 'Manger au Japon avec des restrictions alimentaires. Guides complets pour végétariens, végans, sans porc (halal) et gestion des allergies.',
+    type: 'article',
+  },
+};
 
 export default function RegimesAlimentairesPage() {
   const totalChains = getTotalChainCount();

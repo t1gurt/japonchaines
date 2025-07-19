@@ -3,13 +3,22 @@ import Link from 'next/link';
 import ChainViewTracker from '@/components/ChainViewTracker';
 
 export const metadata: Metadata = {
-  title: 'Anan (安安) - Guide Complet | Seven Yakiniku Abordable',
-  description: 'Découvrez Anan (七輪焼肉 安安), la chaîne de yakiniku abordable proposant des grillades savoureuses au charbon de bois dans une ambiance décontractée.',
-  keywords: 'Anan, 安安, 七輪焼肉, yakiniku abordable, barbecue japonais, charbon de bois, shichirin, restaurant japonais',
+  title: "Anan 安安 | Yakiniku Shichirin | Japonchaines",
+  description: "Yakiniku au charbon abordable. Menu, prix, conseils pour profiter de cette chaîne populaire.",
+  keywords: "Anan, 安安, 七輪焼肉, yakiniku abordable, barbecue japonais, charbon de bois, shichirin, restaurant japonais",
   openGraph: {
-    title: 'Anan - Yakiniku Abordable au Charbon de Bois',
-    description: 'Guide complet d\'Anan : yakiniku traditionnel au charbon, prix accessibles et ambiance conviviale pour tous les budgets.',
-    type: 'article'
+    title: "Anan 安安 | Yakiniku Shichirin | Japonchaines",
+    description: "Yakiniku au charbon abordable. Menu, prix, conseils pour profiter de cette chaîne populaire.",
+    type: "article",
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: "/chaines/anan"
+  },
+  robots: {
+    index: true,
+    follow: true
   }
 };
 

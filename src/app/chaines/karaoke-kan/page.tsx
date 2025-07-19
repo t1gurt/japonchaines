@@ -4,16 +4,16 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Karaoke Kan (カラオケ館) | Karaoke | Guide Restaurants Japonais',
-  description: 'Guide complet de Karaoke Kan - Chaîne de karaoke avec salles privées et équipements de qualité. Expérience karaoke authentique japonaise.',
+  title: 'Karaoke Kan カラオケ館 | Karaoke Premium | Japonchaines',
+  description: 'Expérience karaoke haut de gamme. Salles élégantes, équipements pointe, service qualité.',
   keywords: [
     'karaoke kan', 'カラオケ館', 'karaoke', 'salles privées',
     'équipements qualité', 'expérience authentique', 'chant japonais',
     'divertissement', 'karaoke box', 'ambiance conviviale'
   ],
   openGraph: {
-    title: 'Karaoke Kan (カラオケ館) | Karaoke de Qualité',
-    description: 'Découvrez Karaoke Kan, chaîne de karaoke avec salles privées et équipements de qualité',
+    title: 'Karaoke Kan : L\'Expérience Karaoke Haut de Gamme | Japonchaines',
+    description: 'Découvrez Karaoke Kan, la chaîne de karaoke premium. Salles élégantes, équipements de pointe et service de qualité.',
     type: 'article',
     url: '/chaines/karaoke-kan',
   },

@@ -1,6 +1,18 @@
 import Link from 'next/link';
 import { BookOpen, Users, Heart, Utensils, Star, ArrowRight, Globe, Calendar, Clock } from 'lucide-react';
+import { Metadata } from 'next';
 import GuideViewTracker from '../../../components/GuideViewTracker';
+
+export const metadata: Metadata = {
+  title: 'Étiquette Restaurant Japonais : Culture | Japonchaines',
+  description: 'Maîtrisez table : baguettes, pourboire, bonnes manières expérience réussie.',
+  keywords: 'étiquette restaurant japonais, bonnes manières Japon, culture culinaire japonaise, savoir-vivre Japon, baguettes étiquette',
+  openGraph: {
+    title: 'Étiquette au Restaurant Japonais : Guide Culturel',
+    description: 'Découvrez les bonnes manières et l\'étiquette pour une expérience réussie dans les restaurants japonais.',
+    type: 'article',
+  },
+};
 
 export default function CultureEtiquettePage() {
   const sections = [

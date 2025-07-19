@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Freshness Burger (フレッシュネスバーガー) | Burgers | Guide Restaurants Japonais',
-  description: 'Guide complet de Freshness Burger - Burgers premium japonais avec ingrédients frais et qualité supérieure. Burgers gourmet style japonais.',
+  title: "Freshness Burger フレッシュネスバーガー | Made to Order | Japonchaines",
+  description: "Burgers premium préparés à la commande. Ingrédients frais locaux, expérience fast-casual.",
   keywords: [
     'freshness burger', 'フレッシュネスバーガー', 'burgers premium', 'ingrédients frais',
     'qualité supérieure', 'burgers gourmet', 'style japonais',
     'burgers japonais', 'qualité premium', 'ingrédients naturels'
   ],
   openGraph: {
-    title: 'Freshness Burger (フレッシュネスバーガー) | Burgers Premium Japonais',
-    description: 'Découvrez Freshness Burger, burgers premium avec ingrédients frais et qualité supérieure style japonais',
+    title: "Freshness Burger フレッシュネスバーガー | Made to Order | Japonchaines",
+    description: "Burgers premium préparés à la commande. Ingrédients frais locaux, expérience fast-casual.",
     type: 'article',
-    url: '/chaines/freshness-burger',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/freshness-burger',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

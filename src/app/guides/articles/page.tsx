@@ -1,6 +1,27 @@
 import Link from 'next/link';
 import { BookOpen, Clock, TrendingUp, Star, ArrowRight, Calendar, Users, Award } from 'lucide-react';
 import GuideViewTracker from '../../../components/GuideViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Articles de Fond sur la Culture Culinaire Japonaise | Japonchaines',
+  description: 'Analyses approfondies sur l\'histoire, les tendances et les secrets de la gastronomie japonaise et de ses chaînes de restaurants.',
+  keywords: 'culture culinaire japonaise, articles gastronomie japon, histoire restaurants japonais, anthropologie culinaire, tendances alimentaires',
+  openGraph: {
+    title: 'Articles de Fond sur la Culture Culinaire Japonaise | Japonchaines',
+    description: 'Analyses approfondies sur l\'histoire, les tendances et les secrets de la gastronomie japonaise et de ses chaînes de restaurants.',
+    type: 'website',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/guides/articles'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function ArticlesPage() {
   // 難易度順に記事を並べる

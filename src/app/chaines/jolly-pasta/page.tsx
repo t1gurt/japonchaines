@@ -1,5 +1,26 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Jolly Pasta : La Trattoria Familiale Japonaise | Japonchaines',
+  description: 'Découvrez Jolly Pasta, la chaîne de restaurants familiaux spécialisée dans les pâtes italiennes adaptées au goût japonais. Menu varié et prix doux.',
+  keywords: 'jolly pasta, pasta japonais, famille restaurant, italien japon, pâtes japonaises, trattoria familiale, famiresu italien',
+  openGraph: {
+    title: 'Jolly Pasta : La Trattoria Familiale Japonaise | Japonchaines',
+    description: 'Découvrez Jolly Pasta, la chaîne de restaurants familiaux spécialisée dans les pâtes italiennes adaptées au goût japonais. Menu varié et prix doux.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/chaines/jolly-pasta'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function JollyPastaPage() {
   return (

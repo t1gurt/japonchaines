@@ -1,6 +1,27 @@
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, MapPin, Star, Award } from 'lucide-react';
 import GuideViewTracker from '../../../../components/GuideViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Voyage Gastronomique : Le Tour du Japon en "Gotochi Burger" | Japonchaines',
+  description: 'Découvrez le Japon à travers ses burgers régionaux (Gotochi). Du Sasebo Burger au Kitakata Ramen Burger, un voyage culinaire unique.',
+  keywords: 'gotochi burger, burger régional japon, sasebo burger, spécialités locales, voyage gastronomique japon, terroir japonais',
+  openGraph: {
+    title: 'Voyage Gastronomique : Le Tour du Japon en "Gotochi Burger"',
+    description: 'Découvrez le Japon à travers ses burgers régionaux (Gotochi). Du Sasebo Burger au Kitakata Ramen Burger, un voyage culinaire unique.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/guides/articles/gotochiburger-voyage'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function GotochiburgerPage() {
   const article = {

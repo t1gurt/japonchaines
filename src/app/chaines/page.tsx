@@ -3,6 +3,29 @@
 import Link from 'next/link';
 import { useState, useMemo } from 'react';
 import { Search, Star, TrendingUp, Clock, MapPin } from 'lucide-react';
+import { Metadata } from 'next';
+
+// Note: This metadata will need to be moved to a layout.tsx or generated statically
+// since this is a client component
+const metadata: Metadata = {
+  title: "46 Chaînes Japonaises | Guide 2025 | Japonchaines",
+  description: "Explorez 46 chaînes classées par type. Avis, menus, prix pour choisir où manger au Japon.",
+  keywords: "chaînes restaurant japonais, liste restaurant Japon, guide chaînes japonaises, manger Japon",
+  openGraph: {
+    title: "46 Chaînes Japonaises | Guide 2025 | Japonchaines",
+    description: "Explorez 46 chaînes classées par type. Avis, menus, prix pour choisir où manger au Japon.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: "/chaines"
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function ChainesPage() {
   // State for search and filtering

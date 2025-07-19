@@ -1,5 +1,46 @@
 import Link from "next/link";
 import CategoryViewTracker from '../../../components/CategoryViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Abura Soba : Guide des Nouilles sans Bouillon de Tokyo | Japonchaines",
+  description: "Découvrez l'abura soba, les \"nouilles à l'huile\" de Tokyo. Un plat plus sain qu'il n'y paraît, avec ses propres rituels de dégustation.",
+  keywords: "abura soba, nouilles Tokyo, cuisine japonaise, oil noodles, mazesoba",
+  openGraph: {
+    title: "Abura Soba : Guide des Nouilles sans Bouillon de Tokyo | Japonchaines",
+    description: "Découvrez l'abura soba, les \"nouilles à l'huile\" de Tokyo. Un plat plus sain qu'il n'y paraît, avec ses propres rituels de dégustation.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/aburasoba",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/aburasoba-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Abura Soba - Nouilles sans bouillon de Tokyo"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Abura Soba : Guide des Nouilles sans Bouillon de Tokyo | Japonchaines",
+    description: "Découvrez l'abura soba, les \"nouilles à l'huile\" de Tokyo. Un plat plus sain qu'il n'y paraît, avec ses propres rituels de dégustation.",
+    images: ["/images/aburasoba-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/aburasoba"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function AburassobaPage() {
   const abursobaChains = [

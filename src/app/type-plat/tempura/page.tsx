@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Tempura et Tendon : Guide de la Friture Japonaise | Japonchaines",
+  description: "Maîtrisez l'art de la tempura. Guide des beignets japonais légers et des bols de riz garnis (tendon) dans des chaînes comme Tenya.",
+  keywords: "tempura, tendon, Tenya, Tsunahachi, friture japonaise, beignets japonais",
+  openGraph: {
+    title: "Tempura et Tendon : Guide de la Friture Japonaise | Japonchaines",
+    description: "Maîtrisez l'art de la tempura. Guide des beignets japonais légers et des bols de riz garnis (tendon) dans des chaînes comme Tenya.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/tempura",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/tempura-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Tempura japonaise - Guide des beignets et tendon"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tempura et Tendon : Guide de la Friture Japonaise | Japonchaines",
+    description: "Maîtrisez l'art de la tempura. Guide des beignets japonais légers et des bols de riz garnis (tendon) dans des chaînes comme Tenya.",
+    images: ["/images/tempura-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/tempura"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function TempuraTendonPage() {
   const tempuraChains = [

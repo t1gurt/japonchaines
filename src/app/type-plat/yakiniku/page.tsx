@@ -3,22 +3,27 @@ import { Metadata } from 'next';
 import { ArrowLeft, Flame, Users, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'YAKINIKU : L\'Art Gastronomique Japonais du Gril | Guide Complet Japonchaines',
-  description: 'Découvrez l\'univers fascinant du yakiniku japonais : une expérience gastronomique interactive où convivialité et excellence culinaire se rencontrent. Guide complet des techniques, menus et meilleures adresses.',
+  title: "Yakiniku | Barbecue Japonais Wagyu | Japonchaines",
+  description: "Le guide complet du Yakiniku. Apprenez à griller le wagyu, le kalbi et le harami comme un pro. Découvrez les meilleures chaînes comme Gyukaku.",
   keywords: [
     'yakiniku', 'grill japonais', 'wagyu', 'kalbi', 'harami', 'culture culinaire japonaise',
     'barbecue japonais', 'convivialité', 'gastronomie interactive', 'restaurant yakiniku',
     'viande grillée', 'technique de cuisson', 'sauce tare', 'ホルモン hormone'
   ],
   openGraph: {
-    title: 'YAKINIKU : L\'Art Gastronomique Japonais du Gril',
-    description: 'Une expérience gastronomique unique où la convivialité française rencontre l\'excellence culinaire japonaise.',
+    title: "Yakiniku | Barbecue Japonais Wagyu | Japonchaines",
+    description: "Le guide complet du Yakiniku. Apprenez à griller le wagyu, le kalbi et le harami comme un pro. Découvrez les meilleures chaînes comme Gyukaku.",
     type: 'article',
-    url: '/type-plat/yakiniku',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/type-plat/yakiniku',
   },
+  robots: {
+    index: true,
+    follow: true
+  }
 };
 
 export default function YakinikuPage() {

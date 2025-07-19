@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Lotteria (ロッテリア) | Burgers | Guide Restaurants Japonais',
-  description: 'Guide complet de Lotteria - Chaîne de burgers japonaise avec menu unique et saveurs locales. Burgers style japonais avec influences asiatiques.',
+  title: "Lotteria ロッテリア | Burger Créatif | Japonchaines",
+  description: "Créations uniques. Ebi Burger au Tower Burger, saveurs introuvables ailleurs.",
   keywords: [
     'lotteria', 'ロッテリア', 'burgers japonais', 'menu unique',
     'saveurs locales', 'style japonais', 'influences asiatiques',
     'burgers originaux', 'fast food japonais', 'créativité culinaire'
   ],
   openGraph: {
-    title: 'Lotteria (ロッテリア) | Burgers Style Japonais',
-    description: 'Découvrez Lotteria, chaîne de burgers japonaise avec menu unique et saveurs locales originales',
+    title: "Lotteria ロッテリア | Burger Créatif | Japonchaines",
+    description: "Créations uniques. Ebi Burger au Tower Burger, saveurs introuvables ailleurs.",
     type: 'article',
-    url: '/chaines/lotteria',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/lotteria',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

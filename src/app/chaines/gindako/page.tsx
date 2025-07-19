@@ -1,5 +1,31 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Gindako 銀だこ | Roi du Takoyaki | Japonchaines",
+  description: "Takoyaki croustillant extérieur, fondant intérieur. Boulettes poulpe d'Osaka.",
+  keywords: [
+    'gindako', '銀だこ', 'takoyaki', 'osaka takoyaki',
+    'street food', 'boulettes poulpe', 'cuisine osaka',
+    'takoyaki croustillant', 'roi takoyaki', 'specialty osaka'
+  ],
+  openGraph: {
+    title: "Gindako 銀だこ | Roi du Takoyaki | Japonchaines",
+    description: "Takoyaki croustillant extérieur, fondant intérieur. Boulettes poulpe d'Osaka.",
+    type: 'article',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: '/chaines/gindako',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true }
+  },
+};
 
 export default function GindakoPage() {
   return (

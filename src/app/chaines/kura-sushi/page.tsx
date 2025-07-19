@@ -4,26 +4,27 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Kura Sushi (くら寿司) | Kaiten-zushi | Guide Restaurants Japonais',
-  description: 'Guide complet de Kura Sushi - Sushi tournant innovant avec système de capsules et technologie pour une expérience ludique. Menu détaillé, prix et innovations.',
+  title: "Kura Sushi くら寿司 | Kaiten Ludique | Japonchaines",
+  description: "Pioneer 100% sans additifs ! Système Bikkura-Pon ludique, protection antibactérienne, technologie révolutionnaire. Muttenka qualité.",
   keywords: [
-    'kura sushi', 'くら寿司', 'kaiten-zushi', 'sushi tournant',
-    'système capsules', 'sushi frais', 'technologie ludique',
-    'prix accessibles', 'innovation sushi', 'expérience ludique'
+    'kura sushi', 'くら寿司', 'muttenka sans additifs', 'bikkura-pon game',
+    'protection antibactérienne', 'kaiten révolutionnaire', 'famille ludique',
+    'technologie sushi', 'qualité naturelle', 'innovation culinaire'
   ],
   openGraph: {
-    title: 'Kura Sushi (くら寿司) | Sushi Tournant Innovant',
-    description: 'Découvrez Kura Sushi, sushi tournant innovant avec système de capsules et technologie ludique',
+    title: "Kura Sushi くら寿司 | Kaiten Ludique | Japonchaines",
+    description: "Pioneer 100% sans additifs ! Système Bikkura-Pon ludique, protection antibactérienne, technologie révolutionnaire. Muttenka qualité.",
     type: 'article',
-    url: '/chaines/kura-sushi',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/kura-sushi',
   },
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true
+  }
 };
 
 export default function KuraSushiPage() {

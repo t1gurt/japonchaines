@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Gusto (ガスト) | Family Restaurant | Guide Restaurants Japonais',
-  description: 'Guide complet de Gusto - Restaurant familial populaire avec menu varié et prix abordables. Parfait pour les familles, ambiance décontractée.',
+  title: "Gusto ガスト | Famiresu N°1 | Japonchaines",
+  description: "Leader restaurants familiaux. Menu varié, service robot, drink bar illimité.",
   keywords: [
     'gusto', 'ガスト', 'family restaurant', 'restaurant familial',
     'menu varié', 'prix abordables', 'parfait familles',
     'ambiance décontractée', 'cuisine occidentale', 'restaurant populaire'
   ],
   openGraph: {
-    title: 'Gusto (ガスト) | Restaurant Familial Populaire',
-    description: 'Découvrez Gusto, restaurant familial avec menu varié et prix abordables, parfait pour les familles',
+    title: "Gusto ガスト | Famiresu N°1 | Japonchaines",
+    description: "Leader restaurants familiaux. Menu varié, service robot, drink bar illimité.",
     type: 'article',
-    url: '/chaines/gusto',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/gusto',

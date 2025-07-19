@@ -4,8 +4,8 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Big Echo (ビッグエコー) | Guide Complet Karaoke Japonais | Culture & Pratique',
-  description: 'Guide complet de Big Echo - Plus grande chaîne de karaoke du Japon. Système DAM premium, guide étape par étape pour débutants, étiquette karaoke, conseils francophones et expériences solo/groupe.',
+  title: "Big Echo | Karaoke N°1 Japon | Japonchaines",
+  description: "Plus grande chaîne karaoke. Guide DAM, réservation, prix pour une soirée réussie.",
   keywords: [
     'big echo', 'ビッグエコー', 'karaoke japonais', 'daiichikosho',
     'denmoku guide', 'système dam', 'nomihoudai', 'hitokara', 
@@ -13,10 +13,11 @@ export const metadata: Metadata = {
     'rōmaji rubi', 'prix karaoke japon', 'chansons françaises japon'
   ],
   openGraph: {
-    title: 'Big Echo (ビッグエコー) | Guide Complet du Karaoke Japonais',
-    description: 'Maîtrisez Big Echo avec notre guide expert : de votre première visite au karaoke solo, en passant par l\'étiquette japonaise et les conseils pour francophones',
+    title: "Big Echo | Karaoke N°1 Japon | Japonchaines",
+    description: "Plus grande chaîne karaoke. Guide DAM, réservation, prix pour une soirée réussie.",
     type: 'article',
-    url: '/chaines/big-echo',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/big-echo',

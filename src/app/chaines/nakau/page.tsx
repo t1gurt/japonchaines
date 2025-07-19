@@ -4,14 +4,24 @@ import { Clock, MapPin, DollarSign, Users, ChefHat, Star, Award, TrendingUp, Hea
 import ChainViewTracker from '../../../components/ChainViewTracker';
 
 export const metadata = {
-  title: "Nakau (なか卯) - Guide Complet | Chaînes Japonaises",
-  description: "Découvrez Nakau, spécialiste du gyūdon et udon depuis 1969. Menu diversifié, prix abordables et qualité familiale. Guide complet avec méthodes de commande et recommandations.",
+  title: "Nakau なか卯 | Gyudon + Udon | Japonchaines",
+  description: "Fusion parfaite gyudon-udon. Qualité familiale, menu varié, spécialité Oyako-don.",
   keywords: ["Nakau", "なか卯", "gyudon", "udon", "tempura", "restaurants japonais", "chaîne", "guide français"],
   openGraph: {
-    title: "Nakau (なか卯) - Spécialiste Gyūdon & Udon | Guide Français",
-    description: "Guide complet de Nakau - fusion parfaite entre gyūdon et udon, qualité familiale depuis 1969",
+    title: "Nakau なか卯 | Gyudon + Udon | Japonchaines",
+    description: "Fusion parfaite gyudon-udon. Qualité familiale, menu varié, spécialité Oyako-don.",
     type: "article",
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
+  alternates: {
+    canonical: '/chaines/nakau'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true }
+  }
 };
 
 export default function NakauPage() {

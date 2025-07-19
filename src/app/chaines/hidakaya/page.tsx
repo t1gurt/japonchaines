@@ -1,5 +1,26 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hidakaya : Le "Chuka" Populaire des Salarymen | Japonchaines',
+  description: 'Découvrez Hidakaya, la chaîne de cuisine chinoise (chuka) abordable. Ramen, gyoza et plats sautés à prix imbattables. Le QG des salarymen.',
+  keywords: 'hidakaya, chuka, cuisine chinoise japonaise, ramen pas cher, gyoza, restaurant salaryman, fast food chinois japon',
+  openGraph: {
+    title: 'Hidakaya : Le "Chuka" Populaire des Salarymen | Japonchaines',
+    description: 'Découvrez Hidakaya, la chaîne de cuisine chinoise (chuka) abordable. Ramen, gyoza et plats sautés à prix imbattables. Le QG des salarymen.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/chaines/hidakaya'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function HidakayaPage() {
   return (
