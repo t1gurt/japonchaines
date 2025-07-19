@@ -78,7 +78,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
               { name: "Gyūdon", subtitle: "牛丼", description: "Bols de riz au bœuf", href: "/type-plat/gyudon" },
-              { name: "Ramen", subtitle: "ラーメン", description: "Nouilles japonaises", href: "/type-plat/ramen" },
+              { name: "Ramen", subtitle: "ラーメン", description: "Nouilles japonaises", href: "/type-plat/ramen", bgImage: "/images/chaines/ippudo/shiromaru-motoaji.jpg" },
               { name: "Kaiten-zushi", subtitle: "回転寿司", description: "Sushi tournant", href: "/type-plat/kaiten-zushi" },
               { name: "Curry Japonais", subtitle: "カレー", description: "Curry à la japonaise", href: "/type-plat/curry" },
               { name: "Teishoku", subtitle: "定食", description: "Repas complets", href: "/type-plat/teishoku" },
@@ -96,17 +96,31 @@ export default function Home() {
               <Link 
                 key={category.name}
                 href={category.href}
-                className="group bg-gray-50 rounded-lg p-6 hover:bg-red-50 transition-colors border border-gray-200 hover:border-red-200"
+                className="group relative overflow-hidden bg-gray-50 rounded-lg p-6 hover:bg-red-50 transition-colors border border-gray-200 hover:border-red-200"
+                style={category.bgImage ? {
+                  backgroundImage: `url('${category.bgImage}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                } : {}}
               >
-                <h4 className="font-semibold text-gray-900 group-hover:text-red-600 mb-1">
-                  {category.name}
-                </h4>
-                <p className="text-sm text-gray-600 japanese-text mb-2">
-                  {category.subtitle}
-                </p>
-                <p className="text-xs text-gray-500">
-                  {category.description}
-                </p>
+                {category.bgImage && (
+                  <div 
+                    className="absolute inset-0 group-hover:opacity-75 transition-all duration-300"
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+                  ></div>
+                )}
+                <div className="relative z-10">
+                  <h4 className={`font-semibold mb-1 ${category.bgImage ? 'text-white group-hover:text-red-200' : 'text-gray-900 group-hover:text-red-600'}`}>
+                    {category.name}
+                  </h4>
+                  <p className={`text-sm japanese-text mb-2 ${category.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>
+                    {category.subtitle}
+                  </p>
+                  <p className={`text-xs ${category.bgImage ? 'text-gray-300' : 'text-gray-500'}`}>
+                    {category.description}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>

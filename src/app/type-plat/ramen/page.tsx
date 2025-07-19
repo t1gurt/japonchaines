@@ -135,42 +135,54 @@ export default function RamenPage() {const ramenChains = [
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-orange-100 to-red-100 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-16"
+        style={{
+          backgroundImage: "url('/images/chaines/ippudo/shiromaru-motoaji.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div 
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+        ></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center mb-4">
                 <span className="text-5xl mr-4">🍜</span>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
                     Ramen
                   </h1>
-                  <p className="text-2xl text-gray-600 japanese-text">ラーメン</p>
+                  <p className="text-2xl text-gray-200 japanese-text">ラーメン</p>
                 </div>
               </div>
-              <p className="text-xl text-gray-700 mb-6">
+              <p className="text-xl text-gray-200 mb-6">
                 Le plat de nouilles le plus emblématique du Japon. Nouilles de blé servies 
                 dans un bouillon savoureux avec diverses garnitures.
               </p>
               <div className="flex flex-wrap gap-4">
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-orange-500 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium">
                   Prix : ¥700-1500
                 </span>
-                <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-red-500 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium">
                   Réconfortant
                 </span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-blue-500 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium">
                   Nombreuses variétés
                 </span>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-white bg-opacity-90 p-8 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">L'Art du Ramen</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-700 mb-4">
                 Le ramen moderne est né au début du 20ème siècle, influencé par les nouilles 
                 chinoises. Chaque région du Japon a développé son propre style unique.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 Un bon ramen se compose de trois éléments essentiels : le bouillon (dashi), 
                 les nouilles (men) et les garnitures (toppings). L'harmonie entre ces éléments 
                 crée l'expérience ramen parfaite.
@@ -232,8 +244,16 @@ export default function RamenPage() {const ramenChains = [
               >
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-xs text-gray-500">Logo</span>
+                    <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center mr-4 overflow-hidden">
+                      {chain.name === "Ippudo" ? (
+                        <img 
+                          src="/images/chaines/ippudo/ippudo-logo.jpg" 
+                          alt="Logo Ippudo"
+                          className="w-full h-full object-cover"
+                        />
+                      ) : (
+                        <span className="text-xs text-gray-500">Logo</span>
+                      )}
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors">
