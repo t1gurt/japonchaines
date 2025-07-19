@@ -1,5 +1,46 @@
 import Link from "next/link";
 import CategoryViewTracker from "../../../components/CategoryViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Soba : Guide des Nouilles de Sarrasin Japonaises | Japonchaines",
+  description: "Découvrez l'art des soba, les nouilles de sarrasin japonaises. Dégustation chaude ou froide, et guide des chaînes comme Fuji Soba.",
+  keywords: "soba, nouilles sarrasin, Fuji Soba, Yudetaro, nouilles japonaises, zaru soba",
+  openGraph: {
+    title: "Soba : Guide des Nouilles de Sarrasin Japonaises | Japonchaines",
+    description: "Découvrez l'art des soba, les nouilles de sarrasin japonaises. Dégustation chaude ou froide, et guide des chaînes comme Fuji Soba.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/soba",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/soba-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Soba - Nouilles de sarrasin japonaises"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Soba : Guide des Nouilles de Sarrasin Japonaises | Japonchaines",
+    description: "Découvrez l'art des soba, les nouilles de sarrasin japonaises. Dégustation chaude ou froide, et guide des chaînes comme Fuji Soba.",
+    images: ["/images/soba-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/soba"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function SobaPage() {
   const sobaChains = [

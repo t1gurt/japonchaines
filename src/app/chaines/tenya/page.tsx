@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Tenya (てんや) | Tempura | Guide Restaurants Japonais',
-  description: 'Guide complet de Tenya - Tempura rapide et abordable avec technique professionnelle et ingrédients de saison. Menu détaillé, prix et conseils tempura.',
+  title: "Tenya てんや | Tempura Rapide | Japonchaines",
+  description: "Art tempura rapide et abordable. Beignets légers sur riz, prix imbattables.",
   keywords: [
     'tenya', 'てんや', 'tempura', 'tempura rapide',
     'technique pro', 'prix accessibles', 'ingrédients saison',
     'tempura abordable', 'friture japonaise', 'ebi tempura'
   ],
   openGraph: {
-    title: 'Tenya (てんや) | Tempura Rapide et Abordable',
-    description: 'Découvrez Tenya, tempura rapide avec technique professionnelle et ingrédients de saison',
+    title: "Tenya てんや | Tempura Rapide | Japonchaines",
+    description: "Art tempura rapide et abordable. Beignets légers sur riz, prix imbattables.",
     type: 'article',
-    url: '/chaines/tenya',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/tenya',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

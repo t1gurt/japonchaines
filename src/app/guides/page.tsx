@@ -1,6 +1,27 @@
 import Link from 'next/link';
 import { ArrowLeft, Book, Utensils, Heart, Globe, ChefHat, HelpCircle, Brain, Wine } from 'lucide-react';
 import GuideViewTracker from '../../components/GuideViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Guides Pratiques | Manger Japon | Japonchaines",
+  description: "Maîtrisez l'art de manger au Japon : commander, étiquette, régimes, culture culinaire.",
+  keywords: "guide voyage Japon, restaurant japonais, comment commander, étiquette Japon, régimes alimentaires",
+  openGraph: {
+    title: "Guides Pratiques | Manger Japon | Japonchaines",
+    description: "Maîtrisez l'art de manger au Japon : commander, étiquette, régimes, culture culinaire.",
+    type: "website",
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: "/guides"
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function GuidesPage() {  const guides = [
     {

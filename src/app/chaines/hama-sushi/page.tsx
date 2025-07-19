@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hama Sushi (はま寿司) | Kaiten-zushi | Guide Restaurants Japonais',
-  description: 'Guide complet de Hama Sushi - Sushi tournant abordable avec système de commande tactile et ramen. Menu varié, prix attractifs et service efficace.',
+  title: "Hama Sushi はま寿司 | 110¥ + 5 Sauces Soja | Japonchaines",
+  description: "Kaiten-zushi le plus abordable. Plupart des assiettes 110¥, 5 sauces soja régionales.",
   keywords: [
     'hama sushi', 'はま寿司', 'kaiten-zushi', 'sushi tournant',
     'commande tactile', 'prix abordables', 'sushi frais',
     'ramen disponible', 'service rapide', 'menu varié'
   ],
   openGraph: {
-    title: 'Hama Sushi (はま寿司) | Sushi Tournant Abordable',
-    description: 'Découvrez Hama Sushi, sushi tournant abordable avec système de commande tactile et menu varié',
+    title: "Hama Sushi はま寿司 | 110¥ + 5 Sauces Soja | Japonchaines",
+    description: "Kaiten-zushi le plus abordable. Plupart des assiettes 110¥, 5 sauces soja régionales.",
     type: 'article',
-    url: '/chaines/hama-sushi',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/hama-sushi',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

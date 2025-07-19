@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Botejyu (ぼてぢゅう) | Okonomiyaki | Guide Restaurants Japonais',
-  description: 'Guide complet de Botejyu - L\'inventeur du okonomiyaki moderne avec mayonnaise et Modan-yaki. Restaurant originel de Osaka depuis 1946.',
+  title: "Botejyu ぼてぢゅう | Inventeur Okonomiyaki | Japonchaines",
+  description: "Inventeur okonomiyaki mayonnaise et Modan-yaki. Histoire, menu, spécialités 1946.",
   keywords: [
     'botejyu', 'ぼてぢゅう', 'okonomiyaki', 'modan-yaki', 'mayonnaise okonomiyaki',
     'osaka cuisine', 'konamon', 'takoyaki', 'teppanyaki', 'restaurant osaka',
     'originel okonomiyaki', 'invention mayonnaise', 'takarazuka'
   ],
   openGraph: {
-    title: 'Botejyu (ぼてぢゅう) | L\'Inventeur du Okonomiyaki Moderne',
-    description: 'Découvrez Botejyu, le restaurant légendaire qui a inventé le okonomiyaki avec mayonnaise et le Modan-yaki depuis 1946',
+    title: "Botejyu ぼてぢゅう | Inventeur Okonomiyaki | Japonchaines",
+    description: "Inventeur okonomiyaki mayonnaise et Modan-yaki. Histoire, menu, spécialités 1946.",
     type: 'article',
-    url: '/chaines/botejyu',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/botejyu',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

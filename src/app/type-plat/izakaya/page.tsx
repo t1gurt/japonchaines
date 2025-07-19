@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Izakaya : Guide des Bars à Tapas Japonais | Japonchaines",
+  description: "Découvrez la culture de l'izakaya, le bistrot japonais. Yakitori, bière et ambiance conviviale. Guide des chaînes comme Torikizoku.",
+  keywords: "izakaya, Torikizoku, Isomaru Suisan, yakitori, bar japonais, bistrot japonais",
+  openGraph: {
+    title: "Izakaya : Guide des Bars à Tapas Japonais | Japonchaines",
+    description: "Découvrez la culture de l'izakaya, le bistrot japonais. Yakitori, bière et ambiance conviviale. Guide des chaînes comme Torikizoku.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/izakaya",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/izakaya-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Izakaya - Bars à tapas japonais"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Izakaya : Guide des Bars à Tapas Japonais | Japonchaines",
+    description: "Découvrez la culture de l'izakaya, le bistrot japonais. Yakitori, bière et ambiance conviviale. Guide des chaînes comme Torikizoku.",
+    images: ["/images/izakaya-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/izakaya"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function IzakayaPage() {
   const izakayaChains = [

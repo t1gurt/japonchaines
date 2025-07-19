@@ -4,16 +4,16 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Shirokiya (白木屋) | Izakaya | Guide Restaurants Japonais',
-  description: 'Guide complet de Shirokiya - Izakaya traditionnel avec ambiance authentique et menu japonais varié. Expérience culturelle et culinaire authentique.',
+  title: 'Shirokiya 白木屋 | Izakaya Traditionnel | Japonchaines',
+  description: 'Izakaya emblématique. Ambiance authentique, menu varié, art de boire japonais.',
   keywords: [
     'shirokiya', '白木屋', 'izakaya', 'traditionnel',
     'ambiance authentique', 'menu japonais', 'expérience culturelle',
     'cuisine japonaise', 'boissons traditionnelles', 'atmosphère locale'
   ],
   openGraph: {
-    title: 'Shirokiya (白木屋) | Izakaya Traditionnel',
-    description: 'Découvrez Shirokiya, izakaya traditionnel avec ambiance authentique et expérience culinaire japonaise',
+    title: 'Shirokiya : L\'Expérience de l\'Izakaya Traditionnel | Japonchaines',
+    description: 'Découvrez Shirokiya, l\'un des izakaya les plus emblématiques du Japon. Ambiance authentique, menu varié et l\'art de boire japonais.',
     type: 'article',
     url: '/chaines/shirokiya',
   },

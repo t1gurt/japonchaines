@@ -1,6 +1,18 @@
 import Link from 'next/link';
 import { ArrowLeft, Ticket, Monitor, QrCode, MessageCircle, AlertCircle, CheckCircle, Clock } from 'lucide-react';
+import { Metadata } from 'next';
 import GuideViewTracker from '../../../components/GuideViewTracker';
+
+export const metadata: Metadata = {
+  title: 'Comment Commander au Japon : Guide des Distributeurs et Tablettes | Japonchaines',
+  description: 'Guide complet pour commander dans les restaurants japonais : maîtrisez les distributeurs de tickets (kenbaiki), les tablettes tactiles et les QR codes.',
+  keywords: 'commander japon, kenbaiki, distributeur tickets japon, tablette tactile restaurant, QR code commande, guide restaurant japon',
+  openGraph: {
+    title: 'Comment Commander au Japon : Distributeurs, Tablettes et QR Codes',
+    description: 'Maîtrisez tous les systèmes de commande japonais : kenbaiki, écrans tactiles et QR codes. Guide pratique avec phrases utiles.',
+    type: 'article',
+  },
+};
 
 export default function CommentCommanderPage() {
   const orderingSystems = [

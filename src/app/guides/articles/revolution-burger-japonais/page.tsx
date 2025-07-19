@@ -1,6 +1,27 @@
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, Share2 } from 'lucide-react';
 import GuideViewTracker from '../../../../components/GuideViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'La Révolution du Burger Japonais : Du Fast-Food à la Gastronomie | Japonchaines',
+  description: 'Découvrez comment le Japon a transformé le hamburger en un art culinaire, avec des innovations comme le Rice Burger et le Teriyaki Burger.',
+  keywords: 'révolution burger japonais, rice burger, teriyaki burger, gastronomie japonaise, innovation culinaire, fast food japonais',
+  openGraph: {
+    title: 'La Révolution du Burger Japonais : Du Fast-Food à la Gastronomie',
+    description: 'Découvrez comment le Japon a transformé le hamburger en un art culinaire, avec des innovations comme le Rice Burger et le Teriyaki Burger.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/guides/articles/revolution-burger-japonais'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function RevolutionBurgerJaponaisPage() {
   const article = {

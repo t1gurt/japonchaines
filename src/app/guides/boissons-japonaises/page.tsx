@@ -1,16 +1,25 @@
 import Link from 'next/link';
 import { Wine, Coffee, Beer, Droplets, Star, ArrowRight, BookOpen, Heart, Globe, Thermometer, Clock, Award } from 'lucide-react';
 import GuideViewTracker from '../../../components/GuideViewTracker';
+import { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Guide Complet des Boissons Japonaises | Saké, Bière, Shochu - Japonchaines',
-  description: 'Guide expert des boissons japonaises pour francophones : saké, shochu, whisky japonais, bière et leurs accords parfaits. Culture, étiquette et art de boire au Japon.',
+export const metadata: Metadata = {
+  title: 'Boissons Japonaises | Saké Shochu | Japonchaines',
+  description: 'Expert saké, shochu, whisky, bière. Accords parfaits, culture, étiquette.',
   keywords: 'boissons japonaises, saké, nihonshu, shochu, whisky japonais, bière japonaise, umeshu, chuhai, guide français, culture japonaise, accord mets boissons',
   openGraph: {
-    title: 'L\'Art des Boissons Japonaises - Guide Complet',
-    description: 'Découvrez l\'univers fascinant des boissons japonaises : du saké raffiné au shochu authentique, maîtrisez la culture de la boisson au Japon.',
-    type: 'article'
-  }
+    title: 'Guide des Boissons Japonaises : Saké, Shochu, Bière | Japonchaines',
+    description: 'Apprenez à choisir et déguster les boissons japonaises. Guide complet sur le saké, shochu, whisky japonais et l\'art de boire au Japon.',
+    type: 'article',
+    url: '/guides/boissons-japonaises',
+  },
+  alternates: {
+    canonical: '/guides/boissons-japonaises',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function BoissonsJaponaisesPage() {

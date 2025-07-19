@@ -1,6 +1,27 @@
 import Link from 'next/link';
 import { ArrowLeft, Calendar, Clock, User, TrendingUp, Sparkles, Heart } from 'lucide-react';
 import GuideViewTracker from '../../../../components/GuideViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Kikan Gentei & Moe-dan : L\'Art Japonais du Burger | Japonchaines',
+  description: 'Découvrez comment les concepts de "période limitée" (kikan gentei) et d\'\"esthétique de la coupe" (moe-dan) ont révolutionné le burger au Japon.',
+  keywords: 'kikan gentei, moe-dan, burger japonais, période limitée, esthétique coupe, culture consommation japon, marketing japonais',
+  openGraph: {
+    title: 'Kikan Gentei & Moe-dan : L\'Art Japonais du Burger',
+    description: 'Découvrez comment les concepts de "période limitée" (kikan gentei) et d\'\"esthétique de la coupe" (moe-dan) ont révolutionné le burger au Japon.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/guides/articles/culture-consommation-burger'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function CultureConsommationBurgerPage() {
   const article = {

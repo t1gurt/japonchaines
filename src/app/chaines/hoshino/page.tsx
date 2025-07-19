@@ -1,5 +1,26 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Hoshino Coffee : Le Charme du Kissaten Rétro | Japonchaines',
+  description: 'Découvrez Hoshino Coffee et son ambiance nostalgique de l\'ère Showa. Café siphon, pancakes soufflés et un service attentionné.',
+  keywords: 'hoshino coffee, kissaten, café japonais traditionnel, ambiance showa, pancakes japonais, café siphon, nostalgie japon',
+  openGraph: {
+    title: 'Hoshino Coffee : Le Charme du Kissaten Rétro | Japonchaines',
+    description: 'Découvrez Hoshino Coffee et son ambiance nostalgique de l\'ère Showa. Café siphon, pancakes soufflés et un service attentionné.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/chaines/hoshino'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function HoshinoPage() {
   return (

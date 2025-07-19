@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Cafés Japonais (Kissaten) : Guide des Chaînes et Culture | Japonchaines",
+  description: "Découvrez la culture unique des cafés japonais (kissaten). Du \"Morning Service\" de Komeda à l'ambiance rétro de Hoshino.",
+  keywords: "cafés japonais, kissaten, Komeda Coffee, Hoshino Coffee, morning service",
+  openGraph: {
+    title: "Cafés Japonais (Kissaten) : Guide des Chaînes et Culture | Japonchaines",
+    description: "Découvrez la culture unique des cafés japonais (kissaten). Du \"Morning Service\" de Komeda à l'ambiance rétro de Hoshino.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/cafe",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/cafes-japonais-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Cafés japonais - Kissaten et chaînes modernes"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Cafés Japonais (Kissaten) : Guide des Chaînes et Culture | Japonchaines",
+    description: "Découvrez la culture unique des cafés japonais (kissaten). Du \"Morning Service\" de Komeda à l'ambiance rétro de Hoshino.",
+    images: ["/images/cafes-japonais-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/cafe"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function CafePage() {
   return (

@@ -1,5 +1,26 @@
 import Link from "next/link";
 import ChainViewTracker from "../../../components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Yudetaro : Le Soba Artisanal et Abordable | Japonchaines',
+  description: 'Découvrez Yudetaro, la chaîne qui rend le soba artisanal accessible. Nouilles fraîches préparées sur place et service rapide.',
+  keywords: 'yudetaro, soba artisanal, soba frais, nouilles maison, soba abordable, fast food traditionnel, soba chaîne',
+  openGraph: {
+    title: 'Yudetaro : Le Soba Artisanal et Abordable | Japonchaines',
+    description: 'Découvrez Yudetaro, la chaîne qui rend le soba artisanal accessible. Nouilles fraîches préparées sur place et service rapide.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/chaines/yudetaro'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function YudetaroPage() {
   const menuCategories = [

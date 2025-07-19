@@ -2,20 +2,21 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Isomaru Suisan (磯丸水産) | Guide Complet de l'Izakaya de Fruits de Mer | Japonchaines.fr",
-  description: "Découvrez Isomaru Suisan, l'izakaya révolutionnaire qui apporte l'ambiance d'une 'maison de la mer' au cœur des grandes villes japonaises. Grillez vos fruits de mer frais vous-même et vivez une expérience conviviale unique.",
+  title: "Isomaru Suisan 磯丸水産 | Izakaya Fruits Mer 24h | Japonchaines",
+  description: "Izakaya fruits de mer 24h/24. Grillez coquillages/poissons frais, ambiance port de pêche.",
   keywords: "Isomaru Suisan, 磯丸水産, izakaya, fruits de mer, grill, hamayaki, Tokyo, Osaka, poisson frais, coquillages, convivialité, culture japonaise",
   openGraph: {
-    title: "Isomaru Suisan - L'Izakaya de Fruits de Mer le Plus Convivial du Japon",
-    description: "Expérience unique de grill de fruits de mer dans une ambiance de 'maison de la mer' en plein centre-ville. Guide complet avec conseils pratiques.",
-    url: "https://japonchaines.fr/chaines/isomaru-suisan",
+    title: "Isomaru Suisan : L'Izakaya de Fruits de Mer 24h/24 | Japonchaines",
+    description: "Découvrez Isomaru Suisan, l'izakaya révolutionnaire qui apporte l'ambiance d'une 'maison de la mer' au cœur des grandes villes japonaises.",
+    url: "/chaines/isomaru-suisan",
     type: "article",
-    locale: "fr_FR",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "Isomaru Suisan - Guide de l'Izakaya de Fruits de Mer",
-    description: "Découvrez cette expérience unique de convivialité japonaise",
+  alternates: {
+    canonical: '/chaines/isomaru-suisan',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

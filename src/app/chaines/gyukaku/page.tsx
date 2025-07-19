@@ -3,14 +3,23 @@ import Link from 'next/link';
 import ChainViewTracker from '@/components/ChainViewTracker';
 
 export const metadata: Metadata = {
-  title: 'Gyukaku (牛角) - Guide Complet | Restaurant Yakiniku Premium',
-  description: 'Découvrez Gyukaku, la chaîne de yakiniku premium proposant des viandes de qualité exceptionnelle dans une ambiance moderne et conviviale.',
+  title: "Gyukaku 牛角 | Yakiniku Premium | Japonchaines",
+  description: "Leader yakiniku Japon. Viandes premium, formules à volonté, barbecue convivial.",
   keywords: 'Gyukaku, 牛角, yakiniku, barbecue japonais, kalbi, harami, viande premium, restaurant japonais',
   openGraph: {
-    title: 'Gyukaku - Restaurant Yakiniku Premium',
-    description: 'Guide complet de Gyukaku : spécialités yakiniku, viandes premium, ambiance moderne et expérience grill authentique.',
-    type: 'article'
-  }
+    title: "Gyukaku 牛角 | Yakiniku Premium | Japonchaines",
+    description: "Leader yakiniku Japon. Viandes premium, formules à volonté, barbecue convivial.",
+    type: 'article',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: '/chaines/gyukaku',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function GyukakuPage() {

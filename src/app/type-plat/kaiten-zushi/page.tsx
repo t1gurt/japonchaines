@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Kaiten-zushi : Guide des Sushis sur Tapis Roulant | Japonchaines",
+  description: "Le guide complet du kaiten-zushi. Découvrez les meilleures chaînes (Sushiro, Kura), comment commander et les règles à connaître.",
+  keywords: "kaiten-zushi, sushi tournant, Sushiro, Kura Sushi, Hama Sushi, sushi pas cher",
+  openGraph: {
+    title: "Kaiten-zushi : Guide des Sushis sur Tapis Roulant | Japonchaines",
+    description: "Le guide complet du kaiten-zushi. Découvrez les meilleures chaînes (Sushiro, Kura), comment commander et les règles à connaître.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/kaiten-zushi",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/kaiten-zushi-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Kaiten-zushi - Sushis sur tapis roulant"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kaiten-zushi : Guide des Sushis sur Tapis Roulant | Japonchaines",
+    description: "Le guide complet du kaiten-zushi. Découvrez les meilleures chaînes (Sushiro, Kura), comment commander et les règles à connaître.",
+    images: ["/images/kaiten-zushi-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/kaiten-zushi"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function KaitenZushiPage() {
   const sushiChains = [

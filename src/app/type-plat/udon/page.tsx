@@ -1,5 +1,46 @@
 import Link from "next/link";
 import CategoryViewTracker from "../../../components/CategoryViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Udon : Guide des Nouilles Épaisses Japonaises | Japonchaines",
+  description: "Découvrez les udon, les nouilles de blé épaisses et réconfortantes. Guide des chaînes comme Marugame Seimen et des styles de dégustation.",
+  keywords: "udon, Marugame Seimen, Hanamaru Udon, nouilles japonaises, nouilles de blé",
+  openGraph: {
+    title: "Udon : Guide des Nouilles Épaisses Japonaises | Japonchaines",
+    description: "Découvrez les udon, les nouilles de blé épaisses et réconfortantes. Guide des chaînes comme Marugame Seimen et des styles de dégustation.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/udon",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/udon-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Udon - Nouilles épaisses japonaises"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Udon : Guide des Nouilles Épaisses Japonaises | Japonchaines",
+    description: "Découvrez les udon, les nouilles de blé épaisses et réconfortantes. Guide des chaînes comme Marugame Seimen et des styles de dégustation.",
+    images: ["/images/udon-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/udon"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function UdonPage() {
   const udonChains = [

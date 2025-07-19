@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Saizeriya (サイゼリヤ) | Family Restaurant | Guide Restaurants Japonais',
-  description: 'Guide complet de Saizeriya - Restaurant familial italien abordable au Japon. Menu varié, prix exceptionnels et ambiance décontractée pour tous.',
+  title: "Saizeriya サイゼリヤ | Italien Abordable | Japonchaines",
+  description: "Restaurant italien prix imbattables. Pizza 399¥, pâtes 299¥, ambiance unique.",
   keywords: [
     'saizeriya', 'サイゼリヤ', 'restaurant familial', 'italien abordable',
     'prix bas', 'menu varié', 'cuisine italienne',
     'restaurant décontracté', 'famille', 'économique'
   ],
   openGraph: {
-    title: 'Saizeriya (サイゼリヤ) | Restaurant Italien Abordable',
-    description: 'Découvrez Saizeriya, restaurant familial italien avec prix exceptionnels et menu varié accessible à tous',
+    title: "Saizeriya サイゼリヤ | Italien Abordable | Japonchaines",
+    description: "Restaurant italien prix imbattables. Pizza 399¥, pâtes 299¥, ambiance unique.",
     type: 'article',
-    url: '/chaines/saizeriya',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/saizeriya',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Street Food Japonaise : Guide du Takoyaki et Yatai | Japonchaines",
+  description: "Explorez la street food japonaise. Découvrez les takoyaki d'Osaka avec Gindako et la culture des stands de rue (yatai).",
+  keywords: "street food japonaise, takoyaki, Gindako, yatai, street food osaka, taiyaki",
+  openGraph: {
+    title: "Street Food Japonaise : Guide du Takoyaki et Yatai | Japonchaines",
+    description: "Explorez la street food japonaise. Découvrez les takoyaki d'Osaka avec Gindako et la culture des stands de rue (yatai).",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/street-food",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/street-food-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Street food japonaise - Takoyaki et yatai"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Street Food Japonaise : Guide du Takoyaki et Yatai | Japonchaines",
+    description: "Explorez la street food japonaise. Découvrez les takoyaki d'Osaka avec Gindako et la culture des stands de rue (yatai).",
+    images: ["/images/street-food-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/street-food"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function StreetFoodPage() {
   return (

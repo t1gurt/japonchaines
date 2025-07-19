@@ -1,5 +1,31 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Ikinari Steak いきなりステーキ | Innovation | Japonchaines",
+  description: "Concept révolutionnaire tachi-gui. Steaks premium, innovation service, excellence bovine.",
+  keywords: [
+    'ikinari steak', 'いきなりステーキ', 'steak premium', 'tachi-gui',
+    'concept révolutionnaire', 'innovation service', 'excellence bovine',
+    'steaks japonais', 'wagyu premium', 'innovation culinaire'
+  ],
+  openGraph: {
+    title: "Ikinari Steak いきなりステーキ | Innovation | Japonchaines",
+    description: "Concept révolutionnaire tachi-gui. Steaks premium, innovation service, excellence bovine.",
+    type: 'article',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: '/chaines/ikinari-steak',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true }
+  },
+};
 
 export default function IkinariSteakPage() {
   return (

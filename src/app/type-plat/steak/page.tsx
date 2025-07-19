@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Steakhouses au Japon : Guide du Wagyu et de l'Ikinari Steak | Japonchaines",
+  description: "Découvrez les steakhouses japonais. Du concept révolutionnaire d'Ikinari Steak à la dégustation de bœuf Wagyu premium.",
+  keywords: "steak japonais, Ikinari Steak, wagyu, bœuf japonais, steakhouse tokyo",
+  openGraph: {
+    title: "Steakhouses au Japon : Guide du Wagyu et de l'Ikinari Steak | Japonchaines",
+    description: "Découvrez les steakhouses japonais. Du concept révolutionnaire d'Ikinari Steak à la dégustation de bœuf Wagyu premium.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/steak",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/steak-japonais-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Steakhouses japonais - Wagyu et Ikinari Steak"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Steakhouses au Japon : Guide du Wagyu et de l'Ikinari Steak | Japonchaines",
+    description: "Découvrez les steakhouses japonais. Du concept révolutionnaire d'Ikinari Steak à la dégustation de bœuf Wagyu premium.",
+    images: ["/images/steak-japonais-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/steak"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function SteakPage() {
   return (

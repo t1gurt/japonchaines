@@ -4,26 +4,27 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Gyoza no Ohsho (餃子の王将) | Cuisine Chinoise | Guide Restaurants Japonais',
-  description: 'Guide complet de Gyoza no Ohsho - Spécialiste des gyoza et cuisine chinoise populaire au Japon. Menu varié, prix abordables et saveurs authentiques.',
+  title: "Gyoza no Ohsho 餃子の王将 | Roi des Gyoza | Japonchaines",
+  description: "6 milliards de gyoza vendus ! Recette secrète depuis 1967, technique yaki-age brevetée. Institution culturelle japonaise.",
   keywords: [
-    'gyoza no ohsho', '餃子の王将', 'gyoza', 'cuisine chinoise',
-    'gyoza grillés', 'prix abordables', 'cuisine populaire',
-    'saveurs authentiques', 'restaurant chinois', 'menu varié'
+    'gyoza no ohsho', '餃子の王将', 'gyoza japonais', 'technique yaki-age',
+    'recette secrète', 'institution japonaise', 'cuisine chinoise',
+    'roi des gyoza', 'tradition culinaire', 'authentique'
   ],
   openGraph: {
-    title: 'Gyoza no Ohsho (餃子の王将) | Roi des Gyoza',
-    description: 'Découvrez Gyoza no Ohsho, spécialiste des gyoza et cuisine chinoise populaire avec prix abordables',
+    title: "Gyoza no Ohsho 餃子の王将 | Roi des Gyoza | Japonchaines",
+    description: "6 milliards de gyoza vendus ! Recette secrète depuis 1967, technique yaki-age brevetée. Institution culturelle japonaise.",
     type: 'article',
-    url: '/chaines/gyoza-no-ohsho',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/gyoza-no-ohsho',
   },
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true
+  }
 };
 
 export default function GyozaNoOhshoPage() {

@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Curry Japonais : Guide des Meilleures Chaînes (CoCo Ichibanya) | Japonchaines",
+  description: "Plongez dans l'univers du curry japonais. Personnalisez votre plat chez CoCo Ichibanya ou goûtez le curry noir de Go!Go!Curry.",
+  keywords: "curry japonais, CoCo Ichibanya, Go Go Curry, curry katsu, curry japonais personnalisé",
+  openGraph: {
+    title: "Curry Japonais : Guide des Meilleures Chaînes (CoCo Ichibanya) | Japonchaines",
+    description: "Plongez dans l'univers du curry japonais. Personnalisez votre plat chez CoCo Ichibanya ou goûtez le curry noir de Go!Go!Curry.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/curry",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/curry-japonais-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Curry japonais - CoCo Ichibanya et autres chaînes"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Curry Japonais : Guide des Meilleures Chaînes (CoCo Ichibanya) | Japonchaines",
+    description: "Plongez dans l'univers du curry japonais. Personnalisez votre plat chez CoCo Ichibanya ou goûtez le curry noir de Go!Go!Curry.",
+    images: ["/images/curry-japonais-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/curry"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function CurryPage() {
   const curryChains = [

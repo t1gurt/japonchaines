@@ -1,5 +1,26 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Doutor Coffee : Le Café Self-Service Japonais | Japonchaines',
+  description: 'Découvrez Doutor, le pionnier du café self-service au Japon. Menu, prix, et l\'art du café rapide et abordable pour une pause à la japonaise.',
+  keywords: 'doutor coffee, café japonais, self-service café, kissaten moderne, café rapide japon, petit déjeuner japonais',
+  openGraph: {
+    title: 'Doutor Coffee : Le Café Self-Service Japonais | Japonchaines',
+    description: 'Découvrez Doutor, le pionnier du café self-service au Japon. Menu, prix, et l\'art du café rapide et abordable pour une pause à la japonaise.',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/chaines/doutor'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function DoutorPage() {
   return (

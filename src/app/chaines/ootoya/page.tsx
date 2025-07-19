@@ -3,13 +3,23 @@ import Link from 'next/link';
 import ChainViewTracker from '@/components/ChainViewTracker';
 
 export const metadata: Metadata = {
-  title: 'Ootoya (大戸屋) - Guide Complet | Restaurant Teishoku Japonais',
-  description: 'Découvrez Ootoya, la chaîne de teishoku haut de gamme proposant des repas complets traditionnels avec des ingrédients frais et une cuisine soignée.',
+  title: "Ootoya 大戸屋 | Teishoku Sain | Japonchaines",
+  description: "Teishoku haut de gamme. Ingrédients frais, cuisine visible, repas équilibrés.",
   keywords: 'Ootoya, 大戸屋, teishoku, restaurant japonais, repas complet, cuisine traditionnelle, légumes frais, saba teishoku',
   openGraph: {
-    title: 'Ootoya - Restaurant Teishoku Haut de Gamme',
-    description: 'Guide complet d\'Ootoya : teishoku traditionnels raffinés avec légumes frais et cuisine visible dans les meilleures chaînes japonaises.',
-    type: 'article'
+    title: "Ootoya 大戸屋 | Teishoku Sain | Japonchaines",
+    description: "Teishoku haut de gamme. Ingrédients frais, cuisine visible, repas équilibrés.",
+    type: 'article',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
+  },
+  alternates: {
+    canonical: '/chaines/ootoya'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true }
   }
 };
 

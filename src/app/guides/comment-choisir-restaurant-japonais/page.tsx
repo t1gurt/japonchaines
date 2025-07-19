@@ -3,13 +3,21 @@ import { ArrowLeft, HelpCircle, Star, DollarSign, Users, Clock, Utensils, MapPin
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Comment Choisir un Restaurant Japonais au Japon ? - Guide Complet',
-  description: 'Guide complet pour choisir le bon restaurant japonais lors de votre voyage au Japon. Conseils pratiques, types de restaurants, budget et recommandations selon vos préférences.',
+  title: 'Choisir Restaurant Japon | Guide 2025 | Japonchaines',
+  description: 'Guide pratique par cuisine, budget, occasion. Évitez pièges, mangez comme local.',
   keywords: 'comment choisir restaurant japonais, guide restaurant japon, types restaurants japonais, budget restaurant japon, conseils voyage japon',
   openGraph: {
-    title: 'Comment Choisir un Restaurant Japonais au Japon ?',
-    description: 'Guide pratique pour sélectionner le restaurant japonais idéal selon votre budget et vos goûts',
+    title: 'Comment Choisir son Restaurant au Japon ? | Guide 2025 | Japonchaines',
+    description: 'Guide pratique pour choisir où manger au Japon. Par type de cuisine, budget et occasion. Conseils pour éviter les pièges touristiques.',
     type: 'article',
+    url: '/guides/comment-choisir-restaurant-japonais',
+  },
+  alternates: {
+    canonical: '/guides/comment-choisir-restaurant-japonais',
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

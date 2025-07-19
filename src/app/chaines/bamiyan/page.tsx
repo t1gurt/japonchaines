@@ -4,18 +4,20 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bamiyan (バーミヤン) | Cuisine Chinoise | Guide Restaurants Japonais',
-  description: 'Guide complet de Bamiyan - Chaîne de restaurant chinois familial avec plats généreux à prix abordables. Menu, prix, conseils de commande et ambiance décontractée.',
+  title: "Bamiyan (バーミヤン) : Guide du Restaurant Chinois Familial | Japonchaines",
+  description: "Découvrez Bamiyan, le restaurant familial chinois du groupe Skylark. Menus variés, gyoza, ramen et plats généreux à prix très abordables.",
   keywords: [
     'bamiyan', 'バーミヤン', 'cuisine chinoise', 'restaurant chinois japon',
     'gyoza', 'ramen chinois', 'riz frit', 'bœuf au poivre noir',
     'restaurant familial', 'prix abordable japon', 'chaîne restaurant'
   ],
   openGraph: {
-    title: 'Bamiyan (バーミヤン) | Cuisine Chinoise Familiale',
-    description: 'Découvrez Bamiyan, la chaîne de restaurant chinois familial au Japon avec des plats généreux et abordables',
+    title: "Bamiyan (バーミヤン) : Guide du Restaurant Chinois Familial | Japonchaines",
+    description: "Découvrez Bamiyan, le restaurant familial chinois du groupe Skylark. Menus variés, gyoza, ramen et plats généreux à prix très abordables.",
     type: 'article',
     url: '/chaines/bamiyan',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/bamiyan',

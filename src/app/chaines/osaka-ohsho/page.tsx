@@ -3,14 +3,22 @@ import Link from 'next/link';
 import ChainViewTracker from '@/components/ChainViewTracker';
 
 export const metadata: Metadata = {
-  title: 'Osaka Ohsho (大阪王将) - Guide Complet | Restaurant Chinois Japonais',
-  description: 'Découvrez Osaka Ohsho, la célèbre chaîne de cuisine chinoise d\'Osaka. Gyoza croustillants, yakimeshi signature et plats généreux dans une ambiance décontractée.',
+  title: 'Osaka Ohsho 大阪王将 | Gyoza Osaka | Japonchaines',
+  description: 'Gyoza croustillants, yakimeshi signature. Ambiance conviviale cuisine rue Osaka.',
   keywords: 'Osaka Ohsho, 大阪王将, restaurant chinois japonais, gyoza, yakimeshi, cuisine chinoise Osaka',
   openGraph: {
-    title: 'Osaka Ohsho - Restaurant Chinois Style Osaka',
-    description: 'Guide complet d\'Osaka Ohsho : spécialités, prix, conseils de commande et culture du restaurant chinois style Osaka.',
-    type: 'article'
-  }
+    title: 'Osaka Ohsho : Les Gyoza et la Cuisine Chinoise d\'Osaka | Japonchaines',
+    description: 'Guide d\'Osaka Ohsho. Découvrez leurs gyoza croustillants, leur yakimeshi signature et l\'ambiance conviviale de la cuisine de rue d\'Osaka.',
+    type: 'article',
+    url: '/chaines/osaka-ohsho',
+  },
+  alternates: {
+    canonical: '/chaines/osaka-ohsho',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function OsakaOhshoPage() {

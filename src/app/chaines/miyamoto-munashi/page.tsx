@@ -4,16 +4,16 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Miyamoto Munashi (宮本むなし) | Teishoku | Guide Restaurants Japonais',
-  description: 'Guide complet de Miyamoto Munashi - Restaurant teishoku traditionnel avec repas équilibrés et prix abordables. Cuisine japonaise authentique.',
+  title: 'Miyamoto Munashi 宮本むなし | Teishoku Osaka | Japonchaines',
+  description: 'Teishoku Osaka ultra-économique. Repas complets généreux, prix défiant concurrence.',
   keywords: [
     'miyamoto munashi', '宮本むなし', 'teishoku', 'repas équilibrés',
     'prix abordables', 'cuisine japonaise', 'restaurant traditionnel',
     'menu japonais', 'repas complets', 'style teishoku'
   ],
   openGraph: {
-    title: 'Miyamoto Munashi (宮本むなし) | Teishoku Traditionnel',
-    description: 'Découvrez Miyamoto Munashi, restaurant teishoku avec repas équilibrés et cuisine japonaise authentique',
+    title: 'Miyamoto Munashi : Le Teishoku d\'Osaka Ultra-Économique | Japonchaines',
+    description: 'Découvrez Miyamoto Munashi, la chaîne de teishoku d\'Osaka. Des repas complets et généreux à des prix défiant toute concurrence.',
     type: 'article',
     url: '/chaines/miyamoto-munashi',
   },

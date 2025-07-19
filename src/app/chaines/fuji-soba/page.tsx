@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fuji Soba (富士そば) | Udon-Soba | Guide Restaurants Japonais',
-  description: 'Guide complet de Fuji Soba - Chaîne de soba rapide ouverte 24h/24 dans certains lieux. Soba authentique, service rapide et prix abordables.',
+  title: "Fuji Soba 富士そば | Soba Debout 24h | Japonchaines",
+  description: "Institution soba rapide Tokyo. Ouvert 24h/24, idéal salarymen, culture tachi-gui.",
   keywords: [
     'fuji soba', '富士そば', 'soba', 'udon',
     '24h ouvert', 'service rapide', 'prix abordables',
     'soba authentique', 'nouilles japonaises', 'fast soba'
   ],
   openGraph: {
-    title: 'Fuji Soba (富士そば) | Soba Rapide 24h',
-    description: 'Découvrez Fuji Soba, chaîne de soba rapide ouverte 24h/24 avec soba authentique et prix abordables',
+    title: "Fuji Soba 富士そば | Soba Debout 24h | Japonchaines",
+    description: "Institution soba rapide Tokyo. Ouvert 24h/24, idéal salarymen, culture tachi-gui.",
     type: 'article',
-    url: '/chaines/fuji-soba',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/fuji-soba',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

@@ -1,5 +1,26 @@
 import Link from "next/link";
 import ChainViewTracker from "@/components/ChainViewTracker";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Kushikatsu Tanaka : L\'Authentique Goût d\'Osaka | Japonchaines',
+  description: 'Découvrez Kushikatsu Tanaka et ses brochettes panées d\'Osaka. Apprenez la règle d\'or : "ne pas tremper deux fois" !',
+  keywords: 'kushikatsu tanaka, kushikatsu osaka, brochettes panées, règle osaka, deux fois tremper, izakaya osaka, street food osaka',
+  openGraph: {
+    title: 'Kushikatsu Tanaka : L\'Authentique Goût d\'Osaka | Japonchaines',
+    description: 'Découvrez Kushikatsu Tanaka et ses brochettes panées d\'Osaka. Apprenez la règle d\'or : "ne pas tremper deux fois" !',
+    type: 'article',
+    locale: 'fr_FR',
+    siteName: 'Japonchaines - Guide des Restaurants Japonais'
+  },
+  alternates: {
+    canonical: '/chaines/kushikatsu-tanaka'
+  },
+  robots: {
+    index: true,
+    follow: true
+  }
+};
 
 export default function KushikatsuTanakaPage() {
   return (

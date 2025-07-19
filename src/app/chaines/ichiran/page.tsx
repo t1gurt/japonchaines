@@ -4,26 +4,27 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Ichiran (一蘭) | Ramen | Guide Restaurants Japonais',
-  description: 'Guide complet d\'Ichiran - Ramen tonkotsu spécialisé avec système de commande unique et expérience individuelle focalisée. Menu détaillé et concept yatai.',
+  title: "Ichiran 一蘭 | Temple Ramen Solo | Japonchaines",
+  description: "Experience ultime ramen tonkotsu. Boxes individuelles, 3000 combinaisons personnalisées, bouillon 24h. Temple concentration.",
   keywords: [
-    'ichiran', '一蘭', 'ramen', 'tonkotsu ramen',
-    'système yatai', 'personnalisation', 'focus individuel',
-    'ramen spécialisé', 'expérience unique', 'commande unique'
+    'ichiran', '一蘭', 'ramen tonkotsu', 'boxes individuelles',
+    'personnalisation extrême', 'bouillon 24h', 'yatai style',
+    'concentration maximale', 'temple ramen', 'spécialiste unique'
   ],
   openGraph: {
-    title: 'Ichiran (一蘭) | Ramen Tonkotsu Spécialisé',
-    description: 'Découvrez Ichiran, la chaîne de ramen tonkotsu avec système yatai unique et expérience individuelle',
+    title: "Ichiran 一蘭 | Temple Ramen Solo | Japonchaines",
+    description: "Experience ultime ramen tonkotsu. Boxes individuelles, 3000 combinaisons personnalisées, bouillon 24h. Temple concentration.",
     type: 'article',
-    url: '/chaines/ichiran',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/ichiran',
   },
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true
+  }
 };
 
 export default function IchiranPage() {

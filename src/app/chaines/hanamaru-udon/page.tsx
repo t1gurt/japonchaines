@@ -4,18 +4,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Hanamaru Udon (はなまるうどん) | Udon-Soba | Guide Restaurants Japonais',
-  description: 'Guide complet de Hanamaru Udon - Chaîne populaire d\'udon avec service rapide et prix abordables. Udon frais et authentique style Kagawa.',
+  title: "Hanamaru Udon はなまるうどん | Self-Service | Japonchaines",
+  description: "Udon self-service de qualité. Udon frais style Sanuki, grande variété tempuras.",
   keywords: [
     'hanamaru udon', 'はなまるうどん', 'udon', 'soba',
     'service rapide', 'prix abordables', 'udon frais',
     'style kagawa', 'udon authentique', 'self-service'
   ],
   openGraph: {
-    title: 'Hanamaru Udon (はなまるうどん) | Udon Rapide et Abordable',
-    description: 'Découvrez Hanamaru Udon, chaîne populaire d\'udon avec service rapide et prix abordables',
+    title: "Hanamaru Udon はなまるうどん | Self-Service | Japonchaines",
+    description: "Udon self-service de qualité. Udon frais style Sanuki, grande variété tempuras.",
     type: 'article',
-    url: '/chaines/hanamaru-udon',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/hanamaru-udon',
@@ -23,6 +24,7 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true }
   },
 };
 

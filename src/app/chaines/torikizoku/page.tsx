@@ -4,26 +4,27 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Torikizoku (鳥貴族) | Izakaya | Guide Restaurants Japonais',
-  description: 'Guide complet de Torikizoku - Izakaya spécialisé dans le yakitori avec prix uniformes. Ambiance conviviale, brochettes de qualité à prix fixe.',
+  title: "Torikizoku 鳥貴族 | Izakaya Prix Unique | Japonchaines",
+  description: "Révolution yakitori ! Tout à 327¥ : brochettes artisanales, karaage parfait, ambiance izakaya authentique. Démocratisation géniale.",
   keywords: [
-    'torikizoku', '鳥貴族', 'izakaya', 'yakitori',
-    'prix uniforme', 'brochettes poulet', 'ambiance conviviale',
-    'prix fixe', 'spécialité yakitori', 'restaurant japonais'
+    'torikizoku', '鳥貴族', 'yakitori prix unique', 'izakaya démocratique',
+    '327 yen fixe', 'poulet artisanal', 'ambiance conviviale',
+    'revolution yakitori', 'intégration verticale', 'culture izakaya'
   ],
   openGraph: {
-    title: 'Torikizoku (鳥貴族) | Izakaya Yakitori Prix Fixe',
-    description: 'Découvrez Torikizoku, izakaya spécialisé dans le yakitori avec prix uniformes et ambiance conviviale',
+    title: "Torikizoku 鳥貴族 | Izakaya Prix Unique | Japonchaines",
+    description: "Révolution yakitori ! Tout à 327¥ : brochettes artisanales, karaage parfait, ambiance izakaya authentique. Démocratisation géniale.",
     type: 'article',
-    url: '/chaines/torikizoku',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/torikizoku',
   },
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true
+  }
 };
 
 export default function TorikizokuPage() {

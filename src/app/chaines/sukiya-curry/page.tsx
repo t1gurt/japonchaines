@@ -4,16 +4,16 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sukiya Curry (すき家カレー) | Curry | Guide Restaurants Japonais',
-  description: 'Guide complet de Sukiya Curry - Spécialiste du curry japonais avec menu varié et prix abordables. Curry authentique style japonais.',
+  title: 'Sukiya Curry すき家カレー | Curry Rapide | Japonchaines',
+  description: 'Curry économique Sukiya. Prix imbattables, service 24h/24 chaîne N°1 gyudon.',
   keywords: [
     'sukiya curry', 'すき家カレー', 'curry japonais', 'curry rice',
     'prix abordables', 'menu varié', 'curry authentique',
     'style japonais', 'fast curry', 'épices japonaises'
   ],
   openGraph: {
-    title: 'Sukiya Curry (すき家カレー) | Curry Japonais Authentique',
-    description: 'Découvrez Sukiya Curry, spécialiste du curry japonais avec menu varié et prix abordables',
+    title: 'Sukiya Curry : Le Curry Économique et Rapide | Japonchaines',
+    description: 'Découvrez l\'offre curry de Sukiya. Un curry japonais savoureux, des prix imbattables et le service rapide 24h/24 de la chaîne N°1 du gyudon.',
     type: 'article',
     url: '/chaines/sukiya-curry',
   },

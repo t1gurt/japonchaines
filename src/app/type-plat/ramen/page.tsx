@@ -1,5 +1,46 @@
 import Link from "next/link";
 import CategoryViewTracker from '../../../components/CategoryViewTracker';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Ramen : Guide des Bouillons, Nouilles et Chaînes (Ichiran) | Japonchaines",
+  description: "Explorez l'univers du ramen. Des bouillons tonkotsu, shoyu, shio, miso aux meilleures chaînes comme Ichiran et Ippudo.",
+  keywords: "ramen, Ichiran, Ippudo, Tenkaippin, tonkotsu, shoyu, miso, nouilles japonaises",
+  openGraph: {
+    title: "Ramen : Guide des Bouillons, Nouilles et Chaînes (Ichiran) | Japonchaines",
+    description: "Explorez l'univers du ramen. Des bouillons tonkotsu, shoyu, shio, miso aux meilleures chaînes comme Ichiran et Ippudo.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/ramen",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/ramen-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Ramen japonais - Guide des bouillons et chaînes"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ramen : Guide des Bouillons, Nouilles et Chaînes (Ichiran) | Japonchaines",
+    description: "Explorez l'univers du ramen. Des bouillons tonkotsu, shoyu, shio, miso aux meilleures chaînes comme Ichiran et Ippudo.",
+    images: ["/images/ramen-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/ramen"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function RamenPage() {const ramenChains = [
     {

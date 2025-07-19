@@ -5,26 +5,27 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Yoshinoya (吉野家) | Gyudon | Guide Restaurants Japonais',
-  description: 'Guide complet de Yoshinoya - Pionnier historique du gyudon depuis 1899 avec tradition et innovation continues. Menu détaillé, prix et histoire légendaire.',
+  title: "Yoshinoya 吉野家 | Gyudon Original 1899 | Japonchaines",
+  description: "Pionnier gyudon. Recette secrète 125 ans, expérience authentique fast-food japonais.",
   keywords: [
     'yoshinoya', '吉野家', 'gyudon', 'pionnier gyudon',
     'bœuf riz', 'tradition 1899', 'restauration rapide japon',
     'recette secrète', 'innovation continue', 'histoire gyudon'
   ],
   openGraph: {
-    title: 'Yoshinoya (吉野家) | Pionnier du Gyudon depuis 1899',
-    description: 'Découvrez Yoshinoya, le pionnier historique du gyudon au Japon avec plus de 120 ans de tradition',
+    title: "Yoshinoya 吉野家 | Gyudon Original 1899 | Japonchaines",
+    description: "Pionnier gyudon. Recette secrète 125 ans, expérience authentique fast-food japonais.",
     type: 'article',
-    url: '/chaines/yoshinoya',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/yoshinoya',
   },
   robots: {
     index: true,
-    follow: true,
-  },
+    follow: true
+  }
 };
 
 export default function YoshinoyaPage() {

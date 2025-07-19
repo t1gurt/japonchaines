@@ -5,18 +5,19 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sushiro (スシロー) | Kaiten-zushi | Guide Restaurants Japonais',
-  description: 'Guide complet de Sushiro - Leader du sushi tournant depuis 8 ans avec innovation technologique et qualité extraordinaire. Menu détaillé, prix et secrets de l&apos;excellence.',
+  title: "Sushiro スシロー | Kaiten N°1 | Japonchaines",
+  description: "Leader sushi tournant. Qualité exceptionnelle, innovation technologique conquérante.",
   keywords: [
     'sushiro', 'スシロー', 'kaiten-zushi', 'sushi tournant',
     'leader japon', 'innovation tech', 'qualité prix',
     'menu saisonnier', 'sushi abordable', 'tablette tactile'
   ],
   openGraph: {
-    title: 'Sushiro (スシロー) | Leader du Sushi Tournant depuis 8 ans',
-    description: 'Découvrez Sushiro, le leader incontesté du sushi tournant au Japon avec innovation technologique',
+    title: "Sushiro スシロー | Kaiten N°1 | Japonchaines",
+    description: "Leader sushi tournant. Qualité exceptionnelle, innovation technologique conquérante.",
     type: 'article',
-    url: '/chaines/sushiro',
+    locale: "fr_FR",
+    siteName: "Japonchaines - Guide des Restaurants Japonais"
   },
   alternates: {
     canonical: '/chaines/sushiro',

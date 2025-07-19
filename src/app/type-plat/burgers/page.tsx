@@ -1,4 +1,45 @@
 import Link from "next/link";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Burgers Japonais : Guide des Chaînes Uniques (MOS, Freshness) | Japonchaines",
+  description: "Explorez le monde des burgers japonais. Du Rice Burger de MOS aux créations gourmet de Freshness, une réinvention locale d'un classique.",
+  keywords: "burgers japonais, MOS Burger, rice burger, Freshness Burger, Dom Dom Burger",
+  openGraph: {
+    title: "Burgers Japonais : Guide des Chaînes Uniques (MOS, Freshness) | Japonchaines",
+    description: "Explorez le monde des burgers japonais. Du Rice Burger de MOS aux créations gourmet de Freshness, une réinvention locale d'un classique.",
+    type: "article",
+    url: "https://japonchaines.com/type-plat/burgers",
+    siteName: "Japonchaines",
+    locale: "fr_FR",
+    images: [{
+      url: "/images/burgers-japonais-cover.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Burgers japonais - MOS Burger et Freshness Burger"
+    }]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Burgers Japonais : Guide des Chaînes Uniques (MOS, Freshness) | Japonchaines",
+    description: "Explorez le monde des burgers japonais. Du Rice Burger de MOS aux créations gourmet de Freshness, une réinvention locale d'un classique.",
+    images: ["/images/burgers-japonais-cover.jpg"]
+  },
+  alternates: {
+    canonical: "https://japonchaines.com/type-plat/burgers"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }
+};
 
 export default function BurgersJaponaisPage() {
   const burgerChains = [
