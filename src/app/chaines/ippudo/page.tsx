@@ -112,6 +112,58 @@ export default function IppudoPage() {
               </div>
             </div>
 
+            {/* Photos des plats signature */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="flex items-center space-x-2 mb-6">
+                <Star className="w-5 h-5 text-red-600" />
+                <h2 className="text-2xl font-bold text-gray-900">Plats Signature en Images</h2>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {/* Shiromaru */}
+                <div className="text-center">
+                  <div className="relative rounded-lg overflow-hidden mb-3 h-48">
+                    <img 
+                      src="/images/chaines/ippudo/shiromaru-motoaji.jpg" 
+                      alt="Shiromaru Motoaji - Ramen tonkotsu original d'Ippudo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-gray-900">Shiromaru Motoaji</h3>
+                  <p className="text-sm text-gray-600">白丸元味</p>
+                  <p className="text-xs text-gray-500 mt-1">Le ramen original d'Ippudo avec son bouillon tonkotsu crémeux et équilibré</p>
+                </div>
+
+                {/* Akamaru */}
+                <div className="text-center">
+                  <div className="relative rounded-lg overflow-hidden mb-3 h-48">
+                    <img 
+                      src="/images/chaines/ippudo/akamaru-shinaji.jpg" 
+                      alt="Akamaru Shinaji - Ramen tonkotsu épicé d'Ippudo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-gray-900">Akamaru Shinaji</h3>
+                  <p className="text-sm text-gray-600">赤丸新味</p>
+                  <p className="text-xs text-gray-500 mt-1">Version épicée avec miso rouge, ail et huile parfumée pour plus de complexité</p>
+                </div>
+
+                {/* Hitouchi Gyoza */}
+                <div className="text-center">
+                  <div className="relative rounded-lg overflow-hidden mb-3 h-48">
+                    <img 
+                      src="/images/chaines/ippudo/hitouchi-gyoza.jpg" 
+                      alt="Hitouchi Gyoza - Gyoza signature d'Ippudo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="font-semibold text-gray-900">Hitouchi Gyoza</h3>
+                  <p className="text-sm text-gray-600">ひとくち餃子</p>
+                  <p className="text-xs text-gray-500 mt-1">Gyoza signature aux légumes, parfaitement croustillants à l'extérieur et juteux à l'intérieur</p>
+                </div>
+              </div>
+            </div>
+
             {/* Menu détaillé */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="flex items-center space-x-2 mb-6">
@@ -193,6 +245,68 @@ export default function IppudoPage() {
                 </div>
               </div>
 
+              {/* Kara-moyashi et légumes croquants */}
+              <div className="mb-8">
+                <h3 className="text-xl font-semibold mb-4">�️ Kara-moyashi et Légumes d'Accompagnement</h3>
+                <div className="bg-red-50 p-4 rounded-lg mb-4">
+                  <div className="flex items-start space-x-4">
+                    <div className="rounded-lg overflow-hidden w-24 h-24 flex-shrink-0">
+                      <img 
+                        src="/images/chaines/ippudo/kara-moyashi.jpg" 
+                        alt="Kara-moyashi - Germes de soja épicés d'Ippudo"
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-red-800 mb-2">Kara-moyashi (辛もやし) - Germes de soja épicés</h4>
+                      <p className="text-red-700 text-sm mb-2">
+                        Spécialité d'Ippudo : germes de soja marinés dans une sauce épicée. 
+                        Peuvent être dégustés seuls <strong>avant le ramen</strong> comme apéritif ou 
+                        ajoutés pendant le repas pour <strong>changer le goût</strong> du bouillon.
+                      </p>
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div>
+                          <h5 className="font-medium text-red-700 mb-1">🍽️ Dégustation en apéritif</h5>
+                          <ul className="text-red-600 text-xs space-y-1">
+                            <li>• Se mangent avec les baguettes</li>
+                            <li>• Préparent le palais au ramen</li>
+                            <li>• Stimulent l'appétit par le piquant</li>
+                            <li>• Texture croquante rafraîchissante</li>
+                          </ul>
+                        </div>
+                        <div>
+                          <h5 className="font-medium text-red-700 mb-1">🔄 Usage pour la "taste change"</h5>
+                          <ul className="text-red-600 text-xs space-y-1">
+                            <li>• Ajoutés à mi-parcours du ramen</li>
+                            <li>• Changent l'équilibre des saveurs</li>
+                            <li>• Apportent fraîcheur et piquant</li>
+                            <li>• Relancent l'intérêt gustatif</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div className="bg-blue-50 p-3 rounded-lg">
+                    <h5 className="font-medium text-blue-800 mb-2">🥬 Autres légumes d'accompagnement</h5>
+                    <ul className="text-blue-700 text-sm space-y-1">
+                      <li>• <strong>Negi</strong> - Oignons nouveaux finement ciselés</li>
+                      <li>• <strong>Menma</strong> - Pousses de bambou fermentées</li>
+                      <li>• <strong>Kikurage</strong> - Champignons noirs gélatineux (selon saison)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-yellow-50 p-3 rounded-lg">
+                    <h5 className="font-medium text-yellow-800 mb-2">💡 Conseil de dégustation</h5>
+                    <p className="text-yellow-700 text-sm">
+                      <strong>Méthode traditionnelle :</strong> Commencez par quelques kara-moyashi en apéritif, 
+                      puis ajoutez-en dans le ramen vers la moitié pour une nouvelle dimension de saveur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
               {/* Accompagnements */}
               <div className="mb-6">
                 <h3 className="text-xl font-semibold mb-4">🥟 Accompagnements Signature</h3>
@@ -221,13 +335,102 @@ export default function IppudoPage() {
                         <td className="p-3">Riz aux œufs de cabillaud épicés</td>
                         <td className="p-3">¥450</td>
                       </tr>
-                      <tr>
-                        <td className="p-3 font-medium">Kakuni Bun</td>
-                        <td className="p-3">Brioche vapeur au porc braisé</td>
-                        <td className="p-3">¥580</td>
-                      </tr>
                     </tbody>
                   </table>
+                </div>
+              </div>
+            </div>
+
+            {/* Condiments et assaisonnements */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="flex items-center space-x-2 mb-6">
+                <Award className="w-5 h-5 text-red-600" />
+                <h2 className="text-2xl font-bold text-gray-900">Condiments et Assaisonnements</h2>
+              </div>
+              
+              <div className="mb-6">
+                <div className="rounded-lg overflow-hidden h-96 mb-4">
+                  <img 
+                    src="/images/chaines/ippudo/condiments-station.jpg" 
+                    alt="Station de condiments Ippudo avec 5 assaisonnements"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <p className="text-gray-600 text-sm mb-4">
+                  Ippudo propose une sélection soignée de condiments pour personnaliser votre ramen selon vos goûts.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="bg-orange-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-orange-800 mb-3">� Pour les Gyoza</h3>
+                  <ul className="text-orange-700 text-sm space-y-2">
+                    <li>
+                      <strong>Shoyu (醤油)</strong><br/>
+                      <span className="text-xs">Sauce soja spécialement pour tremper les hitouchi gyoza</span>
+                    </li>
+                    <li>
+                      <strong>Su (酢)</strong><br/>
+                      <span className="text-xs">Vinaigre de riz pour les gyoza, acidité parfaite pour la pâte</span>
+                    </li>
+                  </ul>
+                  <div className="mt-2 p-2 bg-orange-100 rounded text-xs text-orange-800">
+                    <strong>💡 Usage :</strong> Mélangez shoyu + vinaigre pour une sauce gyoza parfaite
+                  </div>
+                </div>
+
+                <div className="bg-red-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-red-800 mb-3">� Pour le Ramen</h3>
+                  <ul className="text-red-700 text-sm space-y-2">
+                    <li>
+                      <strong>Goma (胡麻)</strong><br/>
+                      <span className="text-xs">Graines de sésame à moudre fraîchement dans le ramen</span>
+                    </li>
+                    <li>
+                      <strong>Ramen Pepper (ラーメン専用ペッパー)</strong><br/>
+                      <span className="text-xs">Poivre spécialement mélangé pour ramen, complexité aromatique</span>
+                    </li>
+                  </ul>
+                  <div className="mt-2 p-2 bg-red-100 rounded text-xs text-red-800">
+                    <strong>⚡ Astuce :</strong> Écrasez le goma juste avant de l'ajouter pour libérer les huiles
+                  </div>
+                </div>
+
+                <div className="bg-green-50 p-4 rounded-lg">
+                  <h3 className="font-semibold text-green-800 mb-3">🍜 Concentré de saveurs</h3>
+                  <ul className="text-green-700 text-sm space-y-2">
+                    <li>
+                      <strong>Ramen Dashi (ラーメンダシ)</strong><br/>
+                      <span className="text-xs">Concentré de bouillon, pour intensifier l'umami et la profondeur</span>
+                    </li>
+                  </ul>
+                  <div className="mt-3 p-2 bg-green-100 rounded text-xs text-green-800">
+                    <strong>💡 Astuce :</strong> Le dashi concentré permet d'ajuster l'intensité du goût sans diluer le bouillon.
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 bg-yellow-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-yellow-800 mb-3">💡 Guide d'utilisation des condiments</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <h4 className="font-medium text-yellow-700 mb-2">🥟 Pour les Gyoza</h4>
+                    <ul className="text-yellow-600 space-y-1">
+                      <li>• Mélangez <strong>shoyu + vinaigre</strong> (ratio 2:1)</li>
+                      <li>• Trempez délicatement chaque gyoza</li>
+                      <li>• L'acidité du vinaigre coupe la richesse de la pâte</li>
+                      <li>• Parfait équilibre salé-acide</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-yellow-700 mb-2">🍜 Pour le Ramen</h4>
+                    <ul className="text-yellow-600 space-y-1">
+                      <li>• <strong>Goma :</strong> Écrasez fraîchement avec la cuillère</li>
+                      <li>• <strong>Ramen dashi :</strong> Ajoutez en fin de repas</li>
+                      <li>• <strong>Pepper :</strong> Une pincée pour l'arôme</li>
+                      <li>• Mélangez délicatement pour préserver la texture</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -272,6 +475,110 @@ export default function IppudoPage() {
                       <li>• Mélange d'os de différentes parties du porc</li>
                       <li>• Standardisation pour qualité constante</li>
                     </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Système de commande et branding */}
+            <div className="bg-white rounded-lg shadow-sm p-6">
+              <div className="flex items-center space-x-2 mb-6">
+                <TrendingUp className="w-5 h-5 text-red-600" />
+                <h2 className="text-2xl font-bold text-gray-900">Système de Commande et Identité Visuelle</h2>
+              </div>
+              
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                {/* Logo et branding */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">🏮 Logo et Identité Ippudo</h3>
+                  <div className="rounded-lg overflow-hidden h-80 mb-4">
+                    <img 
+                      src="/images/chaines/ippudo/ippudo-logo.jpg" 
+                      alt="Logo officiel Ippudo avec caractère japonais"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="bg-red-50 p-3 rounded-lg">
+                      <h4 className="font-medium text-red-800 mb-2">Signification du logo</h4>
+                      <p className="text-red-700 text-sm">
+                        Le caractère <strong>「一」(ichi)</strong> symbolise l'unicité et l'excellence. 
+                        Il représente la quête de perfection d'Ippudo dans l'art du ramen.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-orange-50 p-3 rounded-lg">
+                      <h4 className="font-medium text-orange-800 mb-2">Design moderne</h4>
+                      <p className="text-orange-700 text-sm">
+                        Typographie épurée alliant tradition japonaise et esthétique contemporaine, 
+                        reflétant la philosophie de modernisation respectueuse d'Ippudo.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Système de commande */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">📱 Tablette de Commande Numérique</h3>
+                  <div className="rounded-lg overflow-hidden h-80 mb-4">
+                    <img 
+                      src="/images/chaines/ippudo/tablet-ordering.jpg" 
+                      alt="Tablette de commande tactile multilingue Ippudo"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  
+                  <div className="space-y-3">
+                    <div className="bg-blue-50 p-3 rounded-lg">
+                      <h4 className="font-medium text-blue-800 mb-2">Interface multilingue</h4>
+                      <p className="text-blue-700 text-sm">
+                        Tablettes tactiles disponibles en japonais, anglais et parfois français 
+                        dans les restaurants touristiques. Interface intuitive avec photos détaillées.
+                      </p>
+                    </div>
+                    
+                    <div className="bg-green-50 p-3 rounded-lg">
+                      <h4 className="font-medium text-green-800 mb-2">Personnalisation avancée</h4>
+                      <p className="text-green-700 text-sm">
+                        Système de customisation complet : fermeté des nouilles, richesse du bouillon, 
+                        toppings individuels, accompagnements. Paiement intégré possible.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-6 bg-purple-50 p-4 rounded-lg">
+                <h3 className="font-semibold text-purple-800 mb-3">🎯 Expérience de commande pas à pas</h3>
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 border-2 border-purple-300">
+                      <span className="text-purple-600 font-bold">1</span>
+                    </div>
+                    <div className="font-medium text-purple-700">Sélection</div>
+                    <div className="text-purple-600">Choisir le ramen de base sur la tablette</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 border-2 border-purple-300">
+                      <span className="text-purple-600 font-bold">2</span>
+                    </div>
+                    <div className="font-medium text-purple-700">Customisation</div>
+                    <div className="text-purple-600">Ajuster nouilles, bouillon, toppings</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 border-2 border-purple-300">
+                      <span className="text-purple-600 font-bold">3</span>
+                    </div>
+                    <div className="font-medium text-purple-700">Accompagnements</div>
+                    <div className="text-purple-600">Ajouter gyoza, riz parfumé, boissons</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="bg-white rounded-full w-8 h-8 flex items-center justify-center mx-auto mb-2 border-2 border-purple-300">
+                      <span className="text-purple-600 font-bold">4</span>
+                    </div>
+                    <div className="font-medium text-purple-700">Confirmation</div>
+                    <div className="text-purple-600">Valider et effectuer le paiement</div>
                   </div>
                 </div>
               </div>
