@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const categories = [
   { name: 'Gyudon', href: '/type-plat/gyudon', emoji: '🍚', color: 'bg-orange-100 text-orange-800' },
-  { name: 'Ramen', href: '/type-plat/ramen', emoji: '🍜', color: 'bg-red-100 text-red-800' },
+  { name: 'Ramen', href: '/type-plat/ramen', emoji: '🍜', color: 'bg-red-100 text-red-800', bgImage: '/images/chaines/ippudo/shiromaru-motoaji.jpg' },
   { name: 'Sushi', href: '/type-plat/kaiten-zushi', emoji: '🍣', color: 'bg-blue-100 text-blue-800' },
   { name: 'Udon', href: '/type-plat/udon', emoji: '🍲', color: 'bg-yellow-100 text-yellow-800' },
   { name: 'Tempura', href: '/type-plat/tempura', emoji: '🍤', color: 'bg-green-100 text-green-800' },
@@ -25,10 +25,24 @@ const MobileCategoryGrid: React.FC = () => {
           <Link
             key={category.name}
             href={category.href}
-            className={`${category.color} p-4 rounded-xl flex flex-col items-center text-center hover:scale-105 transition-transform`}
+            className={`${category.bgImage ? 'relative overflow-hidden' : category.color} p-4 rounded-xl flex flex-col items-center text-center hover:scale-105 transition-transform`}
+            style={category.bgImage ? {
+              backgroundImage: `url('${category.bgImage}')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            } : {}}
           >
-            <span className="text-3xl mb-2">{category.emoji}</span>
-            <span className="font-medium text-sm">{category.name}</span>
+            {category.bgImage && (
+              <div 
+                className="absolute inset-0 hover:opacity-75 transition-all duration-300"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+              ></div>
+            )}
+            <div className="relative z-10">
+              <span className={`text-3xl mb-2 block ${category.bgImage ? 'filter drop-shadow-lg' : ''}`}>{category.emoji}</span>
+              <span className={`font-medium text-sm ${category.bgImage ? 'text-white' : ''}`}>{category.name}</span>
+            </div>
           </Link>
         ))}
       </div>
