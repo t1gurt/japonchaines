@@ -45,8 +45,12 @@ export default function IppudoPage() {
           </Link>
           
           <div className="flex items-center space-x-4">
-            <div className="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center">
-              <span className="text-white text-2xl font-bold">一</span>
+            <div className="w-16 h-16 rounded-lg overflow-hidden">
+              <img 
+                src="/images/chaines/ippudo/ippudo-logo.jpg" 
+                alt="Logo Ippudo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-gray-900">Ippudo</h1>
@@ -349,11 +353,11 @@ export default function IppudoPage() {
               </div>
               
               <div className="mb-6">
-                <div className="rounded-lg overflow-hidden h-96 mb-4">
+                <div className="rounded-lg overflow-hidden h-64 md:h-96 mb-4">
                   <img 
                     src="/images/chaines/ippudo/condiments-station.jpg" 
                     alt="Station de condiments Ippudo avec 5 assaisonnements"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-contain md:object-cover"
                   />
                 </div>
                 <p className="text-gray-600 text-sm mb-4">
