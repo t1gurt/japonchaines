@@ -11,6 +11,7 @@ import MobileNavigation from "@/components/MobileNavigation";
 import BottomNavigation from "@/components/BottomNavigation";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import GoogleAdSense from "@/components/GoogleAdSense";
+import GoogleSiteVerification from "@/components/GoogleSiteVerification";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 import StructuredData from "@/components/StructuredData";
 import { generateWebsiteSchema } from "@/lib/structured-data";
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <GoogleAdSense />
+        <GoogleSiteVerification />
       </head>
       <body
         className={`${inter.variable} font-sans antialiased bg-white text-gray-900`}
