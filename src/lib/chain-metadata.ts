@@ -309,8 +309,8 @@ const chainData: Record<string, {
     name: 'Sushiro',
     nameJp: 'スシロー',
     category: 'Kaiten-zushi',
-    description: 'Leader du sushi tournant avec innovation technologique et qualité à prix accessible.',
-    specialties: ['Leader kaiten', 'Innovation tech', 'Qualité accessible', 'Menu saisonnier'],
+    description: 'Guide du sushi pour votre voyage au Japon! Découvrez Sushiro, le N°1 du sushi tournant. ✅ Commande facile sur écran tactile multilingue. ✅ Plus de 100 plats dès 120¥. ✅ L\'initiation parfaite!',
+    specialties: ['sushiro japon', 'manger sushi japon', 'premier sushi tokyo', 'kaiten sushi guide', 'Leader kaiten', 'Innovation tech', 'Qualité accessible', 'Menu saisonnier'],
     founded: '1984'
   },
   'tenkaippin': {
@@ -386,6 +386,38 @@ export function generateChainMetadata(chainSlug: string): Metadata {
     return {
       title: 'Chaîne de Restaurant Japonais | Guide Complet',
       description: 'Découvrez cette chaîne de restaurant japonais avec notre guide détaillé.',
+    };
+  }
+
+  // スシロー専用メタデータ
+  if (chainSlug === 'sushiro') {
+    return {
+      title: 'Sushiro Japon | Votre Première Expérience de Vrais Sushis, Facile et Abordable',
+      description: 'Guide du sushi pour votre voyage au Japon! Découvrez Sushiro, le N°1 du sushi tournant. ✅ Commande facile sur écran tactile multilingue. ✅ Plus de 100 plats dès 120¥. ✅ L\'initiation parfaite!',
+      keywords: [
+        'sushiro japon', 'manger sushi japon', 'premier sushi tokyo', 'kaiten sushi guide',
+        'sushiro', 'スシロー', 'kaiten-zushi', 'sushi tournant',
+        'leader japon', 'innovation tech', 'qualité prix',
+        'menu saisonnier', 'sushi abordable', 'tablette tactile'
+      ],
+      openGraph: {
+        title: 'Sushiro Japon | Votre Première Expérience de Vrais Sushis, Facile et Abordable',
+        description: 'Guide du sushi pour votre voyage au Japon! Découvrez Sushiro, le N°1 du sushi tournant. ✅ Commande facile sur écran tactile multilingue. ✅ Plus de 100 plats dès 120¥. ✅ L\'initiation parfaite!',
+        type: 'article',
+        url: '/chaines/sushiro',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Sushiro Japon | Votre Première Expérience de Vrais Sushis, Facile et Abordable',
+        description: 'Guide du sushi pour votre voyage au Japon! Découvrez Sushiro, le N°1 du sushi tournant. ✅ Commande facile sur écran tactile multilingue. ✅ Plus de 100 plats dès 120¥. ✅ L\'initiation parfaite!',
+      },
+      alternates: {
+        canonical: '/chaines/sushiro',
+      },
+      robots: {
+        index: true,
+        follow: true,
+      },
     };
   }
 
