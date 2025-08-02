@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 import { ArrowLeft, Flame, Users, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Yakiniku | Barbecue Japonais Wagyu | Japonchaines",
+  title: "Yakiniku : L'Art du Grill Japonais & Wagyu Premium | Japonchaines",
   description: "Le guide complet du Yakiniku. Apprenez à griller le wagyu, le kalbi et le harami comme un pro. Découvrez les meilleures chaînes comme Gyukaku.",
   keywords: [
     'yakiniku', 'grill japonais', 'wagyu', 'kalbi', 'harami', 'culture culinaire japonaise',
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'viande grillée', 'technique de cuisson', 'sauce tare', 'ホルモン hormone'
   ],
   openGraph: {
-    title: "Yakiniku | Barbecue Japonais Wagyu | Japonchaines",
+    title: "Yakiniku : L'Art du Grill Japonais & Wagyu Premium | Japonchaines",
     description: "Le guide complet du Yakiniku. Apprenez à griller le wagyu, le kalbi et le harami comme un pro. Découvrez les meilleures chaînes comme Gyukaku.",
     type: 'article',
     locale: "fr_FR",
