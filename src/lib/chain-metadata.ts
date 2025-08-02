@@ -365,8 +365,8 @@ const chainData: Record<string, {
     name: 'Yoshinoya',
     nameJp: '吉野家',
     category: 'Gyudon',
-    description: 'Pionnier historique du gyudon depuis 1899 avec tradition et innovation continues.',
-    specialties: ['Pionnier gyudon', 'Tradition 1899', 'Innovation continue', 'Recette secrète'],
+    description: 'Découvrez Yoshinoya, la légende du gyūdon depuis 1899! Le créateur du plat emblématique du Japon. ✅ 125 ans d\'histoire et de tradition. ✅ Le gyūdon authentique à prix imbattable. ✅ Plus de 1200 restaurants!',
+    specialties: ['yoshinoya japon', 'gyudon authentique', 'manger gyudon tokyo', 'boeuf japonais rapide', 'Pionnier gyudon', 'Tradition 1899', 'Innovation continue', 'Recette secrète'],
     founded: '1899'
   },
   'yudetaro': {
@@ -413,6 +413,38 @@ export function generateChainMetadata(chainSlug: string): Metadata {
       },
       alternates: {
         canonical: '/chaines/sushiro',
+      },
+      robots: {
+        index: true,
+        follow: true,
+      },
+    };
+  }
+
+  // 吉野家専用メタデータ
+  if (chainSlug === 'yoshinoya') {
+    return {
+      title: 'Yoshinoya Japon | Le Créateur du Gyūdon Depuis 1899 - Guide Complet',
+      description: 'Découvrez Yoshinoya, la légende du gyūdon depuis 1899! Le créateur du plat emblématique du Japon. ✅ 125 ans d\'histoire et de tradition. ✅ Le gyūdon authentique à prix imbattable. ✅ Plus de 1200 restaurants!',
+      keywords: [
+        'yoshinoya japon', 'gyudon authentique', 'manger gyudon tokyo', 'boeuf japonais rapide',
+        'yoshinoya', '吉野家', 'gyudon', 'beef bowl',
+        'pionnier 1899', 'tradition japonaise', 'plat emblématique',
+        'restaurant rapide japon', 'bœuf sur riz', 'cuisine économique japon'
+      ],
+      openGraph: {
+        title: 'Yoshinoya Japon | Le Créateur du Gyūdon Depuis 1899 - Guide Complet',
+        description: 'Découvrez Yoshinoya, la légende du gyūdon depuis 1899! Le créateur du plat emblématique du Japon. ✅ 125 ans d\'histoire et de tradition. ✅ Le gyūdon authentique à prix imbattable. ✅ Plus de 1200 restaurants!',
+        type: 'article',
+        url: '/chaines/yoshinoya',
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'Yoshinoya Japon | Le Créateur du Gyūdon Depuis 1899 - Guide Complet',
+        description: 'Découvrez Yoshinoya, la légende du gyūdon depuis 1899! Le créateur du plat emblématique du Japon. ✅ 125 ans d\'histoire et de tradition. ✅ Le gyūdon authentique à prix imbattable. ✅ Plus de 1200 restaurants!',
+      },
+      alternates: {
+        canonical: '/chaines/yoshinoya',
       },
       robots: {
         index: true,
