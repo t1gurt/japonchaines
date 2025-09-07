@@ -585,6 +585,19 @@ export default function YoshinoyaPage() {
                   <div className="space-y-4">
                     <div className="bg-green-50 p-4 rounded-lg">
                       <h4 className="font-semibold text-green-900 mb-3">🎯 Les Combos Incontournables</h4>
+                      
+                      {/* 牛だく牛丼キムチセットの画像を追加 */}
+                      <div className="mb-4">
+                        <img 
+                          src="/images/chaines/yoshinoya/gyudaku-gyudon-kimuchi-set.jpg" 
+                          alt="Gyūdaku Gyūdon Kimuchi Set - Bœuf extra, gyūdon et kimchi épicé"
+                          className="w-full rounded-lg shadow-md"
+                        />
+                        <p className="text-sm text-gray-600 mt-2 text-center">
+                          <strong>Gyūdaku Gyūdon Kimuchi Set (牛だく牛丼キムチセット)</strong> - Combinaison populaire avec bœuf extra et kimchi épicé
+                        </p>
+                      </div>
+                      
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                         <div className="space-y-3">
                           <div className="border-b border-green-200 pb-2">
@@ -697,6 +710,18 @@ export default function YoshinoyaPage() {
                 {/* Le processus étape par étape */}
                 <div className="border-l-4 border-orange-500 pl-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">📋 Le Processus : Simple mais Précis</h3>
+                  
+                  {/* 注文用タブレットの画像を追加 */}
+                  <div className="mb-6">
+                    <img 
+                      src="/images/chaines/yoshinoya/tablet-ordering.jpg" 
+                      alt="Tablette de commande Yoshinoya - Interface multilingue avec menu numérique"
+                      className="w-full max-w-2xl rounded-lg shadow-md"
+                    />
+                    <p className="text-sm text-gray-600 mt-2 text-center">
+                      <strong>Tablette de commande moderne</strong> - Interface intuitive avec support multilingue pour une commande facile
+                    </p>
+                  </div>
                   
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     <div className="text-center bg-orange-50 p-4 rounded-lg">
