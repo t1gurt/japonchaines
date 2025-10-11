@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, History, Award, Utensils, Heart, Flame, Crown } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
@@ -34,10 +35,10 @@ export default function CocoIchibanyaPage() {
       japanese: "定番カレー",
       items: [
         {
-          name: "Pork Cutlet Curry",
-          japanese: "ポークカツカレー",
+          name: "Rose Cutlet Curry",
+          japanese: "ロースカツカレー",
           price: "¥820",
-          description: "L'incontournable escalope de porc panée avec curry signature CoCo",
+          description: "L'incontournable escalope de porc (longe) panée avec curry signature CoCo",
           spiceLevel: "Personnalisable 0-10",
           isPopular: true
         },
@@ -113,7 +114,7 @@ export default function CocoIchibanyaPage() {
       category: "Protéines",
       japanese: "タンパク質",
       items: [
-        { name: "Escalope de porc", japanese: "ポークカツ", price: "¥250" },
+        { name: "Escalope de longe de porc", japanese: "ロースカツ", price: "¥250" },
         { name: "Escalope de poulet", japanese: "チキンカツ", price: "¥220" },
         { name: "Saucisse", japanese: "ソーセージ", price: "¥180" },
         { name: "Œuf", japanese: "たまご", price: "¥120" },
@@ -232,7 +233,7 @@ export default function CocoIchibanyaPage() {
       situation: "Commander",
       japanese: "注文時",
       phrases: [
-        { french: "Curry de porc katsu, niveau 3 s'il vous plaît", japanese: "ポークカツカレー、3番でお願いします", romaji: "Pōku katsu karē, san-ban de onegaishimasu" },
+        { french: "Curry de longe katsu, niveau 3 s'il vous plaît", japanese: "ロースカツカレー、3番でお願いします", romaji: "Rōsu katsu karē, san-ban de onegaishimasu" },
         { french: "Riz normal", japanese: "ライス普通で", romaji: "Raisu futsū de" },
         { french: "Grande portion de riz", japanese: "ライス大盛りで", romaji: "Raisu ōmori de" },
         { french: "Avec du fromage en plus", japanese: "チーズトッピングで", romaji: "Chīzu toppingu de" }
@@ -323,6 +324,31 @@ export default function CocoIchibanyaPage() {
             Menu Signature
             <span className="block text-lg text-gray-600 mt-2">メニュー</span>
           </h2>
+          
+          {/* Featured Curry Image */}
+          <div className="mb-12 text-center">
+            <div className="max-w-2xl mx-auto bg-gradient-to-br from-orange-50 to-amber-50 rounded-xl p-6 shadow-lg">
+              <h3 className="text-2xl font-bold mb-4 text-orange-800">
+                Plat Vedette - Rose Cutlet Curry
+                <span className="block text-sm font-normal text-gray-600">人気No.1 ロースカツカレー</span>
+              </h3>
+              <div className="relative">
+                <Image
+                  src="/images/chaines/cocoichi/cocoichi-curry.jpg"
+                  alt="CoCo壱番屋のロースカツカレー - Rose Cutlet Curry with perfectly golden cutlet"
+                  width={600}
+                  height={400}
+                  className="rounded-lg w-full h-auto shadow-md"
+                />
+                <div className="mt-4 text-gray-700">
+                  <p className="text-sm">
+                    L'escalope de longe de porc parfaitement panée, croustillante à l'extérieur et juteuse à l'intérieur, 
+                    servie avec le curry signature CoCo Ichibanya.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
           
           <div className="grid lg:grid-cols-2 gap-8">
             {menuCategories.map((category, index) => (
@@ -448,6 +474,29 @@ export default function CocoIchibanyaPage() {
             Comment Commander
             <span className="block text-lg text-gray-600 mt-2">注文方法</span>
           </h2>
+          
+          {/* Tablet Image */}
+          <div className="mb-12 text-center">
+            <div className="max-w-2xl mx-auto bg-white rounded-xl p-6 shadow-lg">
+              <h3 className="text-xl font-bold mb-4 text-blue-800">
+                Système de Commande Moderne
+                <span className="block text-sm font-normal text-gray-600">最新の注文システム</span>
+              </h3>
+              <Image
+                src="/images/chaines/cocoichi/cocoichi-tablet.jpg"
+                alt="CoCo壱番屋の注文用タブレット - CoCo Ichibanya ordering tablet system"
+                width={500}
+                height={350}
+                className="rounded-lg w-full h-auto"
+              />
+              <div className="mt-4 text-gray-700">
+                <p className="text-sm">
+                  Tablette tactile intuitive disponible dans de nombreux restaurants CoCo Ichibanya. 
+                  Simplifiez votre commande avec les images et descriptions détaillées !
+                </p>
+              </div>
+            </div>
+          </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
             {orderingSteps.map((step, index) => (

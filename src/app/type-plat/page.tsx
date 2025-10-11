@@ -110,7 +110,8 @@ export default function TypePlatPage() {  // Fonction pour obtenir le bon lien p
       detailedDescription: "Le curry japonais est plus doux et plus épais que le curry indien, souvent servi avec du riz blanc et accompagné de légumes, viande ou fruits de mer. C'est un comfort food très apprécié.",
       chains: ["CoCo壱番屋", "Go!Go!Curry"],
       color: "bg-yellow-500",
-      icon: "🍛"
+      icon: "🍛",
+      bgImage: "/images/chaines/cocoichi/cocoichi-curry.jpg"
     },
     {
       id: "tempura",

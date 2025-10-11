@@ -76,7 +76,8 @@ export default function ChainesPage() {
       category: 'Curry',
       description: 'La chaîne de curry japonais la plus populaire avec de nombreuses options de personnalisation.',
       popularity: 'Très populaire',
-      avgPrice: '600-1200¥'
+      avgPrice: '600-1200¥',
+      bgImage: '/images/chaines/cocoichi/cocoichi-curry.jpg'
     },
     {
       slug: 'domdom',
