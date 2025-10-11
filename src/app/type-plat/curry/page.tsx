@@ -159,42 +159,54 @@ export default function CurryPage() {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-yellow-100 to-orange-100 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section 
+        className="relative py-16"
+        style={{
+          backgroundImage: "url('/images/chaines/cocoichi/cocoichi-curry.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div 
+          className="absolute inset-0"
+          style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+        ></div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center mb-4">
                 <span className="text-5xl mr-4">🍛</span>
                 <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
+                  <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
                     Curry Japonais
                   </h1>
-                  <p className="text-2xl text-gray-600 japanese-text">カレー</p>
+                  <p className="text-2xl text-gray-200 japanese-text">カレー</p>
                 </div>
               </div>
-              <p className="text-xl text-gray-700 mb-6">
+              <p className="text-xl text-gray-200 mb-6">
                 La version japonaise du curry indien, plus douce et épaisse, devenue un 
                 comfort food national. Personnalisable à l'infini selon vos goûts.
               </p>
               <div className="flex flex-wrap gap-4">
-                <span className="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-yellow-500 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium">
                   Prix : ¥400-1600
                 </span>
-                <span className="bg-orange-100 text-orange-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-orange-500 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium">
                   Personnalisable
                 </span>
-                <span className="bg-red-100 text-red-800 px-3 py-1 rounded-full text-sm font-medium">
+                <span className="bg-red-500 bg-opacity-80 text-white px-3 py-1 rounded-full text-sm font-medium">
                   Comfort Food
                 </span>
               </div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
+            <div className="bg-white bg-opacity-90 p-8 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Le Curry Japonais Unique</h3>
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-700 mb-4">
                 Introduit à l'époque Meiji via la marine britannique, le curry japonais a évolué 
                 pour devenir plus doux et plus épais que l'original indien, adapté au palais japonais.
               </p>
-              <p className="text-gray-600">
+              <p className="text-gray-700">
                 Servi avec du riz blanc, il est devenu si populaire qu'il est considéré comme 
                 l'un des trois plats nationaux du Japon avec les ramen et les sushi.
               </p>
