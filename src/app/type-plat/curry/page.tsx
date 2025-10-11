@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -48,13 +49,15 @@ export default function CurryPage() {
       japanese: "ココイチ",
       englishName: "CoCo Ichibanya",
       description: "Le roi incontesté du curry japonais avec plus de 1400 restaurants dans le monde. Connu pour sa personnalisation infinie.",
-      specialties: ["Curry de porc katsu", "Curry végétarien", "Curry épicé niveau 10"],
+      specialties: ["Curry de longe katsu", "Curry végétarien", "Curry épicé niveau 10"],
       priceRange: "¥500-1200",
       spiceLevel: "Niveau 0-10 (personnalisable)",
       orderingMethod: "Commande au comptoir",
       vegetarianOptions: "Excellentes options végétariennes et vegan",
       uniqueFeatures: ["21 niveaux d'épice", "Plus de 40 toppings", "Options vegan certifiées"],
-      href: "/chaines/coco-ichibanya"
+      href: "/chaines/coco-ichibanya",
+      image: "/images/chaines/cocoichi/cocoichi-curry.jpg",
+      imageAlt: "CoCo壱番屋のロースカツカレー - Rose Cutlet Curry signature dish"
     },
     {
       name: "Go!Go!Curry",
@@ -295,11 +298,31 @@ export default function CurryPage() {
                 href={chain.href}
                 className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-yellow-200 overflow-hidden"
               >
+                {/* Image Section */}
+                {chain.image && (
+                  <div className="relative h-48 w-full overflow-hidden">
+                    <Image
+                      src={chain.image}
+                      alt={chain.imageAlt || `${chain.name} curry dish`}
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-20 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-white bg-opacity-90 text-gray-900 px-3 py-1 rounded-full text-sm font-medium">
+                        🍛 Curry
+                      </span>
+                    </div>
+                  </div>
+                )}
+                
                 <div className="p-6">
                   <div className="flex items-center mb-4">
-                    <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
-                      <span className="text-yellow-600 text-xl">🍛</span>
-                    </div>
+                    {!chain.image && (
+                      <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mr-4">
+                        <span className="text-yellow-600 text-xl">🍛</span>
+                      </div>
+                    )}
                     <div>
                       <h3 className="text-xl font-bold text-gray-900 group-hover:text-yellow-600 transition-colors">
                         {chain.name}

@@ -80,7 +80,7 @@ export default function Home() {
               { name: "Gyūdon", subtitle: "牛丼", description: "Bols de riz au bœuf", href: "/type-plat/gyudon" },
               { name: "Ramen", subtitle: "ラーメン", description: "Nouilles japonaises", href: "/type-plat/ramen", bgImage: "/images/chaines/ippudo/shiromaru-motoaji.jpg" },
               { name: "Kaiten-zushi", subtitle: "回転寿司", description: "Sushi tournant", href: "/type-plat/kaiten-zushi" },
-              { name: "Curry Japonais", subtitle: "カレー", description: "Curry à la japonaise", href: "/type-plat/curry" },
+              { name: "Curry Japonais", subtitle: "カレー", description: "Curry à la japonaise", href: "/type-plat/curry", bgImage: "/images/chaines/cocoichi/cocoichi-curry.jpg" },
               { name: "Teishoku", subtitle: "定食", description: "Repas complets", href: "/type-plat/teishoku" },
               { name: "Tempura", subtitle: "天ぷら", description: "Beignets japonais", href: "/type-plat/tempura" },
               { name: "Udon", subtitle: "うどん", description: "Nouilles épaisses", href: "/type-plat/udon" },
