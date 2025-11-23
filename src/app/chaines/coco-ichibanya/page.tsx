@@ -5,7 +5,7 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "CoCo Ichibanya ココイチ | Curry N°1 | Japonchaines",
+  title: "CoCo Ichibanya : Créez votre curry \"sur mesure\" avec plus de 40 toppings",
   description: "Personnalisez votre curry : épices (1-10), riz, 40+ toppings. Leader curry japonais.",
   keywords: [
     'coco ichibanya', 'ココイチ', 'curry japonais', 'personnalisation',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'leader curry', 'épices personnalisées', 'curry rice'
   ],
   openGraph: {
-    title: "CoCo Ichibanya ココイチ | Curry N°1 | Japonchaines",
+    title: "CoCo Ichibanya : Créez votre curry \"sur mesure\" avec plus de 40 toppings",
     description: "Personnalisez votre curry : épices (1-10), riz, 40+ toppings. Leader curry japonais.",
     type: 'article',
     locale: "fr_FR",
