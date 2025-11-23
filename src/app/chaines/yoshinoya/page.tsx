@@ -1,11 +1,11 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowLeft, Clock, MapPin, CreditCard, Info, Star, TrendingUp, Users, Globe, Award, History } from 'lucide-react';
+import { ArrowLeft, MapPin , Star, TrendingUp,  Award, History } from 'lucide-react';
 import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Yoshinoya 吉野家 | Gyudon Original 1899 | Japonchaines",
+  title: "Yoshinoya : Le \"Fast-food\" sain et pas cher adoré des Japonais",
   description: "Pionnier gyudon. Recette secrète 125 ans, expérience authentique fast-food japonais.",
   keywords: [
     'yoshinoya', '吉野家', 'gyudon', 'pionnier gyudon',
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'recette secrète', 'innovation continue', 'histoire gyudon'
   ],
   openGraph: {
-    title: "Yoshinoya 吉野家 | Gyudon Original 1899 | Japonchaines",
+    title: "Yoshinoya : Le \"Fast-food\" sain et pas cher adoré des Japonais",
     description: "Pionnier gyudon. Recette secrète 125 ans, expérience authentique fast-food japonais.",
     type: 'article',
     locale: "fr_FR",

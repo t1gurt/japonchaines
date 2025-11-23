@@ -4,7 +4,7 @@ import ChainViewTracker from '../../../components/ChainViewTracker';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Ippudo 一風堂 | Ramen Premium | Japonchaines",
+  title: "Ippudo : Le célèbre Ramen de Paris... à moitié prix au Japon !",
   description: "Ramen tonkotsu premium. Innovation hakata, qualité internationale, expérience raffinée.",
   keywords: [
     'ippudo', '一風堂', 'ramen tonkotsu', 'hakata ramen',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     'style hakata', 'ramen raffiné', 'innovation ramen'
   ],
   openGraph: {
-    title: "Ippudo 一風堂 | Ramen Premium | Japonchaines",
+    title: "Ippudo : Le célèbre Ramen de Paris... à moitié prix au Japon !",
     description: "Ramen tonkotsu premium. Innovation hakata, qualité internationale, expérience raffinée.",
     type: 'article',
     locale: "fr_FR",
