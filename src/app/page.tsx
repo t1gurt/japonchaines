@@ -37,23 +37,23 @@ export default function Home() {
             <span className="text-red-600 block">Chaînes de Restaurants Japonais</span>
           </h2>
           <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Le premier guide complet en français pour naviguer facilement dans les chaînes 
+            Le premier guide complet en français pour naviguer facilement dans les chaînes
             de restaurants japonais. Menus détaillés, méthodes de commande et conseils pratiques.
           </p>
-          
+
           {/* Mobile Search */}
           <div className="md:hidden mb-8">
             <MobileSearch />
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link 
+            <Link
               href="/type-plat"
               className="bg-red-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors"
             >
               Explorer par Type de Plat
             </Link>
-            <Link 
+            <Link
               href="/chaines"
               className="border-2 border-red-600 text-red-600 px-8 py-4 rounded-lg font-semibold hover:bg-red-600 hover:text-white transition-colors"
             >
@@ -77,9 +77,9 @@ export default function Home() {
           </h3>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {[
-              { name: "Gyūdon", subtitle: "牛丼", description: "Bols de riz au bœuf", href: "/type-plat/gyudon" },
+              { name: "Gyūdon", subtitle: "牛丼", description: "Bols de riz au bœuf", href: "/type-plat/gyudon", bgImage: "/images/chaines/yoshinoya/gyudaku-gyudon-kimuchi-set.jpg" },
               { name: "Ramen", subtitle: "ラーメン", description: "Nouilles japonaises", href: "/type-plat/ramen", bgImage: "/images/chaines/ippudo/shiromaru-motoaji.jpg" },
-              { name: "Kaiten-zushi", subtitle: "回転寿司", description: "Sushi tournant", href: "/type-plat/kaiten-zushi" },
+              { name: "Kaiten-zushi", subtitle: "回転寿司", description: "Sushi tournant", href: "/type-plat/kaiten-zushi", bgImage: "/images/chaines/sushiro/maguro.jpg" },
               { name: "Curry Japonais", subtitle: "カレー", description: "Curry à la japonaise", href: "/type-plat/curry", bgImage: "/images/chaines/cocoichi/cocoichi-curry.jpg" },
               { name: "Teishoku", subtitle: "定食", description: "Repas complets", href: "/type-plat/teishoku" },
               { name: "Tempura", subtitle: "天ぷら", description: "Beignets japonais", href: "/type-plat/tempura" },
@@ -93,7 +93,7 @@ export default function Home() {
               { name: "Steak", subtitle: "ステーキ", description: "Excellence bovine", href: "/type-plat/steak" },
               { name: "Karaoke", subtitle: "カラオケ", description: "Divertissement musical", href: "/type-plat/karaoke" },
             ].map((category) => (
-              <Link 
+              <Link
                 key={category.name}
                 href={category.href}
                 className="group relative overflow-hidden bg-gray-50 rounded-lg p-6 hover:bg-red-50 transition-colors border border-gray-200 hover:border-red-200"
@@ -105,7 +105,7 @@ export default function Home() {
                 } : {}}
               >
                 {category.bgImage && (
-                  <div 
+                  <div
                     className="absolute inset-0 group-hover:opacity-75 transition-all duration-300"
                     style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
                   ></div>
@@ -134,10 +134,10 @@ export default function Home() {
             Chaînes Populaires
           </h3>          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { name: "Yoshinoya", japanese: "吉野家", type: "Gyūdon", slug: "yoshinoya" },
+              { name: "Yoshinoya", japanese: "吉野家", type: "Gyūdon", slug: "yoshinoya", bgImage: "/images/chaines/yoshinoya/gyudaku-gyudon-kimuchi-set.jpg" },
               { name: "Nakau", japanese: "なか卯", type: "Gyūdon", slug: "nakau" },
-              { name: "Sushiro", japanese: "スシロー", type: "Kaiten-zushi", slug: "sushiro" },
-              { name: "CoCo Ichibanya", japanese: "ココイチ", type: "Curry", slug: "coco-ichibanya" },
+              { name: "Sushiro", japanese: "スシロー", type: "Kaiten-zushi", slug: "sushiro", bgImage: "/images/chaines/sushiro/maguro.jpg" },
+              { name: "CoCo Ichibanya", japanese: "ココイチ", type: "Curry", slug: "coco-ichibanya", bgImage: "/images/chaines/cocoichi/cocoichi-curry.jpg" },
               { name: "Ootoya", japanese: "大戸屋", type: "Teishoku", slug: "ootoya" },
               { name: "Ichiran", japanese: "一蘭", type: "Ramen", slug: "ichiran" },
               { name: "Marugame Seimen", japanese: "丸亀製麺", type: "Udon", slug: "marugame-seimen" },
@@ -148,14 +148,28 @@ export default function Home() {
               { name: "Ikinari Steak", japanese: "いきなりステーキ", type: "Steak", slug: "ikinari-steak" },
               { name: "Big Echo", japanese: "ビッグエコー", type: "Karaoke", slug: "big-echo" },
             ].map((chain) => (
-              <Link 
+              <Link
                 key={chain.name}
                 href={`/chaines/${chain.slug}`}
-                className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-red-200"
+                className="group relative overflow-hidden bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-200 hover:border-red-200"
+                style={chain.bgImage ? {
+                  backgroundImage: `url('${chain.bgImage}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                } : {}}
               >
-                <h4 className="font-semibold text-gray-900 mb-1">{chain.name}</h4>
-                <p className="text-sm text-gray-600 japanese-text mb-2">{chain.japanese}</p>
-                <p className="text-xs text-red-600 font-medium">{chain.type}</p>
+                {chain.bgImage && (
+                  <div
+                    className="absolute inset-0 group-hover:opacity-75 transition-all duration-300"
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  ></div>
+                )}
+                <div className="relative z-10">
+                  <h4 className={`font-semibold mb-1 ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>{chain.name}</h4>
+                  <p className={`text-sm japanese-text mb-2 ${chain.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>{chain.japanese}</p>
+                  <p className={`text-xs font-medium ${chain.bgImage ? 'text-red-200' : 'text-red-600'}`}>{chain.type}</p>
+                </div>
               </Link>
             ))}
           </div>
@@ -171,7 +185,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Comment Commander",                description: "Maîtrisez les distributeurs de tickets, écrans tactiles et commandes QR code",
+                title: "Comment Commander", description: "Maîtrisez les distributeurs de tickets, écrans tactiles et commandes QR code",
                 icon: "🎫",
                 href: "/guides/comment-commander"
               },
@@ -188,7 +202,7 @@ export default function Home() {
                 href: "/guides/culture-etiquette"
               }
             ].map((guide) => (
-              <Link 
+              <Link
                 key={guide.title}
                 href={guide.href}
                 className="bg-gray-50 rounded-lg p-8 hover:bg-red-50 transition-colors border border-gray-200 hover:border-red-200"

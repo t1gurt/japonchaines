@@ -10,7 +10,7 @@ export default function Footer() {
               <span className="text-xl font-bold text-red-400">🍜 Chain Japanese Restaurants</span>
             </div>
             <p className="text-gray-300 mb-4 max-w-md">
-              Votre guide complet des chaînes de restaurants japonais. 
+              Votre guide complet des chaînes de restaurants japonais.
               Découvrez, commandez et savourez la cuisine japonaise en toute confiance.
             </p>
           </div>
