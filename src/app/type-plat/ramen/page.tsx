@@ -1,5 +1,3 @@
-'use client';
-
 import Link from 'next/link';
 import { Metadata } from 'next';
 import CategoryViewTracker from '@/components/CategoryViewTracker';
@@ -7,19 +5,6 @@ import PageHero from '@/components/PageHero';
 import ContentSection from '@/components/ContentSection';
 import ResourceGrid from '@/components/ResourceGrid';
 import ResourceCard from '@/components/ResourceCard';
-
-// Metadata needs to be handled carefully in client components or moved to layout
-// Since we are using 'use client', we can't export metadata here if it's a page.
-// However, for this refactoring, I will keep the structure similar to previous successful refactors.
-// If metadata is required, it should be in a separate layout.tsx or this file should be a server component
-// importing client components.
-// Given the previous pattern, I'll assume we can keep it as is or the user handles metadata elsewhere/accepts this limitation for now.
-// But wait, the previous Anan page I made was a Server Component (no 'use client' at top, but imported client components).
-// `CategoryViewTracker` uses hooks, so it must be a client component.
-// `PageHero` etc are likely client components.
-// If I make this page a Server Component, I can export metadata.
-// But I need to import `CategoryViewTracker` which is a client component. That's fine.
-// So I will NOT add 'use client' at the top, and ensure imports are correct.
 
 const ramenChains = [
   {
