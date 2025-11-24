@@ -1,25 +1,8 @@
-'use client';
-
 import { Metadata } from 'next';
 import Link from 'next/link';
 import ChainViewTracker from '@/components/ChainViewTracker';
 import PageHero from '@/components/PageHero';
 import ContentSection from '@/components/ContentSection';
-
-// Metadata needs to be exported from a separate file or layout if using 'use client', 
-// but for now we'll keep the page client-side and omit metadata export or move it to layout.
-// Next.js App Router pages with 'use client' cannot export metadata.
-// However, since this was a page.tsx, it might have been server component before?
-// The previous file had 'export const metadata' but NO 'use client' directive at the top?
-// Wait, the previous file content I read did NOT have 'use client'.
-// But it used `ChainViewTracker` which might be a client component.
-// If `ChainViewTracker` is a client component, it can be imported in a server component.
-// So I should keep this page as a Server Component if possible to export metadata.
-// But `PageHero` and `ContentSection` are likely client components or compatible.
-// Let's check if `PageHero` uses client features. It uses `useRouter`? No, usually just props.
-// If I want to keep metadata, I should not add 'use client' to this page.
-// `ChainViewTracker` is likely a client component (it uses hooks).
-// So I can keep the page as Server Component.
 
 // Re-declaring data here for now as it was in the original file.
 const menuItems = [
