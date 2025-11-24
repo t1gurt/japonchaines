@@ -96,7 +96,7 @@ export default function Home() {
               <Link
                 key={category.name}
                 href={category.href}
-                className="group relative overflow-hidden bg-gray-50 rounded-lg p-6 hover:bg-red-50 transition-colors border border-gray-200 hover:border-red-200"
+                className="group relative overflow-hidden bg-gray-50 rounded-lg p-6 hover:bg-red-50 transition-colors border border-gray-200 hover:border-red-200 block"
                 style={category.bgImage ? {
                   backgroundImage: `url('${category.bgImage}')`,
                   backgroundSize: 'cover',
