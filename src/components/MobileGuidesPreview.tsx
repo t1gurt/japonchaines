@@ -38,7 +38,7 @@ const MobileGuidesPreview: React.FC = () => {
       </h3>
       <div className="space-y-3">
         {guides.map((guide) => (
-          <Link 
+          <Link
             key={guide.title}
             href={guide.href}
             className={`block p-4 rounded-lg border-2 hover:shadow-md transition-all ${guide.color}`}
@@ -63,7 +63,7 @@ const MobileGuidesPreview: React.FC = () => {
         ))}
       </div>
       <div className="mt-4 text-center">
-        <Link 
+        <Link
           href="/guides"
           className="text-red-600 text-sm font-medium hover:text-red-700"
         >

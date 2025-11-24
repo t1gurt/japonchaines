@@ -20,7 +20,7 @@ const MobileChainCards: React.FC = () => {
       </h3>
       <div className="grid grid-cols-2 gap-3">
         {popularChains.map((chain) => (
-          <Link 
+          <Link
             key={chain.name}
             href={`/chaines/${chain.slug}`}
             className="bg-white rounded-lg p-4 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
@@ -38,7 +38,7 @@ const MobileChainCards: React.FC = () => {
         ))}
       </div>
       <div className="mt-4 text-center">
-        <Link 
+        <Link
           href="/chaines"
           className="text-red-600 text-sm font-medium hover:text-red-700"
         >
