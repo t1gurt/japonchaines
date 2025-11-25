@@ -23,11 +23,11 @@ async function getFileModifiedDate(filePath: string): Promise<Date> {
 // ページパスからファイルパスを生成する関数
 function getPageFilePath(page: string): string {
   const srcDir = join(process.cwd(), 'src', 'app');
-  
+
   if (page === '') {
     return join(srcDir, 'page.tsx');
   }
-  
+
   return join(srcDir, page.slice(1), 'page.tsx');
 }
 
@@ -39,15 +39,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     staticPages.map(async (page) => {
       const filePath = getPageFilePath(page);
       const lastModified = await getFileModifiedDate(filePath);
-      
+
+      const isRoot = page === '';
+      const url = isRoot ? `${baseUrl}` : `${baseUrl}${page}/`;
+
       return {
-        url: `${baseUrl}${page}`,
+        url,
         lastModified,
         changeFrequency: 'weekly' as const,
-        priority: page === '' ? 1.0 : 0.8,
+        priority: isRoot ? 1.0 : 0.8,
         alternates: {
           languages: {
-            'fr-FR': `${baseUrl}${page}`,
+            'fr-FR': url,
           },
         },
       };
@@ -59,15 +62,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     restaurantChains.map(async (chain) => {
       const filePath = join(process.cwd(), 'src', 'app', 'chaines', chain, 'page.tsx');
       const lastModified = await getFileModifiedDate(filePath);
-      
+      const url = `${baseUrl}/chaines/${chain}/`;
+
       return {
-        url: `${baseUrl}/chaines/${chain}`,
+        url,
         lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.7,
         alternates: {
           languages: {
-            'fr-FR': `${baseUrl}/chaines/${chain}`,
+            'fr-FR': url,
           },
         },
       };
@@ -79,15 +83,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     foodTypes.map(async (type) => {
       const filePath = join(process.cwd(), 'src', 'app', 'type-plat', type, 'page.tsx');
       const lastModified = await getFileModifiedDate(filePath);
-      
+      const url = `${baseUrl}/type-plat/${type}/`;
+
       return {
-        url: `${baseUrl}/type-plat/${type}`,
+        url,
         lastModified,
         changeFrequency: 'monthly' as const,
         priority: 0.6,
         alternates: {
           languages: {
-            'fr-FR': `${baseUrl}/type-plat/${type}`,
+            'fr-FR': url,
           },
         },
       };

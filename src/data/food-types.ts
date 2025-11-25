@@ -96,7 +96,7 @@ export const foodTypes: FoodType[] = [
         icon: "🥢"
     },
     {
-        id: "family-restaurant",
+        id: "family-restaurants",
         name: "Family Restaurants",
         japanese: "ファミリーレストラン",
         description: "Restaurants familiaux proposant une cuisine variée dans une ambiance décontractée",
