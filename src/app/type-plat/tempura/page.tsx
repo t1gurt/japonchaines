@@ -181,6 +181,7 @@ export default function TempuraTendonPage() {
       popularity: "⭐⭐⭐"
     }
   ];
+
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Breadcrumb */}
@@ -211,7 +212,7 @@ export default function TempuraTendonPage() {
                 </div>
               </div>
               <p className="text-xl text-gray-700 mb-6">
-                L'art japonais de la friture légère. Tempura croustillante servie seule 
+                L&apos;art japonais de la friture légère. Tempura croustillante servie seule
                 ou sur riz (tendon) avec une sauce sucrée-salée délicieuse.
               </p>
               <div className="flex flex-wrap gap-4">
@@ -227,14 +228,14 @@ export default function TempuraTendonPage() {
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">L'Art de la Tempura</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">L&apos;Art de la Tempura</h3>
               <p className="text-gray-600 mb-4">
-                Introduite par les missionnaires portugais au 16ème siècle, la tempura 
-                est devenue un pilier de la cuisine japonaise grâce à sa pâte légère 
+                Introduite par les missionnaires portugais au 16ème siècle, la tempura
+                est devenue un pilier de la cuisine japonaise grâce à sa pâte légère
                 et aérée qui sublime les ingrédients.
               </p>
               <p className="text-gray-600">
-                Le tendon (tempura + don = bol) transforme cette technique en plat 
+                Le tendon (tempura + don = bol) transforme cette technique en plat
                 complet et abordable, parfait pour un repas rapide mais raffiné.
               </p>
             </div>
@@ -320,9 +321,8 @@ export default function TempuraTendonPage() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {tempuraTypes.map((tempura, index) => (
-              <div key={index} className={`bg-white rounded-xl p-6 border ${
-                tempura.beginner ? 'border-green-200 bg-green-50' : 'border-gray-200'
-              }`}>
+              <div key={index} className={`bg-white rounded-xl p-6 border ${tempura.beginner ? 'border-green-200 bg-green-50' : 'border-gray-200'
+                }`}>
                 {tempura.beginner && (
                   <span className="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mb-3 inline-block">
                     Recommandé débutants
@@ -331,7 +331,7 @@ export default function TempuraTendonPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-1">{tempura.name}</h3>
                 <p className="text-gray-600 japanese-text text-sm mb-3">{tempura.japanese}</p>
                 <p className="text-gray-600 text-sm mb-4">{tempura.description}</p>
-                
+
                 <div className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="font-semibold text-gray-900">Caractère :</span>
@@ -370,9 +370,9 @@ export default function TempuraTendonPage() {
                   <h3 className="text-lg font-bold text-gray-900 mb-1">{tendon.name}</h3>
                   <p className="text-gray-600 japanese-text text-sm mb-3">{tendon.japanese}</p>
                 </div>
-                
+
                 <p className="text-gray-600 text-sm mb-4">{tendon.description}</p>
-                
+
                 <div className="space-y-2 text-sm">
                   <div>
                     <span className="font-semibold text-gray-900">Contenu :</span>
@@ -401,7 +401,7 @@ export default function TempuraTendonPage() {
           </h2>
           <div className="grid lg:grid-cols-3 gap-8">
             {tempuraChains.map((chain, index) => (
-              <Link 
+              <Link
                 key={index}
                 href={chain.href}
                 className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-orange-200 overflow-hidden"
@@ -419,20 +419,20 @@ export default function TempuraTendonPage() {
                       <p className="text-gray-500 text-xs">{chain.englishName}</p>
                     </div>
                   </div>
-                  
+
                   <p className="text-gray-600 mb-4 text-sm">{chain.description}</p>
-                  
+
                   <div className="space-y-3">
                     <div>
                       <h4 className="text-sm font-semibold text-gray-900">Spécialités :</h4>
                       <p className="text-sm text-gray-600">{chain.specialties.join(", ")}</p>
                     </div>
-                    
+
                     <div>
                       <h4 className="text-sm font-semibold text-gray-900">Particularités :</h4>
                       <p className="text-sm text-gray-600">{chain.uniqueFeatures.join(", ")}</p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 gap-2 text-sm">
                       <div>
                         <span className="font-semibold text-gray-900">Prix : </span>
@@ -448,7 +448,7 @@ export default function TempuraTendonPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-6 flex items-center justify-between">
                     <span className="text-orange-600 font-medium text-sm group-hover:text-orange-700">
                       Voir les détails →
@@ -467,7 +467,7 @@ export default function TempuraTendonPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Comment Commander Tempura et Tendon
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
               <div className="text-3xl mb-4">🎫</div>
@@ -478,7 +478,7 @@ export default function TempuraTendonPage() {
                 <li>• Paiement avant ou après service</li>
               </ul>
             </div>
-            
+
             <div className="bg-yellow-50 p-6 rounded-xl border border-yellow-200">
               <div className="text-3xl mb-4">🍤</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">2. Type de Plat</h3>
@@ -488,7 +488,7 @@ export default function TempuraTendonPage() {
                 <li>• Sets = tempura + riz + miso</li>
               </ul>
             </div>
-            
+
             <div className="bg-green-50 p-6 rounded-xl border border-green-200">
               <div className="text-3xl mb-4">🥢</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">3. Ingrédients</h3>
@@ -498,7 +498,7 @@ export default function TempuraTendonPage() {
                 <li>• Mix = plusieurs ingrédients</li>
               </ul>
             </div>
-            
+
             <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
               <div className="text-3xl mb-4">🍜</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">4. Accompagnements</h3>
@@ -516,14 +516,14 @@ export default function TempuraTendonPage() {
               <div>
                 <p><span className="font-semibold">Ebi tendon kudasai</span> <span className="japanese-text">海老天丼ください</span></p>
                 <p className="text-gray-600 mb-2">Un tendon aux crevettes, s'il vous plaît</p>
-                
+
                 <p><span className="font-semibold">Yasai tempura arimasu ka?</span> <span className="japanese-text">野菜天ぷらありますか？</span></p>
                 <p className="text-gray-600 mb-2">Avez-vous de la tempura de légumes ?</p>
               </div>
               <div>
                 <p><span className="font-semibold">Ten-zaru soba onegaishimasu</span> <span className="japanese-text">天ざるそばお願いします</span></p>
                 <p className="text-gray-600 mb-2">Des soba froides avec tempura, s'il vous plaît</p>
-                
+
                 <p><span className="font-semibold">Tentsuyu motto kudasai</span> <span className="japanese-text">天つゆもっとください</span></p>
                 <p className="text-gray-600">Plus de sauce tempura, s'il vous plaît</p>
               </div>
@@ -538,63 +538,64 @@ export default function TempuraTendonPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Conseils pour Profiter de la Tempura
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">⏰</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Mangez Rapidement</h3>
               <p className="text-gray-600 text-sm">
-                La tempura est meilleure chaude et croustillante. Ne la laissez pas refroidir 
+                La tempura est meilleure chaude et croustillante. Ne la laissez pas refroidir
                 trop longtemps, surtout dans un tendon où elle peut ramollir avec la sauce.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">🥢</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Technique de Trempage</h3>
               <p className="text-gray-600 text-sm">
-                Trempez délicatement la tempura dans la sauce tentsuyu. Ajoutez du daikon 
+                Trempez délicatement la tempura dans la sauce tentsuyu. Ajoutez du daikon
                 râpé et du gingembre pour une saveur plus fraîche et digestive.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">🌱</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Options Végétariennes</h3>
               <p className="text-gray-600 text-sm">
-                La tempura de légumes (yasai) est excellente et souvent moins chère. 
+                La tempura de légumes (yasai) est excellente et souvent moins chère.
                 Parfait pour découvrir des légumes japonais comme le kabocha (potiron).
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">💡</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Économiser</h3>
               <p className="text-gray-600 text-sm">
-                Les tendon sont plus abordables que la tempura seule. Les sets lunch 
+                Les tendon sont plus abordables que la tempura seule. Les sets lunch
                 (midi) offrent souvent un excellent rapport qualité-prix.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">🍜</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Combiner avec Soba</h3>
               <p className="text-gray-600 text-sm">
-                Ten-zaru soba (soba froides + tempura) est un classique rafraîchissant 
+                Ten-zaru soba (soba froides + tempura) est un classique rafraîchissant
                 en été. Parfait équilibre entre le chaud et le froid.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">🥗</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Équilibrer le Repas</h3>
               <p className="text-gray-600 text-sm">
-                La tempura étant frite, accompagnez-la de légumes frais ou de salade 
+                La tempura étant frite, accompagnez-la de légumes frais ou de salade
                 de chou souvent proposée gratuitement dans les chaînes.
               </p>
             </div>
           </div>
-        </div>      </section>
+        </div>
+      </section>
     </div>
   );
 }

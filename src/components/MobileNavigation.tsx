@@ -32,12 +32,7 @@ const navigationItems: NavItem[] = [
       { label: 'Yakiniku 🥩', href: '/type-plat/yakiniku', icon: <></>, accent: 'text-purple-600' },
     ]
   },
-  {
-    label: 'Tutoriel',
-    href: '/tutorial',
-    icon: <BookOpen className="w-5 h-5" />,
-    accent: 'text-green-600'
-  },
+
   {
     label: 'Guides',
     href: '/guides',
@@ -78,8 +73,8 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, toggleMenu 
   };
 
   const toggleExpanded = (label: string) => {
-    setExpandedItems(prev => 
-      prev.includes(label) 
+    setExpandedItems(prev =>
+      prev.includes(label)
         ? prev.filter(item => item !== label)
         : [...prev, label]
     );
@@ -87,13 +82,12 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, toggleMenu 
 
   return (
     <>
-      
+
 
       {/* Mobile Menu Panel Modernisé - Fullscreen */}
       <nav
-        className={`md:hidden fixed top-0 left-0 h-screen w-screen bg-white/95 backdrop-blur-md shadow-2xl z-40 transform transition-opacity duration-300 ease-out ${
-          isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
+        className={`md:hidden fixed top-0 left-0 h-screen w-screen bg-white/95 backdrop-blur-md shadow-2xl z-40 transform transition-opacity duration-300 ease-out ${isOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+          }`}
       >
         <div className="flex flex-col h-full">
           {/* Header Modernisé */}
@@ -137,7 +131,7 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, toggleMenu 
                     </div>
                     <span className="font-medium text-gray-700 group-hover:text-gray-900">{item.label}</span>
                   </Link>
-                  
+
                   {item.children && (
                     <button
                       onClick={() => toggleExpanded(item.label)}

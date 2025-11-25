@@ -69,16 +69,27 @@ export default function Footer() {
                   À propos
                 </Link>
               </li>
+              <li>
+                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
 
         {/* Ligne de séparation */}        <div className="border-t border-gray-800 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-center items-center">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} Chain Japanese Restaurants. Tous droits réservés.
-            </p>
+          <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mb-4 md:mb-0">
+            <Link href="/mentions-legales" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Mentions Légales
+            </Link>
+            <Link href="/politique-de-confidentialite" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Politique de Confidentialité
+            </Link>
           </div>
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()} Chain Japanese Restaurants. Tous droits réservés.
+          </p>
         </div>
       </div>
     </footer>

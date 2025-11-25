@@ -22,7 +22,7 @@ const SelfReportModal: React.FC<SelfReportModalProps> = ({ isOpen, onClose, onRe
     chains.forEach(chain => {
       categoryCount[chain.category] = (categoryCount[chain.category] || 0) + 1;
     });
-    
+
     return [
       { id: 'all', name: 'Toutes', count: chains.length },
       { id: 'gyudon', name: 'Gyūdon', count: categoryCount['gyudon'] || 0 },
@@ -32,7 +32,7 @@ const SelfReportModal: React.FC<SelfReportModalProps> = ({ isOpen, onClose, onRe
       { id: 'tempura', name: 'Tempura/Tendon', count: categoryCount['tempura'] || 0 },
       { id: 'udon', name: 'Udon', count: categoryCount['udon'] || 0 },
       { id: 'soba', name: 'Soba', count: categoryCount['soba'] || 0 },
-      { id: 'family-restaurant', name: 'Family Restaurant', count: categoryCount['family-restaurant'] || 0 },
+      { id: 'family-restaurants', name: 'Family Restaurant', count: categoryCount['family-restaurants'] || 0 },
       { id: 'burger', name: 'Burger Japonais', count: categoryCount['burger'] || 0 },
       { id: 'chinese', name: 'Cuisine Chinoise', count: categoryCount['chinese'] || 0 },
       { id: 'izakaya', name: 'Izakaya', count: categoryCount['izakaya'] || 0 },
@@ -48,15 +48,15 @@ const SelfReportModal: React.FC<SelfReportModalProps> = ({ isOpen, onClose, onRe
   // Chaînes filtrées
   const filteredChains = useMemo(() => {
     let filtered = selectedCategory === 'all' ? chains : getChainsByCategory(selectedCategory);
-    
+
     if (searchTerm) {
-      filtered = filtered.filter(chain => 
+      filtered = filtered.filter(chain =>
         chain.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         chain.japanese.includes(searchTerm) ||
         chain.description.toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
-    
+
     return filtered;
   }, [selectedCategory, searchTerm]);
 
@@ -101,7 +101,7 @@ const SelfReportModal: React.FC<SelfReportModalProps> = ({ isOpen, onClose, onRe
       case 'tempura': return '🍤';
       case 'udon': return '🍲';
       case 'soba': return '🥢';
-      case 'family-restaurant': return '🍽️';
+      case 'family-restaurants': return '🍽️';
       case 'burger': return '🍔';
       case 'chinese': return '🥟';
       case 'izakaya': return '🍻';
@@ -167,11 +167,10 @@ const SelfReportModal: React.FC<SelfReportModalProps> = ({ isOpen, onClose, onRe
                 <button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
-                  className={`px-4 py-2 rounded-xl border-2 font-medium transition-all ${
-                    selectedCategory === category.id
-                      ? 'bg-blue-600 text-white border-blue-600 shadow-lg'
-                      : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:bg-blue-50'
-                  }`}
+                  className={`px-4 py-2 rounded-xl border-2 font-medium transition-all ${selectedCategory === category.id
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-lg'
+                    : 'bg-white text-gray-700 border-gray-200 hover:border-blue-300 hover:bg-blue-50'
+                    }`}
                 >
                   <span className="mr-2">{getCategoryIcon(category.id)}</span>
                   {category.name}
@@ -186,7 +185,7 @@ const SelfReportModal: React.FC<SelfReportModalProps> = ({ isOpen, onClose, onRe
             <h3 className="text-lg font-semibold text-gray-800 mb-3">
               Chaînes disponibles ({filteredChains.length})
             </h3>
-            
+
             {filteredChains.length === 0 ? (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">😕</div>
@@ -201,18 +200,16 @@ const SelfReportModal: React.FC<SelfReportModalProps> = ({ isOpen, onClose, onRe
                     <div
                       key={chain.id}
                       onClick={() => handleChainToggle(chain.id)}
-                      className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all duration-200 transform hover:scale-105 ${
-                        isSelected
-                          ? 'bg-blue-50 border-blue-500 shadow-lg ring-2 ring-blue-200'
-                          : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-md'
-                      }`}
+                      className={`relative p-4 rounded-xl border-2 cursor-pointer transition-all duration-200 transform hover:scale-105 ${isSelected
+                        ? 'bg-blue-50 border-blue-500 shadow-lg ring-2 ring-blue-200'
+                        : 'bg-white border-gray-200 hover:border-blue-300 hover:shadow-md'
+                        }`}
                     >
                       {/* Indicateur de sélection */}
-                      <div className={`absolute top-3 right-3 w-6 h-6 rounded-full border-2 flex items-center justify-center ${
-                        isSelected 
-                          ? 'bg-blue-600 border-blue-600' 
-                          : 'bg-white border-gray-300'
-                      }`}>
+                      <div className={`absolute top-3 right-3 w-6 h-6 rounded-full border-2 flex items-center justify-center ${isSelected
+                        ? 'bg-blue-600 border-blue-600'
+                        : 'bg-white border-gray-300'
+                        }`}>
                         {isSelected && <span className="text-white text-sm">✓</span>}
                       </div>
 
