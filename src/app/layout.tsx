@@ -16,6 +16,8 @@ import AnalyticsProvider from "@/components/AnalyticsProvider";
 import StructuredData from "@/components/StructuredData";
 import { generateWebsiteSchema } from "@/lib/structured-data";
 
+import CookieConsent from "@/components/CookieConsent";
+
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -33,7 +35,7 @@ export default function RootLayout({
   };
 
   const websiteSchema = generateWebsiteSchema();
-  
+
   return (
     <html lang="fr">
       <head>
@@ -47,14 +49,15 @@ export default function RootLayout({
         <StructuredData data={websiteSchema} />
         <AnalyticsProvider>
           <Header />
-          
-                    <MobileHeader toggleMenu={toggleMenu} isOpen={isMenuOpen} />
+
+          <MobileHeader toggleMenu={toggleMenu} isOpen={isMenuOpen} />
           <MobileNavigation isOpen={isMenuOpen} toggleMenu={toggleMenu} />
           <main className="min-h-screen pb-16 md:pb-0">
             {children}
           </main>
           <Footer />
           <BottomNavigation />
+          <CookieConsent />
         </AnalyticsProvider>
       </body>
     </html>
