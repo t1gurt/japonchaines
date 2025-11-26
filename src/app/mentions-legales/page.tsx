@@ -24,7 +24,7 @@ export default function MentionsLegalesPage() {
                         <section>
                             <h2 className="text-xl font-semibold text-gray-900 mb-4">1. Éditeur du Site</h2>
                             <p>
-                                Le site Japonchaines.net est édité à titre personnel.
+                                Le site Japonchaines.net est édité à titre personnel par Tigurt.
                             </p>
                             <p className="mt-2">
                                 <strong>Contact :</strong><br />
