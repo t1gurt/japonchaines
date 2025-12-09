@@ -27,7 +27,8 @@ export default function TeishokuPage() {
       vegetarianOptions: "Excellentes options végétariennes",
       uniqueFeatures: ["Légumes frais", "Cuisine visible", "Présentation soignée"],
       atmosphere: "Familial raffiné",
-      href: "/chaines/ootoya"
+      href: "/chaines/ootoya",
+      bgImage: "/images/chaines/ootoya/ootoya-teishoku-bg.jpg"
     },
     {
       name: "Yayoiken",
@@ -42,7 +43,7 @@ export default function TeishokuPage() {
       uniqueFeatures: ["Riz illimité", "Prix abordable", "Portions généreuses"],
       atmosphere: "Décontracté familial",
       href: "/chaines/yayoiken"
-    },    {
+    }, {
       name: "Miyamoto Munashi",
       japanese: "宮本むなし",
       englishName: "Miyamoto Munashi",
@@ -140,10 +141,11 @@ export default function TeishokuPage() {
     }
   ];
 
+
   return (
     <div className="min-h-screen bg-gray-50">
       <CategoryViewTracker categoryName="teishoku" />
-      
+
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -157,50 +159,63 @@ export default function TeishokuPage() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-green-100 to-blue-100 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center mb-4">
-                <span className="text-5xl mr-4">🍱</span>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">
-                    Teishoku
-                  </h1>
-                  <p className="text-2xl text-gray-600 japanese-text">定食</p>
+      {/* Hero Section with PageHero */}
+      <section>
+        <div className="relative">
+          <div
+            className="absolute inset-0 z-0"
+            style={{
+              backgroundImage: "url('/images/chaines/ootoya/ootoya-teishoku-bg.jpg')",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat'
+            }}
+          />
+          <div className="absolute inset-0 bg-black/50 z-0" />
+
+          <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <div className="flex items-center mb-4">
+                  <span className="text-5xl mr-4">🍱</span>
+                  <div>
+                    <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">
+                      Teishoku
+                    </h1>
+                    <p className="text-2xl text-gray-200 japanese-text">定食</p>
+                  </div>
+                </div>
+                <p className="text-xl text-gray-100 mb-6">
+                  Découvrez l'essence de la cuisine familiale japonaise avec les teishoku :
+                  des repas complets et équilibrés alliant tradition millénaire et nutrition
+                  moderne. Un plat principal, du riz, une soupe miso et des accompagnements
+                  pour un repas parfaitement harmonieux.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Prix : ¥600-1500
+                  </span>
+                  <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Repas complet
+                  </span>
+                  <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
+                    Cuisine traditionnelle
+                  </span>
                 </div>
               </div>
-              <p className="text-xl text-gray-700 mb-6">
-                Découvrez l'essence de la cuisine familiale japonaise avec les teishoku : 
-                des repas complets et équilibrés alliant tradition millénaire et nutrition 
-                moderne. Un plat principal, du riz, une soupe miso et des accompagnements 
-                pour un repas parfaitement harmonieux.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                  Prix : ¥600-1500
-                </span>
-                <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
-                  Repas complet
-                </span>
-                <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm font-medium">
-                  Cuisine traditionnelle
-                </span>
+              <div className="bg-white/95 backdrop-blur-sm p-8 rounded-xl shadow-lg">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">Le Teishoku Traditionnel</h3>
+                <p className="text-gray-600 mb-4">
+                  Le teishoku suit la philosophie "ichijuu sansai" (une soupe, trois plats)
+                  qui garantit un repas nutritionnellement équilibré. C'est l'incarnation
+                  de la sagesse culinaire japonaise.
+                </p>
+                <p className="text-gray-600">
+                  Chaque élément a sa fonction : le riz apporte l'énergie, le plat principal
+                  les protéines, la soupe miso les probiotiques, et les accompagnements
+                  les vitamines et minéraux.
+                </p>
               </div>
-            </div>
-            <div className="bg-white p-8 rounded-xl shadow-lg">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Le Teishoku Traditionnel</h3>
-              <p className="text-gray-600 mb-4">
-                Le teishoku suit la philosophie "ichijuu sansai" (une soupe, trois plats) 
-                qui garantit un repas nutritionnellement équilibré. C'est l'incarnation 
-                de la sagesse culinaire japonaise.
-              </p>
-              <p className="text-gray-600">
-                Chaque élément a sa fonction : le riz apporte l'énergie, le plat principal 
-                les protéines, la soupe miso les probiotiques, et les accompagnements 
-                les vitamines et minéraux.
-              </p>
             </div>
           </div>
         </div>
@@ -237,7 +252,7 @@ export default function TeishokuPage() {
                 <h3 className="text-lg font-bold text-gray-900 mb-1">{component.name}</h3>
                 <p className="text-gray-600 japanese-text text-sm mb-3">{component.japanese}</p>
                 <p className="text-gray-600 text-sm mb-4">{component.description}</p>
-                
+
                 <div className="space-y-2 text-sm">
                   <div>
                     <span className="font-semibold text-gray-900">Caractéristiques :</span>
@@ -266,56 +281,68 @@ export default function TeishokuPage() {
           </h2>
           <div className="grid lg:grid-cols-3 gap-8">
             {teishokuChains.map((chain, index) => (
-              <Link 
+              <Link
                 key={index}
                 href={chain.href}
-                className="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-green-200 overflow-hidden"
+                className="group relative overflow-hidden bg-white rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-green-200"
+                style={chain.bgImage ? {
+                  backgroundImage: `url('${chain.bgImage}')`,
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center',
+                  backgroundRepeat: 'no-repeat'
+                } : {}}
               >
-                <div className="p-6">
+                {chain.bgImage && (
+                  <div
+                    className="absolute inset-0 group-hover:opacity-75 transition-all duration-300"
+                    style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)' }}
+                  ></div>
+                )}
+                <div className="p-6" style={{ position: 'relative', zIndex: 10 }}>
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
                       <span className="text-green-600 text-xl">🍱</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-green-600 transition-colors">
+                      <h3 className={`text-xl font-bold transition-colors ${chain.bgImage ? 'text-white group-hover:text-green-200' : 'text-gray-900 group-hover:text-green-600'}`}>
                         {chain.name}
                       </h3>
-                      <p className="text-gray-600 japanese-text">{chain.japanese}</p>
-                      <p className="text-gray-500 text-xs">{chain.atmosphere}</p>
+                      <p className={`japanese-text ${chain.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>{chain.japanese}</p>
+                      <p className={`text-xs ${chain.bgImage ? 'text-gray-300' : 'text-gray-500'}`}>{chain.atmosphere}</p>
                     </div>
                   </div>
-                  
-                  <p className="text-gray-600 mb-4 text-sm">{chain.description}</p>
-                  
+
+                  <p className={`mb-4 text-sm ${chain.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>{chain.description}</p>
+
                   <div className="space-y-3">
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900">Spécialités :</h4>
-                      <p className="text-sm text-gray-600">{chain.specialties.join(", ")}</p>
+                      <h4 className={`text-sm font-semibold ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>Spécialités :</h4>
+                      <p className={`text-sm ${chain.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>{chain.specialties.join(", ")}</p>
                     </div>
-                    
+
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900">Particularités :</h4>
-                      <p className="text-sm text-gray-600">{chain.uniqueFeatures.join(", ")}</p>
+                      <h4 className={`text-sm font-semibold ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>Particularités :</h4>
+                      <p className={`text-sm ${chain.bgImage ? 'text-gray-200' : 'text-gray-600'}`}>{chain.uniqueFeatures.join(", ")}</p>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 gap-2 text-sm">
                       <div>
-                        <span className="font-semibold text-gray-900">Prix : </span>
-                        <span className="text-gray-600">{chain.priceRange}</span>
+                        <span className={`font-semibold ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>Prix : </span>
+                        <span className={chain.bgImage ? 'text-gray-200' : 'text-gray-600'}>{chain.priceRange}</span>
                       </div>
                       <div>
-                        <span className="font-semibold text-gray-900">Style : </span>
-                        <span className="text-gray-600">{chain.style}</span>
+                        <span className={`font-semibold ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>Style : </span>
+                        <span className={chain.bgImage ? 'text-gray-200' : 'text-gray-600'}>{chain.style}</span>
                       </div>
                       <div>
-                        <span className="font-semibold text-gray-900">Végétarien : </span>
-                        <span className="text-gray-600">{chain.vegetarianOptions}</span>
+                        <span className={`font-semibold ${chain.bgImage ? 'text-white' : 'text-gray-900'}`}>Végétarien : </span>
+                        <span className={chain.bgImage ? 'text-gray-200 font-medium' : 'text-gray-600'}>{chain.vegetarianOptions}</span>
                       </div>
                     </div>
                   </div>
-                  
+
                   <div className="mt-6 flex items-center justify-between">
-                    <span className="text-green-600 font-medium text-sm group-hover:text-green-700">
+                    <span className={`font-medium text-sm ${chain.bgImage ? 'text-green-200 group-hover:text-green-100' : 'text-green-600 group-hover:text-green-700'}`}>
                       Voir les détails →
                     </span>
                   </div>
@@ -332,7 +359,7 @@ export default function TeishokuPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Comment Commander un Teishoku
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="bg-green-50 p-6 rounded-xl border border-green-200">
               <div className="text-3xl mb-4">📋</div>
@@ -343,7 +370,7 @@ export default function TeishokuPage() {
                 <li>• Noter les accompagnements inclus</li>
               </ul>
             </div>
-            
+
             <div className="bg-blue-50 p-6 rounded-xl border border-blue-200">
               <div className="text-3xl mb-4">🍚</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">2. Options de Riz</h3>
@@ -353,7 +380,7 @@ export default function TeishokuPage() {
                 <li>• Souvent illimité (okawari)</li>
               </ul>
             </div>
-            
+
             <div className="bg-purple-50 p-6 rounded-xl border border-purple-200">
               <div className="text-3xl mb-4">🥤</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">3. Boissons</h3>
@@ -363,7 +390,7 @@ export default function TeishokuPage() {
                 <li>• Boissons supplémentaires payantes</li>
               </ul>
             </div>
-            
+
             <div className="bg-orange-50 p-6 rounded-xl border border-orange-200">
               <div className="text-3xl mb-4">⏰</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">4. Service</h3>
@@ -381,14 +408,14 @@ export default function TeishokuPage() {
               <div>
                 <p><span className="font-semibold">Teishoku wo kudasai</span> <span className="japanese-text">定食をください</span></p>
                 <p className="text-gray-600 mb-2">Un teishoku, s'il vous plaît</p>
-                
+
                 <p><span className="font-semibold">Gohan okawari dekimasu ka?</span> <span className="japanese-text">ご飯おかわりできますか？</span></p>
                 <p className="text-gray-600 mb-2">Puis-je avoir une deuxième portion de riz ?</p>
               </div>
               <div>
                 <p><span className="font-semibold">Osusume wa nan desu ka?</span> <span className="japanese-text">おすすめは何ですか？</span></p>
                 <p className="text-gray-600 mb-2">Quelle est votre recommandation ?</p>
-                
+
                 <p><span className="font-semibold">Gochisousama deshita</span> <span className="japanese-text">ごちそうさまでした</span></p>
                 <p className="text-gray-600">Merci pour ce repas (à la fin)</p>
               </div>
@@ -403,58 +430,58 @@ export default function TeishokuPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Conseils pour Apprécier les Teishoku
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">🥢</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Ordre de Dégustation</h3>
               <p className="text-gray-600 text-sm">
-                Commencez par la soupe miso pour préparer l'estomac, puis alternez 
+                Commencez par la soupe miso pour préparer l'estomac, puis alternez
                 entre le plat principal et le riz. Les marinés nettoient le palais.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">⚖️</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Équilibre Parfait</h3>
               <p className="text-gray-600 text-sm">
-                Le teishoku est conçu pour être nutritionnellement complet. 
+                Le teishoku est conçu pour être nutritionnellement complet.
                 Mangez tous les composants pour bénéficier de cet équilibre.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">💰</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Excellent Rapport Qualité-Prix</h3>
               <p className="text-gray-600 text-sm">
-                Un teishoku offre un repas complet pour moins cher que plusieurs 
+                Un teishoku offre un repas complet pour moins cher que plusieurs
                 plats séparés. Parfait pour un déjeuner équilibré.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">🌱</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Option Végétarienne</h3>
               <p className="text-gray-600 text-sm">
-                Ootoya propose d'excellentes options végétariennes. Yayoiken 
+                Ootoya propose d'excellentes options végétariennes. Yayoiken
                 et autres chaînes ont des alternatives à base de tofu.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">📱</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Menus Photographiés</h3>
               <p className="text-gray-600 text-sm">
-                Les chaînes de teishoku ont généralement des menus avec photos, 
+                Les chaînes de teishoku ont généralement des menus avec photos,
                 facilitant la commande même sans parler japonais.
               </p>
             </div>
-            
+
             <div className="bg-white p-6 rounded-xl shadow-sm">
               <div className="text-3xl mb-4">🕐</div>
               <h3 className="text-lg font-bold text-gray-900 mb-3">Horaires Idéaux</h3>
               <p className="text-gray-600 text-sm">
-                Évitez l'heure de pointe du déjeuner (12h-13h) pour plus de tranquillité. 
+                Évitez l'heure de pointe du déjeuner (12h-13h) pour plus de tranquillité.
                 Les teishoku sont parfaits pour un dîner léger aussi.
               </p>
             </div>
