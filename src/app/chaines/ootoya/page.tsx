@@ -29,6 +29,7 @@ export default function OotoyaPage() {
       category: "Teishoku Poisson",
       items: [
         { name: "Saba Teishoku", japanese: "鯖定食", price: "¥980", description: "Maquereau grillé avec riz, soupe miso et légumes de saison" },
+        { name: "Saba no Sumibiyaki to Tori Tatsuta-age", japanese: "さばの炭火焼きと鶏竜田揚げ", price: "¥1230", description: "Maquereau grillé au feu de charbon et poulet frit tatsuta-age dans un set luxueux", image: "/images/chaines/ootoya/ootoya-teishoku-bg.jpg" },
         { name: "Salmon Teishoku", japanese: "鮭定食", price: "¥1080", description: "Saumon grillé sauce teriyaki, accompagnements traditionnels" },
         { name: "Hokke Teishoku", japanese: "ホッケ定食", price: "¥1180", description: "Poisson atka grillé, spécialité d'Hokkaido" },
         { name: "Buri Teriyaki", japanese: "ブリ照り焼き", price: "¥1280", description: "Sériole laquée teriyaki, légumes sautés" }
@@ -131,8 +132,8 @@ export default function OotoyaPage() {
       step: 3,
       title: "Commande",
       icon: "✍️",
-      description: "Commander auprès du serveur",
-      tips: ["Pointer sur la photo si nécessaire", "Préciser 'teishoku' pour le set complet", "Demander des modifications si besoin"]
+      description: "Commander auprès du serveur ou via QR code",
+      tips: ["Système QR code disponible dans certains restaurants", "Commande sur smartphone en plusieurs langues", "Idéal pour les touristes étrangers"]
     },
     {
       step: 4,
@@ -146,7 +147,7 @@ export default function OotoyaPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <ChainViewTracker chainName="Ootoya" chainCategory="Teishoku" />
-      
+
       {/* Breadcrumb */}
       <div className="bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -175,13 +176,13 @@ export default function OotoyaPage() {
                   <p className="text-lg text-gray-600">Teishoku Haut de Gamme</p>
                 </div>
               </div>
-              
+
               <p className="text-xl text-gray-700 mb-6">
-                Découvrez l'excellence du teishoku chez Ootoya : cuisine traditionnelle 
-                raffinée avec des ingrédients frais, préparation visible et présentation 
+                Découvrez l'excellence du teishoku chez Ootoya : cuisine traditionnelle
+                raffinée avec des ingrédients frais, préparation visible et présentation
                 soignée. L'art de la cuisine familiale japonaise élevé au niveau supérieur.
               </p>
-              
+
               <div className="flex flex-wrap gap-3 mb-6">
                 <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
                   Légumes Frais
@@ -197,7 +198,7 @@ export default function OotoyaPage() {
                 </span>
               </div>
             </div>
-            
+
             <div className="bg-white p-8 rounded-xl shadow-lg">
               <h3 className="text-xl font-bold text-gray-900 mb-4">Informations Pratiques</h3>
               <div className="space-y-3 text-sm">
@@ -238,10 +239,10 @@ export default function OotoyaPage() {
             La Philosophie Ichijuu Sansai chez Ootoya
           </h2>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
-            一汁三菜 (Ichijuu Sansai) - "Une soupe, trois plats" - principe fondamental 
+            一汁三菜 (Ichijuu Sansai) - "Une soupe, trois plats" - principe fondamental
             de l'équilibre alimentaire japonais, parfaitement incarné dans chaque teishoku Ootoya.
           </p>
-          
+
           <div className="grid lg:grid-cols-2 gap-8">
             {ichijuuSansai.map((element, index) => (
               <div key={index} className="bg-green-50 rounded-xl p-8 border border-green-200">
@@ -250,9 +251,9 @@ export default function OotoyaPage() {
                   <h3 className="text-2xl font-bold text-gray-900">{element.name}</h3>
                   <p className="text-lg text-gray-600">{element.description}</p>
                 </div>
-                
+
                 <p className="text-gray-700 mb-4">{element.content}</p>
-                
+
                 <div className="mb-4">
                   <h4 className="font-semibold text-gray-900 mb-2">Composants typiques :</h4>
                   <div className="flex flex-wrap gap-2">
@@ -263,7 +264,7 @@ export default function OotoyaPage() {
                     ))}
                   </div>
                 </div>
-                
+
                 <div className="bg-white p-4 rounded-lg border border-green-100">
                   <h4 className="font-semibold text-gray-900 mb-1">Signification nutritionnelle :</h4>
                   <p className="text-gray-600 text-sm">{element.significance}</p>
@@ -280,7 +281,7 @@ export default function OotoyaPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Menu Ootoya - Teishoku Sélection
           </h2>
-          
+
           <div className="space-y-8">
             {menuItems.map((category, categoryIndex) => (
               <div key={categoryIndex} className="bg-white rounded-xl p-6 shadow-sm">
@@ -292,7 +293,16 @@ export default function OotoyaPage() {
                 </h3>
                 <div className="grid md:grid-cols-2 gap-4">
                   {category.items.map((item, itemIndex) => (
-                    <div key={itemIndex} className="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <div key={itemIndex} className="bg-gray-50 p-4 rounded-lg border border-gray-200 overflow-hidden">
+                      {item.image && (
+                        <div className="mb-3 rounded-lg overflow-hidden">
+                          <img
+                            src={item.image}
+                            alt={item.name}
+                            className="w-full h-48 object-cover"
+                          />
+                        </div>
+                      )}
                       <div className="flex justify-between items-start mb-2">
                         <h4 className="font-bold text-gray-900">{item.name}</h4>
                         <span className="text-green-600 font-bold text-lg">{item.price}</span>
@@ -314,7 +324,7 @@ export default function OotoyaPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Les Atouts d'Ootoya
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {ootoyaFeatures.map((feature, index) => (
               <div key={index} className="bg-green-50 p-6 rounded-xl border border-green-200">
@@ -336,7 +346,7 @@ export default function OotoyaPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Comment Commander chez Ootoya
           </h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {orderingGuide.map((step, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
@@ -364,7 +374,7 @@ export default function OotoyaPage() {
                 <p><span className="font-semibold">Saba teishoku onegaishimasu</span></p>
                 <p className="text-gray-600 japanese-text mb-2">鯖定食お願いします</p>
                 <p className="text-gray-500 text-xs mb-3">Un teishoku au maquereau, s'il vous plaît</p>
-                
+
                 <p><span className="font-semibold">Yasai wa nan ga arimasu ka?</span></p>
                 <p className="text-gray-600 japanese-text mb-2">野菜は何がありますか？</p>
                 <p className="text-gray-500 text-xs">Quels légumes avez-vous ?</p>
@@ -373,7 +383,7 @@ export default function OotoyaPage() {
                 <p><span className="font-semibold">Bejitarian menyuu wa?</span></p>
                 <p className="text-gray-600 japanese-text mb-2">ベジタリアンメニューは？</p>
                 <p className="text-gray-500 text-xs mb-3">Avez-vous un menu végétarien ?</p>
-                
+
                 <p><span className="font-semibold">Oishikatta desu</span></p>
                 <p className="text-gray-600 japanese-text mb-2">美味しかったです</p>
                 <p className="text-gray-500 text-xs">C'était délicieux</p>
@@ -389,20 +399,35 @@ export default function OotoyaPage() {
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Autres Chaînes de Teishoku
           </h2>
-          
+
           <div className="grid md:grid-cols-3 gap-6">            <Link href="/chaines/yayoiken" className="group bg-yellow-50 p-6 rounded-xl border border-yellow-200 hover:border-yellow-300 transition-colors">
-              <h3 className="text-lg font-bold text-gray-900 group-hover:text-yellow-600 mb-3">Yayoiken</h3>
-              <p className="text-gray-600 text-sm">Teishoku populaires avec riz illimité et prix abordables.</p>
-            </Link>
-            
+            <h3 className="text-lg font-bold text-gray-900 group-hover:text-yellow-600 mb-3">Yayoiken</h3>
+            <p className="text-gray-600 text-sm">Teishoku populaires avec riz illimité et prix abordables.</p>
+          </Link>
+
             <Link href="/chaines/miyamoto-munashi" className="group bg-orange-50 p-6 rounded-xl border border-orange-200 hover:border-orange-300 transition-colors">
               <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 mb-3">Miyamoto Munashi</h3>
               <p className="text-gray-600 text-sm">Teishoku économique d'Osaka avec portions généreuses à petit prix.</p>
             </Link>
-            
-            <Link href="/type-plat/teishoku" className="group bg-green-50 p-6 rounded-xl border border-green-200 hover:border-green-300 transition-colors">
-              <h3 className="text-lg font-bold text-gray-900 group-hover:text-green-600 mb-3">Tous les Teishoku</h3>
-              <p className="text-gray-600 text-sm">Découvrez toutes les chaînes de teishoku et leur philosophie.</p>
+
+            <Link
+              href="/type-plat/teishoku"
+              className="group relative overflow-hidden bg-green-50 p-6 rounded-xl border border-green-200 hover:border-green-300 transition-colors"
+              style={{
+                backgroundImage: "url('/images/chaines/ootoya/ootoya-teishoku-bg.jpg')",
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat'
+              }}
+            >
+              <div
+                className="absolute inset-0 group-hover:opacity-75 transition-all duration-300"
+                style={{ backgroundColor: 'rgba(0, 0, 0, 0.5)' }}
+              ></div>
+              <div className="relative z-10">
+                <h3 className="text-lg font-bold text-white group-hover:text-green-200 mb-3">Tous les Teishoku</h3>
+                <p className="text-gray-200 text-sm">Découvrez toutes les chaînes de teishoku et leur philosophie.</p>
+              </div>
             </Link>
           </div>
         </div>
